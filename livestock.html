@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>肉牛·乳牛·肉羊·绵羊综合方案｜活力旺®枯草菌源蛋白酶饲料添加剂</title>
-    <meta name="description" content="活力旺®活力得®枯草菌源蛋白酶，肉牛ADG+25%，乳牛产奶+2.7kg/天，肉羊FCR-6%，绵羊毛质改善">
+    <meta property="og:image" content="assets/livestock-beef-before-after.jpg">
+<meta name="description" content="活力旺®活力得®枯草菌源蛋白酶，肉牛ADG+25%，乳牛产奶+2.7kg/天，肉羊FCR-6%，绵羊毛质改善">
     <meta name="keywords" content="肉牛,乳牛,肉羊,绵羊,饲料添加剂,活力旺,枯草菌源蛋白酶">
     <link rel="canonical" href="https://animal.feed-pet.com/livestock.html">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Serif+SC:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -207,7 +208,28 @@
             border-left: 4px solid var(--accent);
             padding-left: 15px;
         }
-    </style>
+    
+        /* ===== 全局設計系統補丁 v2 ===== */
+        html { scroll-behavior: smooth; }
+        .pain-point { border-left: none; border-top: 3px solid var(--danger); border-radius: 12px; padding: 20px 18px; transition: transform 0.2s, box-shadow 0.2s; }
+        .pain-point:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(192,57,43,0.12); }
+        .mechanism-card { transition: transform 0.2s, box-shadow 0.2s; }
+        .mechanism-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(26,58,26,0.12); }
+        table { border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(26,58,26,0.07); }
+        th { font-weight: 600; letter-spacing: 0.04em; font-size: 0.85rem; }
+        .back-to-top { box-shadow: 0 4px 16px rgba(201,168,76,0.4); transition: transform 0.2s, box-shadow 0.2s; }
+        .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(201,168,76,0.5); }
+        @media (max-width: 640px) { img { border-radius: 8px; } .container { padding: 0 16px; } section { padding: 36px 0; } h2 { font-size: 1.3rem; } }
+        .lang-cn section:first-of-type, .lang-tw section:first-of-type, .lang-en section:first-of-type { position: relative !important; overflow: hidden; min-height: clamp(300px,40vw,480px); }
+        .lang-cn section:first-of-type .hero-grid > div:last-child > img, .lang-tw section:first-of-type .hero-grid > div:last-child > img, .lang-en section:first-of-type .hero-grid > div:last-child > img { display: none; }
+        .lang-cn section:first-of-type .hero-grid > div:first-child, .lang-tw section:first-of-type .hero-grid > div:first-child, .lang-en section:first-of-type .hero-grid > div:first-child { flex: 1 1 100%; max-width: 700px; }
+        /* Hero BG livestock */
+        .lang-cn section:first-of-type::before,.lang-tw section:first-of-type::before,.lang-en section:first-of-type::before{content:'';position:absolute;inset:0;background-image:url('assets/livestock-beef-before-after.jpg');background-size:cover;background-position:center 40%;opacity:0.28;z-index:0;pointer-events:none;}
+        .lang-cn section:first-of-type>*,.lang-tw section:first-of-type>*,.lang-en section:first-of-type>*{position:relative;z-index:1;}
+        </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"偶蹄动物综合方案","description":"活力旺®活力得®枯草菌源蛋白酶，肉牛ADG+25%，乳牛产奶+2.7kg/天，肉羊FCR-6.35%","image":"https://animal.feed-pet.com/assets/livestock-beef-before-after.jpg","brand":{"@type":"Brand","name":"活力旺®"},"url":"https://animal.feed-pet.com/livestock.html"}
+</script>
 </head>
 <body>
 <div id="lightbox" class="lightbox" onclick="this.classList.remove('active')">
