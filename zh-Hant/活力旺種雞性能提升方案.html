@@ -1,0 +1,1287 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <style>
+    /* 防止文字選取 */
+    body {
+        -webkit-user-select: none;  /* Safari */
+        -moz-user-select: none;     /* Firefox */
+        -ms-user-select: none;      /* IE/Edge */
+        user-select: none;           /* 標準語法 */
+    }
+
+    /* 針對圖片：禁止拖曳、禁止長按菜單，但保留點擊事件（由父層處理） */
+    img {
+        -webkit-touch-callout: none; /* iOS 長按選單 */
+        -webkit-user-drag: none;     /* Chrome 拖曳 */
+        user-drag: none;
+        pointer-events: none;         /* 讓圖片本身無法被點擊，但父容器可接收點擊 */
+    }
+
+    /* 圖片的容器需設定 cursor: pointer 提示可點擊 */
+    .img-container {
+        cursor: pointer;
+    }
+</style>
+
+<!-- 簡易 Lightbox 結構 -->
+<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:9999; justify-content:center; align-items:center; flex-direction:column;" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="" style="max-width:90%; max-height:80%; object-fit:contain; border-radius:8px;">
+    <div id="lightbox-caption" style="color:white; margin-top:16px; font-size:1rem;"></div>
+</div>
+
+<script>
+    // 1. 禁止右鍵選單 (含手機長按)
+    document.addEventListener('contextmenu', e => e.preventDefault());
+
+    // 2. 禁止複製快捷鍵 (Ctrl+C, Ctrl+X)
+    document.addEventListener('copy', e => e.preventDefault());
+    document.addEventListener('cut', e => e.preventDefault());
+
+    // 3. 禁止選取事件 (滑鼠拖曳選取)
+    document.addEventListener('selectstart', e => e.preventDefault());
+
+    // 4. 輕量 Lightbox 功能：所有 .img-container 內的圖片點擊放大
+    function openLightbox(element) {
+        const img = element.querySelector('img');
+        if (!img) return;
+        const caption = element.querySelector('.img-title')?.innerText || '';
+        const lb = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightbox-img');
+        const lbCaption = document.getElementById('lightbox-caption');
+        lbImg.src = img.src;
+        lbCaption.innerText = caption;
+        lb.style.display = 'flex';
+    }
+
+    // 為所有 .img-container 綁定點擊事件
+    document.querySelectorAll('.img-container').forEach(container => {
+        container.addEventListener('click', function() {
+            openLightbox(this);
+        });
+    });
+</script>
+    <meta charset="UTF-8">
+    <meta name="description" content="活力旺種雞性能提升方案 - 受精率提升至92-95%，孵化率提升4-5%，健雛率94-97%，千隻場年增淨利NTD 235,915，投資報酬率919%。">
+    <meta name="keywords" content="種雞,受精率,孵化率,健雛率,種雞飼料,飼料添加劑,活力旺,種雞管理,繁殖性能">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="首池有限公司">
+    <meta name="revisit-after" content="7 days">
+    <link rel="canonical" href="https://richtrong.com/活力旺種雞性能提升方案.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://richtrong.com/活力旺種雞性能提升方案.html">
+    <link rel="alternate" hreflang="zh-Hans" href="https://richtrong.com/活力旺種雞性能提升方案.html">
+    <link rel="alternate" hreflang="en" href="https://richtrong.com/活力旺種雞性能提升方案.html">
+    <link rel="alternate" hreflang="x-default" href="https://richtrong.com/活力旺種雞性能提升方案.html">
+    <meta property="og:title" content="種雞性能提升方案｜活力旺飼料添加劑｜首池有限公司">
+    <meta property="og:description" content="活力旺種雞性能提升方案 - 受精率提升至92-95%，孵化率提升4-5%，健雛率94-97%，千隻場年增淨利NTD 235,915，投資報酬率919%。">
+    <meta property="og:image" content="https://richtrong.com/assets/breeding-chicken-performance-improvement.jpg">
+    <meta property="og:url" content="https://richtrong.com/活力旺種雞性能提升方案.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="活力旺 - 首池有限公司">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="種雞性能提升方案｜活力旺飼料添加劑｜首池有限公司">
+    <meta name="twitter:description" content="活力旺種雞性能提升方案 - 受精率提升至92-95%，孵化率提升4-5%，健雛率94-97%，千隻場年增淨利NTD 235,915，投資報酬率919%。">
+    <meta name="twitter:image" content="https://richtrong.com/assets/breeding-chicken-performance-improvement.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>種雞性能提升方案｜活力旺飼料添加劑｜首池有限公司</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0A5C8C',
+                        secondary: '#3A7CA5',
+                        accent: '#E9B741',
+                        neutral: '#F5F5F5',
+                        dark: '#1e2c3a',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'Noto Sans SC', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'base': '8px',
+                        'card': '12px',
+                        'img': '16px',
+                    },
+                    boxShadow: {
+                        'card': '0 4px 12px rgba(0,0,0,0.08)',
+                        'hover': '0 8px 20px rgba(0,0,0,0.12)',
+                        'img': '0 6px 16px rgba(0,0,0,0.1)',
+                    }
+                },
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .bg-gradient-blue {
+                background: linear-gradient(135deg, #e6f0fa 0%, #cde1f0 100%);
+            }
+            .table-responsive {
+                overflow-x: auto;
+            }
+            .img-hover-zoom {
+                overflow: hidden;
+                border-radius: 16px;
+            }
+            .img-hover-zoom img {
+                transition: transform 0.5s ease;
+            }
+            .img-hover-zoom:hover img {
+                transform: scale(1.03);
+            }
+            .lang-content {
+                display: none;
+            }
+            .lang-content.active {
+                display: block;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans bg-white text-dark antialiased">
+    <!-- 導航列 (固定) -->
+    <div class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="px-4 py-2 rounded-base bg-gray-100 text-gray-800 text-sm font-medium hover:bg-gray-200 transition-colors flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left"></i>
+                返回主頁
+            </a>
+            <div class="flex gap-2">
+                <button id="lang-tw" class="px-4 py-2 rounded-base bg-primary text-white text-sm font-medium hover:bg-secondary transition-colors shadow-md">繁體中文 / TWD</button>
+                <button id="lang-cn" class="px-4 py-2 rounded-base bg-gray-200 text-gray-800 text-sm font-medium hover:bg-gray-300 transition-colors">简体中文 / CNY</button>
+                <button id="lang-en" class="px-4 py-2 rounded-base bg-gray-200 text-gray-800 text-sm font-medium hover:bg-gray-300 transition-colors">English / USD</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 繁體中文內容 ========== -->
+    <div id="content-tw" class="lang-content active">
+        <!-- 頂部橫幅 -->
+        <header class="relative w-full h-[50vh] md:h-[60vh] overflow-hidden mt-16">
+            <img src="../assets/breeder-chicken-header.jpg" alt="現代化種雞場" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-dark/60 flex flex-col justify-center items-center text-white px-4">
+                <div class="text-[clamp(1.8rem,5vw,3rem)] font-black text-shadow text-center">活力旺種雞性能提升方案</div>
+                <div class="mt-4 text-[clamp(1rem,2vw,1.25rem)] font-light text-shadow text-center max-w-3xl">種公雞 × 種母雞 · 雙向優化｜孵化率+5% · 健雛率+5% · ROI 919%</div>
+                <div class="mt-8 bg-primary/90 px-6 py-3 rounded-base text-lg font-bold hover:bg-primary transition-colors cursor-pointer">首池有限公司 &copy; 2026</div>
+            </div>
+        </header>
+
+        <div class="container mx-auto px-4 py-12 max-w-7xl">
+            <!-- 執行摘要 -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-bullseye mr-3 text-accent"></i>
+                    執行摘要：種雞繁殖性能全面升級
+                </h2>
+                <p class="text-lg mb-8 leading-relaxed text-gray-700">
+                    <strong class="text-secondary">核心定位：</strong>基於首池專利發酵平台與國際前沿代謝科學，整合精密複合酶、免疫調控肽、代謝調控複方（小核酸肽+褐藻素）三層協同技術，針對種公雞精液品質與種母雞產蛋性能、孵化率、健雛率四大痛點，實現繁殖效率最大化，打造種雞場「價值引擎」。
+                </p>
+                <!-- 摘要數據卡片 (四項關鍵指標) -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-3 text-secondary">種蛋受精率</h4>
+                        <div class="text-base text-gray-600 mb-2">88-92% → 92-95%</div>
+                        <div class="text-2xl font-bold text-accent mb-3">↑ 3-4%</div>
+                        <p class="text-gray-700 text-sm">提升精液品質與卵子活力</p>
+                    </div>
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-3 text-secondary">孵化率</h4>
+                        <div class="text-base text-gray-600 mb-2">84-88% → 88-92%</div>
+                        <div class="text-2xl font-bold text-accent mb-3">↑ 4-5%</div>
+                        <p class="text-gray-700 text-sm">降低早期胚胎死亡率</p>
+                    </div>
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-3 text-secondary">健雛率</h4>
+                        <div class="text-base text-gray-600 mb-2">90-94% → 94-97%</div>
+                        <div class="text-2xl font-bold text-accent mb-3">↑ 4-5%</div>
+                        <p class="text-gray-700 text-sm">提升雛雞活力與均勻度</p>
+                    </div>
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-3 text-secondary">產蛋高峰期</h4>
+                        <div class="text-base text-gray-600 mb-2">28-32週 → 32-36週</div>
+                        <div class="text-2xl font-bold text-accent mb-3">↑ 4週</div>
+                        <p class="text-gray-700 text-sm">延長高峰，增加合格種蛋</p>
+                    </div>
+                </div>
+                <!-- 高亮效益區塊 -->
+                <div class="bg-gradient-blue rounded-card p-8 flex flex-col md:flex-row items-center justify-between">
+                    <div class="text-center md:text-left mb-6 md:mb-0">
+                        <div class="text-4xl md:text-5xl font-black text-secondary">NTD 235,915</div>
+                        <div class="text-base text-dark/80 mt-2">千隻種母雞年增淨利潤</div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-center">
+                        <div class="text-lg font-bold text-primary-dark">投資報酬率 919%</div>
+                        <div class="hidden md:block text-dark/50">│</div>
+                        <div class="text-lg font-bold text-primary-dark">回收期 1.3 個月</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 產業基準與挑戰 -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-chart-line mr-3 text-accent"></i>
+                    台灣種雞產業基準與活力旺解決方案
+                </h2>
+                <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow mb-6">
+                    <h3 class="text-xl font-bold text-secondary mb-4">一、種雞群生產性能基準</h3>
+                    <div class="table-responsive">
+                        <table class="w-full border-collapse text-sm">
+                            <thead><tr class="bg-primary/10"><th class="p-3 text-left border-b-2 border-primary">指標</th><th class="p-3 text-left border-b-2 border-primary">產業平均</th><th class="p-3 text-left border-b-2 border-primary">活力旺目標</th></tr></thead>
+                            <tbody>
+                                <tr><td class="p-3 border-b">受精率</td><td class="p-3 border-b">88-92%</td><td class="p-3 border-b text-primary font-bold">92-95%</td></tr>
+                                <tr><td class="p-3 border-b">孵化率</td><td class="p-3 border-b">84-88%</td><td class="p-3 border-b text-primary font-bold">88-92%</td></tr>
+                                <tr><td class="p-3 border-b">健雛率</td><td class="p-3 border-b">90-94%</td><td class="p-3 border-b text-primary font-bold">94-97%</td></tr>
+                                <tr><td class="p-3 border-b">年產合格種蛋</td><td class="p-3 border-b">140-160顆</td><td class="p-3 border-b text-primary font-bold">155-170顆</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-4 text-sm text-gray-600">※ 依據台灣種雞產業平均數據 (2015-2025) 及國際期刊基準</div>
+                </div>
+
+                <!-- 挑戰卡片 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-2 text-secondary"><i class="fas fa-exclamation-triangle text-accent mr-2"></i>夏季繁殖障礙</h4>
+                        <p class="text-sm text-gray-700">熱緊迫導致受精率下降5-8%、孵化率下降3-5%。活力旺褐藻素激活Nrf2通路，清除自由基，維持精子與卵母細胞品質。</p>
+                    </div>
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-2 text-secondary"><i class="fas fa-exclamation-triangle text-accent mr-2"></i>種蛋品質不均</h4>
+                        <p class="text-sm text-gray-700">蛋殼厚度、內部品質差異大。活力旺精密複合酶提升鈣磷利用率，蛋殼強度提升12%，蛋白高度增加8%。</p>
+                    </div>
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-2 text-secondary"><i class="fas fa-exclamation-triangle text-accent mr-2"></i>種公雞精液衰退</h4>
+                        <p class="text-sm text-gray-700">35週齡後精液量、活力顯著下降。活力旺小核酸肽提升粒線體ATP合成，精子活力維持85%+，畸形率＜12%。</p>
+                    </div>
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-2 text-secondary"><i class="fas fa-exclamation-triangle text-accent mr-2"></i>早期胚胎死亡率</h4>
+                        <p class="text-sm text-gray-700">胚蛋附著期（0-7天）死亡占孵化失敗40%。活力旺免疫調控肽調控子宮內膜細胞激素，附著率提升15%。</p>
+                    </div>
+                </div>
+
+                <!-- 種蛋品質圖片 -->
+                <div class="img-hover-zoom shadow-img mt-8">
+                    <img src="../assets/breeder-egg-quality.png" alt="種蛋品質對比" class="w-full h-auto rounded-img">
+                    <p class="text-xs text-gray-500 mt-2 italic">圖1：活力旺組種蛋蛋殼均勻、氣室正常；對照組蛋殼粗糙、氣室鬆動</p>
+                </div>
+            </section>
+
+            <!-- 擴充機轉：三層生理機制 (文獻引用) -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-flask mr-3 text-accent"></i>
+                    活力旺三重生理調控機轉（文獻實證）
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- 層級一 -->
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow border-t-4 border-primary">
+                        <div class="text-2xl mb-2">🧬</div>
+                        <h3 class="font-bold text-lg mb-2 text-secondary">層級一：營養吸收與腸道健康</h3>
+                        <p class="text-sm text-gray-700 mb-2"><span class="font-bold">作用成分：</span>精密複合酶製劑</p>
+                        <p class="text-sm text-gray-700 mb-2"><span class="font-bold">機轉：</span>提升蛋白質、胺基酸消化率18-22%，改善腸絨毛高度/隱窩深度比，降低腸道炎症因子IL-1β、TNF-α。</p>
+                        <p class="text-xs text-gray-500 italic">科學依據：Poultry Sci. 2023;102(4):102456. PMID:36796122</p>
+                    </div>
+                    <!-- 層級二 -->
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow border-t-4 border-accent">
+                        <div class="text-2xl mb-2">🛡️</div>
+                        <h3 class="font-bold text-lg mb-2 text-secondary">層級二：抗氧化與細胞保護</h3>
+                        <p class="text-sm text-gray-700 mb-2"><span class="font-bold">作用成分：</span>免疫調控肽 + 褐藻素</p>
+                        <p class="text-sm text-gray-700 mb-2"><span class="font-bold">機轉：</span>激活Nrf2/ARE抗氧化通路，SOD、GPx活性提升25-30%；保護卵母細胞膜完整性，精子DNA損傷降低30%。</p>
+                        <p class="text-xs text-gray-500 italic">科學依據：Animals. 2022;12(15):1912. PMID:35952889</p>
+                    </div>
+                    <!-- 層級三 -->
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow border-t-4 border-secondary">
+                        <div class="text-2xl mb-2">⚡</div>
+                        <h3 class="font-bold text-lg mb-2 text-secondary">層級三：生殖內分泌調控</h3>
+                        <p class="text-sm text-gray-700 mb-2"><span class="font-bold">作用成分：</span>小核酸肽 (NAD+前體)</p>
+                        <p class="text-sm text-gray-700 mb-2"><span class="font-bold">機轉：</span>提升卵巢粒線體ATP合成，穩定FSH、LH脈衝；促進睪丸間質細胞睾酮分泌，延長產蛋高峰4週。</p>
+                        <p class="text-xs text-gray-500 italic">科學依據：J. Anim. Sci. 2016;94(8):3245-3255. PMID:27695806</p>
+                    </div>
+                </div>
+
+                <!-- 精子活力對比圖 -->
+                <div class="img-hover-zoom shadow-img mt-8">
+                    <img src="../assets/sperm-activity.png" alt="精子活力對比" class="w-full h-auto rounded-img">
+                    <p class="text-xs text-gray-500 mt-2 italic">圖2：活力旺組種公雞精子活力85%+，對照組僅65%，尾段擺動頻率提升40%</p>
+                </div>
+            </section>
+
+            <!-- 實施案例 (新增) -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-trophy mr-3 text-accent"></i>
+                    台灣種雞場實施案例
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-2 text-secondary">📍 雲林・弘X種雞場</h4>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">規模：</span>6,000套種雞（紅羽）</p>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">使用方案：</span>活力旺種雞配方1kg/噸，連續16週</p>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">成效：</span>受精率89% → 93.5%，孵化率85% → 90.2%，健雛率91% → 96%</p>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">年淨利：</span>+NTD 145萬元 (以千隻場推算)</p>
+                        <p class="text-xs text-gray-500 mt-2 italic">「以前夏季受精率總掉5-8%，今年加了活力旺，全程穩定在93%以上。」— 林場長</p>
+                    </div>
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-2 text-secondary">📍 屏東・永X種雞場</h4>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">規模：</span>8,000套種雞（黑羽）</p>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">使用方案：</span>活力旺種雞配方1kg/噸，全程使用</p>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">成效：</span>產蛋高峰延長5週，每隻母雞多產8.5枚合格種蛋，雛雞均勻度提升15%</p>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">年淨利：</span>+NTD 212萬元</p>
+                        <p class="text-xs text-gray-500 mt-2 italic">「健雛率從92%拉到96%，雛雞活力明顯更好，客戶指名購買。」— 陳協理</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 成本與添加方案 -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-calculator mr-3 text-accent"></i>
+                    成本參數與添加方案
+                </h2>
+                <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                        <div class="text-center"><span class="text-2xl font-bold text-primary">NTD 600</span><div class="text-sm text-gray-600">活力旺單價/公斤</div></div>
+                        <div class="text-center"><span class="text-2xl font-bold text-primary">1 kg</span><div class="text-sm text-gray-600">每噸飼料添加量</div></div>
+                        <div class="text-center"><span class="text-2xl font-bold text-primary">NTD 0.6</span><div class="text-sm text-gray-600">每公斤飼料成本增</div></div>
+                        <div class="text-center"><span class="text-2xl font-bold text-primary">NTD 0.015</span><div class="text-sm text-gray-600">每顆種蛋成本增</div></div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="w-full border-collapse text-sm">
+                            <thead><tr class="bg-primary/10"><th class="p-3 text-left border-b-2 border-primary">成本項目</th><th class="p-3 text-left border-b-2 border-primary">計算</th><th class="p-3 text-left border-b-2 border-primary">金額 (NTD)</th></tr></thead>
+                            <tbody>
+                                <tr><td class="p-3 border-b">種母雞每日採食量</td><td class="p-3 border-b">125 公克/隻</td><td class="p-3 border-b">-</td></tr>
+                                <tr><td class="p-3 border-b">種公雞每日採食量</td><td class="p-3 border-b">140 公克/隻</td><td class="p-3 border-b">-</td></tr>
+                                <tr><td class="p-3 border-b">每日總飼料消耗 (1,000母+100公)</td><td class="p-3 border-b">(1,000×0.125)+(100×0.14)=139 kg</td><td class="p-3 border-b">-</td></tr>
+                                <tr><td class="p-3 border-b">每日活力旺添加成本</td><td class="p-3 border-b">139 kg × 0.6 NTD/kg</td><td class="p-3 border-b">83.4</td></tr>
+                                <tr class="bg-teal-50"><td class="p-3 border-b font-bold">每月添加成本</td><td class="p-3 border-b">30.4天 × 83.4</td><td class="p-3 border-b font-bold text-primary">2,502</td></tr>
+                                <tr class="bg-teal-50"><td class="p-3 border-b font-bold">每年添加成本 (44週)</td><td class="p-3 border-b">308天 × 83.4</td><td class="p-3 border-b font-bold text-primary">25,690</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="img-hover-zoom shadow-img mt-6">
+                        <img src="../assets/breeder-feed-system.png" alt="自動化飼料系統" class="w-full h-auto rounded-img">
+                        <p class="text-xs text-gray-500 mt-2 italic">圖3：活力旺可無縫整合至現有飼料系統，不增加額外人力</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 經濟效益 (核心數據) -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-coins mr-3 text-accent"></i>
+                    繁殖性能提升與經濟效益評估
+                </h2>
+                <div class="img-hover-zoom shadow-img mb-6">
+                    <img src="../assets/fertility-hatch-data.png" alt="受精孵化數據" class="w-full h-auto rounded-img">
+                    <p class="text-xs text-gray-500 mt-2 italic">圖4：活力旺方案受精率92%↑、孵化率89%↑</p>
+                </div>
+                <div class="table-responsive">
+                    <table class="w-full border-collapse text-sm">
+                        <thead><tr><th class="p-3 border-b-2 border-primary">效益項目</th><th class="p-3 border-b-2 border-primary">計算基數</th><th class="p-3 border-b-2 border-primary">年度價值 (NTD/千隻)</th></tr></thead>
+                        <tbody>
+                            <tr><td class="p-3 border-b">受精率提升 (+3.5%)</td><td class="p-3 border-b">+4,400 顆合格蛋 × 75%孵化率 × NTD 30/雛</td><td class="p-3 border-b text-primary font-bold">+90,000</td></tr>
+                            <tr><td class="p-3 border-b">孵化率提升 (+4.5%)</td><td class="p-3 border-b">+5,400 隻雛雞 × NTD 25/隻</td><td class="p-3 border-b text-primary font-bold">+135,000</td></tr>
+                            <tr><td class="p-3 border-b">健雛率提升 (+4%)</td><td class="p-3 border-b">淘汰減少1,080隻 × NTD 25/隻</td><td class="p-3 border-b text-primary font-bold">+27,000</td></tr>
+                            <tr><td class="p-3 border-b">產蛋高峰期延長 (4週)</td><td class="p-3 border-b">+3.2枚/母 × 1,000母 × NTD 3/枚</td><td class="p-3 border-b text-primary font-bold">+9,600</td></tr>
+                            <tr class="bg-teal-50"><td class="p-3 border-b font-bold">年度總效益</td><td class="p-3 border-b"></td><td class="p-3 border-b font-bold text-primary">+261,600</td></tr>
+                            <tr><td class="p-3 border-b">年度活力旺成本</td><td class="p-3 border-b"></td><td class="p-3 border-b text-red-600 font-bold">-25,685</td></tr>
+                            <tr class="bg-primary/10 font-bold"><td class="p-3 border-b">年度淨利潤增加</td><td class="p-3 border-b"></td><td class="p-3 border-b text-primary text-lg">+235,915</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                    <div class="bg-neutral rounded-card p-4 text-center"><span class="text-2xl font-bold text-primary">+4,400顆</span><div class="text-sm">額外孵化種蛋</div></div>
+                    <div class="bg-neutral rounded-card p-4 text-center"><span class="text-2xl font-bold text-primary">+3,960隻</span><div class="text-sm">額外健康雛雞</div></div>
+                    <div class="bg-neutral rounded-card p-4 text-center"><span class="text-2xl font-bold text-primary">NTD 25</span><div class="text-sm">每隻雛雞淨利潤</div></div>
+                </div>
+                <div class="img-hover-zoom shadow-img mt-6">
+                    <img src="../assets/economic-benefit-chart.png" alt="經濟效益圖表" class="w-full h-auto rounded-img">
+                    <p class="text-xs text-gray-500 mt-2 italic">圖5：ROI 919% · 每母雞年增利 NTD 124</p>
+                </div>
+                <div class="bg-gradient-to-r from-primary to-secondary rounded-card p-8 text-white text-center shadow-lg mt-6">
+                    <h3 class="text-2xl font-bold mb-2">投資報酬率分析</h3>
+                    <div class="text-5xl md:text-6xl font-black my-4 text-accent">919% ROI</div>
+                    <p class="text-lg mb-1">每投入 NTD 1，創造 NTD 9.19 淨收益</p>
+                    <p class="text-lg mb-1">回收期 1.3 個月 · 成本效益比 1 : 9.19</p>
+                </div>
+            </section>
+
+            <!-- 規模效益 -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-chart-simple mr-3 text-accent"></i>
+                    不同養殖規模經濟效益
+                </h2>
+                <div class="table-responsive">
+                    <table class="w-full border-collapse text-sm">
+                        <thead><tr class="bg-primary/10"><th class="p-3 border-b-2 border-primary">規模</th><th class="p-3 border-b-2 border-primary">種母雞</th><th class="p-3 border-b-2 border-primary">年度淨利增加</th><th class="p-3 border-b-2 border-primary">ROI</th></tr></thead>
+                        <tbody>
+                            <tr><td class="p-3 border-b">小型</td><td class="p-3 border-b">500</td><td class="p-3 border-b text-primary font-bold">NTD 117,958</td><td class="p-3 border-b">919%</td></tr>
+                            <tr class="bg-primary/5"><td class="p-3 border-b font-bold">中型(基準)</td><td class="p-3 border-b">1,000</td><td class="p-3 border-b text-primary font-bold">NTD 235,915</td><td class="p-3 border-b">919%</td></tr>
+                            <tr><td class="p-3 border-b">大型</td><td class="p-3 border-b">5,000</td><td class="p-3 border-b text-primary font-bold">NTD 1,179,575</td><td class="p-3 border-b">919%</td></tr>
+                            <tr><td class="p-3 border-b">統進統出場</td><td class="p-3 border-b">10,000</td><td class="p-3 border-b text-primary font-bold">NTD 2,359,150</td><td class="p-3 border-b">919%</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-green-50 border-l-4 border-success p-4 mt-4 text-sm">※ 線性擴展特性：成本與效益同比例增長，ROI維持919%</div>
+            </section>
+
+            <!-- 實施建議與風險管理 -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-shield-halved mr-3 text-accent"></i>
+                    低風險三階段實施建議
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow border-t-4 border-primary relative">
+                        <div class="absolute -top-4 -right-4 bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
+                        <h4 class="font-bold text-lg mb-3 text-secondary">驗證期 (8週)</h4>
+                        <p class="mb-1 text-sm"><strong>規模：</strong>100母+10公</p>
+                        <p class="mb-1 text-sm"><strong>週期：</strong>8週</p>
+                        <p class="mb-1 text-sm"><strong>成本：</strong>NTD 3,120</p>
+                        <p class="text-sm"><strong>核心指標：</strong>受精率、孵化率、精子活力</p>
+                    </div>
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow border-t-4 border-primary relative">
+                        <div class="absolute -top-4 -right-4 bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
+                        <h4 class="font-bold text-lg mb-3 text-secondary">擴展期 (16週)</h4>
+                        <p class="mb-1 text-sm"><strong>規模：</strong>500母+50公</p>
+                        <p class="mb-1 text-sm"><strong>週期：</strong>16週</p>
+                        <p class="mb-1 text-sm"><strong>成本：</strong>NTD 12,480</p>
+                        <p class="text-sm"><strong>核心指標：</strong>產蛋率、健雛率、週期延長</p>
+                    </div>
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow border-t-4 border-primary relative">
+                        <div class="absolute -top-4 -right-4 bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
+                        <h4 class="font-bold text-lg mb-3 text-secondary">全面導入</h4>
+                        <p class="mb-1 text-sm"><strong>規模：</strong>全場種雞</p>
+                        <p class="mb-1 text-sm"><strong>時機：</strong>下一生產週期</p>
+                        <p class="mb-1 text-sm"><strong>成本：</strong>依場內規模</p>
+                        <p class="text-sm"><strong>目標：</strong>全場繁殖效率最大化</p>
+                    </div>
+                </div>
+                <div class="bg-orange-50 border-l-4 border-orange-400 p-4 text-sm">
+                    <strong>風險對沖：</strong>分階段驗證、效果監控；60%效果仍達551% ROI，隨時可停用，無合約限制。
+                </div>
+            </section>
+
+            <!-- 結論 -->
+            <section>
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-star mr-3 text-accent"></i>
+                    結論：種雞生產的價值革命
+                </h2>
+                <div class="bg-gradient-to-r from-primary to-secondary rounded-card p-8 text-white text-center">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
+                        <div><div class="text-3xl font-black text-accent">919%</div><div class="text-sm">投資報酬率</div></div>
+                        <div><div class="text-3xl font-black text-accent">NTD 235,915</div><div class="text-sm">千隻場年增淨利</div></div>
+                        <div><div class="text-3xl font-black text-accent">+4-5%</div><div class="text-sm">孵化率提升</div></div>
+                        <div><div class="text-3xl font-black text-accent">1.3月</div><div class="text-sm">投資回收期</div></div>
+                    </div>
+                    <p class="text-lg mt-6">每投入 NTD 1 元飼料成本，創造 NTD 9.19 元淨收益。從「最低飼料單價」轉向「最高繁殖報酬」。</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- ========== 簡體中文內容 (100%對應繁體) ========== -->
+    <div id="content-cn" class="lang-content">
+        <header class="relative w-full h-[50vh] md:h-[60vh] overflow-hidden mt-16">
+            <img src="../assets/breeder-chicken-header.jpg" alt="现代化种鸡场" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-dark/60 flex flex-col justify-center items-center text-white px-4">
+                <div class="text-[clamp(1.8rem,5vw,3rem)] font-black text-shadow text-center">活力旺种鸡性能提升方案</div>
+                <div class="mt-4 text-[clamp(1rem,2vw,1.25rem)] font-light text-shadow text-center max-w-3xl">种公鸡 × 种母鸡 · 双向优化｜孵化率+5% · 健雏率+5% · ROI 919%</div>
+                <div class="mt-8 bg-primary/90 px-6 py-3 rounded-base text-lg font-bold hover:bg-primary transition-colors cursor-pointer">首池有限公司 &copy; 2026</div>
+            </div>
+        </header>
+
+        <div class="container mx-auto px-4 py-12 max-w-7xl">
+            <!-- 执行摘要 -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-bullseye mr-3 text-accent"></i>
+                    执行摘要：种鸡繁殖性能全面升级
+                </h2>
+                <p class="text-lg mb-8 leading-relaxed text-gray-700">
+                    <strong class="text-secondary">核心定位：</strong>基于首池专利发酵平台与国际前沿代谢科学，整合精密复合酶、免疫调控肽、代谢调控复方（小核酸肽+褐藻素）三层协同技术，针对种公鸡精液品质与种母鸡产蛋性能、孵化率、健雏率四大痛点，实现繁殖效率最大化，打造种鸡场「价值引擎」。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-3 text-secondary">种蛋受精率</h4>
+                        <div class="text-base text-gray-600 mb-2">88-92% → 92-95%</div>
+                        <div class="text-2xl font-bold text-accent mb-3">↑ 3-4%</div>
+                        <p class="text-gray-700 text-sm">提升精液品质与卵子活力</p>
+                    </div>
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-3 text-secondary">孵化率</h4>
+                        <div class="text-base text-gray-600 mb-2">84-88% → 88-92%</div>
+                        <div class="text-2xl font-bold text-accent mb-3">↑ 4-5%</div>
+                        <p class="text-gray-700 text-sm">降低早期胚胎死亡率</p>
+                    </div>
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-3 text-secondary">健雏率</h4>
+                        <div class="text-base text-gray-600 mb-2">90-94% → 94-97%</div>
+                        <div class="text-2xl font-bold text-accent mb-3">↑ 4-5%</div>
+                        <p class="text-gray-700 text-sm">提升雏鸡活力与均匀度</p>
+                    </div>
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-3 text-secondary">产蛋高峰期</h4>
+                        <div class="text-base text-gray-600 mb-2">28-32周 → 32-36周</div>
+                        <div class="text-2xl font-bold text-accent mb-3">↑ 4周</div>
+                        <p class="text-gray-700 text-sm">延长高峰，增加合格种蛋</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-blue rounded-card p-8 flex flex-col md:flex-row items-center justify-between">
+                    <div class="text-center md:text-left mb-6 md:mb-0">
+                        <div class="text-4xl md:text-5xl font-black text-secondary">CNY 51,709</div>
+                        <div class="text-base text-dark/80 mt-2">千只种母鸡年增净利润</div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-center">
+                        <div class="text-lg font-bold text-primary-dark">投资报酬率 919%</div>
+                        <div class="hidden md:block text-dark/50">│</div>
+                        <div class="text-lg font-bold text-primary-dark">回收期 1.3 个月</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 产业基准与挑战 -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-chart-line mr-3 text-accent"></i>
+                    台湾种鸡产业基准与活力旺解决方案
+                </h2>
+                <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow mb-6">
+                    <h3 class="text-xl font-bold text-secondary mb-4">一、种鸡群生产性能基准</h3>
+                    <div class="table-responsive">
+                        <table class="w-full border-collapse text-sm">
+                            <thead><tr class="bg-primary/10"><th class="p-3 text-left border-b-2 border-primary">指标</th><th class="p-3 text-left border-b-2 border-primary">产业平均</th><th class="p-3 text-left border-b-2 border-primary">活力旺目标</th></tr></thead>
+                            <tbody>
+                                <tr><td class="p-3 border-b">受精率</td><td class="p-3 border-b">88-92%</td><td class="p-3 border-b text-primary font-bold">92-95%</td></tr>
+                                <tr><td class="p-3 border-b">孵化率</td><td class="p-3 border-b">84-88%</td><td class="p-3 border-b text-primary font-bold">88-92%</td></tr>
+                                <tr><td class="p-3 border-b">健雏率</td><td class="p-3 border-b">90-94%</td><td class="p-3 border-b text-primary font-bold">94-97%</td></tr>
+                                <tr><td class="p-3 border-b">年产合格种蛋</td><td class="p-3 border-b">140-160颗</td><td class="p-3 border-b text-primary font-bold">155-170颗</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-4 text-sm text-gray-600">※ 依据台湾种鸡产业平均数据 (2015-2025) 及国际期刊基准</div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-2 text-secondary"><i class="fas fa-exclamation-triangle text-accent mr-2"></i>夏季繁殖障碍</h4>
+                        <p class="text-sm text-gray-700">热紧迫导致受精率下降5-8%、孵化率下降3-5%。活力旺褐藻素激活Nrf2通路，清除自由基，维持精子与卵母细胞品质。</p>
+                    </div>
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-2 text-secondary"><i class="fas fa-exclamation-triangle text-accent mr-2"></i>种蛋品质不均</h4>
+                        <p class="text-sm text-gray-700">蛋壳厚度、内部品质差异大。活力旺精密复合酶提升钙磷利用率，蛋壳强度提升12%，蛋白高度增加8%。</p>
+                    </div>
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-2 text-secondary"><i class="fas fa-exclamation-triangle text-accent mr-2"></i>种公鸡精液衰退</h4>
+                        <p class="text-sm text-gray-700">35周龄后精液量、活力显著下降。活力旺小核酸肽提升线粒体ATP合成，精子活力维持85%+，畸形率＜12%。</p>
+                    </div>
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-2 text-secondary"><i class="fas fa-exclamation-triangle text-accent mr-2"></i>早期胚胎死亡率</h4>
+                        <p class="text-sm text-gray-700">胚蛋附着期（0-7天）死亡占孵化失败40%。活力旺免疫调控肽调控子宫内膜细胞激素，附着率提升15%。</p>
+                    </div>
+                </div>
+
+                <div class="img-hover-zoom shadow-img mt-8">
+                    <img src="../assets/breeder-egg-quality.png" alt="种蛋品质对比" class="w-full h-auto rounded-img">
+                    <p class="text-xs text-gray-500 mt-2 italic">图1：活力旺组种蛋蛋壳均匀、气室正常；对照组蛋壳粗糙、气室松动</p>
+                </div>
+            </section>
+
+            <!-- 三重生理调控机转 -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-flask mr-3 text-accent"></i>
+                    活力旺三重生理调控机转（文献实证）
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow border-t-4 border-primary">
+                        <div class="text-2xl mb-2">🧬</div>
+                        <h3 class="font-bold text-lg mb-2 text-secondary">层级一：营养吸收与肠道健康</h3>
+                        <p class="text-sm text-gray-700 mb-2"><span class="font-bold">作用成分：</span>精密复合酶制剂</p>
+                        <p class="text-sm text-gray-700 mb-2"><span class="font-bold">机转：</span>提升蛋白质、氨基酸消化率18-22%，改善肠绒毛高度/隐窝深度比，降低肠道炎症因子IL-1β、TNF-α。</p>
+                        <p class="text-xs text-gray-500 italic">科学依据：Poultry Sci. 2023;102(4):102456. PMID:36796122</p>
+                    </div>
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow border-t-4 border-accent">
+                        <div class="text-2xl mb-2">🛡️</div>
+                        <h3 class="font-bold text-lg mb-2 text-secondary">层级二：抗氧化与细胞保护</h3>
+                        <p class="text-sm text-gray-700 mb-2"><span class="font-bold">作用成分：</span>免疫调控肽 + 褐藻素</p>
+                        <p class="text-sm text-gray-700 mb-2"><span class="font-bold">机转：</span>激活Nrf2/ARE抗氧化通路，SOD、GPx活性提升25-30%；保护卵母细胞膜完整性，精子DNA损伤降低30%。</p>
+                        <p class="text-xs text-gray-500 italic">科学依据：Animals. 2022;12(15):1912. PMID:35952889</p>
+                    </div>
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow border-t-4 border-secondary">
+                        <div class="text-2xl mb-2">⚡</div>
+                        <h3 class="font-bold text-lg mb-2 text-secondary">层级三：生殖内分泌调控</h3>
+                        <p class="text-sm text-gray-700 mb-2"><span class="font-bold">作用成分：</span>小核酸肽 (NAD+前体)</p>
+                        <p class="text-sm text-gray-700 mb-2"><span class="font-bold">机转：</span>提升卵巢线粒体ATP合成，稳定FSH、LH脉冲；促进睾丸间质细胞睾酮分泌，延长产蛋高峰4周。</p>
+                        <p class="text-xs text-gray-500 italic">科学依据：J. Anim. Sci. 2016;94(8):3245-3255. PMID:27695806</p>
+                    </div>
+                </div>
+
+                <div class="img-hover-zoom shadow-img mt-8">
+                    <img src="../assets/sperm-activity.png" alt="精子活力对比" class="w-full h-auto rounded-img">
+                    <p class="text-xs text-gray-500 mt-2 italic">图2：活力旺组种公鸡精子活力85%+，对照组仅65%，尾段摆动频率提升40%</p>
+                </div>
+            </section>
+
+            <!-- 实施案例 -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-trophy mr-3 text-accent"></i>
+                    台湾种鸡场实施案例
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-2 text-secondary">📍 云林・弘X种鸡场</h4>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">规模：</span>6,000套种鸡（红羽）</p>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">使用方案：</span>活力旺种鸡配方1kg/吨，连续16周</p>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">成效：</span>受精率89% → 93.5%，孵化率85% → 90.2%，健雏率91% → 96%</p>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">年净利：</span>+CNY 317,800 (以千只场推算)</p>
+                        <p class="text-xs text-gray-500 mt-2 italic">「以前夏季受精率总掉5-8%，今年加了活力旺，全程稳定在93%以上。」— 林场长</p>
+                    </div>
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-2 text-secondary">📍 屏东・永X种鸡场</h4>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">规模：</span>8,000套种鸡（黑羽）</p>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">使用方案：</span>活力旺种鸡配方1kg/吨，全程使用</p>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">成效：</span>产蛋高峰延长5周，每只母鸡多产8.5枚合格种蛋，雏鸡均匀度提升15%</p>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">年净利：</span>+CNY 464,700</p>
+                        <p class="text-xs text-gray-500 mt-2 italic">「健雏率从92%拉到96%，雏鸡活力明显更好，客户指名购买。」— 陈协理</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 成本参数与添加方案 -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-calculator mr-3 text-accent"></i>
+                    成本参数与添加方案
+                </h2>
+                <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                        <div class="text-center"><span class="text-2xl font-bold text-primary">CNY 131</span><div class="text-sm text-gray-600">活力旺单价/公斤</div></div>
+                        <div class="text-center"><span class="text-2xl font-bold text-primary">1 kg</span><div class="text-sm text-gray-600">每吨饲料添加量</div></div>
+                        <div class="text-center"><span class="text-2xl font-bold text-primary">CNY 0.13</span><div class="text-sm text-gray-600">每公斤饲料成本增</div></div>
+                        <div class="text-center"><span class="text-2xl font-bold text-primary">CNY 0.0033</span><div class="text-sm text-gray-600">每颗种蛋成本增</div></div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="w-full border-collapse text-sm">
+                            <thead><tr class="bg-primary/10"><th class="p-3 text-left border-b-2 border-primary">成本项目</th><th class="p-3 text-left border-b-2 border-primary">计算</th><th class="p-3 text-left border-b-2 border-primary">金额 (CNY)</th></tr></thead>
+                            <tbody>
+                                <tr><td class="p-3 border-b">种母鸡每日采食量</td><td class="p-3 border-b">125 公克/只</td><td class="p-3 border-b">-</td></tr>
+                                <tr><td class="p-3 border-b">种公鸡每日采食量</td><td class="p-3 border-b">140 公克/只</td><td class="p-3 border-b">-</td></tr>
+                                <tr><td class="p-3 border-b">每日总饲料消耗 (1,000母+100公)</td><td class="p-3 border-b">(1,000×0.125)+(100×0.14)=139 kg</td><td class="p-3 border-b">-</td></tr>
+                                <tr><td class="p-3 border-b">每日活力旺添加成本</td><td class="p-3 border-b">139 kg × 0.13 CNY/kg</td><td class="p-3 border-b">18.07</td></tr>
+                                <tr class="bg-teal-50"><td class="p-3 border-b font-bold">每月添加成本</td><td class="p-3 border-b">30.4天 × 18.07</td><td class="p-3 border-b font-bold text-primary">549</td></tr>
+                                <tr class="bg-teal-50"><td class="p-3 border-b font-bold">每年添加成本 (44周)</td><td class="p-3 border-b">308天 × 18.07</td><td class="p-3 border-b font-bold text-primary">5,630</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="img-hover-zoom shadow-img mt-6">
+                        <img src="../assets/breeder-feed-system.png" alt="自动化饲料系统" class="w-full h-auto rounded-img">
+                        <p class="text-xs text-gray-500 mt-2 italic">图3：活力旺可无缝整合至现有饲料系统，不增加额外人力</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 经济效益 -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-coins mr-3 text-accent"></i>
+                    繁殖性能提升与经济效益评估
+                </h2>
+                <div class="img-hover-zoom shadow-img mb-6">
+                    <img src="../assets/fertility-hatch-data.png" alt="受精孵化数据" class="w-full h-auto rounded-img">
+                    <p class="text-xs text-gray-500 mt-2 italic">图4：活力旺方案受精率92%↑、孵化率89%↑</p>
+                </div>
+                <div class="table-responsive">
+                    <table class="w-full border-collapse text-sm">
+                        <thead><tr><th class="p-3 border-b-2 border-primary">效益项目</th><th class="p-3 border-b-2 border-primary">计算基数</th><th class="p-3 border-b-2 border-primary">年度价值 (CNY/千只)</th></tr></thead>
+                        <tbody>
+                            <tr><td class="p-3 border-b">受精率提升 (+3.5%)</td><td class="p-3 border-b">+4,400颗合格蛋 × 75%孵化率 × CNY 6.58/雏</td><td class="p-3 border-b text-primary font-bold">+19,728</td></tr>
+                            <tr><td class="p-3 border-b">孵化率提升 (+4.5%)</td><td class="p-3 border-b">+5,400只雏鸡 × CNY 5.48/只</td><td class="p-3 border-b text-primary font-bold">+29,592</td></tr>
+                            <tr><td class="p-3 border-b">健雏率提升 (+4%)</td><td class="p-3 border-b">淘汰减少1,080只 × CNY 5.48/只</td><td class="p-3 border-b text-primary font-bold">+5,918</td></tr>
+                            <tr><td class="p-3 border-b">产蛋高峰期延长 (4周)</td><td class="p-3 border-b">+3.2枚/母 × 1,000母 × CNY 0.66/枚</td><td class="p-3 border-b text-primary font-bold">+2,112</td></tr>
+                            <tr class="bg-teal-50"><td class="p-3 border-b font-bold">年度总效益</td><td class="p-3 border-b"></td><td class="p-3 border-b font-bold text-primary">+57,350</td></tr>
+                            <tr><td class="p-3 border-b">年度活力旺成本</td><td class="p-3 border-b"></td><td class="p-3 border-b text-red-600 font-bold">-5,630</td></tr>
+                            <tr class="bg-primary/10 font-bold"><td class="p-3 border-b">年度净利润增加</td><td class="p-3 border-b"></td><td class="p-3 border-b text-primary text-lg">+51,709</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                    <div class="bg-neutral rounded-card p-4 text-center"><span class="text-2xl font-bold text-primary">+4,400颗</span><div class="text-sm">额外孵化种蛋</div></div>
+                    <div class="bg-neutral rounded-card p-4 text-center"><span class="text-2xl font-bold text-primary">+3,960只</span><div class="text-sm">额外健康雏鸡</div></div>
+                    <div class="bg-neutral rounded-card p-4 text-center"><span class="text-2xl font-bold text-primary">CNY 5.48</span><div class="text-sm">每只雏鸡净利润</div></div>
+                </div>
+                <div class="img-hover-zoom shadow-img mt-6">
+                    <img src="../assets/economic-benefit-chart.png" alt="经济效益图表" class="w-full h-auto rounded-img">
+                    <p class="text-xs text-gray-500 mt-2 italic">图5：ROI 919% · 每母鸡年增利 CNY 27.16</p>
+                </div>
+                <div class="bg-gradient-to-r from-primary to-secondary rounded-card p-8 text-white text-center shadow-lg mt-6">
+                    <h3 class="text-2xl font-bold mb-2">投资报酬率分析</h3>
+                    <div class="text-5xl md:text-6xl font-black my-4 text-accent">919% ROI</div>
+                    <p class="text-lg mb-1">每投入 CNY 1，创造 CNY 9.19 净收益</p>
+                    <p class="text-lg mb-1">回收期 1.3 个月 · 成本效益比 1 : 9.19</p>
+                </div>
+            </section>
+
+            <!-- 不同养殖规模经济效益 -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-chart-simple mr-3 text-accent"></i>
+                    不同养殖规模经济效益
+                </h2>
+                <div class="table-responsive">
+                    <table class="w-full border-collapse text-sm">
+                        <thead><tr class="bg-primary/10"><th class="p-3 border-b-2 border-primary">规模</th><th class="p-3 border-b-2 border-primary">种母鸡</th><th class="p-3 border-b-2 border-primary">年度净利增加</th><th class="p-3 border-b-2 border-primary">ROI</th></tr></thead>
+                        <tbody>
+                            <tr><td class="p-3 border-b">小型</td><td class="p-3 border-b">500</td><td class="p-3 border-b text-primary font-bold">CNY 25,855</td><td class="p-3 border-b">919%</td></tr>
+                            <tr class="bg-primary/5"><td class="p-3 border-b font-bold">中型(基准)</td><td class="p-3 border-b">1,000</td><td class="p-3 border-b text-primary font-bold">CNY 51,709</td><td class="p-3 border-b">919%</td></tr>
+                            <tr><td class="p-3 border-b">大型</td><td class="p-3 border-b">5,000</td><td class="p-3 border-b text-primary font-bold">CNY 258,545</td><td class="p-3 border-b">919%</td></tr>
+                            <tr><td class="p-3 border-b">统进统出场</td><td class="p-3 border-b">10,000</td><td class="p-3 border-b text-primary font-bold">CNY 517,090</td><td class="p-3 border-b">919%</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-green-50 border-l-4 border-success p-4 mt-4 text-sm">※ 线性扩展特性：成本与效益同比例增长，ROI维持919%</div>
+            </section>
+
+            <!-- 实施建议与风险管理 -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-shield-halved mr-3 text-accent"></i>
+                    低风险三阶段实施建议
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow border-t-4 border-primary relative">
+                        <div class="absolute -top-4 -right-4 bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
+                        <h4 class="font-bold text-lg mb-3 text-secondary">验证期 (8周)</h4>
+                        <p class="mb-1 text-sm"><strong>规模：</strong>100母+10公</p>
+                        <p class="mb-1 text-sm"><strong>周期：</strong>8周</p>
+                        <p class="mb-1 text-sm"><strong>成本：</strong>CNY 684</p>
+                        <p class="text-sm"><strong>核心指标：</strong>受精率、孵化率、精子活力</p>
+                    </div>
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow border-t-4 border-primary relative">
+                        <div class="absolute -top-4 -right-4 bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
+                        <h4 class="font-bold text-lg mb-3 text-secondary">扩展期 (16周)</h4>
+                        <p class="mb-1 text-sm"><strong>规模：</strong>500母+50公</p>
+                        <p class="mb-1 text-sm"><strong>周期：</strong>16周</p>
+                        <p class="mb-1 text-sm"><strong>成本：</strong>CNY 2,735</p>
+                        <p class="text-sm"><strong>核心指标：</strong>产蛋率、健雏率、周期延长</p>
+                    </div>
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow border-t-4 border-primary relative">
+                        <div class="absolute -top-4 -right-4 bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
+                        <h4 class="font-bold text-lg mb-3 text-secondary">全面导入</h4>
+                        <p class="mb-1 text-sm"><strong>规模：</strong>全场种鸡</p>
+                        <p class="mb-1 text-sm"><strong>时机：</strong>下一生产周期</p>
+                        <p class="mb-1 text-sm"><strong>成本：</strong>依场内规模</p>
+                        <p class="text-sm"><strong>目标：</strong>全场繁殖效率最大化</p>
+                    </div>
+                </div>
+                <div class="bg-orange-50 border-l-4 border-orange-400 p-4 text-sm">
+                    <strong>风险对冲：</strong>分阶段验证、效果监控；60%效果仍达551% ROI，随时可停用，无合约限制。
+                </div>
+            </section>
+
+            <!-- 结论 -->
+            <section>
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-star mr-3 text-accent"></i>
+                    结论：种鸡生产的价值革命
+                </h2>
+                <div class="bg-gradient-to-r from-primary to-secondary rounded-card p-8 text-white text-center">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
+                        <div><div class="text-3xl font-black text-accent">919%</div><div class="text-sm">投资报酬率</div></div>
+                        <div><div class="text-3xl font-black text-accent">CNY 51,709</div><div class="text-sm">千只场年增净利</div></div>
+                        <div><div class="text-3xl font-black text-accent">+4-5%</div><div class="text-sm">孵化率提升</div></div>
+                        <div><div class="text-3xl font-black text-accent">1.3月</div><div class="text-sm">投资回收期</div></div>
+                    </div>
+                    <p class="text-lg mt-6">每投入 CNY 1 元饲料成本，创造 CNY 9.19 元净收益。从「最低饲料单价」转向「最高繁殖报酬」。</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- ========== 英文內容 (100%對應繁體) ========== -->
+    <div id="content-en" class="lang-content">
+        <header class="relative w-full h-[50vh] md:h-[60vh] overflow-hidden mt-16">
+            <img src="../assets/breeder-chicken-header.jpg" alt="Modern Breeder Farm" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-dark/60 flex flex-col justify-center items-center text-white px-4">
+                <div class="text-[clamp(1.8rem,5vw,3rem)] font-black text-shadow text-center">Vitality Breeder Performance Enhancement Program</div>
+                <div class="mt-4 text-[clamp(1rem,2vw,1.25rem)] font-light text-shadow text-center max-w-3xl">Rooster × Hen · Dual Optimization｜Hatchability +5% · Chick Quality +5% · ROI 919%</div>
+                <div class="mt-8 bg-primary/90 px-6 py-3 rounded-base text-lg font-bold hover:bg-primary transition-colors cursor-pointer">First Pool Ltd. &copy; 2026</div>
+            </div>
+        </header>
+
+        <div class="container mx-auto px-4 py-12 max-w-7xl">
+            <!-- Executive Summary -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-bullseye mr-3 text-accent"></i>
+                    Executive Summary: Full Breeding Performance Upgrade
+                </h2>
+                <p class="text-lg mb-8 leading-relaxed text-gray-700">
+                    <strong class="text-secondary">Core Positioning:</strong> Based on First Pool's patented fermentation platform and cutting-edge metabolic science, integrating three-layer synergistic technology of precision compound enzymes, immune regulatory peptides, and metabolic regulation complex (small nucleic acid peptides + fucoidan). Targeting four core pain points of breeder rooster semen quality, hen laying performance, hatchability, and chick quality to maximize reproductive efficiency, creating a "value engine" for breeder farms.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-3 text-secondary">Fertility</h4>
+                        <div class="text-base text-gray-600 mb-2">88-92% → 92-95%</div>
+                        <div class="text-2xl font-bold text-accent mb-3">↑ 3-4%</div>
+                        <p class="text-gray-700 text-sm">Improves semen quality & oocyte vitality</p>
+                    </div>
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-3 text-secondary">Hatchability</h4>
+                        <div class="text-base text-gray-600 mb-2">84-88% → 88-92%</div>
+                        <div class="text-2xl font-bold text-accent mb-3">↑ 4-5%</div>
+                        <p class="text-gray-700 text-sm">Reduces early embryo mortality</p>
+                    </div>
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-3 text-secondary">Chick Quality</h4>
+                        <div class="text-base text-gray-600 mb-2">90-94% → 94-97%</div>
+                        <div class="text-2xl font-bold text-accent mb-3">↑ 4-5%</div>
+                        <p class="text-gray-700 text-sm">Increases chick vigor & uniformity</p>
+                    </div>
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-3 text-secondary">Peak Lay Duration</h4>
+                        <div class="text-base text-gray-600 mb-2">28-32 wks → 32-36 wks</div>
+                        <div class="text-2xl font-bold text-accent mb-3">↑ 4 wks</div>
+                        <p class="text-gray-700 text-sm">Extends peak, adds qualified eggs</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-blue rounded-card p-8 flex flex-col md:flex-row items-center justify-between">
+                    <div class="text-center md:text-left mb-6 md:mb-0">
+                        <div class="text-4xl md:text-5xl font-black text-secondary">USD 7,549</div>
+                        <div class="text-base text-dark/80 mt-2">Annual net profit /1,000 hens</div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-center">
+                        <div class="text-lg font-bold text-primary-dark">ROI 919%</div>
+                        <div class="hidden md:block text-dark/50">│</div>
+                        <div class="text-lg font-bold text-primary-dark">Payback 1.3 months</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Industry Benchmark & Challenges -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-chart-line mr-3 text-accent"></i>
+                    Taiwan Breeder Industry Benchmark & Vitality Solution
+                </h2>
+                <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow mb-6">
+                    <h3 class="text-xl font-bold text-secondary mb-4">I. Breeder Flock Performance Benchmark</h3>
+                    <div class="table-responsive">
+                        <table class="w-full border-collapse text-sm">
+                            <thead><tr class="bg-primary/10"><th class="p-3 text-left border-b-2 border-primary">Indicator</th><th class="p-3 text-left border-b-2 border-primary">Industry Average</th><th class="p-3 text-left border-b-2 border-primary">Vitality Target</th></tr></thead>
+                            <tbody>
+                                <tr><td class="p-3 border-b">Fertility</td><td class="p-3 border-b">88-92%</td><td class="p-3 border-b text-primary font-bold">92-95%</td></tr>
+                                <tr><td class="p-3 border-b">Hatchability</td><td class="p-3 border-b">84-88%</td><td class="p-3 border-b text-primary font-bold">88-92%</td></tr>
+                                <tr><td class="p-3 border-b">Chick Quality</td><td class="p-3 border-b">90-94%</td><td class="p-3 border-b text-primary font-bold">94-97%</td></tr>
+                                <tr><td class="p-3 border-b">Annual Qualified Eggs</td><td class="p-3 border-b">140-160 eggs</td><td class="p-3 border-b text-primary font-bold">155-170 eggs</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-4 text-sm text-gray-600">※ Based on Taiwan breeder industry average (2015-2025) and international journal benchmarks</div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-2 text-secondary"><i class="fas fa-exclamation-triangle text-accent mr-2"></i>Summer Breeding Disorder</h4>
+                        <p class="text-sm text-gray-700">Heat stress reduces fertility by 5-8% and hatchability by 3-5%. Vitality fucoidan activates Nrf2 pathway, scavenges free radicals, maintains sperm and oocyte quality.</p>
+                    </div>
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-2 text-secondary"><i class="fas fa-exclamation-triangle text-accent mr-2"></i>Uneven Egg Quality</h4>
+                        <p class="text-sm text-gray-700">Significant variation in shell thickness and internal quality. Vitality precision compound enzymes improve calcium and phosphorus utilization, shell strength +12%, albumen height +8%.</p>
+                    </div>
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-2 text-secondary"><i class="fas fa-exclamation-triangle text-accent mr-2"></i>Rooster Semen Decline</h4>
+                        <p class="text-sm text-gray-700">After 35 weeks, semen volume and motility decrease significantly. Vitality small nucleic acid peptides boost mitochondrial ATP synthesis, maintaining sperm motility 85%+, deformity rate <12%.</p>
+                    </div>
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-2 text-secondary"><i class="fas fa-exclamation-triangle text-accent mr-2"></i>Early Embryo Mortality</h4>
+                        <p class="text-sm text-gray-700">Embryo mortality during attachment period (0-7 days) accounts for 40% of hatch failure. Vitality immune regulatory peptides modulate endometrial cytokines, increasing attachment rate by 15%.</p>
+                    </div>
+                </div>
+
+                <div class="img-hover-zoom shadow-img mt-8">
+                    <img src="../assets/breeder-egg-quality.png" alt="Egg quality comparison" class="w-full h-auto rounded-img">
+                    <p class="text-xs text-gray-500 mt-2 italic">Fig.1: Vitality group eggs show uniform shell, normal air cell; control group rough shell, loose air cell</p>
+                </div>
+            </section>
+
+            <!-- Triple Physiological Mechanisms -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-flask mr-3 text-accent"></i>
+                    Vitality Triple Physiological Mechanisms (Peer-Reviewed)
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow border-t-4 border-primary">
+                        <div class="text-2xl mb-2">🧬</div>
+                        <h3 class="font-bold text-lg mb-2 text-secondary">Level 1: Nutrient Absorption & Gut Health</h3>
+                        <p class="text-sm text-gray-700 mb-2"><span class="font-bold">Active Components:</span> Precision Complex Enzyme</p>
+                        <p class="text-sm text-gray-700 mb-2"><span class="font-bold">Mechanism:</span> Increases protein & amino acid digestibility by 18-22%, improves villus height/crypt depth ratio, reduces intestinal inflammatory cytokines IL-1β, TNF-α.</p>
+                        <p class="text-xs text-gray-500 italic">Reference: Poultry Sci. 2023;102(4):102456. PMID:36796122</p>
+                    </div>
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow border-t-4 border-accent">
+                        <div class="text-2xl mb-2">🛡️</div>
+                        <h3 class="font-bold text-lg mb-2 text-secondary">Level 2: Antioxidant & Cell Protection</h3>
+                        <p class="text-sm text-gray-700 mb-2"><span class="font-bold">Active Components:</span> Immune Regulatory Peptides + Fucoidan</p>
+                        <p class="text-sm text-gray-700 mb-2"><span class="font-bold">Mechanism:</span> Activates Nrf2/ARE antioxidant pathway, increases SOD & GPx activity by 25-30%; protects oocyte membrane integrity, reduces sperm DNA damage by 30%.</p>
+                        <p class="text-xs text-gray-500 italic">Reference: Animals. 2022;12(15):1912. PMID:35952889</p>
+                    </div>
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow border-t-4 border-secondary">
+                        <div class="text-2xl mb-2">⚡</div>
+                        <h3 class="font-bold text-lg mb-2 text-secondary">Level 3: Reproductive Endocrine Regulation</h3>
+                        <p class="text-sm text-gray-700 mb-2"><span class="font-bold">Active Components:</span> Small Nucleic Acid Peptides (NAD+ precursor)</p>
+                        <p class="text-sm text-gray-700 mb-2"><span class="font-bold">Mechanism:</span> Enhances ovarian mitochondrial ATP synthesis, stabilizes FSH/LH pulses; promotes Leydig cell testosterone secretion, extends egg-laying peak by 4 weeks.</p>
+                        <p class="text-xs text-gray-500 italic">Reference: J. Anim. Sci. 2016;94(8):3245-3255. PMID:27695806</p>
+                    </div>
+                </div>
+
+                <div class="img-hover-zoom shadow-img mt-8">
+                    <img src="../assets/sperm-activity.png" alt="Sperm motility comparison" class="w-full h-auto rounded-img">
+                    <p class="text-xs text-gray-500 mt-2 italic">Fig.2: Vitality group rooster sperm motility 85%+, control only 65%, tail beat frequency increased by 40%</p>
+                </div>
+            </section>
+
+            <!-- Case Studies -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-trophy mr-3 text-accent"></i>
+                    Taiwan Breeder Farm Case Studies
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-2 text-secondary">📍 Yunlin · Hongchang Breeder Farm</h4>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">Scale:</span> 6,000 breeder sets (Red-feather)</p>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">Program:</span> Vitality breeder formula 1kg/ton, 16 consecutive weeks</p>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">Results:</span> Fertility 89% → 93.5%, Hatchability 85% → 90.2%, Chick quality 91% → 96%</p>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">Annual profit:</span> +USD 46,400 (projected per 1k hens)</p>
+                        <p class="text-xs text-gray-500 mt-2 italic">"Summer fertility used to drop 5-8%, but with Vitality it stayed above 93% all season." — Farm Manager Lin</p>
+                    </div>
+                    <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                        <h4 class="font-bold text-lg mb-2 text-secondary">📍 Pingtung · Yongfeng Breeder Farm</h4>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">Scale:</span> 8,000 breeder sets (Black-feather)</p>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">Program:</span> Vitality breeder formula 1kg/ton, full‑term use</p>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">Results:</span> Peak lay extended by 5 weeks, +8.5 qualified eggs/hen, chick uniformity improved by 15%</p>
+                        <p class="text-sm text-gray-700 mb-1"><span class="font-bold">Annual profit:</span> +USD 67,800</p>
+                        <p class="text-xs text-gray-500 mt-2 italic">"Chick quality jumped from 92% to 96%, customers specifically ask for our chicks." — Manager Chen</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cost & Inclusion -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-calculator mr-3 text-accent"></i>
+                    Cost Parameters & Inclusion
+                </h2>
+                <div class="bg-white rounded-card shadow-card p-6 hover:shadow-hover transition-shadow">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                        <div class="text-center"><span class="text-2xl font-bold text-primary">USD 19.20</span><div class="text-sm text-gray-600">Vitality price/kg</div></div>
+                        <div class="text-center"><span class="text-2xl font-bold text-primary">1 kg</span><div class="text-sm text-gray-600">Inclusion/ton feed</div></div>
+                        <div class="text-center"><span class="text-2xl font-bold text-primary">USD 0.0192</span><div class="text-sm text-gray-600">Added cost/kg feed</div></div>
+                        <div class="text-center"><span class="text-2xl font-bold text-primary">USD 0.00048</span><div class="text-sm text-gray-600">Added cost/egg</div></div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="w-full border-collapse text-sm">
+                            <thead><tr class="bg-primary/10"><th class="p-3 text-left border-b-2 border-primary">Cost Item</th><th class="p-3 text-left border-b-2 border-primary">Calculation</th><th class="p-3 text-left border-b-2 border-primary">Amount (USD)</th></tr></thead>
+                            <tbody>
+                                <tr><td class="p-3 border-b">Hen daily feed intake</td><td class="p-3 border-b">125 g/hen</td><td class="p-3 border-b">-</td></tr>
+                                <tr><td class="p-3 border-b">Rooster daily feed intake</td><td class="p-3 border-b">140 g/rooster</td><td class="p-3 border-b">-</td></tr>
+                                <tr><td class="p-3 border-b">Total daily feed (1,000 hens + 100 roosters)</td><td class="p-3 border-b">(1,000×0.125)+(100×0.14)=139 kg</td><td class="p-3 border-b">-</td></tr>
+                                <tr><td class="p-3 border-b">Daily Vitality cost</td><td class="p-3 border-b">139 kg × 0.0192 USD/kg</td><td class="p-3 border-b">2.67</td></tr>
+                                <tr class="bg-teal-50"><td class="p-3 border-b font-bold">Monthly cost</td><td class="p-3 border-b">30.4 days × 2.67</td><td class="p-3 border-b font-bold text-primary">81.17</td></tr>
+                                <tr class="bg-teal-50"><td class="p-3 border-b font-bold">Annual cost (44 weeks)</td><td class="p-3 border-b">308 days × 2.67</td><td class="p-3 border-b font-bold text-primary">822</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="img-hover-zoom shadow-img mt-6">
+                        <img src="../assets/breeder-feed-system.png" alt="Automated feed system" class="w-full h-auto rounded-img">
+                        <p class="text-xs text-gray-500 mt-2 italic">Fig.3: Vitality seamlessly integrates into existing feed systems, no extra labor required</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Economic Benefits -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-coins mr-3 text-accent"></i>
+                    Reproductive Performance & Economic Evaluation
+                </h2>
+                <div class="img-hover-zoom shadow-img mb-6">
+                    <img src="../assets/fertility-hatch-data.png" alt="Fertility and hatchability data" class="w-full h-auto rounded-img">
+                    <p class="text-xs text-gray-500 mt-2 italic">Fig.4: Vitality program – Fertility 92%↑, Hatchability 89%↑</p>
+                </div>
+                <div class="table-responsive">
+                    <table class="w-full border-collapse text-sm">
+                        <thead><tr><th class="p-3 border-b-2 border-primary">Benefit Item</th><th class="p-3 border-b-2 border-primary">Calculation Basis</th><th class="p-3 border-b-2 border-primary">Annual Value (USD/1k hens)</th></tr></thead>
+                        <tbody>
+                            <tr><td class="p-3 border-b">Fertility improvement (+3.5%)</td><td class="p-3 border-b">+4,400 qualified eggs × 75% hatch × USD 0.96/chick</td><td class="p-3 border-b text-primary font-bold">+2,880</td></tr>
+                            <tr><td class="p-3 border-b">Hatchability improvement (+4.5%)</td><td class="p-3 border-b">+5,400 chicks × USD 0.80/chick</td><td class="p-3 border-b text-primary font-bold">+4,320</td></tr>
+                            <tr><td class="p-3 border-b">Chick quality improvement (+4%)</td><td class="p-3 border-b">1,080 fewer culls × USD 0.80/chick</td><td class="p-3 border-b text-primary font-bold">+864</td></tr>
+                            <tr><td class="p-3 border-b">Peak lay extension (4 wks)</td><td class="p-3 border-b">+3.2 eggs/hen × 1,000 hens × USD 0.096/egg</td><td class="p-3 border-b text-primary font-bold">+307</td></tr>
+                            <tr class="bg-teal-50"><td class="p-3 border-b font-bold">Total annual benefit</td><td class="p-3 border-b"></td><td class="p-3 border-b font-bold text-primary">+8,371</td></tr>
+                            <tr><td class="p-3 border-b">Annual Vitality cost</td><td class="p-3 border-b"></td><td class="p-3 border-b text-red-600 font-bold">-822</td></tr>
+                            <tr class="bg-primary/10 font-bold"><td class="p-3 border-b">Annual net profit increase</td><td class="p-3 border-b"></td><td class="p-3 border-b text-primary text-lg">+7,549</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                    <div class="bg-neutral rounded-card p-4 text-center"><span class="text-2xl font-bold text-primary">+4,400 eggs</span><div class="text-sm">Extra hatchable eggs</div></div>
+                    <div class="bg-neutral rounded-card p-4 text-center"><span class="text-2xl font-bold text-primary">+3,960 chicks</span><div class="text-sm">Extra healthy chicks</div></div>
+                    <div class="bg-neutral rounded-card p-4 text-center"><span class="text-2xl font-bold text-primary">USD 0.80</span><div class="text-sm">Net profit per chick</div></div>
+                </div>
+                <div class="img-hover-zoom shadow-img mt-6">
+                    <img src="../assets/economic-benefit-chart.png" alt="Economic benefit chart" class="w-full h-auto rounded-img">
+                    <p class="text-xs text-gray-500 mt-2 italic">Fig.5: ROI 919% · +USD 3.96 profit/hen/year</p>
+                </div>
+                <div class="bg-gradient-to-r from-primary to-secondary rounded-card p-8 text-white text-center shadow-lg mt-6">
+                    <h3 class="text-2xl font-bold mb-2">Return on Investment Analysis</h3>
+                    <div class="text-5xl md:text-6xl font-black my-4 text-accent">919% ROI</div>
+                    <p class="text-lg mb-1">Every USD 1 invested creates USD 9.19 net profit</p>
+                    <p class="text-lg mb-1">Payback period 1.3 months · B/C ratio 1 : 9.19</p>
+                </div>
+            </section>
+
+            <!-- Scale Economics -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-chart-simple mr-3 text-accent"></i>
+                    Economic Benefits at Different Scales
+                </h2>
+                <div class="table-responsive">
+                    <table class="w-full border-collapse text-sm">
+                        <thead><tr class="bg-primary/10"><th class="p-3 border-b-2 border-primary">Farm Size</th><th class="p-3 border-b-2 border-primary">Hens</th><th class="p-3 border-b-2 border-primary">Annual Net Profit Increase</th><th class="p-3 border-b-2 border-primary">ROI</th></tr></thead>
+                        <tbody>
+                            <tr><td class="p-3 border-b">Small</td><td class="p-3 border-b">500</td><td class="p-3 border-b text-primary font-bold">USD 3,775</td><td class="p-3 border-b">919%</td></tr>
+                            <tr class="bg-primary/5"><td class="p-3 border-b font-bold">Medium (base)</td><td class="p-3 border-b">1,000</td><td class="p-3 border-b text-primary font-bold">USD 7,549</td><td class="p-3 border-b">919%</td></tr>
+                            <tr><td class="p-3 border-b">Large</td><td class="p-3 border-b">5,000</td><td class="p-3 border-b text-primary font-bold">USD 37,745</td><td class="p-3 border-b">919%</td></tr>
+                            <tr><td class="p-3 border-b">All-in/all-out</td><td class="p-3 border-b">10,000</td><td class="p-3 border-b text-primary font-bold">USD 75,490</td><td class="p-3 border-b">919%</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-green-50 border-l-4 border-success p-4 mt-4 text-sm">※ Linear scaling: costs and benefits increase proportionally, ROI stays at 919%</div>
+            </section>
+
+            <!-- Implementation & Risk -->
+            <section class="mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-shield-halved mr-3 text-accent"></i>
+                    Low‑Risk Three‑Phase Implementation
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow border-t-4 border-primary relative">
+                        <div class="absolute -top-4 -right-4 bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
+                        <h4 class="font-bold text-lg mb-3 text-secondary">Trial Phase (8 wks)</h4>
+                        <p class="mb-1 text-sm"><strong>Scale:</strong> 100 hens + 10 roosters</p>
+                        <p class="mb-1 text-sm"><strong>Period:</strong> 8 weeks</p>
+                        <p class="mb-1 text-sm"><strong>Cost:</strong> USD 100</p>
+                        <p class="text-sm"><strong>Core indicators:</strong> Fertility, hatchability, sperm motility</p>
+                    </div>
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow border-t-4 border-primary relative">
+                        <div class="absolute -top-4 -right-4 bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
+                        <h4 class="font-bold text-lg mb-3 text-secondary">Expansion Phase (16 wks)</h4>
+                        <p class="mb-1 text-sm"><strong>Scale:</strong> 500 hens + 50 roosters</p>
+                        <p class="mb-1 text-sm"><strong>Period:</strong> 16 weeks</p>
+                        <p class="mb-1 text-sm"><strong>Cost:</strong> USD 399</p>
+                        <p class="text-sm"><strong>Core indicators:</strong> Laying rate, chick quality, peak extension</p>
+                    </div>
+                    <div class="bg-neutral rounded-card shadow-card p-6 hover:shadow-hover transition-shadow border-t-4 border-primary relative">
+                        <div class="absolute -top-4 -right-4 bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
+                        <h4 class="font-bold text-lg mb-3 text-secondary">Full Roll‑out</h4>
+                        <p class="mb-1 text-sm"><strong>Scale:</strong> Entire breeder flock</p>
+                        <p class="mb-1 text-sm"><strong>Timing:</strong> Next production cycle</p>
+                        <p class="mb-1 text-sm"><strong>Cost:</strong> Farm scale dependent</p>
+                        <p class="text-sm"><strong>Goal:</strong> Maximize whole‑farm reproductive efficiency</p>
+                    </div>
+                </div>
+                <div class="bg-orange-50 border-l-4 border-orange-400 p-4 text-sm">
+                    <strong>Risk Mitigation:</strong> Phased validation, performance monitoring; 60% efficacy still yields 551% ROI, no‑contract, can be discontinued anytime.
+                </div>
+            </section>
+
+            <!-- Conclusion -->
+            <section>
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 flex items-center">
+                    <i class="fa-solid fa-star mr-3 text-accent"></i>
+                    Conclusion: The Value Revolution in Breeder Production
+                </h2>
+                <div class="bg-gradient-to-r from-primary to-secondary rounded-card p-8 text-white text-center">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
+                        <div><div class="text-3xl font-black text-accent">919%</div><div class="text-sm">ROI</div></div>
+                        <div><div class="text-3xl font-black text-accent">USD 7,549</div><div class="text-sm">Annual profit/1k hens</div></div>
+                        <div><div class="text-3xl font-black text-accent">+4-5%</div><div class="text-sm">Hatchability ↑</div></div>
+                        <div><div class="text-3xl font-black text-accent">1.3 mo</div><div class="text-sm">Payback period</div></div>
+                    </div>
+                    <p class="text-lg mt-6">Every USD 1 invested in feed cost generates USD 9.19 net profit. Shift from "lowest feed price" to "highest breeding ROI".</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- 頁腳 -->
+    <footer class="bg-dark text-white py-8 mt-16">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="text-center">
+                <div class="text-xl font-bold mb-2">首池有限公司 First Pool Ltd.</div>
+                <div class="text-sm text-gray-400 mb-4">活力旺種雞性能提升方案 Vitality Breeder Performance Enhancement Program &copy; 2026 All Rights Reserved</div>
+                <div class="text-sm text-gray-400">精準營養・先進生物科技・永續農業 Precision Nutrition・Advanced Biotechnology・Sustainable Agriculture</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到頂部按鈕 -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-secondary">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 語言切換功能 (與種公豬方案相同)
+        const langButtons = {
+            'lang-tw': document.getElementById('lang-tw'),
+            'lang-cn': document.getElementById('lang-cn'),
+            'lang-en': document.getElementById('lang-en')
+        };
+        const contentDivs = {
+            'tw': document.getElementById('content-tw'),
+            'cn': document.getElementById('content-cn'),
+            'en': document.getElementById('content-en')
+        };
+        let currentLang = 'tw';
+        function switchLanguage(lang) {
+            Object.values(contentDivs).forEach(div => div.classList.remove('active'));
+            contentDivs[lang].classList.add('active');
+            Object.entries(langButtons).forEach(([key, btn]) => {
+                if (key === `lang-${lang}`) {
+                    btn.classList.remove('bg-gray-200', 'text-gray-800');
+                    btn.classList.add('bg-primary', 'text-white');
+                } else {
+                    btn.classList.remove('bg-primary', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-800');
+                }
+            });
+            currentLang = lang;
+            localStorage.setItem('preferredLanguage', lang);
+        }
+        langButtons['lang-tw'].addEventListener('click', () => switchLanguage('tw'));
+        langButtons['lang-cn'].addEventListener('click', () => switchLanguage('cn'));
+        langButtons['lang-en'].addEventListener('click', () => switchLanguage('en'));
+        const savedLang = localStorage.getItem('preferredLanguage');
+        if (savedLang && contentDivs[savedLang]) switchLanguage(savedLang);
+        else switchLanguage('tw');
+
+        // 回到頂部按鈕
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTopBtn.classList.toggle('opacity-0', window.scrollY <= 300);
+            backToTopBtn.classList.toggle('invisible', window.scrollY <= 300);
+            backToTopBtn.classList.toggle('opacity-100', window.scrollY > 300);
+            backToTopBtn.classList.toggle('visible', window.scrollY > 300);
+        });
+        backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+
+<!-- SEO: Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "種雞性能提升方案",
+  "description": "活力旺種雞性能提升方案 - 受精率提升至92-95%，孵化率提升4-5%，健雛率94-97%，千隻場年增淨利NTD 235,915，投資報酬率919%。",
+  "url": "https://richtrong.com/活力旺種雞性能提升方案.html",
+  "image": "https://richtrong.com/assets/breeding-chicken-performance-improvement.jpg",
+  "brand": {
+    "@type": "Brand",
+    "name": "活力旺"
+  },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "首池有限公司",
+    "url": "https://richtrong.com"
+  },
+  "category": "畜牧飼料添加劑"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://richtrong.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "種雞性能提升方案",
+      "item": "https://richtrong.com/活力旺種雞性能提升方案.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "種雞性能提升方案｜活力旺飼料添加劑｜首池有限公司",
+  "description": "活力旺種雞性能提升方案 - 受精率提升至92-95%，孵化率提升4-5%，健雛率94-97%，千隻場年增淨利NTD 235,915，投資報酬率919%。",
+  "url": "https://richtrong.com/活力旺種雞性能提升方案.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "活力旺 - 首池有限公司",
+    "url": "https://richtrong.com"
+  },
+  "about": {
+    "@type": "Organization",
+    "name": "首池有限公司"
+  }
+}
+</script>
+</body>
+</html>
+
+<script>
+(function() {
+  // 原始連結 → 實際檔案名稱（請根據您的實際檔名調整）
+  const linkMap = {
+    "boar-semen-quality.html": "活力旺種公豬精液品質提升方案.html",
+    "pregnant-sow-optimization.html": "活力旺懷孕期母豬生產性能優化方案.html",
+    "nursing-sow-improvement.html": "活力旺哺乳母豬性能提升方案.html",
+    "piglet-milk-replacer.html": "活力旺仔豬人工乳性能提升方案.html",
+    "finisher-pig-fcr.html": "活力旺育肥豬FCR性能提升方案.html",
+    "breeder-chicken.html": "活力旺種雞性能提升方案.html",
+    "layer-chicken.html": "活力旺蛋雞性能提升方案.html",
+    "native-chicken.html": "活力旺土雞性能提升方案.html",
+    "broiler-fcr.html": "活力旺白肉雞FCR性能提升方案.html",
+    "tilapia-survival.html": "活力旺吳郭魚存活率提升方案.html",
+    "shrimp-survival.html": "活力旺白蝦存活率提升方案.html"
+  };
+
+  // 只修正頁尾 .footer-links 內的連結
+  document.querySelectorAll('.footer-links a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (linkMap[href] && !href.startsWith('http')) {
+      link.href = linkMap[href];  // 替換為正確的中文檔名
+    }
+  });
+})();
+</script>

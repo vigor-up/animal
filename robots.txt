@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://richtrong.com/sitemap.xml
+
+# Disallow non-content paths
+Disallow: /.github/

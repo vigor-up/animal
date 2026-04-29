@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Language Selection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; }
+        .lang-links a { margin: 0 15px; font-size: 1.2em; }
+    </style>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p>Please choose your language:</p>
+    <div class="lang-links">
+        <a href="/zh-Hant/">繁體中文</a> |
+        <a href="/zh-Hans/">简体中文</a> |
+        <a href="/en/">English</a>
+    </div>
+    <script>
+        // 可选：自动跳转（基于浏览器语言）
+        const langMap = {
+            'zh-tw': '/zh-Hant/',
+            'zh-hk': '/zh-Hant/',
+            'zh-cn': '/zh-Hans/',
+            'zh': '/zh-Hans/',
+            'en': '/en/'
+        };
+        const acceptLang = navigator.language.toLowerCase();
+        const target = langMap[acceptLang] || '/en/';
+        // 如果希望自动跳转，取消下面注释
+        // window.location.href = target;
+    </script>
+</body>
+</html>
