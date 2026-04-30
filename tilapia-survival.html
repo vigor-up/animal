@@ -214,6 +214,28 @@
         .lang-cn section:first-of-type>*,.lang-tw section:first-of-type>*,.lang-en section:first-of-type>*{position:relative;z-index:1}
         .lang-cn section:first-of-type .hero-grid>div:last-child>img{display:none}
         .lang-cn section:first-of-type .hero-grid>div:first-child,.lang-tw section:first-of-type .hero-grid>div:first-child,.lang-en section:first-of-type .hero-grid>div:first-child{flex:1 1 100%;max-width:700px}
+
+        /* ===== RESULTS ROW - mobile-first RWD ===== */
+        .results-row {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 36px;
+        }
+        .results-row__img { width: 100%; }
+        .results-row__img img { width: 100%; height: auto; border-radius: 16px; }
+        .results-row__stats { width: 100%; }
+        @media (min-width: 768px) {
+            .results-row { flex-direction: row; align-items: flex-start; gap: 40px; }
+            .results-row__img { width: 42%; flex-shrink: 0; }
+            .results-row__stats { flex: 1; }
+        }
+        /* stat list */
+        .stat-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .stat-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; }
+        .stat-label { font-weight: 800; font-size: 1rem; color: var(--text); }
+        .stat-value { font-weight: 800; font-size: 1.05rem; color: var(--accent); }
+        .stat-note { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
         </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product","name":"罗非鱼方案","description":"活力旺®存活率97.4%，均重+60%","image":"https://animal.feed-pet.com/assets/tilapia-harvest-closeup.jpg","brand":{"@type":"Brand","name":"活力旺®"},"url":"https://animal.feed-pet.com/tilapia-survival.html"}
@@ -251,7 +273,7 @@
                     <div class="kpi-card"><div><span class="after">+60%</span></div><div>均重提升</div></div>
                 </div>
             </div>
-            <div style="flex:1"><img src="assets/tilapia-harvest-closeup.jpg" alt="养殖鱼类丰收" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
+            <div class="results-row__img"><img src="assets/tilapia-harvest-closeup.jpg" alt="养殖鱼类丰收" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
         </div>
     </section>
 
@@ -269,15 +291,17 @@
     <!-- Section 3 成效展示 -->
     <div class="container" style="padding: 40px 0; border-top: 1px solid #eee;">
         <h2 style="font-size: 2rem; text-align: center; margin-bottom: 20px;">使用活力旺®的实际成果</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 40px;">
-            <div style="flex:1"><img src="assets/tilapia-growth-comparison.jpg" alt="生长对比" onerror="this.style.display='none'"></div>
-            <div style="flex:1">
-                <div><span style="font-size: 1.4rem; font-weight: 800;">存活率：</span><span class="after">52%→82%（链球菌攻毒） / 97.4%</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">FCR：</span><span class="after">↓15-18%</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">均重：</span><span class="after">增加60%</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">肠道绒毛高度：</span><span class="after">提升30%</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">养殖周期：</span><span class="after">缩短10-18天</span></div>
-                <p style="margin-top: 16px; font-size: 0.85rem; color: var(--muted);">※ 以上数据来自：①活力旺®吴郭鱼同场同密度对照试验；②ResearchGate 2026 (Astaxanthin aquaculture)；③PMID:38481478；④MDPI 2023；⑤Aquaculture Int 2024。建议设立对照池验证实际效果。</p>
+        <div class="results-row">
+            <div class="results-row__img"><img src="assets/tilapia-growth-comparison.jpg" alt="生长对比" onerror="this.style.display='none'"></div>
+            <div class="results-row__stats">
+                <ul class="stat-list">
+<li><span class="stat-label">存活率：</span><span class="stat-value">52%→82%（链球菌攻毒） / 97.4%</span></li>
+                <li><span class="stat-label">FCR：</span><span class="stat-value">↓15-18%</span></li>
+                <li><span class="stat-label">均重：</span><span class="stat-value">增加60%</span></li>
+                <li><span class="stat-label">肠道绒毛高度：</span><span class="stat-value">提升30%</span></li>
+                <li><span class="stat-label">养殖周期：</span><span class="stat-value">缩短10-18天</span></li>
+                </ul>
+<p class="stat-note">※ 以上数据来自：①活力旺®吴郭鱼同场同密度对照试验；②ResearchGate 2026 (Astaxanthin aquaculture)；③PMID:38481478；④MDPI 2023；⑤Aquaculture Int 2024。建议设立对照池验证实际效果。</p>
             </div>
         </div>
         <div class="usage-note" style="background: #eef5ee; padding: 20px; border-radius: 16px; margin: 20px 0;">
@@ -383,7 +407,7 @@
                     <div class="kpi-card"><div><span class="after">+60%</span></div><div>均重提升</div></div>
                 </div>
             </div>
-            <div style="flex:1"><img src="assets/tilapia-harvest-closeup.jpg" alt="養殖魚類豐收" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
+            <div class="results-row__img"><img src="assets/tilapia-harvest-closeup.jpg" alt="養殖魚類豐收" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
         </div>
     </section>
 
@@ -401,15 +425,17 @@
     <!-- Section 3 成效展示 -->
     <div class="container" style="padding: 40px 0; border-top: 1px solid #eee;">
         <h2 style="font-size: 2rem; text-align: center; margin-bottom: 20px;">使用活力旺®的實際成果</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 40px;">
-            <div style="flex:1"><img src="assets/tilapia-growth-comparison.jpg" alt="生長對比" onerror="this.style.display='none'"></div>
-            <div style="flex:1">
-                <div><span style="font-size: 1.4rem; font-weight: 800;">存活率：</span><span class="after">52%→82%（鏈球菌攻毒） / 97.4%</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">FCR：</span><span class="after">↓15-18%</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">均重：</span><span class="after">增加60%</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">腸道絨毛高度：</span><span class="after">提升30%</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">養殖週期：</span><span class="after">縮短10-18天</span></div>
-                <p style="margin-top: 16px; font-size: 0.85rem; color: var(--muted);">※ 以上數據來自：①活力旺®吳郭魚同場同密度對照試驗；②ResearchGate 2026 (Astaxanthin aquaculture)；③PMID:38481478；④MDPI 2023；⑤Aquaculture Int 2024。建議設立對照池驗證實際效果。</p>
+        <div class="results-row">
+            <div class="results-row__img"><img src="assets/tilapia-growth-comparison.jpg" alt="生長對比" onerror="this.style.display='none'"></div>
+            <div class="results-row__stats">
+                <ul class="stat-list">
+<li><span class="stat-label">存活率：</span><span class="stat-value">52%→82%（鏈球菌攻毒） / 97.4%</span></li>
+                <li><span class="stat-label">FCR：</span><span class="stat-value">↓15-18%</span></li>
+                <li><span class="stat-label">均重：</span><span class="stat-value">增加60%</span></li>
+                <li><span class="stat-label">腸道絨毛高度：</span><span class="stat-value">提升30%</span></li>
+                <li><span class="stat-label">養殖週期：</span><span class="stat-value">縮短10-18天</span></li>
+                </ul>
+<p class="stat-note">※ 以上數據來自：①活力旺®吳郭魚同場同密度對照試驗；②ResearchGate 2026 (Astaxanthin aquaculture)；③PMID:38481478；④MDPI 2023；⑤Aquaculture Int 2024。建議設立對照池驗證實際效果。</p>
             </div>
         </div>
         <div class="usage-note" style="background: #eef5ee; padding: 20px; border-radius: 16px; margin: 20px 0;">
@@ -515,7 +541,7 @@
                     <div class="kpi-card"><div><span class="after">+60%</span></div><div>Average Weight Gain</div></div>
                 </div>
             </div>
-            <div style="flex:1"><img src="assets/tilapia-harvest-closeup.jpg" alt="Fish harvest" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
+            <div class="results-row__img"><img src="assets/tilapia-harvest-closeup.jpg" alt="Fish harvest" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
         </div>
     </section>
 
@@ -533,15 +559,17 @@
     <!-- Section 3 Results -->
     <div class="container" style="padding: 40px 0; border-top: 1px solid #eee;">
         <h2 style="font-size: 2rem; text-align: center; margin-bottom: 20px;">Real Results with Vitality®</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 40px;">
-            <div style="flex:1"><img src="assets/tilapia-growth-comparison.jpg" alt="Growth comparison" onerror="this.style.display='none'"></div>
-            <div style="flex:1">
-                <div><span style="font-size: 1.4rem; font-weight: 800;">Survival: </span><span class="after">52%→82% (Strep challenge) / 97.4% (Astaxanthin)</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">FCR: </span><span class="after">↓15-18%</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">Avg weight: </span><span class="after">+60%</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">Gut villi height: </span><span class="after">+30%</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">Grow-out period: </span><span class="after">Shortened 10-18 days</span></div>
-                <p style="margin-top: 16px; font-size: 0.85rem; color: var(--muted);">※ Data from: ①VitalBoost® tilapia same-farm trials; ②ResearchGate 2026 (Astaxanthin aquaculture); ③PMID:38481478; ④MDPI 2023; ⑤Aquaculture Int 2024. Recommend your own control pond validation.</p>
+        <div class="results-row">
+            <div class="results-row__img"><img src="assets/tilapia-growth-comparison.jpg" alt="Growth comparison" onerror="this.style.display='none'"></div>
+            <div class="results-row__stats">
+                <ul class="stat-list">
+<li><span class="stat-label">Survival: </span><span class="stat-value">52%→82% (Strep challenge) / 97.4% (Astaxanthin)</span></li>
+                <li><span class="stat-label">FCR: </span><span class="stat-value">↓15-18%</span></li>
+                <li><span class="stat-label">Avg weight: </span><span class="stat-value">+60%</span></li>
+                <li><span class="stat-label">Gut villi height: </span><span class="stat-value">+30%</span></li>
+                <li><span class="stat-label">Grow-out period: </span><span class="stat-value">Shortened 10-18 days</span></li>
+                </ul>
+<p class="stat-note">※ Data from: ①VitalBoost® tilapia same-farm trials; ②ResearchGate 2026 (Astaxanthin aquaculture); ③PMID:38481478; ④MDPI 2023; ⑤Aquaculture Int 2024. Recommend your own control pond validation.</p>
             </div>
         </div>
         <div class="usage-note" style="background: #eef5ee; padding: 20px; border-radius: 16px; margin: 20px 0;">

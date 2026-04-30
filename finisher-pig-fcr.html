@@ -211,6 +211,28 @@
         .lang-cn section:first-of-type>*,.lang-tw section:first-of-type>*,.lang-en section:first-of-type>*{position:relative;z-index:1}
         .lang-cn section:first-of-type .hero-grid>div:last-child>img{display:none}
         .lang-cn section:first-of-type .hero-grid>div:first-child,.lang-tw section:first-of-type .hero-grid>div:first-child,.lang-en section:first-of-type .hero-grid>div:first-child{flex:1 1 100%;max-width:700px}
+
+        /* ===== RESULTS ROW - mobile-first RWD ===== */
+        .results-row {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 36px;
+        }
+        .results-row__img { width: 100%; }
+        .results-row__img img { width: 100%; height: auto; border-radius: 16px; }
+        .results-row__stats { width: 100%; }
+        @media (min-width: 768px) {
+            .results-row { flex-direction: row; align-items: flex-start; gap: 40px; }
+            .results-row__img { width: 42%; flex-shrink: 0; }
+            .results-row__stats { flex: 1; }
+        }
+        /* stat list */
+        .stat-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .stat-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; }
+        .stat-label { font-weight: 800; font-size: 1rem; color: var(--text); }
+        .stat-value { font-weight: 800; font-size: 1.05rem; color: var(--accent); }
+        .stat-note { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
         </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product","name":"育肥猪FCR提升方案","description":"活力旺®活力得®枯草菌源蛋白酶，FCR 2.8→2.3","image":"https://animal.feed-pet.com/assets/finisher-pig-fcr-improvement.jpg","brand":{"@type":"Brand","name":"活力旺®"},"url":"https://animal.feed-pet.com/finisher-pig-fcr.html"}
@@ -248,7 +270,7 @@
                     <div class="kpi-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px);"><div><span class="before">110kg</span><span class="arrow">→</span><span class="after" style="color: var(--accent);">130kg+</span></div><div>出栏体重</div></div>
                 </div>
             </div>
-            <div style="flex:1"><img src="assets/finisher-pig-fcr-improvement.jpg" alt="育肥猪FCR改善" onerror="this.style.display='none'" style="border-radius: 24px; width:100%"></div>
+            <div class="results-row__img"><img src="assets/finisher-pig-fcr-improvement.jpg" alt="育肥猪FCR改善" onerror="this.style.display='none'" style="border-radius: 24px; width:100%"></div>
         </div>
     </section>
 
@@ -266,16 +288,18 @@
     <!-- Section 3 成效展示 -->
     <div class="container" style="padding: 40px 0; border-top: 1px solid #eee;">
         <h2 style="font-size: 2rem; text-align: center; margin-bottom: 20px;">使用活力旺®的实际成果</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 40px;">
-            <div style="flex:1"><img src="assets/slaughterhouse-data.jpg" alt="屠宰场实证数据" onerror="this.style.display='none'"></div>
-            <div style="flex:1">
-                <div><span style="font-size: 1.4rem; font-weight: 800;">FCR：</span><span class="before">2.8</span> → <span style="color: var(--accent); font-size: 1.8rem;">2.3</span> (↓18%)</div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">出肉率：</span><span class="before">&lt;75%</span> → <span style="color: var(--accent);">&gt;82%</span> (↑7%+)</div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">背脂厚：</span><span class="before">&gt;2.5cm</span> → <span style="color: var(--accent);">&lt;2cm</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">出栏体重：</span><span class="before">110kg</span> → <span style="color: var(--accent);">130kg+</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">ATP合成效率：</span>+25-30%</div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">肌肉抗氧化：</span>+21.5%（MDPI 2014）</div>
-            </div>
+        <div class="results-row">
+            <div class="results-row__img"><img src="assets/slaughterhouse-data.jpg" alt="屠宰场实证数据" onerror="this.style.display='none'"></div>
+            <div class="results-row__stats">
+                <ul class="stat-list">
+<li><span class="stat-label">FCR：</span><span class="stat-value"><span class="before">2.8</span> → <span style="color: var(--accent); font-size: 1.8rem;">2.3</span> (↓18%)</span></li>
+                <li><span class="stat-label">出肉率：</span><span class="stat-value"><span class="before">&lt;75%</span> → <span style="color: var(--accent);">&gt;82%</span> (↑7%+)</span></li>
+                <li><span class="stat-label">背脂厚：</span><span class="stat-value"><span class="before">&gt;2.5cm</span> → <span style="color: var(--accent);">&lt;2cm</span></span></li>
+                <li><span class="stat-label">出栏体重：</span><span class="stat-value"><span class="before">110kg</span> → <span style="color: var(--accent);">130kg+</span></span></li>
+                <li><span class="stat-label">ATP合成效率：</span><span class="stat-value">+25-30%</span></li>
+                <li><span class="stat-label">肌肉抗氧化：</span><span class="stat-value">+21.5%（MDPI 2014）</span></li>
+            </ul>
+</div>
         </div>
         <div style="text-align: center; margin: 30px 0;"><img src="assets/heavy-pigs-140kg.jpg" alt="出栏140kg" onerror="this.style.display='none'" style="max-width:100%; border-radius:20px;"></div>
         <!-- 添加量说明（修正2） -->
@@ -379,11 +403,11 @@
     <section style="background: linear-gradient(135deg, #1a3a1a 0%, #2a5a2a 100%); color: white; padding: 60px 0;">
         <div class="container hero-grid" style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
             <div style="flex:1"><div style="color: var(--accent); font-weight: 600; margin-bottom: 12px;">活力旺® 育肥豬方案</div><h1 style="font-size: clamp(2rem,5vw,3rem); font-weight: 800; margin-bottom: 24px;">育肥豬FCR提升方案<br><span style="color: var(--accent);">料肉比從2.8降至2.3</span></h1><div style="display: flex; gap: 20px; flex-wrap: wrap;"><div class="kpi-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px);"><div><span class="before">2.8</span><span class="arrow">→</span><span class="after" style="color: var(--accent);">2.3</span></div><div>FCR料肉比</div></div><div class="kpi-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px);"><div><span class="before">&lt;75%</span><span class="arrow">→</span><span class="after" style="color: var(--accent);">&gt;82%</span></div><div>出肉率</div></div><div class="kpi-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px);"><div><span class="before">110kg</span><span class="arrow">→</span><span class="after" style="color: var(--accent);">130kg+</span></div><div>出欄體重</div></div></div></div>
-            <div style="flex:1"><img src="assets/finisher-pig-fcr-improvement.jpg" alt="育肥豬FCR改善" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
+            <div class="results-row__img"><img src="assets/finisher-pig-fcr-improvement.jpg" alt="育肥豬FCR改善" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
         </div>
     </section>
     <div class="container" style="padding:60px 0;"><h2 style="font-size:2rem;text-align:center;margin-bottom:40px;">您是否也有這些困擾？</h2><div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));"><div class="pain-point"><i class="fas fa-exclamation-triangle" style="color:var(--danger);font-size:1.8rem;margin-bottom:12px;display:block;"></i><h3>料肉比居高不下</h3><p>行業均值2.7-2.8，豆粕一漲價，利潤就消失</p></div><div class="pain-point"><i class="fas fa-chart-line" style="color:var(--danger);font-size:1.8rem;margin-bottom:12px;display:block;"></i><h3>出肉率低</h3><p>&lt;75%，高檔肉比例少，屠宰場壓價，賣不出好錢</p></div><div class="pain-point"><i class="fas fa-weight-hanging" style="color:var(--danger);font-size:1.8rem;margin-bottom:12px;display:block;"></i><h3>背脂厚</h3><p>&gt;2.5cm，胴體評級差，進不了高端肉市場</p></div></div><p style="text-align:center;margin-top:32px;font-weight:500;">活力旺®的使命，就是徹底解決這三個問題。</p></div>
-    <div class="container" style="padding:40px 0;border-top:1px solid #eee;"><h2 style="font-size:2rem;text-align:center;margin-bottom:20px;">使用活力旺®的實際成果</h2><div style="display:flex;flex-wrap:wrap;gap:30px;align-items:center;margin-bottom:40px;"><div style="flex:1"><img src="assets/slaughterhouse-data.jpg" alt="屠宰場實證數據" onerror="this.style.display='none'"></div><div style="flex:1"><div><span style="font-size:1.4rem;font-weight:800;">FCR：</span><span class="before">2.8</span> → <span style="color:var(--accent);font-size:1.8rem;">2.3</span> (↓18%)</div><div><span style="font-size:1.4rem;font-weight:800;">出肉率：</span><span class="before">&lt;75%</span> → <span style="color:var(--accent);">&gt;82%</span> (↑7%+)</div><div><span style="font-size:1.4rem;font-weight:800;">背脂厚：</span><span class="before">&gt;2.5cm</span> → <span style="color:var(--accent);">&lt;2cm</span></div><div><span style="font-size:1.4rem;font-weight:800;">出欄體重：</span><span class="before">110kg</span> → <span style="color:var(--accent);">130kg+</span></div><div><span style="font-size:1.4rem;font-weight:800;">ATP合成效率：</span>+25-30%</div><div><span style="font-size:1.4rem;font-weight:800;">肌肉抗氧化：</span>+21.5%（MDPI 2014）</div></div></div><div style="text-align:center;margin:30px 0;"><img src="assets/heavy-pigs-140kg.jpg" alt="出欄140kg" onerror="this.style.display='none'" style="max-width:100%;border-radius:20px;"></div>
+    <div class="container" style="padding:40px 0;border-top:1px solid #eee;"><h2 style="font-size:2rem;text-align:center;margin-bottom:20px;">使用活力旺®的實際成果</h2><div style="display:flex;flex-wrap:wrap;gap:30px;align-items:center;margin-bottom:40px;"><div class="results-row__img"><img src="assets/slaughterhouse-data.jpg" alt="屠宰場實證數據" onerror="this.style.display='none'"></div><div style="flex:1"><div><span style="font-size:1.4rem;font-weight:800;">FCR：</span><span class="before">2.8</span> → <span style="color:var(--accent);font-size:1.8rem;">2.3</span> (↓18%)</div><div><span style="font-size:1.4rem;font-weight:800;">出肉率：</span><span class="before">&lt;75%</span> → <span style="color:var(--accent);">&gt;82%</span> (↑7%+)</div><div><span style="font-size:1.4rem;font-weight:800;">背脂厚：</span><span class="before">&gt;2.5cm</span> → <span style="color:var(--accent);">&lt;2cm</span></div><div><span style="font-size:1.4rem;font-weight:800;">出欄體重：</span><span class="before">110kg</span> → <span style="color:var(--accent);">130kg+</span></div><div><span style="font-size:1.4rem;font-weight:800;">ATP合成效率：</span>+25-30%</div><div><span style="font-size:1.4rem;font-weight:800;">肌肉抗氧化：</span>+21.5%（MDPI 2014）</div></div></div><div style="text-align:center;margin:30px 0;"><img src="assets/heavy-pigs-140kg.jpg" alt="出欄140kg" onerror="this.style.display='none'" style="max-width:100%;border-radius:20px;"></div>
         <!-- 添加量说明（修正2 繁体） -->
         <div style="background:#eef5ee;padding:20px;border-radius:16px;margin:20px 0;"><strong>📌 添加量說明</strong><br>每噸全價飼料添加20公斤活力旺®，出廠預混規格，開袋即用，無需額外操作。</div>
         <div style="background:#eef5ee;padding:20px;border-radius:16px;margin:20px 0;"><strong>📌 使用方式</strong><br>活力旺®預混型產品，20公斤/袋，按<strong>20公斤兌1噸全價飼料</strong>均勻混合，直接使用。</div>
@@ -403,11 +427,11 @@
     <section style="background: linear-gradient(135deg, #1a3a1a 0%, #2a5a2a 100%); color: white; padding: 60px 0;">
         <div class="container hero-grid" style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
             <div style="flex:1"><div style="color: var(--accent); font-weight: 600; margin-bottom: 12px;">Vitality® Finisher Program</div><h1 style="font-size: clamp(2rem,5vw,3rem); font-weight: 800; margin-bottom: 24px;">Finishing Pig FCR Upgrade<br><span style="color: var(--accent);">Feed Ratio: 2.8 → 2.3</span></h1><div style="display: flex; gap: 20px; flex-wrap: wrap;"><div class="kpi-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px);"><div><span class="before">2.8</span><span class="arrow">→</span><span class="after" style="color: var(--accent);">2.3</span></div><div>FCR Ratio</div></div><div class="kpi-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px);"><div><span class="before">&lt;75%</span><span class="arrow">→</span><span class="after" style="color: var(--accent);">&gt;82%</span></div><div>Carcass Yield</div></div><div class="kpi-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px);"><div><span class="before">110kg</span><span class="arrow">→</span><span class="after" style="color: var(--accent);">130kg+</span></div><div>Live Weight</div></div></div></div>
-            <div style="flex:1"><img src="assets/finisher-pig-fcr-improvement.jpg" alt="Finisher FCR improvement" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
+            <div class="results-row__img"><img src="assets/finisher-pig-fcr-improvement.jpg" alt="Finisher FCR improvement" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
         </div>
     </section>
     <div class="container" style="padding:60px 0;"><h2 style="font-size:2rem;text-align:center;margin-bottom:40px;">Do You Also Face These Challenges?</h2><div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));"><div class="pain-point"><i class="fas fa-exclamation-triangle" style="color:var(--danger);font-size:1.8rem;margin-bottom:12px;display:block;"></i><h3>High FCR</h3><p>Industry average 2.7-2.8. Soybean price spike wipes out your profit.</p></div><div class="pain-point"><i class="fas fa-chart-line" style="color:var(--danger);font-size:1.8rem;margin-bottom:12px;display:block;"></i><h3>Low Carcass Yield</h3><p>&lt;75%, few premium cuts. Slaughterhouses force low prices.</p></div><div class="pain-point"><i class="fas fa-weight-hanging" style="color:var(--danger);font-size:1.8rem;margin-bottom:12px;display:block;"></i><h3>Thick Backfat</h3><p>&gt;2.5cm, poor grading. Locked out of premium markets.</p></div></div><p style="text-align:center;margin-top:32px;font-weight:500;">Vitality®'s mission is to solve these three problems completely.</p></div>
-    <div class="container" style="padding:40px 0;border-top:1px solid #eee;"><h2 style="font-size:2rem;text-align:center;margin-bottom:20px;">Real Results with Vitality®</h2><div style="display:flex;flex-wrap:wrap;gap:30px;align-items:center;margin-bottom:40px;"><div style="flex:1"><img src="assets/slaughterhouse-data.jpg" alt="Slaughterhouse data" onerror="this.style.display='none'"></div><div style="flex:1"><div><span style="font-size:1.4rem;font-weight:800;">FCR：</span><span class="before">2.8</span> → <span style="color:var(--accent);font-size:1.8rem;">2.3</span> (↓18%)</div><div><span style="font-size:1.4rem;font-weight:800;">Carcass Yield：</span><span class="before">&lt;75%</span> → <span style="color:var(--accent);">&gt;82%</span> (↑7%+)</div><div><span style="font-size:1.4rem;font-weight:800;">Backfat：</span><span class="before">&gt;2.5cm</span> → <span style="color:var(--accent);">&lt;2cm</span></div><div><span style="font-size:1.4rem;font-weight:800;">Live Weight：</span><span class="before">110kg</span> → <span style="color:var(--accent);">130kg+</span></div><div><span style="font-size:1.4rem;font-weight:800;">ATP synthesis：</span>+25-30%</div><div><span style="font-size:1.4rem;font-weight:800;">Muscle antioxidant：</span>+21.5% (MDPI 2014)</div></div></div><div style="text-align:center;margin:30px 0;"><img src="assets/heavy-pigs-140kg.jpg" alt="140kg slaughter weight" onerror="this.style.display='none'" style="max-width:100%;border-radius:20px;"></div>
+    <div class="container" style="padding:40px 0;border-top:1px solid #eee;"><h2 style="font-size:2rem;text-align:center;margin-bottom:20px;">Real Results with Vitality®</h2><div style="display:flex;flex-wrap:wrap;gap:30px;align-items:center;margin-bottom:40px;"><div class="results-row__img"><img src="assets/slaughterhouse-data.jpg" alt="Slaughterhouse data" onerror="this.style.display='none'"></div><div style="flex:1"><div><span style="font-size:1.4rem;font-weight:800;">FCR：</span><span class="before">2.8</span> → <span style="color:var(--accent);font-size:1.8rem;">2.3</span> (↓18%)</div><div><span style="font-size:1.4rem;font-weight:800;">Carcass Yield：</span><span class="before">&lt;75%</span> → <span style="color:var(--accent);">&gt;82%</span> (↑7%+)</div><div><span style="font-size:1.4rem;font-weight:800;">Backfat：</span><span class="before">&gt;2.5cm</span> → <span style="color:var(--accent);">&lt;2cm</span></div><div><span style="font-size:1.4rem;font-weight:800;">Live Weight：</span><span class="before">110kg</span> → <span style="color:var(--accent);">130kg+</span></div><div><span style="font-size:1.4rem;font-weight:800;">ATP synthesis：</span>+25-30%</div><div><span style="font-size:1.4rem;font-weight:800;">Muscle antioxidant：</span>+21.5% (MDPI 2014)</div></div></div><div style="text-align:center;margin:30px 0;"><img src="assets/heavy-pigs-140kg.jpg" alt="140kg slaughter weight" onerror="this.style.display='none'" style="max-width:100%;border-radius:20px;"></div>
         <!-- 添加量说明（修正2 英文） -->
         <div style="background:#eef5ee;padding:20px;border-radius:16px;margin:20px 0;"><strong>📌 Addition Instruction</strong><br>Add 20kg VitalBoost® per tonne of complete feed. Ready-to-use pre-mix, no extra steps.</div>
         <div style="background:#eef5ee;padding:20px;border-radius:16px;margin:20px 0;"><strong>📌 Usage</strong><br>VitalBoost® pre-mixed 20kg/bag. Mix <strong>20kg per 1 tonne of complete feed</strong> uniformly.</div>

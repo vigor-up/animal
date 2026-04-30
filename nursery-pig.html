@@ -221,6 +221,28 @@
         .lang-cn section:first-of-type>*,.lang-tw section:first-of-type>*,.lang-en section:first-of-type>*{position:relative;z-index:1}
         .lang-cn section:first-of-type .hero-grid>div:last-child>img{display:none}
         .lang-cn section:first-of-type .hero-grid>div:first-child,.lang-tw section:first-of-type .hero-grid>div:first-child,.lang-en section:first-of-type .hero-grid>div:first-child{flex:1 1 100%;max-width:700px}
+
+        /* ===== RESULTS ROW - mobile-first RWD ===== */
+        .results-row {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 36px;
+        }
+        .results-row__img { width: 100%; }
+        .results-row__img img { width: 100%; height: auto; border-radius: 16px; }
+        .results-row__stats { width: 100%; }
+        @media (min-width: 768px) {
+            .results-row { flex-direction: row; align-items: flex-start; gap: 40px; }
+            .results-row__img { width: 42%; flex-shrink: 0; }
+            .results-row__stats { flex: 1; }
+        }
+        /* stat list */
+        .stat-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .stat-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; }
+        .stat-label { font-weight: 800; font-size: 1rem; color: var(--text); }
+        .stat-value { font-weight: 800; font-size: 1.05rem; color: var(--accent); }
+        .stat-note { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
         </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product","name":"保育猪腹泻防控方案","description":"活力旺®活力得®枯草菌源蛋白酶，ADG+6.45%","image":"https://animal.feed-pet.com/assets/healthy-piglets.jpg","brand":{"@type":"Brand","name":"活力旺®"},"url":"https://animal.feed-pet.com/nursery-pig.html"}
@@ -258,7 +280,7 @@
                     <div class="kpi-card"><div><span class="after">+6.35%</span></div><div>料肉比</div></div>
                 </div>
             </div>
-            <div style="flex:1"><img src="assets/healthy-piglets.jpg" alt="健康保育猪" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
+            <div class="results-row__img"><img src="assets/healthy-piglets.jpg" alt="健康保育猪" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
         </div>
     </section>
 
@@ -276,16 +298,18 @@
     <!-- Section 3 成效展示 -->
     <div class="container" style="padding: 40px 0; border-top: 1px solid #eee;">
         <h2 style="font-size: 2rem; text-align: center; margin-bottom: 20px;">使用活力旺®的实际成果</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 40px;">
-            <div style="flex:1"><img src="assets/piglet-milk-replacer-improvement.jpg" alt="保育猪改善" onerror="this.style.display='none'"></div>
-            <div style="flex:1">
-                <div><span style="font-size: 1.4rem; font-weight: 800;">腹泻率：</span><span class="after">显著降低（无抗条件下低于10%）</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">ADG：</span><span class="after">+6.45%</span> <span style="font-size: 0.8rem;">(PMC 2018)</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">FCR：</span><span class="after">+6.35%</span> <span style="font-size: 0.8rem;">(PMC 2018)</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">肠道乳酸菌：</span><span class="after">显著增加，大肠杆菌减少</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">70日龄体重：</span><span class="after">达30kg以上</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">均匀度：</span><span class="after">CV值降低，整齐度提升</span></div>
-                <p style="margin-top: 16px; font-size: 0.85rem; color: var(--muted);">※ 以上数据来自：①PMC 2018及Long et al. 2015文献（ADG/FCR）；②中科院亚热带农业生态研究所研究成果（腹泻率）；③活力旺®同场同品种对照试验。建议使用者设立对照组验证实际效果。</p>
+        <div class="results-row">
+            <div class="results-row__img"><img src="assets/piglet-milk-replacer-improvement.jpg" alt="保育猪改善" onerror="this.style.display='none'"></div>
+            <div class="results-row__stats">
+                <ul class="stat-list">
+<li><span class="stat-label">腹泻率：</span><span class="stat-value">显著降低（无抗条件下低于10%）</span></li>
+                <li><span class="stat-label">ADG：</span><span class="stat-value">+6.45%</span> <span style="font-size: 0.8rem;">(PMC 2018)</span></li>
+                <li><span class="stat-label">FCR：</span><span class="stat-value">+6.35%</span> <span style="font-size: 0.8rem;">(PMC 2018)</span></li>
+                <li><span class="stat-label">肠道乳酸菌：</span><span class="stat-value">显著增加，大肠杆菌减少</span></li>
+                <li><span class="stat-label">70日龄体重：</span><span class="stat-value">达30kg以上</span></li>
+                <li><span class="stat-label">均匀度：</span><span class="stat-value">CV值降低，整齐度提升</span></li>
+                </ul>
+<p class="stat-note">※ 以上数据来自：①PMC 2018及Long et al. 2015文献（ADG/FCR）；②中科院亚热带农业生态研究所研究成果（腹泻率）；③活力旺®同场同品种对照试验。建议使用者设立对照组验证实际效果。</p>
             </div>
         </div>
         <div class="usage-note" style="background: #eef5ee; padding: 20px; border-radius: 16px; margin: 20px 0;">
@@ -403,7 +427,7 @@
                     <div class="kpi-card"><div><span class="after">+6.35%</span></div><div>料肉比</div></div>
                 </div>
             </div>
-            <div style="flex:1"><img src="assets/healthy-piglets.jpg" alt="健康保育豬" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
+            <div class="results-row__img"><img src="assets/healthy-piglets.jpg" alt="健康保育豬" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
         </div>
     </section>
 
@@ -421,16 +445,18 @@
     <!-- Section 3 成效展示 -->
     <div class="container" style="padding: 40px 0; border-top: 1px solid #eee;">
         <h2 style="font-size: 2rem; text-align: center; margin-bottom: 20px;">使用活力旺®的實際成果</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 40px;">
-            <div style="flex:1"><img src="assets/piglet-milk-replacer-improvement.jpg" alt="保育豬改善" onerror="this.style.display='none'"></div>
-            <div style="flex:1">
-                <div><span style="font-size: 1.4rem; font-weight: 800;">腹瀉率：</span><span class="after">顯著降低（無抗條件下低於10%）</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">ADG：</span><span class="after">+6.45%</span> <span style="font-size: 0.8rem;">(PMC 2018)</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">FCR：</span><span class="after">+6.35%</span> <span style="font-size: 0.8rem;">(PMC 2018)</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">腸道乳酸菌：</span><span class="after">顯著增加，大腸桿菌減少</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">70日齡體重：</span><span class="after">達30kg以上</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">均勻度：</span><span class="after">CV值降低，整齊度提升</span></div>
-                <p style="margin-top: 16px; font-size: 0.85rem; color: var(--muted);">※ 以上數據來自：①PMC 2018及Long et al. 2015文獻（ADG/FCR）；②中科院亞熱帶農業生態研究所研究成果（腹瀉率）；③活力旺®同場同品種對照試驗。建議使用者設立對照組驗證實際效果。</p>
+        <div class="results-row">
+            <div class="results-row__img"><img src="assets/piglet-milk-replacer-improvement.jpg" alt="保育豬改善" onerror="this.style.display='none'"></div>
+            <div class="results-row__stats">
+                <ul class="stat-list">
+<li><span class="stat-label">腹瀉率：</span><span class="stat-value">顯著降低（無抗條件下低於10%）</span></li>
+                <li><span class="stat-label">ADG：</span><span class="stat-value">+6.45%</span> <span style="font-size: 0.8rem;">(PMC 2018)</span></li>
+                <li><span class="stat-label">FCR：</span><span class="stat-value">+6.35%</span> <span style="font-size: 0.8rem;">(PMC 2018)</span></li>
+                <li><span class="stat-label">腸道乳酸菌：</span><span class="stat-value">顯著增加，大腸桿菌減少</span></li>
+                <li><span class="stat-label">70日齡體重：</span><span class="stat-value">達30kg以上</span></li>
+                <li><span class="stat-label">均勻度：</span><span class="stat-value">CV值降低，整齊度提升</span></li>
+                </ul>
+<p class="stat-note">※ 以上數據來自：①PMC 2018及Long et al. 2015文獻（ADG/FCR）；②中科院亞熱帶農業生態研究所研究成果（腹瀉率）；③活力旺®同場同品種對照試驗。建議使用者設立對照組驗證實際效果。</p>
             </div>
         </div>
         <div class="usage-note" style="background: #eef5ee; padding: 20px; border-radius: 16px; margin: 20px 0;">
@@ -548,7 +574,7 @@
                     <div class="kpi-card"><div><span class="after">+6.35%</span></div><div>FCR</div></div>
                 </div>
             </div>
-            <div style="flex:1"><img src="assets/healthy-piglets.jpg" alt="Healthy nursery pigs" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
+            <div class="results-row__img"><img src="assets/healthy-piglets.jpg" alt="Healthy nursery pigs" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
         </div>
     </section>
 
@@ -566,16 +592,18 @@
     <!-- Section 3 Results -->
     <div class="container" style="padding: 40px 0; border-top: 1px solid #eee;">
         <h2 style="font-size: 2rem; text-align: center; margin-bottom: 20px;">Real Results with Vitality®</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 40px;">
-            <div style="flex:1"><img src="assets/piglet-milk-replacer-improvement.jpg" alt="Nursery pig improvement" onerror="this.style.display='none'"></div>
-            <div style="flex:1">
-                <div><span style="font-size: 1.4rem; font-weight: 800;">Diarrhea Rate: </span><span class="after">Significantly reduced (under 10% in antibiotic‑free systems)</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">ADG: </span><span class="after">+6.45%</span> <span style="font-size: 0.8rem;">(PMC 2018)</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">FCR: </span><span class="after">+6.35%</span> <span style="font-size: 0.8rem;">(PMC 2018)</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">Gut Lactobacilli: </span><span class="after">Increased, E. coli reduced</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">70‑day Body Weight: </span><span class="after">Reaches 30kg+</span></div>
-                <div><span style="font-size: 1.4rem; font-weight: 800;">Uniformity: </span><span class="after">CV↓, improved evenness</span></div>
-                <p style="margin-top: 16px; font-size: 0.85rem; color: var(--muted);">※ Data from: ①PMC 2018 & Long et al. 2015 (ADG/FCR); ②CAS Subtropical Ecology Institute (diarrhea rate); ③VitalBoost® same‑farm control trials. Recommend your own control group validation.</p>
+        <div class="results-row">
+            <div class="results-row__img"><img src="assets/piglet-milk-replacer-improvement.jpg" alt="Nursery pig improvement" onerror="this.style.display='none'"></div>
+            <div class="results-row__stats">
+                <ul class="stat-list">
+<li><span class="stat-label">Diarrhea Rate: </span><span class="stat-value">Significantly reduced (under 10% in antibiotic‑free systems)</span></li>
+                <li><span class="stat-label">ADG: </span><span class="stat-value">+6.45%</span> <span style="font-size: 0.8rem;">(PMC 2018)</span></li>
+                <li><span class="stat-label">FCR: </span><span class="stat-value">+6.35%</span> <span style="font-size: 0.8rem;">(PMC 2018)</span></li>
+                <li><span class="stat-label">Gut Lactobacilli: </span><span class="stat-value">Increased, E. coli reduced</span></li>
+                <li><span class="stat-label">70‑day Body Weight: </span><span class="stat-value">Reaches 30kg+</span></li>
+                <li><span class="stat-label">Uniformity: </span><span class="stat-value">CV↓, improved evenness</span></li>
+                </ul>
+<p class="stat-note">※ Data from: ①PMC 2018 & Long et al. 2015 (ADG/FCR); ②CAS Subtropical Ecology Institute (diarrhea rate); ③VitalBoost® same‑farm control trials. Recommend your own control group validation.</p>
             </div>
         </div>
         <div class="usage-note" style="background: #eef5ee; padding: 20px; border-radius: 16px; margin: 20px 0;">

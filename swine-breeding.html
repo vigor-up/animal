@@ -162,6 +162,28 @@
         .lang-cn section:first-of-type>*,.lang-tw section:first-of-type>*,.lang-en section:first-of-type>*{position:relative;z-index:1}
         .lang-cn section:first-of-type .hero-grid>div:last-child>img{display:none}
         .lang-cn section:first-of-type .hero-grid>div:first-child,.lang-tw section:first-of-type .hero-grid>div:first-child,.lang-en section:first-of-type .hero-grid>div:first-child{flex:1 1 100%;max-width:700px}
+
+        /* ===== RESULTS ROW - mobile-first RWD ===== */
+        .results-row {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 36px;
+        }
+        .results-row__img { width: 100%; }
+        .results-row__img img { width: 100%; height: auto; border-radius: 16px; }
+        .results-row__stats { width: 100%; }
+        @media (min-width: 768px) {
+            .results-row { flex-direction: row; align-items: flex-start; gap: 40px; }
+            .results-row__img { width: 42%; flex-shrink: 0; }
+            .results-row__stats { flex: 1; }
+        }
+        /* stat list */
+        .stat-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .stat-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; }
+        .stat-label { font-weight: 800; font-size: 1rem; color: var(--text); }
+        .stat-value { font-weight: 800; font-size: 1.05rem; color: var(--accent); }
+        .stat-note { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
         </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product","name":"种公猪精液品质提升方案","description":"活力旺®活力得®枯草菌源蛋白酶","image":"https://animal.feed-pet.com/assets/modern-boar-farm-header.jpg","brand":{"@type":"Brand","name":"活力旺®"},"url":"https://animal.feed-pet.com/swine-breeding.html"}
@@ -228,8 +250,8 @@
     <!-- 成效展示（含精液量对比图） -->
     <div class="container" style="padding: 40px 0; border-top: 1px solid #eee;">
         <h2 style="font-size: 2rem; text-align: center; margin-bottom: 20px;">使用活力旺®的实际成果</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 40px;">
-            <div style="flex:1"><img src="assets/sperm-motility-comparison-chart.jpg" alt="精子活力对比" onerror="this.style.display='none'"></div>
+        <div class="results-row">
+            <div class="results-row__img"><img src="assets/sperm-motility-comparison-chart.jpg" alt="精子活力对比" onerror="this.style.display='none'"></div>
             <div style="flex:1">
                 <div style="margin-bottom: 20px;"><span style="font-size: 2rem; font-weight: 800;">精子活力</span><br><span class="before">65%</span> → <span style="color: var(--accent); font-size: 2rem;">85%+</span></div>
                 <div style="margin-bottom: 20px;"><span style="font-size: 2rem; font-weight: 800;">精液量</span><br>约克夏/长白 <span class="before">500ml</span> → <span style="color: var(--accent);">550-600ml</span><br>杜洛克 <span class="before">250ml</span> → <span style="color: var(--accent);">260-300ml</span></div>
@@ -396,8 +418,8 @@
     <!-- 成效展示 -->
     <div class="container" style="padding: 40px 0; border-top: 1px solid #eee;">
         <h2 style="font-size: 2rem; text-align: center; margin-bottom: 20px;">使用活力旺®的實際成果</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 40px;">
-            <div style="flex:1"><img src="assets/sperm-motility-comparison-chart.jpg" alt="精子活力對比" onerror="this.style.display='none'"></div>
+        <div class="results-row">
+            <div class="results-row__img"><img src="assets/sperm-motility-comparison-chart.jpg" alt="精子活力對比" onerror="this.style.display='none'"></div>
             <div style="flex:1">
                 <div style="margin-bottom: 20px;"><span style="font-size: 2rem; font-weight: 800;">精子活力</span><br><span class="before">65%</span> → <span style="color: var(--accent); font-size: 2rem;">85%+</span></div>
                 <div style="margin-bottom: 20px;"><span style="font-size: 2rem; font-weight: 800;">精液量</span><br>約克夏/長白 <span class="before">500ml</span> → <span style="color: var(--accent);">550-600ml</span><br>杜洛克 <span class="before">250ml</span> → <span style="color: var(--accent);">260-300ml</span></div>
@@ -564,8 +586,8 @@
     <!-- Results -->
     <div class="container" style="padding: 40px 0; border-top: 1px solid #eee;">
         <h2 style="font-size: 2rem; text-align: center; margin-bottom: 20px;">Real Results with Vitality®</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 40px;">
-            <div style="flex:1"><img src="assets/sperm-motility-comparison-chart.jpg" alt="Sperm Motility Comparison" onerror="this.style.display='none'"></div>
+        <div class="results-row">
+            <div class="results-row__img"><img src="assets/sperm-motility-comparison-chart.jpg" alt="Sperm Motility Comparison" onerror="this.style.display='none'"></div>
             <div style="flex:1">
                 <div style="margin-bottom: 20px;"><span style="font-size: 2rem; font-weight: 800;">Sperm Motility</span><br><span class="before">65%</span> → <span style="color: var(--accent); font-size: 2rem;">85%+</span></div>
                 <div style="margin-bottom: 20px;"><span style="font-size: 2rem; font-weight: 800;">Semen Volume</span><br>Yorkshire/Landrace <span class="before">500ml</span> → <span style="color: var(--accent);">550-600ml</span><br>Duroc <span class="before">250ml</span> → <span style="color: var(--accent);">260-300ml</span></div>
