@@ -67,9 +67,11 @@
             flex-shrink: 0;
         }
         .logo-img {
-            height: 38px;
-            width: auto;
+            height: 32px !important;
+            width: auto !important;
+            max-width: 32px !important;
             object-fit: contain;
+            border-radius: 0 !important;
         }
         .brand {
             font-size: 1.2rem;
@@ -274,7 +276,15 @@
         .lang-cn.active, .lang-tw.active, .lang-en.active {
             display: block;
         }
-    </style>
+            .footer-logo-img {
+            height: 32px !important;
+            width: auto !important;
+            max-width: 32px !important;
+            border-radius: 0 !important;
+            filter: brightness(0) invert(1) opacity(0.85);
+            flex-shrink: 0;
+        }
+</style>
 </head>
 <body>
 
