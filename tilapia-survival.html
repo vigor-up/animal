@@ -279,6 +279,50 @@
             .roi-benefit-item { flex: 1; }
             .roi-number-badge { font-size: 1.7rem; }
         }
+
+        /* ===== LOGO ===== */
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+        .logo-img {
+            height: 36px;
+            width: auto;
+            display: block;
+            border-radius: 0;
+            filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2));
+        }
+        .brand-text {
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--accent, #c9a84c);
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+        /* Footer logo */
+        .footer-logo-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .footer-logo-img {
+            height: 40px;
+            width: auto;
+            border-radius: 0;
+            filter: brightness(0) invert(1) opacity(0.85);
+        }
+        .footer-brand-text {
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: #c9a84c;
+            letter-spacing: 0.06em;
+        }
         </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product","name":"罗非鱼方案","description":"活力旺®存活率97.4%，均重+60%","image":"https://animal.feed-pet.com/assets/tilapia-harvest-closeup.jpg","brand":{"@type":"Brand","name":"活力旺®"},"url":"https://animal.feed-pet.com/tilapia-survival.html"}
@@ -292,7 +336,10 @@
 
 <nav>
     <div class="container nav-container">
-        <div class="brand">活力旺®</div>
+        <a href="index.html" class="logo-area">
+      <img src="assets/logo.png" alt="活力旺® VitalBoost Plus" class="logo-img" onerror="this.style.display='none'">
+      <span class="brand-text">活力旺®</span>
+    </a>
         <div class="lang-switcher">
             <button class="lang-btn active" data-lang="cn">简体中文</button>
             <button class="lang-btn" data-lang="tw">繁體中文</button>
@@ -428,7 +475,11 @@
 
     <footer>
         <div class="container">
-            <div class="footer-links" style="text-align: center; margin-bottom: 20px;">
+            <div class="footer-logo-row">
+            <img src="assets/logo.png" alt="活力旺® VitalBoost Plus" class="footer-logo-img" onerror="this.style.display='none'">
+            <span class="footer-brand-text">活力旺® VitalBoost Plus</span>
+          </div>
+          <div class="footer-links" style="text-align: center; margin-bottom: 20px;">
                 <a href="index.html">首页</a> | <a href="swine-breeding.html">种公猪</a> | <a href="pregnant-sow.html">怀孕母猪</a> | <a href="lactating-sow.html">哺乳母猪</a> | <a href="nursery-pig.html">保育猪</a> | <a href="finisher-pig-fcr.html">育肥猪</a> | <a href="layer-chicken.html">蛋鸡</a> | <a href="broiler-fcr.html">白肉鸡</a> | <a href="native-chicken.html">土鸡</a> | <a href="tilapia-survival.html">罗非鱼</a> | <a href="shrimp-survival.html">白虾/泰国虾</a> | <a href="fish-yield.html">养殖鱼类</a>
             </div>
             <div style="text-align: center;">© 2026 活力旺®代理商 · 引用PubMed/FAO/GSA · 实拍图片</div>

@@ -294,6 +294,50 @@
         .stat-label { font-weight: 800; font-size: 1rem; color: var(--text); }
         .stat-value { font-weight: 800; font-size: 1.05rem; color: var(--accent); }
         .stat-note { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+
+        /* ===== LOGO ===== */
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+        .logo-img {
+            height: 36px;
+            width: auto;
+            display: block;
+            border-radius: 0;
+            filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2));
+        }
+        .brand-text {
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--accent, #c9a84c);
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+        /* Footer logo */
+        .footer-logo-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .footer-logo-img {
+            height: 40px;
+            width: auto;
+            border-radius: 0;
+            filter: brightness(0) invert(1) opacity(0.85);
+        }
+        .footer-brand-text {
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: #c9a84c;
+            letter-spacing: 0.06em;
+        }
         </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product","name":"偶蹄动物方案","description":"活力旺®肉牛ADG+25%，乳牛产奶+2.7kg/天","image":"https://animal.feed-pet.com/assets/livestock-beef-before-after.jpg","brand":{"@type":"Brand","name":"活力旺®"},"url":"https://animal.feed-pet.com/livestock.html"}
@@ -307,7 +351,10 @@
 
 <nav>
     <div class="container nav-container">
-        <div class="brand">活力旺®</div>
+        <a href="index.html" class="logo-area">
+      <img src="assets/logo.png" alt="活力旺® VitalBoost Plus" class="logo-img" onerror="this.style.display='none'">
+      <span class="brand-text">活力旺®</span>
+    </a>
         <div class="lang-switcher">
             <button class="lang-btn active" data-lang="cn">简体</button>
             <button class="lang-btn" data-lang="tw">繁體</button>
@@ -443,7 +490,11 @@
         </div>
         <p>※ 活力旺®代理商提供完整试验记录表单。</p>
     </div>
-    <footer><div class="container"><div class="footer-links"><a href="index.html">首页</a> | <a href="swine-breeding.html">种公猪</a> | <a href="pregnant-sow.html">怀孕母猪</a> | <a href="lactating-sow.html">哺乳母猪</a> | <a href="nursery-pig.html">保育猪</a> | <a href="finisher-pig-fcr.html">育肥猪</a> | <a href="layer-chicken.html">蛋鸡</a> | <a href="broiler-fcr.html">白肉鸡</a> | <a href="native-chicken.html">土鸡</a> | <a href="tilapia-survival.html">罗非鱼</a> | <a href="shrimp-survival.html">白虾</a> | <a href="livestock.html">牛羊</a></div><div>© 2026 活力旺®代理商</div></div></footer>
+    <footer><div class="container"><div class="footer-logo-row">
+            <img src="assets/logo.png" alt="活力旺® VitalBoost Plus" class="footer-logo-img" onerror="this.style.display='none'">
+            <span class="footer-brand-text">活力旺® VitalBoost Plus</span>
+          </div>
+          <div class="footer-links"><a href="index.html">首页</a> | <a href="swine-breeding.html">种公猪</a> | <a href="pregnant-sow.html">怀孕母猪</a> | <a href="lactating-sow.html">哺乳母猪</a> | <a href="nursery-pig.html">保育猪</a> | <a href="finisher-pig-fcr.html">育肥猪</a> | <a href="layer-chicken.html">蛋鸡</a> | <a href="broiler-fcr.html">白肉鸡</a> | <a href="native-chicken.html">土鸡</a> | <a href="tilapia-survival.html">罗非鱼</a> | <a href="shrimp-survival.html">白虾</a> | <a href="livestock.html">牛羊</a></div><div>© 2026 活力旺®代理商</div></div></footer>
 </div>
 
 <!-- ==================== 繁體中文版（完整翻譯） ==================== -->

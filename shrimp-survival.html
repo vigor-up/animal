@@ -207,6 +207,50 @@ footer{background:var(--primary);color:#ccc;padding:40px 0}
   .section--cta{padding:48px 16px}
   .brand{font-size:1.1rem}
 }
+
+        /* ===== LOGO ===== */
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+        .logo-img {
+            height: 36px;
+            width: auto;
+            display: block;
+            border-radius: 0;
+            filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2));
+        }
+        .brand-text {
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--accent, #c9a84c);
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+        /* Footer logo */
+        .footer-logo-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .footer-logo-img {
+            height: 40px;
+            width: auto;
+            border-radius: 0;
+            filter: brightness(0) invert(1) opacity(0.85);
+        }
+        .footer-brand-text {
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: #c9a84c;
+            letter-spacing: 0.06em;
+        }
 </style>
 </head>
 <body>
@@ -218,7 +262,10 @@ footer{background:var(--primary);color:#ccc;padding:40px 0}
 
 <nav>
   <div class="container nav-inner">
-    <div class="brand">活力旺®</div>
+    <a href="index.html" class="logo-area">
+      <img src="assets/logo.png" alt="活力旺® VitalBoost Plus" class="logo-img" onerror="this.style.display='none'">
+      <span class="brand-text">活力旺®</span>
+    </a>
     <div class="lang-switcher">
       <button class="lang-btn active" data-lang="cn">简体中文</button>
       <button class="lang-btn" data-lang="tw">繁體中文</button>
@@ -435,7 +482,11 @@ footer{background:var(--primary);color:#ccc;padding:40px 0}
 
   <footer>
     <div class="container">
-      <div class="footer-links">
+      <div class="footer-logo-row">
+            <img src="assets/logo.png" alt="活力旺® VitalBoost Plus" class="footer-logo-img" onerror="this.style.display='none'">
+            <span class="footer-brand-text">活力旺® VitalBoost Plus</span>
+          </div>
+          <div class="footer-links">
         <a href="index.html">首頁</a> | <a href="swine-breeding.html">種公豬</a> | <a href="pregnant-sow.html">懷孕母豬</a> | <a href="lactating-sow.html">哺乳母豬</a> |
         <a href="nursery-pig.html">保育豬</a> | <a href="finisher-pig-fcr.html">育肥豬</a> | <a href="layer-chicken.html">蛋雞</a> | <a href="broiler-fcr.html">白肉雞</a> |
         <a href="native-chicken.html">土雞</a> | <a href="tilapia-survival.html">吳郭魚</a> | <a href="shrimp-survival.html">白蝦/泰國蝦</a> | <a href="livestock.html">牛羊</a>
@@ -652,7 +703,11 @@ footer{background:var(--primary);color:#ccc;padding:40px 0}
 
   <footer>
     <div class="container">
-      <div class="footer-links">
+      <div class="footer-logo-row">
+            <img src="assets/logo.png" alt="活力旺® VitalBoost Plus" class="footer-logo-img" onerror="this.style.display='none'">
+            <span class="footer-brand-text">活力旺® VitalBoost Plus</span>
+          </div>
+          <div class="footer-links">
         <a href="index.html">首頁</a> | <a href="swine-breeding.html">種公豬</a> | <a href="pregnant-sow.html">懷孕母豬</a> | <a href="lactating-sow.html">哺乳母豬</a> |
         <a href="nursery-pig.html">保育豬</a> | <a href="finisher-pig-fcr.html">育肥豬</a> | <a href="layer-chicken.html">蛋雞</a> | <a href="broiler-fcr.html">白肉雞</a> |
         <a href="native-chicken.html">土雞</a> | <a href="tilapia-survival.html">吳郭魚</a> | <a href="shrimp-survival.html">白蝦/泰國蝦</a> | <a href="livestock.html">牛羊</a>
@@ -869,7 +924,11 @@ footer{background:var(--primary);color:#ccc;padding:40px 0}
 
   <footer>
     <div class="container">
-      <div class="footer-links">
+      <div class="footer-logo-row">
+            <img src="assets/logo.png" alt="活力旺® VitalBoost Plus" class="footer-logo-img" onerror="this.style.display='none'">
+            <span class="footer-brand-text">活力旺® VitalBoost Plus</span>
+          </div>
+          <div class="footer-links">
         <a href="index.html">Home</a> | <a href="swine-breeding.html">Boar</a> | <a href="pregnant-sow.html">Pregnant Sow</a> | <a href="lactating-sow.html">Lactating Sow</a> |
         <a href="nursery-pig.html">Nursery</a> | <a href="finisher-pig-fcr.html">Finisher</a> | <a href="layer-chicken.html">Layer Hen</a> | <a href="broiler-fcr.html">Broiler</a> |
         <a href="native-chicken.html">Native Chicken</a> | <a href="tilapia-survival.html">Tilapia</a> | <a href="shrimp-survival.html">White Shrimp/Prawn</a> | <a href="livestock.html">Cattle &amp; Sheep</a>

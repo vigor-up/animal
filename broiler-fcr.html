@@ -234,6 +234,50 @@
             color: var(--accent);
             font-family: 'Roboto Mono', monospace;
         }
+
+        /* ===== LOGO ===== */
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+        .logo-img {
+            height: 36px;
+            width: auto;
+            display: block;
+            border-radius: 0;
+            filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2));
+        }
+        .brand-text {
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--accent, #c9a84c);
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+        /* Footer logo */
+        .footer-logo-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .footer-logo-img {
+            height: 40px;
+            width: auto;
+            border-radius: 0;
+            filter: brightness(0) invert(1) opacity(0.85);
+        }
+        .footer-brand-text {
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: #c9a84c;
+            letter-spacing: 0.06em;
+        }
     </style>
 </head>
 <body>
@@ -243,7 +287,10 @@
 
 <nav>
     <div class="container nav-container">
-        <a href="index.html" class="brand">活力旺®</a>
+        <a href="index.html" class="logo-area">
+      <img src="assets/logo.png" alt="活力旺® VitalBoost Plus" class="logo-img" onerror="this.style.display='none'">
+      <span class="brand-text">活力旺®</span>
+    </a>
         <div class="lang-switcher">
             <button class="lang-btn active" data-lang="cn">简体</button>
             <button class="lang-btn" data-lang="tw">繁體</button>
@@ -649,7 +696,11 @@
 </script>
 <footer style="background:#1a3a1a;color:#ddd;padding:32px 16px 20px;margin-top:48px;text-align:center;font-size:.78rem;line-height:1.9">
 <div style="max-width:1280px;margin:0 auto">
-<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px 20px;margin-bottom:20px">
+<div class="footer-logo-row">
+            <img src="assets/logo.png" alt="活力旺® VitalBoost Plus" class="footer-logo-img" onerror="this.style.display='none'">
+            <span class="footer-brand-text">活力旺® VitalBoost Plus</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px 20px;margin-bottom:20px">
 <a href="index.html" style="color:#ddd;text-decoration:none">首頁</a>
 <a href="swine-breeding.html" style="color:#ddd;text-decoration:none">種公豬</a>
 <a href="pregnant-sow.html" style="color:#ddd;text-decoration:none">懷孕母豬</a>
