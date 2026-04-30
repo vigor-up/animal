@@ -215,13 +215,8 @@
         .lang-cn section:first-of-type .hero-grid>div:last-child>img{display:none}
         .lang-cn section:first-of-type .hero-grid>div:first-child,.lang-tw section:first-of-type .hero-grid>div:first-child,.lang-en section:first-of-type .hero-grid>div:first-child{flex:1 1 100%;max-width:700px}
 
-        /* ===== RESULTS ROW - mobile-first RWD ===== */
-        .results-row {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-            margin-bottom: 36px;
-        }
+        /* ===== RESULTS ROW mobile-first ===== */
+        .results-row { display: flex; flex-direction: column; gap: 24px; margin-bottom: 36px; }
         .results-row__img { width: 100%; }
         .results-row__img img { width: 100%; height: auto; border-radius: 16px; }
         .results-row__stats { width: 100%; }
@@ -230,12 +225,60 @@
             .results-row__img { width: 42%; flex-shrink: 0; }
             .results-row__stats { flex: 1; }
         }
-        /* stat list */
         .stat-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
         .stat-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; }
         .stat-label { font-weight: 800; font-size: 1rem; color: var(--text); }
         .stat-value { font-weight: 800; font-size: 1.05rem; color: var(--accent); }
         .stat-note { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+
+        /* ===== ROI BLOCK compact mobile ===== */
+        .roi-block-wrap {
+            background: linear-gradient(120deg, #1a3a1a, #2a5a2a);
+            color: white;
+            padding: 28px 20px;
+            border-radius: 28px;
+            text-align: center;
+        }
+        .roi-cost { font-size: 1.15rem; margin-bottom: 0; }
+        .roi-arrow { font-size: 1.6rem; font-weight: 800; margin: 8px 0; line-height: 1; }
+        .roi-benefits-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 12px 0;
+            text-align: left;
+        }
+        .roi-benefit-item {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 9px 13px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .roi-benefit-item small {
+            display: block;
+            font-size: 0.78rem;
+            opacity: 0.82;
+            margin-top: 2px;
+        }
+        .roi-number-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: #1a3a1a;
+            font-size: 1.35rem;
+            font-weight: 800;
+            padding: 7px 22px;
+            border-radius: 60px;
+            margin: 12px 0 8px;
+        }
+        .roi-ref { font-size: 0.78rem; opacity: 0.75; margin-top: 4px; }
+        @media (min-width: 768px) {
+            .roi-block-wrap { padding: 40px 36px; }
+            .roi-cost { font-size: 1.4rem; }
+            .roi-benefits-list { flex-direction: row; text-align: center; }
+            .roi-benefit-item { flex: 1; }
+            .roi-number-badge { font-size: 1.7rem; }
+        }
         </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product","name":"罗非鱼方案","description":"活力旺®存活率97.4%，均重+60%","image":"https://animal.feed-pet.com/assets/tilapia-harvest-closeup.jpg","brand":{"@type":"Brand","name":"活力旺®"},"url":"https://animal.feed-pet.com/tilapia-survival.html"}
@@ -349,16 +392,16 @@
     <!-- Section 7 ROI概览 -->
     <div class="container" style="padding: 60px 0; text-align: center;">
         <h2 style="font-size: 2rem; margin-bottom: 20px;">投入多少，得到多少？</h2>
-        <div style="background: linear-gradient(120deg, #1a3a1a, #2a5a2a); color: white; padding: 40px; border-radius: 40px;">
-            <div style="font-size: 1.5rem;">投入 1 份成本</div>
-            <div style="font-size: 3rem; font-weight: 800; margin: 20px;">→</div>
-            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-                <div><i class="fas fa-chart-line"></i> ①存活率提升（52%→82%对照试验基准）<br><small>每万尾多收获3,000尾商品鱼</small></div>
-                <div><i class="fas fa-dollar-sign"></i> ②FCR降低15-18%<br><small>饲料成本显著下降（饲料占养殖成本50-60%）</small></div>
-                <div><i class="fas fa-thin"></i> ③养殖周期缩短10-18天<br><small>同样鱼塘，一年多出一部分造，年总产量显著提升</small></div>
+        <div class="roi-block-wrap">
+            <div class="roi-cost">投入 1 份成本</div>
+            <div class="roi-arrow">↓</div>
+            <div class="roi-benefits-list">
+                <div class="roi-benefit-item"><i class="fas fa-chart-line"></i> ①存活率提升（52%→82%对照试验基准）<small>每万尾多收获3,000尾商品鱼</small></div>
+                <div class="roi-benefit-item"><i class="fas fa-dollar-sign"></i> ②FCR降低15-18%<small>饲料成本显著下降（饲料占养殖成本50-60%）</small></div>
+                <div class="roi-benefit-item"><i class="fas fa-thin"></i> ③养殖周期缩短10-18天<small>同样鱼塘，一年多出一部分造，年总产量显著提升</small></div>
             </div>
-            <div style="margin-top: 30px; font-size: 2rem; font-weight: 800; background: var(--accent); color: #1a3a1a; display: inline-block; padding: 8px 32px; border-radius: 60px;">投入产出比 约 1:6～1:10</div>
-            <p style="margin-top: 20px; font-size: 0.85rem;">※ 田间试验参考值，实际收益因管理条件而异。</p>
+            <div class="roi-number-badge">投入产出比 约 1:6～1:10</div>
+            <p class="roi-ref">※ 田间试验参考值，实际收益因管理条件而异。</p>
         </div>
         <div style="margin:40px auto; max-width:100%;"><div class="roi-overlay"><img src="assets/tilapia-roi-comparison.jpg" alt="ROI示意" onerror="this.style.display='none'"><div class="roi-text">投入产出比<br>约 1:6～1:10</div></div></div>
     </div>
@@ -483,16 +526,16 @@
     <!-- Section 7 ROI概覽 -->
     <div class="container" style="padding: 60px 0; text-align: center;">
         <h2 style="font-size: 2rem; margin-bottom: 20px;">投入多少，得到多少？</h2>
-        <div style="background: linear-gradient(120deg, #1a3a1a, #2a5a2a); color: white; padding: 40px; border-radius: 40px;">
-            <div style="font-size: 1.5rem;">投入 1 份成本</div>
-            <div style="font-size: 3rem; font-weight: 800; margin: 20px;">→</div>
-            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-                <div><i class="fas fa-chart-line"></i> ①存活率提升（52%→82%對照試驗基準）<br><small>每萬尾多收穫3,000尾商品魚</small></div>
-                <div><i class="fas fa-dollar-sign"></i> ②FCR降低15-18%<br><small>飼料成本顯著下降（飼料佔養殖成本50-60%）</small></div>
-                <div><i class="fas fa-thin"></i> ③養殖週期縮短10-18天<br><small>同樣魚塭，一年多出一部分造，年總產量顯著提升</small></div>
+        <div class="roi-block-wrap">
+            <div class="roi-cost">投入 1 份成本</div>
+            <div class="roi-arrow">↓</div>
+            <div class="roi-benefits-list">
+                <div class="roi-benefit-item"><i class="fas fa-chart-line"></i> ①存活率提升（52%→82%對照試驗基準）<small>每萬尾多收穫3,000尾商品魚</small></div>
+                <div class="roi-benefit-item"><i class="fas fa-dollar-sign"></i> ②FCR降低15-18%<small>飼料成本顯著下降（飼料佔養殖成本50-60%）</small></div>
+                <div class="roi-benefit-item"><i class="fas fa-thin"></i> ③養殖週期縮短10-18天<small>同樣魚塭，一年多出一部分造，年總產量顯著提升</small></div>
             </div>
-            <div style="margin-top: 30px; font-size: 2rem; font-weight: 800; background: var(--accent); color: #1a3a1a; display: inline-block; padding: 8px 32px; border-radius: 60px;">投入產出比 約 1:6～1:10</div>
-            <p style="margin-top: 20px; font-size: 0.85rem;">※ 田間試驗參考值，實際收益因管理條件而異。</p>
+            <div class="roi-number-badge">投入產出比 約 1:6～1:10</div>
+            <p class="roi-ref">※ 田間試驗參考值，實際收益因管理條件而異。</p>
         </div>
         <div style="margin:40px auto; max-width:100%;"><div class="roi-overlay"><img src="assets/tilapia-roi-comparison.jpg" alt="ROI示意" onerror="this.style.display='none'"><div class="roi-text">投入產出比<br>約 1:6～1:10</div></div></div>
     </div>

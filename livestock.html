@@ -214,6 +214,86 @@
         .lang-cn section:first-of-type>*,.lang-tw section:first-of-type>*,.lang-en section:first-of-type>*{position:relative;z-index:1}
         .lang-cn section:first-of-type .hero-grid>div:last-child>img{display:none}
         .lang-cn section:first-of-type .hero-grid>div:first-child,.lang-tw section:first-of-type .hero-grid>div:first-child,.lang-en section:first-of-type .hero-grid>div:first-child{flex:1 1 100%;max-width:700px}
+
+        /* ===== ROI BLOCK - compact mobile ===== */
+        .roi-block-wrap {
+            background: linear-gradient(120deg, #1a3a1a, #2a5a2a);
+            color: white;
+            padding: 32px 24px;
+            border-radius: 32px;
+            text-align: center;
+        }
+        .roi-block-wrap .roi-cost {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+        }
+        .roi-block-wrap .roi-arrow {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin: 8px 0;
+            line-height: 1;
+        }
+        .roi-benefits-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 12px 0;
+            text-align: left;
+        }
+        .roi-benefits-list .roi-benefit-item {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-size: 0.92rem;
+            line-height: 1.5;
+        }
+        .roi-benefits-list .roi-benefit-item small {
+            display: block;
+            font-size: 0.8rem;
+            opacity: 0.8;
+            margin-top: 2px;
+        }
+        .roi-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: #1a3a1a;
+            font-size: 1.4rem;
+            font-weight: 800;
+            padding: 8px 24px;
+            border-radius: 60px;
+            margin: 14px 0 10px;
+        }
+        .roi-ref {
+            font-size: 0.8rem;
+            opacity: 0.75;
+            margin-top: 6px;
+        }
+        @media (min-width: 768px) {
+            .roi-benefits-list {
+                flex-direction: row;
+                text-align: center;
+            }
+            .roi-benefits-list .roi-benefit-item { flex: 1; }
+            .roi-block-wrap { padding: 40px 36px; }
+            .roi-block-wrap .roi-cost { font-size: 1.4rem; }
+            .roi-badge { font-size: 1.8rem; }
+        }
+
+        /* ===== RESULTS ROW mobile-first ===== */
+        .results-row { display: flex; flex-direction: column; gap: 24px; margin-bottom: 36px; }
+        .results-row__img { width: 100%; }
+        .results-row__img img { width: 100%; height: auto; border-radius: 16px; }
+        .results-row__stats { width: 100%; }
+        @media (min-width: 768px) {
+            .results-row { flex-direction: row; align-items: flex-start; gap: 40px; }
+            .results-row__img { width: 42%; flex-shrink: 0; }
+            .results-row__stats { flex: 1; }
+        }
+        .stat-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .stat-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; }
+        .stat-label { font-weight: 800; font-size: 1rem; color: var(--text); }
+        .stat-value { font-weight: 800; font-size: 1.05rem; color: var(--accent); }
+        .stat-note { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
         </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product","name":"偶蹄动物方案","description":"活力旺®肉牛ADG+25%，乳牛产奶+2.7kg/天","image":"https://animal.feed-pet.com/assets/livestock-beef-before-after.jpg","brand":{"@type":"Brand","name":"活力旺®"},"url":"https://animal.feed-pet.com/livestock.html"}
@@ -251,7 +331,7 @@
                     <div class="kpi-card"><div><span class="after">-6%</span></div><div>饲料转换率改善</div></div>
                 </div>
             </div>
-            <div style="flex:1"><img src="assets/livestock-beef-before-after.jpg" alt="牛羊养殖" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
+            <div class="results-row__img"><img src="assets/livestock-beef-before-after.jpg" alt="牛羊养殖" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
         </div>
     </section>
 
@@ -273,19 +353,19 @@
     <div class="container" style="padding: 40px 0; border-top: 1px solid #eee;">
         <h2 style="font-size: 2rem; text-align: center; margin-bottom: 20px;">使用活力旺®的实际成果</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin: 40px 0;">
-            <div style="flex:1"><img src="assets/livestock-beef-before-after.jpg" alt="肉牛对比" onerror="this.style.display='none'"></div>
+            <div class="results-row__img"><img src="assets/livestock-beef-before-after.jpg" alt="肉牛对比" onerror="this.style.display='none'"></div>
             <div style="flex:1"><h3 style="color:var(--accent)">肉牛</h3><p>ADG +25%（Sentonpharm试验数据）<br>犊牛30日龄体重 +4.11%（PMCID: PMC11394282）<br>肌肉脂肪酸显著改善，脂肪氧化降低-25%<br>蹄行跛行显著降低</p></div>
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin: 40px 0;">
-            <div style="flex:1"><img src="assets/livestock-dairy-before-after.jpg" alt="乳牛对比" onerror="this.style.display='none'"></div>
+            <div class="results-row__img"><img src="assets/livestock-dairy-before-after.jpg" alt="乳牛对比" onerror="this.style.display='none'"></div>
             <div style="flex:1"><h3 style="color:var(--accent)">乳牛</h3><p>日均产乳量 +2.7 kg ECM/日（Selko 2024）<br>血清GGT活性 +64.68%（犊牛试验）<br>P4孕酮浓度显著提升，胚胎品质改善<br>犊牛体重 +9.36%，初乳IgG显著提升</p></div>
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin: 40px 0;">
-            <div style="flex:1"><img src="assets/livestock-sheep-before-after.jpg" alt="肉羊对比" onerror="this.style.display='none'"></div>
+            <div class="results-row__img"><img src="assets/livestock-sheep-before-after.jpg" alt="肉羊对比" onerror="this.style.display='none'"></div>
             <div style="flex:1"><h3 style="color:var(--accent)">肉羊</h3><p>FCR -6.35%（PMC 2012验证）<br>胴体重 +2 kg（P<0.05）</p></div>
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin: 40px 0;">
-            <div style="flex:1"><img src="assets/livestock-wool-before-after.jpg" alt="绵羊毛对比" onerror="this.style.display='none'"></div>
+            <div class="results-row__img"><img src="assets/livestock-wool-before-after.jpg" alt="绵羊毛对比" onerror="this.style.display='none'"></div>
             <div style="flex:1"><h3 style="color:var(--accent)">绵羊</h3><p>脂肪氧化降低 -2.5%<br>羊毛品质显著改善（细度、光泽、毛量）<br>矿物质代谢效率 +2%</p></div>
         </div>
         <div class="usage-note" style="background: #eef5ee; padding: 20px; border-radius: 16px; margin: 20px 0;">
@@ -339,14 +419,10 @@
     <!-- Section 7 ROI概览（CSS卡片） -->
     <div class="container" style="padding: 60px 0; text-align: center;">
         <h2 style="font-size: 2rem; margin-bottom: 20px;">投入多少，得到多少？</h2>
-        <div style="background: linear-gradient(120deg, #1a3a1a, #2a5a2a); color: white; padding: 40px; border-radius: 40px;">
-            <div style="font-size: 1.5rem;">投入 1 份成本</div>
-            <div style="font-size: 3rem; font-weight: 800; margin: 20px;">→</div>
-            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-                <div><i class="fas fa-chart-line"></i> ①肉牛：ADG+25% → 出栏日龄缩短</div>
-                <div><i class="fas fa-tint"></i> ②乳牛：ECM+2.7kg/日 → 总乳量显著提升</div>
-                <div><i class="fas fa-weight-hanging"></i> ③肉羊：FCR-6.35%+胴体重+2kg</div>
-                <div><i class="fas fa-tshirt"></i> ④绵羊：羊毛品质提升 → A级毛比例增加</div>
+        <div class="roi-block-wrap">
+            <div class="roi-cost">投入 1 份成本</div>
+            <div class="roi-arrow">↓</div>
+        </div>
             </div>
             <div class="roi-card-row">
                 <div class="roi-card-item"><div class="roi-number">1:6</div><div class="roi-label">保守估算</div></div>
@@ -384,7 +460,7 @@
                     <div class="kpi-card"><div><span class="after">-6%</span></div><div>飼料轉換率改善</div></div>
                 </div>
             </div>
-            <div style="flex:1"><img src="assets/livestock-beef-before-after.jpg" alt="牛羊養殖" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
+            <div class="results-row__img"><img src="assets/livestock-beef-before-after.jpg" alt="牛羊養殖" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
         </div>
     </section>
 
@@ -406,19 +482,19 @@
     <div class="container" style="padding: 40px 0; border-top: 1px solid #eee;">
         <h2 style="font-size: 2rem; text-align: center; margin-bottom: 20px;">使用活力旺®的實際成果</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin: 40px 0;">
-            <div style="flex:1"><img src="assets/livestock-beef-before-after.jpg" alt="肉牛對比" onerror="this.style.display='none'"></div>
+            <div class="results-row__img"><img src="assets/livestock-beef-before-after.jpg" alt="肉牛對比" onerror="this.style.display='none'"></div>
             <div style="flex:1"><h3 style="color:var(--accent)">肉牛</h3><p>ADG +25%（Sentonpharm試驗數據）<br>犢牛30日齡體重 +4.11%（PMCID: PMC11394282）<br>肌肉脂肪酸顯著改善，脂肪氧化降低-25%<br>蹄行跛行顯著降低</p></div>
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin: 40px 0;">
-            <div style="flex:1"><img src="assets/livestock-dairy-before-after.jpg" alt="乳牛對比" onerror="this.style.display='none'"></div>
+            <div class="results-row__img"><img src="assets/livestock-dairy-before-after.jpg" alt="乳牛對比" onerror="this.style.display='none'"></div>
             <div style="flex:1"><h3 style="color:var(--accent)">乳牛</h3><p>日均產乳量 +2.7 kg ECM/日（Selko 2024）<br>血清GGT活性 +64.68%（犢牛試驗）<br>P4孕酮濃度顯著提升，胚胎品質改善<br>犢牛體重 +9.36%，初乳IgG顯著提升</p></div>
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin: 40px 0;">
-            <div style="flex:1"><img src="assets/livestock-sheep-before-after.jpg" alt="肉羊對比" onerror="this.style.display='none'"></div>
+            <div class="results-row__img"><img src="assets/livestock-sheep-before-after.jpg" alt="肉羊對比" onerror="this.style.display='none'"></div>
             <div style="flex:1"><h3 style="color:var(--accent)">肉羊</h3><p>FCR -6.35%（PMC 2012驗證）<br>胴體重 +2 kg（P<0.05）</p></div>
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin: 40px 0;">
-            <div style="flex:1"><img src="assets/livestock-wool-before-after.jpg" alt="綿羊毛對比" onerror="this.style.display='none'"></div>
+            <div class="results-row__img"><img src="assets/livestock-wool-before-after.jpg" alt="綿羊毛對比" onerror="this.style.display='none'"></div>
             <div style="flex:1"><h3 style="color:var(--accent)">綿羊</h3><p>脂肪氧化降低 -2.5%<br>羊毛品質顯著改善（細度、光澤、毛量）<br>礦物質代謝效率 +2%</p></div>
         </div>
         <div class="usage-note" style="background: #eef5ee; padding: 20px; border-radius: 16px; margin: 20px 0;">
@@ -464,14 +540,10 @@
     <!-- Section 7 ROI概覽 -->
     <div class="container" style="padding: 60px 0; text-align: center;">
         <h2 style="font-size: 2rem; margin-bottom: 20px;">投入多少，得到多少？</h2>
-        <div style="background: linear-gradient(120deg, #1a3a1a, #2a5a2a); color: white; padding: 40px; border-radius: 40px;">
-            <div style="font-size: 1.5rem;">投入 1 份成本</div>
-            <div style="font-size: 3rem; font-weight: 800; margin: 20px;">→</div>
-            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-                <div><i class="fas fa-chart-line"></i> ①肉牛：ADG+25% → 出欄日齡縮短</div>
-                <div><i class="fas fa-tint"></i> ②乳牛：ECM+2.7kg/日 → 總乳量顯著提升</div>
-                <div><i class="fas fa-weight-hanging"></i> ③肉羊：FCR-6.35%+胴體重+2kg</div>
-                <div><i class="fas fa-tshirt"></i> ④綿羊：羊毛品質提升 → A級毛比例增加</div>
+        <div class="roi-block-wrap">
+            <div class="roi-cost">投入 1 份成本</div>
+            <div class="roi-arrow">↓</div>
+        </div>
             </div>
             <div class="roi-card-row">
                 <div class="roi-card-item"><div class="roi-number">1:6</div><div class="roi-label">保守估算</div></div>
@@ -509,7 +581,7 @@
                     <div class="kpi-card"><div><span class="after">-6%</span></div><div>FCR Improvement</div></div>
                 </div>
             </div>
-            <div style="flex:1"><img src="assets/livestock-beef-before-after.jpg" alt="Livestock farming" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
+            <div class="results-row__img"><img src="assets/livestock-beef-before-after.jpg" alt="Livestock farming" onerror="this.style.display='none'" style="border-radius:24px; width:100%"></div>
         </div>
     </section>
 
@@ -531,19 +603,19 @@
     <div class="container" style="padding: 40px 0; border-top: 1px solid #eee;">
         <h2 style="font-size: 2rem; text-align: center; margin-bottom: 20px;">Real Results with VitalBoost®</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin: 40px 0;">
-            <div style="flex:1"><img src="assets/livestock-beef-before-after.jpg" alt="Beef comparison" onerror="this.style.display='none'"></div>
+            <div class="results-row__img"><img src="assets/livestock-beef-before-after.jpg" alt="Beef comparison" onerror="this.style.display='none'"></div>
             <div style="flex:1"><h3 style="color:var(--accent)">Beef Cattle</h3><p>ADG +25% (Sentonpharm)<br>30-day calf weight +4.11% (PMCID: PMC11394282)<br>Muscle fatty acid improved, fat oxidation -25%<br>Lameness significantly reduced</p></div>
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin: 40px 0;">
-            <div style="flex:1"><img src="assets/livestock-dairy-before-after.jpg" alt="Dairy comparison" onerror="this.style.display='none'"></div>
+            <div class="results-row__img"><img src="assets/livestock-dairy-before-after.jpg" alt="Dairy comparison" onerror="this.style.display='none'"></div>
             <div style="flex:1"><h3 style="color:var(--accent)">Dairy Cow</h3><p>Milk yield +2.7 kg ECM/day (Selko 2024)<br>Serum GGT +64.68% (calf trial)<br>P4 concentration ↑, embryo quality ↑<br>Calf weight +9.36%, colostrum IgG ↑</p></div>
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin: 40px 0;">
-            <div style="flex:1"><img src="assets/livestock-sheep-before-after.jpg" alt="Sheep comparison" onerror="this.style.display='none'"></div>
+            <div class="results-row__img"><img src="assets/livestock-sheep-before-after.jpg" alt="Sheep comparison" onerror="this.style.display='none'"></div>
             <div style="flex:1"><h3 style="color:var(--accent)">Mutton Sheep</h3><p>FCR -6.35% (PMC 2012)<br>Carcass weight +2 kg (P<0.05)</p></div>
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin: 40px 0;">
-            <div style="flex:1"><img src="assets/livestock-wool-before-after.jpg" alt="Wool comparison" onerror="this.style.display='none'"></div>
+            <div class="results-row__img"><img src="assets/livestock-wool-before-after.jpg" alt="Wool comparison" onerror="this.style.display='none'"></div>
             <div style="flex:1"><h3 style="color:var(--accent)">Wool Sheep</h3><p>Fat oxidation -2.5% (muscle respiration)<br>Wool quality significantly improved<br>Mineral metabolism efficiency +2%</p></div>
         </div>
         <div class="usage-note" style="background: #eef5ee; padding: 20px; border-radius: 16px; margin: 20px 0;">
@@ -589,14 +661,10 @@
     <!-- Section 7 ROI Overview -->
     <div class="container" style="padding: 60px 0; text-align: center;">
         <h2 style="font-size: 2rem; margin-bottom: 20px;">Investment & Return</h2>
-        <div style="background: linear-gradient(120deg, #1a3a1a, #2a5a2a); color: white; padding: 40px; border-radius: 40px;">
-            <div style="font-size: 1.5rem;">Invest 1 unit of cost</div>
-            <div style="font-size: 3rem; font-weight: 800; margin: 20px;">→</div>
-            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-                <div><i class="fas fa-chart-line"></i> ① Beef: ADG+25% → shorter days to market</div>
-                <div><i class="fas fa-tint"></i> ② Dairy: +2.7kg ECM/day → higher total milk</div>
-                <div><i class="fas fa-weight-hanging"></i> ③ Sheep: FCR-6.35% + carcass+2kg</div>
-                <div><i class="fas fa-tshirt"></i> ④ Wool: higher grade → price premium</div>
+        <div class="roi-block-wrap">
+            <div class="roi-cost">投入 1 份成本</div>
+            <div class="roi-arrow">↓</div>
+        </div>
             </div>
             <div class="roi-card-row">
                 <div class="roi-card-item"><div class="roi-number">1:6</div><div class="roi-label">Conservative</div></div>
