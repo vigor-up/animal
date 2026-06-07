@@ -1,1462 +1,234 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>活力旺® VitalBoost Plus｜精準動物營養・全物種解決方案</title>
-<meta name="description" content="活力旺®活力得®枯草菌源蛋白酶，覆蓋豬雞水產牛羊11物種，存活率↑、FCR↓、蛋殼強度+39.5%，亞洲農業生技首選">
-<meta name="keywords" content="活力旺,VitalBoost,枯草菌源蛋白酶,動物營養,飼料添加劑,豬,雞,蝦,羅非魚,牛羊">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>活力得® Vitality Plus®｜精準動物營養・全物種解決方案</title>
+<meta name="description" content="活力得®植物甾醇與蛋白酶飼料添加劑，覆蓋豬雞水產牛羊，FCR↓、存活率↑、蛋殼強度提升，康奈爾大學研發→台灣生產→廈門澤林總代理">
 <link rel="canonical" href="https://animal.feed-pet.com/">
-<meta property="og:title" content="活力旺® VitalBoost Plus｜精準動物營養">
-<meta property="og:description" content="活力得®枯草菌源蛋白酶，11物種解決方案，FCR↓・存活率↑・蛋殼強度+39.5%">
-<meta property="og:image" content="assets/logo.png">
-<meta property="og:type" content="website">
-<link rel="alternate" hreflang="zh-Hans" href="https://animal.feed-pet.com/">
 <link rel="alternate" hreflang="zh-Hant" href="https://animal.feed-pet.com/">
+<link rel="alternate" hreflang="zh-Hans" href="https://animal.feed-pet.com/">
 <link rel="alternate" hreflang="en" href="https://animal.feed-pet.com/">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"活力旺® VitalBoost Plus","url":"https://animal.feed-pet.com","description":"精準動物營養解決方案","brand":{"@type":"Brand","name":"活力旺®"}}
-</script>
 <style>
-/* ============================================================
-   DESIGN TOKENS — Precision AgBiotech
-============================================================ */
-:root {
-  /* Color */
-  --ink:       #0d1f0d;
-  --forest:    #1a3a1a;
-  --forest-md: #2a5a2a;
-  --forest-lt: #3a7a3a;
-  --gold:      #c9a535;
-  --gold-lt:   #e2bb4a;
-  --gold-bg:   #fdf8ee;
-  --ivory:     #fafaf7;
-  --paper:     #f4f3ef;
-  --mist:      #e8e6e0;
-  --mid:       #8a9080;
-  --white:     #ffffff;
-  --danger:    #b03a2e;
-  --emerald:   #2d7a4f;
-
-  /* Typography scale (8pt baseline) */
-  --text-xs:   0.75rem;   /* 12px */
-  --text-sm:   0.875rem;  /* 14px */
-  --text-base: 1rem;      /* 16px */
-  --text-md:   1.125rem;  /* 18px */
-  --text-lg:   1.375rem;  /* 22px */
-  --text-xl:   1.75rem;   /* 28px */
-  --text-2xl:  2.25rem;   /* 36px */
-  --text-3xl:  3rem;      /* 48px */
-  --text-4xl:  4rem;      /* 64px */
-
-  /* Spacing (8px grid) */
-  --s1: 8px;  --s2: 16px;  --s3: 24px;  --s4: 32px;
-  --s5: 48px; --s6: 64px;  --s7: 96px;  --s8: 128px;
-
-  /* Radius */
-  --r-sm: 4px;  --r-md: 8px;  --r-lg: 16px;  --r-xl: 24px;
-
-  /* Shadow */
-  --shadow-xs: 0 1px 3px rgba(13,31,13,.06);
-  --shadow-sm: 0 2px 8px rgba(13,31,13,.08);
-  --shadow-md: 0 4px 20px rgba(13,31,13,.1);
-  --shadow-lg: 0 12px 40px rgba(13,31,13,.14);
-  --shadow-card: 0 2px 12px rgba(13,31,13,.07), 0 0 0 1px rgba(13,31,13,.04);
-
-  /* Transition */
-  --ease: cubic-bezier(.22,.68,0,1.2);
-  --ease-out: cubic-bezier(.22,.6,.36,1);
-}
-
-/* ============================================================
-   RESET & BASE
-============================================================ */
-*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; -webkit-tap-highlight-color:transparent; }
-
-body {
-  font-family:'Noto Sans SC', sans-serif;
-  font-size:var(--text-base);
-  line-height:1.85;
-  color:var(--ink);
-  background:var(--ivory);
-  overflow-x:hidden;
-}
-
-h1,h2,h3,h4 {
-  font-family:'Noto Serif SC', serif;
-  font-feature-settings:"palt" 1;
-  line-height:1.25;
-  letter-spacing:-.01em;
-}
-h1 { font-size:clamp(2rem, 6vw, var(--text-4xl)); font-weight:900; }
-h2 { font-size:clamp(1.5rem, 4vw, var(--text-2xl)); font-weight:700; }
-h3 { font-size:clamp(var(--text-md), 2.5vw, var(--text-lg)); font-weight:700; }
-
-p { line-height:1.85; }
-a { color:inherit; text-decoration:none; }
-img { display:block; width:100%; height:auto; }
-
-/* Mono numbers */
-.num {
-  font-family:'DM Mono', monospace;
-  font-variant-numeric:tabular-nums;
-  font-weight:500;
-  letter-spacing:-.02em;
-}
-
-/* ============================================================
-   LAYOUT
-============================================================ */
-.container {
-  max-width:1280px;
-  margin:0 auto;
-  padding:0 var(--s3);
-}
-@media(min-width:768px) { .container { padding:0 var(--s5); } }
-@media(min-width:1280px) { .container { padding:0 var(--s6); } }
-
-/* ============================================================
-   NAV
-============================================================ */
-.nav {
-  position:sticky;
-  top:0;
-  z-index:200;
-  background:rgba(26,58,26,.96);
-  backdrop-filter:blur(12px) saturate(180%);
-  -webkit-backdrop-filter:blur(12px) saturate(180%);
-  border-bottom:1px solid rgba(201,165,53,.15);
-}
-.nav-inner {
-  display:flex;
-  align-items:center;
-  gap:var(--s2);
-  padding:var(--s2) var(--s3);
-  max-width:1280px;
-  margin:0 auto;
-}
-@media(min-width:768px) { .nav-inner { padding:var(--s2) var(--s5); } }
-
-.nav-brand {
-  display:flex;
-  align-items:center;
-  gap:var(--s1);
-  flex-shrink:0;
-  margin-right:auto;
-}
-.nav-logo {
-  height:30px;
-  width:auto;
-  max-width:30px !important;
-  border-radius:0 !important;
-  filter:drop-shadow(0 1px 4px rgba(0,0,0,.3));
-  flex-shrink:0;
-}
-.nav-name {
-  font-family:'Noto Serif SC', serif;
-  font-weight:700;
-  font-size:var(--text-md);
-  color:var(--gold);
-  letter-spacing:.06em;
-  white-space:nowrap;
-}
-
-.lang-group {
-  display:flex;
-  gap:var(--s1);
-  background:rgba(255,255,255,.08);
-  border-radius:40px;
-  padding:3px;
-}
-.lang-btn {
-  cursor:pointer;
-  border:none;
-  background:transparent;
-  color:rgba(255,255,255,.65);
-  font-family:'Noto Sans SC', sans-serif;
-  font-size:var(--text-xs);
-  font-weight:500;
-  padding:5px 12px;
-  border-radius:40px;
-  transition:all .2s;
-  white-space:nowrap;
-  letter-spacing:.03em;
-}
-.lang-btn.active {
-  background:var(--gold);
-  color:var(--forest);
-  font-weight:700;
-}
-.lang-btn:hover:not(.active) { color:var(--white); background:rgba(255,255,255,.12); }
-
-/* ============================================================
-   HERO
-============================================================ */
-.hero {
-  position:relative;
-  background:var(--forest);
-  color:var(--white);
-  overflow:hidden;
-  min-height:min(90vh, 680px);
-  display:flex;
-  align-items:center;
-}
-.hero-bg {
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(ellipse 80% 60% at 65% 40%, rgba(42,90,42,.55) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 40% at 20% 80%, rgba(201,165,53,.08) 0%, transparent 60%),
-    linear-gradient(160deg, #0d1f0d 0%, #1a3a1a 50%, #0f2a0f 100%);
-}
-/* Subtle grid texture */
-.hero-bg::after {
-  content:'';
-  position:absolute;
-  inset:0;
-  background-image:
-    linear-gradient(rgba(201,165,53,.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201,165,53,.04) 1px, transparent 1px);
-  background-size:48px 48px;
-  mask-image:linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
-}
-
-.hero-inner {
-  position:relative;
-  z-index:2;
-  width:100%;
-  padding:var(--s6) 0 var(--s5);
-}
-@media(min-width:768px) { .hero-inner { padding:var(--s7) 0 var(--s6); } }
-
-.hero-content {
-  display:flex;
-  flex-direction:column;
-  gap:var(--s4);
-}
-@media(min-width:900px) {
-  .hero-content {
-    flex-direction:row;
-    align-items:center;
-    gap:var(--s6);
-  }
-  .hero-text { flex:1; }
-  .hero-visual { flex:0 0 44%; }
-}
-
-.hero-eyebrow {
-  display:inline-flex;
-  align-items:center;
-  gap:var(--s1);
-  font-size:var(--text-xs);
-  font-weight:600;
-  letter-spacing:.15em;
-  text-transform:uppercase;
-  color:var(--gold);
-  margin-bottom:var(--s2);
-}
-.hero-eyebrow::before {
-  content:'';
-  display:inline-block;
-  width:24px;
-  height:2px;
-  background:var(--gold);
-  border-radius:2px;
-}
-
-.hero-title {
-  margin-bottom:var(--s3);
-  color:var(--white);
-}
-.hero-title em {
-  font-style:normal;
-  color:var(--gold);
-  display:block;
-}
-
-.hero-desc {
-  font-size:var(--text-sm);
-  color:rgba(255,255,255,.7);
-  max-width:520px;
-  line-height:1.8;
-  margin-bottom:var(--s4);
-}
-
-/* Hero KPI row */
-.hero-kpis {
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:var(--s2);
-  margin-top:var(--s2);
-}
-@media(max-width:400px) {
-  .hero-kpis { grid-template-columns:repeat(3,1fr); gap:var(--s1); }
-}
-
-.hero-kpi {
-  background:rgba(255,255,255,.07);
-  border:1px solid rgba(201,165,53,.18);
-  border-radius:var(--r-md);
-  padding:var(--s2) var(--s1);
-  text-align:center;
-  transition:background .2s;
-}
-.hero-kpi:hover { background:rgba(255,255,255,.11); }
-.hero-kpi-num {
-  font-family:'DM Mono', monospace;
-  font-size:clamp(1.25rem, 3.5vw, 1.7rem);
-  font-weight:500;
-  color:var(--gold);
-  line-height:1;
-  margin-bottom:4px;
-  letter-spacing:-.02em;
-}
-.hero-kpi-label {
-  font-size:var(--text-xs);
-  color:rgba(255,255,255,.6);
-  line-height:1.3;
-}
-
-/* Hero visual */
-.hero-img-wrap {
-  position:relative;
-  border-radius:var(--r-lg);
-  overflow:hidden;
-  aspect-ratio:4/3;
-  box-shadow:var(--shadow-lg), 0 0 0 1px rgba(201,165,53,.2);
-}
-.hero-img-wrap img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-  border-radius:0;
-}
-.hero-img-badge {
-  position:absolute;
-  bottom:var(--s2);
-  left:var(--s2);
-  background:rgba(13,31,13,.88);
-  backdrop-filter:blur(8px);
-  border:1px solid rgba(201,165,53,.25);
-  border-radius:var(--r-md);
-  padding:var(--s1) var(--s2);
-  font-size:var(--text-xs);
-  color:var(--gold);
-  font-weight:600;
-  letter-spacing:.05em;
-}
-
-/* ============================================================
-   STATS RIBBON
-============================================================ */
-.ribbon {
-  background:var(--ink);
-  border-top:1px solid rgba(201,165,53,.15);
-  border-bottom:1px solid rgba(201,165,53,.08);
-  overflow:hidden;
-}
-.ribbon-inner {
-  display:flex;
-  overflow-x:auto;
-  scrollbar-width:none;
-  gap:0;
-}
-.ribbon-inner::-webkit-scrollbar { display:none; }
-.ribbon-stat {
-  flex:0 0 auto;
-  padding:var(--s3) var(--s4);
-  text-align:center;
-  border-right:1px solid rgba(255,255,255,.06);
-  min-width:140px;
-}
-.ribbon-stat:last-child { border-right:none; }
-.ribbon-num {
-  font-family:'DM Mono', monospace;
-  font-size:var(--text-2xl);
-  font-weight:500;
-  color:var(--gold);
-  line-height:1;
-  letter-spacing:-.03em;
-}
-.ribbon-label {
-  font-size:var(--text-xs);
-  color:rgba(255,255,255,.45);
-  margin-top:4px;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-}
-
-/* ============================================================
-   SECTION COMMONS
-============================================================ */
-.section { padding:var(--s6) 0; }
-.section--dark { background:var(--forest); color:var(--white); }
-.section--paper { background:var(--paper); }
-.section--ivory { background:var(--ivory); }
-
-.section-header {
-  margin-bottom:var(--s5);
-}
-.section-label {
-  font-size:var(--text-xs);
-  font-weight:600;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--gold);
-  margin-bottom:var(--s2);
-  display:flex;
-  align-items:center;
-  gap:var(--s1);
-}
-.section-label::before {
-  content:'';
-  display:inline-block;
-  width:20px;
-  height:2px;
-  background:var(--gold);
-  border-radius:2px;
-}
-.section-title {
-  margin-bottom:var(--s2);
-}
-.section-title--center { text-align:center; }
-.section-title--center + .section-desc { text-align:center; max-width:580px; margin:0 auto; }
-.section-desc {
-  font-size:var(--text-sm);
-  color:var(--mid);
-  max-width:600px;
-}
-
-/* ============================================================
-   PRODUCT GRID
-============================================================ */
-.product-grid {
-  display:grid;
-  grid-template-columns:1fr;
-  gap:var(--s2);
-}
-@media(min-width:480px)  { .product-grid { grid-template-columns:repeat(2,1fr); gap:var(--s3); } }
-@media(min-width:768px)  { .product-grid { grid-template-columns:repeat(3,1fr); } }
-@media(min-width:1100px) { .product-grid { grid-template-columns:repeat(4,1fr); } }
-
-/* Product card */
-.pcard {
-  position:relative;
-  display:flex;
-  flex-direction:column;
-  background:var(--white);
-  border-radius:var(--r-lg);
-  overflow:hidden;
-  box-shadow:var(--shadow-card);
-  border:1px solid var(--mist);
-  transition:transform .25s var(--ease-out), box-shadow .25s var(--ease-out), border-color .25s;
-  text-decoration:none;
-  color:var(--ink);
-}
-.pcard:hover {
-  transform:translateY(-4px);
-  box-shadow:var(--shadow-lg);
-  border-color:rgba(201,165,53,.35);
-}
-.pcard:hover .pcard-img img { transform:scale(1.04); }
-
-.pcard-img {
-  overflow:hidden;
-  aspect-ratio:16/9;
-  background:var(--paper);
-}
-.pcard-img img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  border-radius:0;
-  transition:transform .4s var(--ease-out);
-}
-
-.pcard-body {
-  padding:var(--s2) var(--s3) var(--s3);
-  flex:1;
-  display:flex;
-  flex-direction:column;
-}
-
-.pcard-name {
-  font-family:'Noto Serif SC', serif;
-  font-size:var(--text-md);
-  font-weight:700;
-  color:var(--forest);
-  margin-bottom:var(--s1);
-  line-height:1.3;
-}
-.pcard-emoji { margin-right:4px; }
-
-.pcard-kpis {
-  display:flex;
-  flex-direction:column;
-  gap:4px;
-  margin-bottom:var(--s2);
-  flex:1;
-}
-.pcard-kpi {
-  display:flex;
-  align-items:baseline;
-  gap:6px;
-  font-size:var(--text-xs);
-  color:var(--mid);
-  line-height:1.5;
-}
-.pcard-kpi-val {
-  font-family:'DM Mono', monospace;
-  font-size:var(--text-sm);
-  font-weight:500;
-  color:var(--emerald);
-  white-space:nowrap;
-  flex-shrink:0;
-}
-
-.pcard-cta {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  font-size:var(--text-xs);
-  font-weight:600;
-  color:var(--forest);
-  letter-spacing:.04em;
-  text-transform:uppercase;
-  padding-top:var(--s2);
-  border-top:1px solid var(--mist);
-}
-.pcard-cta::after {
-  content:'→';
-  font-size:var(--text-sm);
-  transition:transform .2s;
-}
-.pcard:hover .pcard-cta::after { transform:translateX(4px); }
-
-.pcard-badge {
-  position:absolute;
-  top:var(--s2);
-  right:var(--s2);
-  background:rgba(13,31,13,.75);
-  backdrop-filter:blur(6px);
-  color:var(--gold);
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  padding:3px 8px;
-  border-radius:20px;
-  border:1px solid rgba(201,165,53,.25);
-}
-
-/* ============================================================
-   GROUP HEADERS (豬 / 雞 / 水產 / 牛羊)
-============================================================ */
-.group-section { margin-bottom:var(--s5); }
-.group-section:last-child { margin-bottom:0; }
-.group-header {
-  display:flex;
-  align-items:center;
-  gap:var(--s2);
-  margin-bottom:var(--s3);
-  padding-bottom:var(--s2);
-  border-bottom:1px solid var(--mist);
-}
-.group-icon {
-  width:40px;
-  height:40px;
-  background:var(--forest);
-  border-radius:var(--r-md);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:1.25rem;
-  flex-shrink:0;
-}
-.group-title {
-  font-family:'Noto Serif SC', serif;
-  font-size:var(--text-lg);
-  font-weight:700;
-  color:var(--forest);
-}
-.group-count {
-  margin-left:auto;
-  font-size:var(--text-xs);
-  color:var(--mid);
-  letter-spacing:.06em;
-}
-
-/* ============================================================
-   SCIENCE STRIP
-============================================================ */
-.science-strip {
-  background:linear-gradient(135deg, var(--ink) 0%, var(--forest) 100%);
-  color:var(--white);
-  padding:var(--s5) 0;
-  position:relative;
-  overflow:hidden;
-}
-.science-strip::before {
-  content:'';
-  position:absolute;
-  inset:0;
-  background:repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 20px,
-    rgba(201,165,53,.025) 20px,
-    rgba(201,165,53,.025) 21px
-  );
-}
-.science-inner {
-  position:relative;
-  z-index:1;
-  display:flex;
-  flex-direction:column;
-  gap:var(--s4);
-  align-items:center;
-  text-align:center;
-}
-@media(min-width:768px) {
-  .science-inner { flex-direction:row; text-align:left; gap:var(--s6); }
-  .science-text { flex:1; }
-}
-.science-title {
-  font-family:'Noto Serif SC', serif;
-  font-size:clamp(var(--text-lg), 3vw, var(--text-2xl));
-  font-weight:700;
-  color:var(--white);
-  margin-bottom:var(--s2);
-}
-.science-desc {
-  font-size:var(--text-sm);
-  color:rgba(255,255,255,.65);
-  line-height:1.85;
-}
-.science-pills {
-  display:flex;
-  flex-wrap:wrap;
-  gap:var(--s1);
-  margin-top:var(--s3);
-  justify-content:center;
-}
-@media(min-width:768px) { .science-pills { justify-content:flex-start; } }
-.science-pill {
-  background:rgba(201,165,53,.12);
-  border:1px solid rgba(201,165,53,.25);
-  color:var(--gold);
-  font-size:var(--text-xs);
-  font-weight:600;
-  padding:5px 14px;
-  border-radius:20px;
-  letter-spacing:.04em;
-}
-.science-kpis {
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:var(--s2);
-  flex-shrink:0;
-}
-@media(min-width:768px) { .science-kpis { width:340px; } }
-.science-kpi {
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(201,165,53,.12);
-  border-radius:var(--r-md);
-  padding:var(--s2) var(--s3);
-  text-align:center;
-}
-.science-kpi-num {
-  font-family:'DM Mono', monospace;
-  font-size:var(--text-xl);
-  font-weight:500;
-  color:var(--gold);
-  line-height:1;
-  letter-spacing:-.02em;
-}
-.science-kpi-label {
-  font-size:var(--text-xs);
-  color:rgba(255,255,255,.5);
-  margin-top:4px;
-}
-
-/* ============================================================
-   FOOTER
-============================================================ */
-.footer {
-  background:var(--ink);
-  color:rgba(255,255,255,.5);
-  padding:var(--s5) 0 var(--s4);
-}
-.footer-top {
-  display:flex;
-  flex-direction:column;
-  gap:var(--s4);
-  margin-bottom:var(--s4);
-  padding-bottom:var(--s4);
-  border-bottom:1px solid rgba(255,255,255,.06);
-}
-@media(min-width:768px) {
-  .footer-top { flex-direction:row; align-items:center; justify-content:space-between; }
-}
-.footer-brand {
-  display:flex;
-  align-items:center;
-  gap:var(--s2);
-}
-.footer-logo {
-  height:32px !important;
-  width:auto !important;
-  max-width:32px !important;
-  border-radius:0 !important;
-  filter:brightness(0) invert(1) opacity(.8);
-  flex-shrink:0;
-}
-.footer-brand-text {
-  font-family:'Noto Serif SC', serif;
-  font-size:var(--text-md);
-  font-weight:700;
-  color:rgba(255,255,255,.85);
-  letter-spacing:.06em;
-}
-.footer-tagline {
-  font-size:var(--text-xs);
-  color:rgba(255,255,255,.35);
-  letter-spacing:.1em;
-  text-transform:uppercase;
-}
-.footer-links {
-  display:flex;
-  flex-wrap:wrap;
-  gap:var(--s1) var(--s2);
-  justify-content:center;
-}
-@media(min-width:768px) { .footer-links { justify-content:flex-end; } }
-.footer-links a {
-  font-size:var(--text-xs);
-  color:rgba(255,255,255,.4);
-  transition:color .2s;
-  padding:3px 0;
-}
-.footer-links a:hover { color:var(--gold); }
-.footer-copy {
-  font-size:var(--text-xs);
-  color:rgba(255,255,255,.25);
-  text-align:center;
-  letter-spacing:.04em;
-}
-
-/* ============================================================
-   BACK TO TOP
-============================================================ */
-.btt {
-  position:fixed;
-  bottom:var(--s3);
-  right:var(--s3);
-  width:44px;
-  height:44px;
-  background:var(--forest);
-  border:1px solid rgba(201,165,53,.3);
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-  opacity:0;
-  transition:opacity .3s, transform .3s;
-  z-index:300;
-  color:var(--gold);
-  font-size:1.1rem;
-  box-shadow:var(--shadow-md);
-}
-.btt.visible { opacity:1; }
-.btt:hover { transform:translateY(-3px); background:var(--forest-md); }
-
-/* ============================================================
-   MOBILE OVERRIDES
-============================================================ */
-@media(max-width:479px) {
-  :root { --s6:48px; --s7:64px; }
-  .hero-kpi-num { font-size:1.1rem; }
-  .ribbon-stat { padding:var(--s2) var(--s3); min-width:110px; }
-  .ribbon-num { font-size:var(--text-xl); }
-  .pcard-body { padding:var(--s2); }
-  .section { padding:var(--s4) 0; }
-}
-
-/* ============================================================
-   LIGHTBOX
-============================================================ */
-.lightbox {
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.92);
-  z-index:1000;
-  justify-content:center;
-  align-items:center;
-}
-.lightbox.active { display:flex; }
-.lightbox img { max-width:94vw; max-height:86vh; width:auto; border-radius:var(--r-md); cursor:default; }
-
-/* ============================================================
-   ANIMATIONS
-============================================================ */
-@keyframes fadeUp {
-  from { opacity:0; transform:translateY(16px); }
-  to   { opacity:1; transform:translateY(0); }
-}
-.hero-text > * {
-  animation:fadeUp .6s var(--ease-out) both;
-}
-.hero-text > *:nth-child(1) { animation-delay:.05s; }
-.hero-text > *:nth-child(2) { animation-delay:.15s; }
-.hero-text > *:nth-child(3) { animation-delay:.25s; }
-.hero-text > *:nth-child(4) { animation-delay:.35s; }
+:root{--ink:#0d1f0d;--forest:#1a3a1a;--forest-md:#2a5a2a;--forest-lt:#3a7a3a;--gold:#c9a535;--gold-lt:#e2bb4a;--gold-bg:#fdf8ee;--ivory:#fafaf7;--paper:#f4f3ef;--mist:#e8e6e0;--mid:#8a9080;--white:#fff;--text-xs:.75rem;--text-sm:.875rem;--text-base:1rem;--text-md:1.125rem;--text-lg:1.375rem;--text-xl:1.75rem;--text-2xl:2.25rem;--text-3xl:3rem;--text-4xl:4rem;--s1:8px;--s2:16px;--s3:24px;--s4:32px;--s5:48px;--s6:64px;--s7:96px;--r-sm:4px;--r-md:8px;--r-lg:16px;--r-xl:24px;--shadow-sm:0 2px 8px rgba(13,31,13,.08);--shadow-md:0 4px 20px rgba(13,31,13,.1);--shadow-lg:0 12px 40px rgba(13,31,13,.14);--ease-out:cubic-bezier(.22,.6,.36,1)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans SC',sans-serif;font-size:var(--text-base);line-height:1.85;color:var(--ink);background:var(--ivory)}
+h1,h2,h3,h4{font-family:'Noto Serif SC',serif;line-height:1.25;letter-spacing:-.01em}
+h1{font-size:clamp(2rem,6vw,var(--text-4xl));font-weight:900}
+h2{font-size:clamp(1.5rem,4vw,var(--text-2xl));font-weight:700;margin-bottom:var(--s3)}
+h3{font-size:clamp(var(--text-md),2.5vw,var(--text-lg));font-weight:700}
+.container{max-width:1280px;margin:0 auto;padding:0 var(--s3)}
+@media(min-width:768px){.container{padding:0 var(--s5)}}
+.nav{position:sticky;top:0;z-index:200;background:rgba(26,58,26,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,165,53,.15)}
+.nav-inner{display:flex;align-items:center;gap:var(--s2);padding:var(--s2) var(--s3);max-width:1280px;margin:0 auto}
+.nav-brand{display:flex;align-items:center;gap:var(--s1);margin-right:auto}
+.nav-logo{height:36px;width:auto;border-radius:50%}
+.nav-name{font-family:'Noto Serif SC',serif;font-weight:700;font-size:1.2rem;color:var(--gold);letter-spacing:.06em}
+.lang-group{display:flex;gap:4px;background:rgba(255,255,255,.08);border-radius:40px;padding:3px}
+.lang-btn{cursor:pointer;border:none;background:transparent;color:rgba(255,255,255,.65);font-size:var(--text-xs);font-weight:500;padding:5px 12px;border-radius:40px;transition:all .2s}
+.lang-btn.active{background:var(--gold);color:var(--forest);font-weight:700}
+.section{padding:var(--s6) 0}
+.section--dark{background:var(--forest);color:var(--white)}
+.section--paper{background:var(--paper)}
+.section-tag{font-size:var(--text-xs);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--s2)}
+.section-desc{color:var(--mid);margin-bottom:var(--s4);max-width:600px}
+.hero{position:relative;background:var(--forest);color:var(--white);overflow:hidden;min-height:min(90vh,680px);display:flex;align-items:center}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 65% 40%,rgba(42,90,42,.55) 0%,transparent 70%),radial-gradient(ellipse 50% 40% at 20% 80%,rgba(201,165,53,.08) 0%,transparent 60%),linear-gradient(160deg,#0d1f0d,#1a3a1a 50%,#0f2a0f 100%)}
+.hero-bg::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,165,53,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,165,53,.04) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,transparent 0%,black 20%,black 80%,transparent 100%)}
+.hero-inner{position:relative;z-index:2;width:100%;padding:var(--s6) 0 var(--s5)}
+.hero-content{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s5)}
+.hero-text{flex:1;min-width:300px}
+.hero-visual{flex:0 0 44%}
+@media(max-width:768px){.hero-visual{flex:1 1 100%}}
+.hero-title{font-size:clamp(2rem,5vw,3.5rem);margin-bottom:var(--s3)}
+.hero-title em{font-style:normal;color:var(--gold);display:block}
+.hero-desc{font-size:var(--text-md);color:rgba(255,255,255,.7);max-width:560px;margin-bottom:var(--s4);line-height:1.8}
+.hero-img{width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-lg)}
+.chain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--s4);margin-top:var(--s4)}
+.chain-card{background:var(--white);border-radius:var(--r-lg);padding:var(--s4);box-shadow:var(--shadow-sm);border:1px solid var(--mist);text-align:center}
+.chain-step{font-family:'DM Mono',monospace;font-size:var(--text-xl);color:var(--gold);font-weight:500}
+.chain-name{font-weight:700;margin:var(--s1) 0 var(--s1)}
+.chain-role{font-size:var(--text-sm);color:var(--mid)}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:var(--s4)}
+.pcard{background:var(--white);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--mist);transition:transform .25s var(--ease-out),box-shadow .25s}
+.pcard:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.pcard-img{aspect-ratio:16/9;overflow:hidden;background:var(--paper)}
+.pcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.pcard:hover .pcard-img img{transform:scale(1.04)}
+.pcard-body{padding:var(--s3)}
+.pcard-badge{display:inline-block;font-size:var(--text-xs);font-weight:600;padding:3px 10px;border-radius:40px;margin-bottom:var(--s2);text-transform:uppercase;letter-spacing:.08em}
+.badge-breeding{background:var(--gold-bg);color:#8B6F2D}
+.badge-growth{background:#e1eddb;color:var(--forest-md)}
+.pcard-target{font-size:var(--text-sm);color:var(--mid);margin-bottom:var(--s1)}
+.pcard-ingredient{font-size:var(--text-xs);color:var(--forest-lt);margin-bottom:var(--s2)}
+.pcard-kpis{display:grid;grid-template-columns:1fr 1fr;gap:var(--s1);margin:var(--s2) 0}
+.kpi-item{background:var(--paper);border-radius:var(--r-sm);padding:var(--s1);text-align:center}
+.kpi-num{font-family:'DM Mono',monospace;font-size:var(--text-md);font-weight:500;color:var(--forest-md)}
+.kpi-label{font-size:var(--text-xs);color:var(--mid)}
+.pcard-mech{font-size:var(--text-sm);margin-bottom:var(--s2);line-height:1.7}
+.accordion{display:none;font-size:var(--text-sm);background:var(--paper);border-radius:var(--r-md);padding:var(--s2);margin-top:var(--s2)}
+.accordion.open{display:block}
+.cta-btn{cursor:pointer;border:1px solid var(--forest-md);background:transparent;color:var(--forest-md);font-size:var(--text-sm);padding:8px 20px;border-radius:40px;transition:all .2s;font-weight:500}
+.cta-btn:hover{background:var(--forest-md);color:var(--white)}
+.footer{background:var(--ink);color:rgba(255,255,255,.6);padding:var(--s5) 0;font-size:var(--text-sm)}
+.footer a{color:var(--gold);text-decoration:none}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--s4);margin-bottom:var(--s4)}
+.footer-brand{font-family:'Noto Serif SC',serif;font-size:1.1rem;color:var(--gold);margin-bottom:var(--s1)}
+.footer-disclaimer{font-size:var(--text-xs);color:rgba(255,255,255,.4);line-height:1.6;margin-top:var(--s3);padding-top:var(--s2);border-top:1px solid rgba(255,255,255,.08)}
+.text-gold{color:var(--gold)}
+.faq-item{margin-bottom:var(--s2);padding:var(--s2);background:var(--white);border-radius:var(--r-md);box-shadow:var(--shadow-sm)}
+.faq-q{font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-a{display:none;margin-top:var(--s1);color:var(--mid);font-size:var(--text-sm)}
+.faq-a.open{display:block}
 </style>
 </head>
 <body>
 
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox" onclick="this.classList.remove('active')">
-  <img id="lb-img" src="" alt="">
-</div>
-
-<!-- NAV -->
 <nav class="nav">
-  <div class="nav-inner">
-    <div class="nav-brand">
-      <img src="assets/logo.png" alt="活力旺®" class="nav-logo no-lightbox" onerror="this.style.display='none'" loading="lazy">
-      <span class="nav-name">活力旺®</span>
-    </div>
-    <div class="lang-group">
-      <button class="lang-btn active" data-lang="cn">简体</button>
-      <button class="lang-btn" data-lang="tw">繁體</button>
-      <button class="lang-btn" data-lang="en">EN</button>
-    </div>
-  </div>
+<div class="nav-inner">
+<a href="#" class="nav-brand">
+<img src="assets/images/product-package-blank.jpg" alt="" class="nav-logo" onerror="this.style.display='none'">
+<span class="nav-name" data-i18n="brand_name">活力得®</span>
+</a>
+<div class="lang-group">
+<button class="lang-btn active" onclick="switchLang('zh-Hant')">繁</button>
+<button class="lang-btn" onclick="switchLang('zh-Hans')">简</button>
+<button class="lang-btn" onclick="switchLang('en')">EN</button>
+</div>
+</div>
 </nav>
 
-<!-- ================================================================
-     简体中文
-================================================================ -->
-<div id="lang-cn" class="lang-cn" style="display:block">
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="container hero-inner">
+<div class="hero-content">
+<div class="hero-text">
+<div class="hero-eyebrow text-gold" data-i18n="hero_eyebrow">PRECISION ANIMAL NUTRITION</div>
+<h1 class="hero-title" data-i18n="hero_title">活力得<sup>®</sup> <em data-i18n="hero_subtitle">精準動物營養</em></h1>
+<p class="hero-desc" data-i18n="hero_desc">源自美國康奈爾大學動物科學系研究基礎，經台灣百萬頭規模實證，為中華區畜牧水產市場打造的六支精準飼料添加劑。</p>
+<a href="#products" class="cta-btn" style="border-color:var(--gold);color:var(--gold);display:inline-block" data-i18n="hero_cta">探索產品 →</a>
+</div>
+<div class="hero-visual">
+<img src="assets/images/product-package-blank.jpg" alt="Vitality Plus" class="hero-img" loading="lazy">
+</div>
+</div>
+</div>
+</section>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-inner">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <div class="hero-eyebrow">PRECISION ANIMAL NUTRITION · ADVANCED BIOTECHNOLOGY</div>
-            <h1 class="hero-title">
-              全物種動物營養<br>
-              <em>科學解決方案</em>
-            </h1>
-            <p class="hero-desc">活力旺®活力得®枯草菌源蛋白酶，覆蓋豬·雞·蝦·魚·牛羊11個物種，從分子層面提升免疫力、消化率與生產性能。</p>
-            <div class="hero-kpis">
-              <div class="hero-kpi">
-                <div class="hero-kpi-num num">11</div>
-                <div class="hero-kpi-label">物種方案</div>
-              </div>
-              <div class="hero-kpi">
-                <div class="hero-kpi-num num">97.4%</div>
-                <div class="hero-kpi-label">最高存活率</div>
-              </div>
-              <div class="hero-kpi">
-                <div class="hero-kpi-num num">3語言</div>
-                <div class="hero-kpi-label">中英文支援</div>
-              </div>
-            </div>
-          </div>
-          <div class="hero-visual">
-            <div class="hero-img-wrap">
-              <img class="no-lightbox" src="assets/logo.jpg" alt="活力旺®精準動物營養" loading="eager" onerror="this.style.display='none'">
-              <div class="hero-img-badge">活力得® 枯草菌源蛋白酶</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="section section--paper" id="chain">
+<div class="container">
+<div class="section-tag" data-i18n="chain_tag">TECHNOLOGY ORIGIN</div>
+<h2 data-i18n="chain_title">三地溯源・驗證技術鏈</h2>
+<div class="chain-grid">
+<div class="chain-card"><div class="chain-step">01</div><div class="chain-name" data-i18n="chain_1_name">康奈爾大學</div><div class="chain-role" data-i18n="chain_1_role">動物科學系．研發源頭</div></div>
+<div class="chain-card"><div class="chain-step">02</div><div class="chain-name" data-i18n="chain_2_name">richtrong.com</div><div class="chain-role" data-i18n="chain_2_role">美國商化運營</div></div>
+<div class="chain-card"><div class="chain-step">03</div><div class="chain-name" data-i18n="chain_3_name">台灣毅展實業</div><div class="chain-role" data-i18n="chain_3_role">標準化生產</div></div>
+<div class="chain-card"><div class="chain-step">04</div><div class="chain-name" data-i18n="chain_4_name">廈門澤林生物</div><div class="chain-role" data-i18n="chain_4_role">中國總代理</div></div>
+</div>
+</div>
+</section>
 
-  <!-- STATS RIBBON -->
-  <div class="ribbon">
-    <div class="container">
-      <div class="ribbon-inner">
-        <div class="ribbon-stat">
-          <div class="ribbon-num num">97.4%</div>
-          <div class="ribbon-label">對蝦最高存活率</div>
-        </div>
-        <div class="ribbon-stat">
-          <div class="ribbon-num num">↓95%</div>
-          <div class="ribbon-label">弧菌菌落數</div>
-        </div>
-        <div class="ribbon-stat">
-          <div class="ribbon-num num">+39.5%</div>
-          <div class="ribbon-label">蛋殼強度提升</div>
-        </div>
-        <div class="ribbon-stat">
-          <div class="ribbon-num num">↓18%</div>
-          <div class="ribbon-label">育肥豬 FCR</div>
-        </div>
-        <div class="ribbon-stat">
-          <div class="ribbon-num num">+25%</div>
-          <div class="ribbon-label">肉牛 ADG</div>
-        </div>
-      </div>
-    </div>
-  </div>
+<section class="section" id="products">
+<div class="container">
+<div class="section-tag" data-i18n="prod_tag">SIX FORMULATIONS</div>
+<h2 data-i18n="prod_title">六支專屬配方．精準對應</h2>
+<p class="section-desc" data-i18n="prod_desc">繁殖線以植物甾醇為核心，生長線以蛋白酶為核心。數據來自台灣實證場。</p>
+<div class="product-grid">
+<div class="pcard"><div class="pcard-img"><img src="assets/images/sow-nursing-piglets.jpg" alt="均仔旺" loading="lazy"></div><div class="pcard-body"><div class="pcard-badge badge-breeding" data-i18n="uniform_litter_badge">繁殖</div><h3 data-i18n="uniform_litter_name">均仔旺</h3><div class="pcard-target" data-i18n="uniform_litter_target">懷孕+哺乳母豬</div><div class="pcard-ingredient">植物甾醇 ≥ 2.5%</div><p class="pcard-mech" data-i18n="uniform_litter_mech">植物甾醇調節母豬生殖激素平衡，優化子宮內營養分配，提升胎兒均勻度與初生活力；搭配蛋白酶強化乳汁蛋白合成，仔豬離乳整齊。</p><div class="pcard-kpis"><div class="kpi-item"><div class="kpi-num">22-28</div><div class="kpi-label" data-i18n="uniform_litter_kpi0">PSY</div></div> <div class="kpi-item"><div class="kpi-num">6.5-8.5</div><div class="kpi-label" data-i18n="uniform_litter_kpi1">離乳體重(kg)</div></div> <div class="kpi-item"><div class="kpi-num">85-92%</div><div class="kpi-label" data-i18n="uniform_litter_kpi2">分娩率</div></div> <div class="kpi-item"><div class="kpi-num">1:5~1:8</div><div class="kpi-label" data-i18n="uniform_litter_kpi3">ROI</div></div></div><button class="cta-btn" onclick="toggleAccordion(this)" data-i18n="uniform_litter_cta">了解更多</button><div class="accordion"><h4 style="margin-bottom:var(--s1)" data-i18n="uniform_litter_accord_mech">完整作用機制</h4>
+<p style="font-size:var(--text-sm);line-height:1.7">Enhances protein digestion for milk production; optimizes fat metabolism to preserve body condition; supports gut microbiome balance via milk quality. ① Milk Protein Enhancement Subtilisin breaks down feed proteins, providing amino acids directly into milk. Higher milk protein = better piglet growth and survival. → Same feed, richer milk. Grade A weaner rate rises 5-8%. ② Body Condition Preservation Optimizes fat metabolism, reducing body reserves mobilization. Sow maintains BCS 2.5-3.5, supporting next litter conception. → Less body loss = faster return to estrus. Annual litter rate stays above 2.2. ③ Piglet Gut Development Improved sow nutrition transfers to milk IgG and growth factors. Better passive immunity + villi development = lifetime FCR advantage. → Invest in the sow, benefit all three outcomes. Does It Work for Your Breed? Yorkshire × Landrace National mainstream. Lactation intake 5-7kg/day. Weaning uniformity ↑, Grade A piglet rate +5-8% PIC composite Corporate farms. Intake 6-8kg/day. Significant improvement, Grade A rate improved Landrace GD/SC/FJ. Intake 5-7kg/day. Uniformity improved, Grade A + Shennong composite South China large farms. Intake 5-7kg/day. Significant improvement, Grade A + ※ Average PSY ~23 in mainland China. 活力旺®'s core value: ① Increase Grade A piglet rate ② Reduce weak piglet losses ③ Maintain sow body condition for next litter. Small Trial, Large Profit 1 Phase 1: Effect Verification Scale : 20-50 sows (same breed, same parity). 4-6 weeks</p>
+<h4 style="margin-top:var(--s2);margin-bottom:var(--s1)" data-i18n="uniform_litter_accord_ref">參考文獻</h4>
+<p style="font-size:var(--text-xs);line-height:1.6">values. Actual returns depend on management. Ready to maximize your boar's value? Contact a Vitality® distributor for a tailored plan. Contact Distributor ※ Data from Vitality® field trials and published literature. Actual results vary with management, breed, season. ※ Use breed‑matched control groups for verification. ※ ROI figures are references, not investment advice. Fig: Boar sperm morphology improvement over time | Day 0→7→14→21, abnormal rate 45%→5% 活力旺® VitalBoost Plus PRECISION ANIMAL NUTRITION Boar Pregnant Sow Lactating Sow Nursery Finisher Layer Hen Broiler Breeder Shrimp Tilapia Livestock Home © 2026 活力旺® Distributor · VitalBoost® Subtilisin · Professional Animal Nutrition ↑
 
-  <!-- PRODUCTS -->
-  <section class="section section--ivory">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">PRODUCT SOLUTIONS</div>
-        <h2 class="section-title">選擇您的養殖物種</h2>
-        <p class="section-desc">每個方案均提供完整的科學數據支持、田間試驗驗證，以及 CN / TW / EN 三語技術資料。</p>
-      </div>
+values. Actual returns depend on management. Return ratio approx. 1:4～1:6 Ready to improve your sow reproductive performance? Contact VitalBoost® Distributor Contact Distributor ※ Data from VitalBoost® field trials and published literature. Results vary by breed, parity, and management. ※ Recommend same-farm control group. ※ ROI is reference value only, not investment advice. 活力旺® VitalBoost Plus PRECISION ANIMAL NUTRITION Boar Pregnant Sow Lactating Sow Nursery Finisher Layer Hen Broiler Breeder Shrimp Tilapia Livestock Home © 2026 活力旺® Distributor · VitalBoost® Subtilisin · Professional Animal Nutrition ↑
 
-      <!-- 豬 -->
-      <div class="group-section">
-        <div class="group-header">
-          <div class="group-icon">🐷</div>
-          <div class="group-title">豬隻方案</div>
-          <span class="group-count">5 個方案</span>
-        </div>
-        <div class="product-grid">
-          <a href="swine-breeding.html" class="pcard">
-            <div class="pcard-img"><img src="assets/modern-boar-farm-header.jpg" alt="種公豬" loading="lazy" onerror="this.style.display='none'"></div>
-            <div class="pcard-body">
-              <div class="pcard-name"><span class="pcard-emoji">🐗</span>種公豬</div>
-              <div class="pcard-kpis">
-                <div class="pcard-kpi"><span class="pcard-kpi-val">65%→85%+</span>精子活力提升</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">+15-20%</span>精液量增加</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">8-12%</span>畸形率降至</div>
-              </div>
-              <div class="pcard-cta">查看方案</div>
-            </div>
-            <span class="pcard-badge">✦ 上線中</span>
-          </a>
-          <a href="pregnant-sow.html" class="pcard">
-            <div class="pcard-img"><img src="assets/pregnant-sow-production-optimization.jpg" alt="懷孕母豬" loading="lazy" onerror="this.style.display='none'"></div>
-            <div class="pcard-body">
-              <div class="pcard-name"><span class="pcard-emoji">🐷</span>懷孕母豬</div>
-              <div class="pcard-kpis">
-                <div class="pcard-kpi"><span class="pcard-kpi-val">+5-8%</span>健仔率提升</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">↑</span>初生重均勻度</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">↓</span>弱仔比例</div>
-              </div>
-              <div class="pcard-cta">查看方案</div>
-            </div>
-            <span class="pcard-badge">✦ 上線中</span>
-          </a>
-          <a href="lactating-sow.html" class="pcard">
-            <div class="pcard-img"><img src="assets/nursing-sow-performance-improvement.jpg" alt="哺乳母豬" loading="lazy" onerror="this.style.display='none'"></div>
-            <div class="pcard-body">
-              <div class="pcard-name"><span class="pcard-emoji">🐷</span>哺乳母豬</div>
-              <div class="pcard-kpis">
-                <div class="pcard-kpi"><span class="pcard-kpi-val">+5-8%</span>A級苗比例提升</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">↑</span>斷奶重均勻度</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">↓</span>母豬體重損失</div>
-              </div>
-              <div class="pcard-cta">查看方案</div>
-            </div>
-            <span class="pcard-badge">✦ 上線中</span>
-          </a>
-          <a href="nursery-pig.html" class="pcard">
-            <div class="pcard-img"><img src="assets/healthy-piglets.jpg" alt="保育豬" loading="lazy" onerror="this.style.display='none'"></div>
-            <div class="pcard-body">
-              <div class="pcard-name"><span class="pcard-emoji">🐽</span>保育豬</div>
-              <div class="pcard-kpis">
-                <div class="pcard-kpi"><span class="pcard-kpi-val">↓10%</span>腹瀉率（無抗）</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">+6.45%</span>ADG 日增重</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">+6.35%</span>FCR 飼料效率</div>
-              </div>
-              <div class="pcard-cta">查看方案</div>
-            </div>
-            <span class="pcard-badge">✦ 上線中</span>
-          </a>
-          <a href="finisher-pig-fcr.html" class="pcard">
-            <div class="pcard-img"><img src="assets/heavy-pigs-140kg.jpg" alt="育肥豬" loading="lazy" onerror="this.style.display='none'"></div>
-            <div class="pcard-body">
-              <div class="pcard-name"><span class="pcard-emoji">🥩</span>育肥豬</div>
-              <div class="pcard-kpis">
-                <div class="pcard-kpi"><span class="pcard-kpi-val">2.8→2.3</span>FCR ↓18%</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">&gt;82%</span>出肉率</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">110→130kg</span>出欄體重</div>
-              </div>
-              <div class="pcard-cta">查看方案</div>
-            </div>
-            <span class="pcard-badge">✦ 上線中</span>
-          </a>
-        </div>
-      </div>
+values. Based on A/B grade piglet standard calculation. Ready to maximize your lactating sow performance? Contact 活力旺® Distributor 📞 Technical Consultation 📋 Request Trial Protocol ※ Data based on same-farm same-breed control trials. Results vary by breed, housing, management, and season. ※ Recommend on-farm control group verification. ROI ratios are reference values only. 活力旺® VitalBoost Plus PRECISION ANIMAL NUTRITION Boar Pregnant Sow Lactating Sow Nursery Finisher Layer Hen Broiler Breeder Shrimp Tilapia Livestock Home © 2026 活力旺® Distributor · VitalBoost® Subtilisin · Professional Animal Nutrition id=&quot;backToTop&quot;&gt; ↑
 
-      <!-- 雞 -->
-      <div class="group-section">
-        <div class="group-header">
-          <div class="group-icon">🐓</div>
-          <div class="group-title">家禽方案</div>
-          <span class="group-count">3 個方案</span>
-        </div>
-        <div class="product-grid">
-          <a href="layer-chicken.html" class="pcard">
-            <div class="pcard-img"><img src="assets/layer-chicken-performance-improvement.jpg" alt="蛋雞" loading="lazy" onerror="this.style.display='none'"></div>
-            <div class="pcard-body">
-              <div class="pcard-name"><span class="pcard-emoji">🥚</span>蛋雞</div>
-              <div class="pcard-kpis">
-                <div class="pcard-kpi"><span class="pcard-kpi-val">↓4.9%</span>FCR 料蛋比</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">+39.5%</span>蛋殼強度</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">+2-4週</span>高峰期延長</div>
-              </div>
-              <div class="pcard-cta">查看方案</div>
-            </div>
-            <span class="pcard-badge">✦ 上線中</span>
-          </a>
-          <a href="broiler-fcr.html" class="pcard">
-            <div class="pcard-img"><img src="assets/broiler-chicken-fcr-improvement.jpg" alt="白肉雞土雞" loading="lazy" onerror="this.style.display='none'"></div>
-            <div class="pcard-body">
-              <div class="pcard-name"><span class="pcard-emoji">🍗</span>白肉雞·土雞</div>
-              <div class="pcard-kpis">
-                <div class="pcard-kpi"><span class="pcard-kpi-val">+12.15%</span>胸肉產量</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">+5.88%</span>屠體率提升</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">-3~5%</span>土雞料肉比</div>
-              </div>
-              <div class="pcard-cta">查看方案</div>
-            </div>
-            <span class="pcard-badge">✦ 上線中</span>
-          </a>
-          <a href="breeder-chicken.html" class="pcard">
-            <div class="pcard-img"><img src="assets/breeding-chicken-performance-improvement.jpg" alt="種雞" loading="lazy" onerror="this.style.display='none'"></div>
-            <div class="pcard-body">
-              <div class="pcard-name"><span class="pcard-emoji">🐓</span>種雞</div>
-              <div class="pcard-kpis">
-                <div class="pcard-kpi"><span class="pcard-kpi-val">+3-4%</span>受精率提升</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">+4-5%</span>孵化率提升</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">+4-5%</span>健雛率提升</div>
-              </div>
-              <div class="pcard-cta">查看方案</div>
-            </div>
-            <span class="pcard-badge">✦ 上線中</span>
-          </a>
-        </div>
-      </div>
+values. Actual returns depend on management. Nursery stag</p></div></div></div>
+<div class="pcard"><div class="pcard-img"><img src="assets/images/layer-hen-farm.jpg" alt="殼力旺" loading="lazy"></div><div class="pcard-body"><div class="pcard-badge badge-breeding" data-i18n="shell_strength_badge">繁殖</div><h3 data-i18n="shell_strength_name">殼力旺</h3><div class="pcard-target" data-i18n="shell_strength_target">種雞·蛋雞</div><div class="pcard-ingredient">植物甾醇 ≥ 2.5%</div><p class="pcard-mech" data-i18n="shell_strength_mech">植物甾醇調節鈣磷代謝與蛋殼腺功能，強化蛋殼超微結構，延緩產蛋後期蛋殼品質衰退，提升種蛋孵化性能。</p><div class="pcard-kpis"><div class="kpi-item"><div class="kpi-num">+15-25%</div><div class="kpi-label" data-i18n="shell_strength_kpi0">蛋殼強度</div></div> <div class="kpi-item"><div class="kpi-num">85-93%</div><div class="kpi-label" data-i18n="shell_strength_kpi1">孵化率</div></div> <div class="kpi-item"><div class="kpi-num">30-50%</div><div class="kpi-label" data-i18n="shell_strength_kpi2">破蛋率降</div></div> <div class="kpi-item"><div class="kpi-num">1:6~1:9</div><div class="kpi-label" data-i18n="shell_strength_kpi3">ROI</div></div></div><button class="cta-btn" onclick="toggleAccordion(this)" data-i18n="shell_strength_cta">了解更多</button><div class="accordion"><h4 style="margin-bottom:var(--s1)" data-i18n="shell_strength_accord_mech">完整作用機制</h4>
+<p style="font-size:var(--text-sm);line-height:1.7">s — dual optimization for roosters and hens ① Nutrient Absorption &amp; Gut Health VitalBoost® Protease improves protein digestibility by 18-22%, enhances gut villi structure, reduces gut inflammation, ensuring key nutrients reach the reproductive system. → Same feed, more key amino acids absorbed. Better sperm development, more nourished follicles. ② Antioxidant &amp; Cell Protection VitalBoost® Protease activates Nrf2/ARE pathway, protects oocyte/sperm cell membrane integrity, reduces embryonic oxidative stress, significantly lowers early embryo mortality (PMC 2017/2024). → Sperm protected from oxidative damage. Intact oocyte membranes. Higher embryo survival after fertilization = more healthy chicks. ③ Reproductive Endocrine Regulation VitalBoost® Protease activates mTOR pathway, stabilizes FSH/LH/estrogen secretion, improves ovarian mitochondrial function, elevates progesterone (P4), extends peak laying by 4 weeks (ResearchGate 2017). → Stable hormones = sustained laying peak. 4 extra weeks of high production = thousands more qualified eggs. ④ Rooster Testicular Function VitalBoost® Protease improves Leydig cell function, boosts testosterone synthesis, delays age-related semen quality decline. Sperm motility improves from 25% to 85%+. → Older roosters don't decline as fast. Same rooster ratio, higher and more consistent fertility. Replace roosters less often. Does It Work for Your Breed? Breed Type Main Provinces Fertility Improvement Hatchability Healthy Chick Rate VitalBoost® A</p>
+<h4 style="margin-top:var(--s2);margin-bottom:var(--s1)" data-i18n="shell_strength_accord_ref">參考文獻</h4>
+<p style="font-size:var(--text-xs);line-height:1.6">) 1:5 Conservative ROI Ratio Field Trial Reference 1:9 Top Farms ※ Reference value. Excludes hatchery premium. Actual results vary by management. Ready to enter a new era of high-hatchability breeding? Contact VitalBoost® distributor for your custom breeder program Contact VitalBoost® Distributor ※ Hatchability/fertility/healthy chick data from VitalBoost® breeder field control trials; P4/embryo quality from PMC 2017/2024; reproductive axis regulation from ResearchGate 2017. ※ Results vary by breed, age, and management conditions. Recommend same-farm control group. ROI is reference only, not investment advice. 活力旺® VitalBoost Plus PRECISION ANIMAL NUTRITION Boar Pregnant Sow Lactating Sow Nursery Finisher Layer Hen Broiler Breeder Shrimp Tilapia Livestock Home © 2026 活力旺® Distributor · VitalBoost® Subtilisin · Professional Animal Nutrition ↑
 
-      <!-- 水產 -->
-      <div class="group-section">
-        <div class="group-header">
-          <div class="group-icon">🌊</div>
-          <div class="group-title">水產方案</div>
-          <span class="group-count">2 個方案</span>
-        </div>
-        <div class="product-grid">
-          <a href="shrimp-survival.html" class="pcard">
-            <div class="pcard-img"><img src="assets/shrimp-cover.jpg" alt="白蝦泰國蝦" loading="lazy" onerror="this.style.display='none'"></div>
-            <div class="pcard-body">
-              <div class="pcard-name"><span class="pcard-emoji">🦐</span>白蝦·泰國蝦</div>
-              <div class="pcard-kpis">
-                <div class="pcard-kpi"><span class="pcard-kpi-val">97.4%</span>最高存活率</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">↓95%</span>弧菌菌落數</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">抗EMS</span>急性肝胰腺壞死</div>
-              </div>
-              <div class="pcard-cta">查看方案</div>
-            </div>
-            <span class="pcard-badge">✦ 上線中</span>
-          </a>
-          <a href="tilapia-survival.html" class="pcard">
-            <div class="pcard-img"><img src="assets/tilapia-harvest-closeup.jpg" alt="羅非魚吳郭魚" loading="lazy" onerror="this.style.display='none'"></div>
-            <div class="pcard-body">
-              <div class="pcard-name"><span class="pcard-emoji">🐟</span>羅非魚·吳郭魚</div>
-              <div class="pcard-kpis">
-                <div class="pcard-kpi"><span class="pcard-kpi-val">97.4%</span>最高存活率</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">+60%</span>均重提升</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">52%→82%</span>鏈球菌存活率</div>
-              </div>
-              <div class="pcard-cta">查看方案</div>
-            </div>
-            <span class="pcard-badge">✦ 上線中</span>
-          </a>
-        </div>
-      </div>
+1:6 Top Farm 活力旺® layer solution addition cost approx. ¥20/ton feed , within standard additive cost acceptance for mainland farms. ※ Field trial reference values. Actual returns vary by management conditions. Based on 10,000 hens, 72-week lay period, market egg price, 115g daily feed intake per hen. Ready to Boost Your Layer Farm Performance? Contact your 活力旺® distributor today 📞 Technical Consultation 📋 Request Trial Protocol ※ 活力旺® distributors provide complete trial record forms including laying rate logs, FCR calculation sheets, spot egg detection cards, and yolk color comparison cards. ※ Data sourced from 活力旺® field trials and published literature (ResearchGate 2017/MDPI 2021/PMC 2018/CASS 2023). ※ Actual results vary by breed, stocking density, feed formulation and season. Recommend on-farm control group verification. ※ ROI ratios are reference values and do not constitute investment advice. 活力旺® VitalBoost Plus PRECISION ANIMAL NUTRITION Boar Pregnant Sow Lactating Sow Nursery F</p></div></div></div>
+<div class="pcard"><div class="pcard-img"><img src="assets/images/shrimp-broodstock-pond.jpg" alt="多卵壯" loading="lazy"></div><div class="pcard-body"><div class="pcard-badge badge-breeding" data-i18n="spawn_boost_badge">繁殖</div><h3 data-i18n="spawn_boost_name">多卵壯</h3><div class="pcard-target" data-i18n="spawn_boost_target">種魚·蝦親本</div><div class="pcard-ingredient">植物甾醇 ≥ 2.5%</div><p class="pcard-mech" data-i18n="spawn_boost_mech">植物甾醇促進親本性腺發育與卵黃生成，優化卵質與精子活力，提升受精率及苗種整齊度。</p><div class="pcard-kpis"><div class="kpi-item"><div class="kpi-num">+20-35%</div><div class="kpi-label" data-i18n="spawn_boost_kpi0">產卵率</div></div> <div class="kpi-item"><div class="kpi-num">85-95%</div><div class="kpi-label" data-i18n="spawn_boost_kpi1">受精率</div></div> <div class="kpi-item"><div class="kpi-num">+15-25%</div><div class="kpi-label" data-i18n="spawn_boost_kpi2">苗種存活率</div></div> <div class="kpi-item"><div class="kpi-num">1:5~1:8</div><div class="kpi-label" data-i18n="spawn_boost_kpi3">ROI</div></div></div><button class="cta-btn" onclick="toggleAccordion(this)" data-i18n="spawn_boost_cta">了解更多</button><div class="accordion"><h4 style="margin-bottom:var(--s1)" data-i18n="spawn_boost_accord_mech">完整作用機制</h4>
+<p style="font-size:var(--text-sm);line-height:1.7">植物甾醇促進親本性腺發育與卵黃生成，優化卵質與精子活力，提升受精率及苗種整齊度。</p></div></div></div>
+<div class="pcard"><div class="pcard-img"><img src="assets/images/finishing-pigs-barn.jpg" alt="長膘旺" loading="lazy"></div><div class="pcard-body"><div class="pcard-badge badge-growth" data-i18n="growth_max_badge">生長</div><h3 data-i18n="growth_max_name">長膘旺</h3><div class="pcard-target" data-i18n="growth_max_target">育肥豬·肉牛·羊</div><div class="pcard-ingredient">蛋白酶 ≥ 100 U/g</div><p class="pcard-mech" data-i18n="growth_max_mech">複合蛋白酶提升蛋白消化率與胺基酸利用率，優化腸道菌群平衡，降低糞氮排放；肉牛/羊搭配植物甾醇提升瘤胃發酵效率。</p><div class="pcard-kpis"><div class="kpi-item"><div class="kpi-num">&lt;2.4</div><div class="kpi-label" data-i18n="growth_max_kpi0">料肉比(FCR)</div></div> <div class="kpi-item"><div class="kpi-num">7-14天</div><div class="kpi-label" data-i18n="growth_max_kpi1">提前出欄</div></div> <div class="kpi-item"><div class="kpi-num">750-950g</div><div class="kpi-label" data-i18n="growth_max_kpi2">日增重</div></div> <div class="kpi-item"><div class="kpi-num">1:5~1:8</div><div class="kpi-label" data-i18n="growth_max_kpi3">ROI</div></div></div><button class="cta-btn" onclick="toggleAccordion(this)" data-i18n="growth_max_cta">了解更多</button><div class="accordion"><h4 style="margin-bottom:var(--s1)" data-i18n="growth_max_accord_mech">完整作用機制</h4>
+<p style="font-size:var(--text-sm);line-height:1.7">Why Bacillus subtilis Protease Improves FCR Subtilisin (EC 3.4.21.62), a serine endoprotease derived from Bacillus subtilis , maintains enzymatic activity across pH 6.5–8.0 in the swine digestive tract. It efficiently hydrolyzes the anti-nutritional factors present in soybean meal — primarily glycinin and β-conglycinin — into 2–6 amino acid oligopeptides, significantly enhancing brush-border peptidase efficiency in the jejunum (PMC 2018). Apparent ileal digestibility of lysine improves by approximately 3–5 percentage points, equivalent to reducing soybean meal inclusion by 8–12 kg/tonne while maintaining equivalent digestible amino acid supply. ① Precise Protein Hydrolysis Degrades trypsin inhibitors, lectins, and intact storage proteins in soybean meal, releasing free amino acids and di/tripeptides for direct absorption. → 3–5% improvement in ileal AA digestibility translates directly to FCR reduction without formula redesign. ② Hindgut Microenvironment Reduces undigested protein substrate entering the large intestine, decreasing putrefactive fermentation and biogenic amine production that damages intestinal villi. → Villus height/crypt depth ratio maintained throughout finishing phase; feed efficiency does not decline with age. ③ AGP Reduction · Immunity · Stress Tolerance Bacillus subtilis colonization competitively excludes C. perfringens , upregulates secretory IgA, and strengthens innate mucosal immunity. Lipopeptide metabolites (iturin, surfactin) provide broad-spectr</p>
+<h4 style="margin-top:var(--s2);margin-bottom:var(--s1)" data-i18n="growth_max_accord_ref">參考文獻</h4>
+<p style="font-size:var(--text-xs);line-height:1.6">by Scale Farm Scale (head/batch) Feed Saved (tonnes) Revenue Gain / Batch Annual Gain (3 batches) 1,000 head 79.4 t $30K $90K 5,000 head 397 t $150K $450K 10,000 head 794 t $300K $900K ※ Calculated at (2.75−2.06)×115kg×scale×feed price. Enhancer cost not deducted. Actual ROI varies by management. ※ Field data from Taiwan trials with control group design (n≥200/group). Baseline FCR per NY/T 2894-2016 and MARA 2023. Actual results vary by farm management, genetics, season. Formulator verification recommended prior to full adoption. ProGrow® Finisher Enhancer PRECISION ANIMAL NUTRITION · ANTIBIOTIC-FREE Layer Hen Broiler Breeder Shrimp Cattle Home © 2026 ProGrow® · Subtilisin Protease Enhancer · Precision Animal Nutrition ↑
 
-      <!-- 牛羊 -->
-      <div class="group-section">
-        <div class="group-header">
-          <div class="group-icon">🐄</div>
-          <div class="group-title">偶蹄動物方案</div>
-          <span class="group-count">1 個方案</span>
-        </div>
-        <div class="product-grid">
-          <a href="livestock.html" class="pcard">
-            <div class="pcard-img"><img src="assets/livestock-beef-before-after.jpg" alt="肉牛乳牛肉羊綿羊" loading="lazy" onerror="this.style.display='none'"></div>
-            <div class="pcard-body">
-              <div class="pcard-name"><span class="pcard-emoji">🐄</span>肉牛·乳牛·肉羊·綿羊</div>
-              <div class="pcard-kpis">
-                <div class="pcard-kpi"><span class="pcard-kpi-val">+25%</span>肉牛 ADG</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">+2.7kg/日</span>乳牛產奶量</div>
-                <div class="pcard-kpi"><span class="pcard-kpi-val">-6.35%</span>肉羊 FCR</div>
-              </div>
-              <div class="pcard-cta">查看方案</div>
-            </div>
-            <span class="pcard-badge">✦ 上線中</span>
-          </a>
-        </div>
-      </div>
+values. Actual returns depend on management. ※ Data from published literature (Sentonpharm field trial, PMC 2012, Selko 2024, PMC11394282). ADG/FCR/milk improvements are literature-reported means. Actual results vary by farm management, breed, feed formula, and environment. Bacillus subtilis listed in MARA Feed Additive Catalogue for cattle and sheep use. ProGrow® Ruminant Enhancer PRECISION ANIMAL NUTRITION · ANTIBIOTIC-FREE Finisher Pig Broiler Layer Hen Shrimp Home © 2026 ProGrow® · Bacillus subtilis Enhancer · Precision Animal Nutrition ↑</p></div></div></div>
+<div class="pcard"><div class="pcard-img"><img src="assets/images/broiler-chicken-house.jpg" alt="足斤旺" loading="lazy"></div><div class="pcard-body"><div class="pcard-badge badge-growth" data-i18n="full_weight_badge">生長</div><h3 data-i18n="full_weight_name">足斤旺</h3><div class="pcard-target" data-i18n="full_weight_target">白肉雞·土雞</div><div class="pcard-ingredient">蛋白酶 ≥ 100 U/g</div><p class="pcard-mech" data-i18n="full_weight_mech">蛋白酶促進腸絨毛發育與隱窩深度比優化，提升飼料養分吸收表面積，搭配植物萃取物緩解熱緊迫。可作為抗生素生長促進劑替代方案。</p><div class="pcard-kpis"><div class="kpi-item"><div class="kpi-num">1.5-1.8</div><div class="kpi-label" data-i18n="full_weight_kpi0">料肉比(FCR)</div></div> <div class="kpi-item"><div class="kpi-num">45-65g</div><div class="kpi-label" data-i18n="full_weight_kpi1">日增重</div></div> <div class="kpi-item"><div class="kpi-num">&lt;10%</div><div class="kpi-label" data-i18n="full_weight_kpi2">均勻度CV</div></div> <div class="kpi-item"><div class="kpi-num">1:6~1:9</div><div class="kpi-label" data-i18n="full_weight_kpi3">ROI</div></div></div><button class="cta-btn" onclick="toggleAccordion(this)" data-i18n="full_weight_cta">了解更多</button><div class="accordion"><h4 style="margin-bottom:var(--s1)" data-i18n="full_weight_accord_mech">完整作用機制</h4>
+<p style="font-size:var(--text-sm);line-height:1.7">蛋白酶促進腸絨毛發育與隱窩深度比優化，提升飼料養分吸收表面積，搭配植物萃取物緩解熱緊迫。可作為抗生素生長促進劑替代方案。</p>
+<h4 style="margin-top:var(--s2);margin-bottom:var(--s1)" data-i18n="full_weight_accord_ref">參考文獻</h4>
+<p style="font-size:var(--text-xs);line-height:1.6">values only, not investment advice. Ready to maximize your broiler's commercial value? Contact VitalBoost® Distributor 📞 Technical Consultation 📋 Request Trial Protocol Native Chicken Farming Challenges? ⏱ Long grow-out (16-22 weeks). High FCR (3.3-3.5). Feed costs never come down. 🪶 Dull feathers, uneven body size. Poor appearance at live bird market. Only ordinary prices. 📉 Survival rate varies 92-95%. Losses eat profits. Intense rural competition. Real Results with VitalBoost® +5-8% Weight Gain 16wk 2.45kg→2.60-2.65kg -3-5% FCR 3.45:1→3.30-3.35:1 +2-3% Survival Rate 95%→97-98% +15% Carcass Score Feather quality significantly improved 📌 VitalBoost® pre-mixed product, 20kg/bag. Add 20kg per 1 metric ton of complete feed. Ready to use. Why VitalBoost® Works for Native Chickens Too? ① Precision Enzyme Complex : Improves protein and amino acid absorption, reduces anti-nutritional factors → Same coarse feed, more absorbed. FCR drops 3-5% directly. ② Immune Modulation Peptide : Activates N</p></div></div></div>
+<div class="pcard"><div class="pcard-img"><img src="assets/images/shrimp-growout-pond.jpg" alt="保苗旺" loading="lazy"></div><div class="pcard-body"><div class="pcard-badge badge-growth" data-i18n="seed_guard_badge">生長</div><h3 data-i18n="seed_guard_name">保苗旺</h3><div class="pcard-target" data-i18n="seed_guard_target">白蝦·吳郭魚·淡水魚</div><div class="pcard-ingredient">蛋白酶 ≥ 100 U/g</div><p class="pcard-mech" data-i18n="seed_guard_mech">蛋白酶增強蛋白同化效率與能量分配，減輕肝胰臟代謝負擔；搭配免疫調節因子提升腸黏膜屏障功能，降低弧菌感染風險。</p><div class="pcard-kpis"><div class="kpi-item"><div class="kpi-num">&gt;80%</div><div class="kpi-label" data-i18n="seed_guard_kpi0">育成率</div></div> <div class="kpi-item"><div class="kpi-num">1.0-1.4</div><div class="kpi-label" data-i18n="seed_guard_kpi1">料肉比(FCR)</div></div> <div class="kpi-item"><div class="kpi-num">-70%</div><div class="kpi-label" data-i18n="seed_guard_kpi2">白便發生率</div></div> <div class="kpi-item"><div class="kpi-num">1:5~1:9</div><div class="kpi-label" data-i18n="seed_guard_kpi3">ROI</div></div></div><button class="cta-btn" onclick="toggleAccordion(this)" data-i18n="seed_guard_cta">了解更多</button><div class="accordion"><h4 style="margin-bottom:var(--s1)" data-i18n="seed_guard_accord_mech">完整作用機制</h4>
+<p style="font-size:var(--text-sm);line-height:1.7">蛋白酶增強蛋白同化效率與能量分配，減輕肝胰臟代謝負擔；搭配免疫調節因子提升腸黏膜屏障功能，降低弧菌感染風險。</p>
+<h4 style="margin-top:var(--s2);margin-bottom:var(--s1)" data-i18n="seed_guard_accord_ref">參考文獻</h4>
+<p style="font-size:var(--text-xs);line-height:1.6">
+values. Actual returns depend on farm management. Return ratio ~1:8 to 1:12 ※ Data from published literature (PMID:38481478; APJMBB 2024 doi:10.35118/apjmbb.2024.032.3.10; ResearchGate 2026; FSI 2025; MDPI 2023) and field trial reference values. Survival/FCR improvements are literature-reported means and vary by culture system, water quality, density, and management. Establish same-farm control groups to validate. Bacillus subtilis listed in MARA Feed Additive Catalogue for aquatic feed use. ProGrow® Shrimp Enhancer PRECISION AQUACULTURE NUTRITION · ANTIBIOTIC-FREE Finisher Pig Broiler Cattle &amp; Sheep Layer Hen Home © 2026 ProGrow® · Bacillus subtilis Enhancer · Precision Aquaculture Nutrition ↑</p></div></div></div>
+</div>
+</div>
+</section>
 
-    </div>
-  </section>
+<section class="section section--dark" id="evidence">
+<div class="container">
+<div class="section-tag" data-i18n="ev_tag">FIELD VERIFICATION</div>
+<h2 data-i18n="ev_title">台灣百萬頭規模・實證背書</h2>
+<p data-i18n="ev_desc" style="color:rgba(255,255,255,.6);max-width:600px">經台灣150萬頭次養殖實證，數據由獨立第三方收集，可提供客戶實地考察。</p>
+</div>
+</section>
 
-  <!-- SCIENCE STRIP -->
-  <div class="science-strip">
-    <div class="container">
-      <div class="science-inner">
-        <div class="science-text">
-          <h2 class="science-title">活力得®枯草菌源蛋白酶<br>分子層面的精準護盾</h2>
-          <p class="science-desc">從消化效率到免疫強化，活力旺®透過四層分子機制同時提升FCR、存活率、繁殖性能與產品品質——無需抗生素，符合全球無抗養殖趨勢。</p>
-          <div class="science-pills">
-            <span class="science-pill">PMC 2018</span>
-            <span class="science-pill">ResearchGate 2026</span>
-            <span class="science-pill">MDPI 2021</span>
-            <span class="science-pill">中科院 2023</span>
-            <span class="science-pill">BAP / ASC 認證相容</span>
-          </div>
-        </div>
-        <div class="science-kpis">
-          <div class="science-kpi">
-            <div class="science-kpi-num num">+49.3%</div>
-            <div class="science-kpi-label">飼料利用率</div>
-          </div>
-          <div class="science-kpi">
-            <div class="science-kpi-num num">↓20.2%</div>
-            <div class="science-kpi-label">運營成本</div>
-          </div>
-          <div class="science-kpi">
-            <div class="science-kpi-num num">500×</div>
-            <div class="science-kpi-label">VE 抗氧化力</div>
-          </div>
-          <div class="science-kpi">
-            <div class="science-kpi-num num">1:8</div>
-            <div class="science-kpi-label">最高投入產出比</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<section class="section section--paper" id="disease">
+<div class="container">
+<div class="section-tag" data-i18n="dz_tag">DISEASE MANAGEMENT</div>
+<h2 data-i18n="dz_title">疾病預防・替抗方案</h2>
+<p class="section-desc" data-i18n="dz_desc">精準營養調控替代傳統抗生素使用路徑，降低養殖風險。</p>
+</div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img src="assets/logo.png" alt="活力旺®" class="footer-logo no-lightbox" onerror="this.style.display='none'">
-          <div>
-            <div class="footer-brand-text">活力旺® VitalBoost Plus</div>
-            <div class="footer-tagline">PRECISION ANIMAL NUTRITION</div>
-          </div>
-        </div>
-        <div class="footer-links">
-          <a href="swine-breeding.html">種公豬</a>
-          <a href="pregnant-sow.html">懷孕母豬</a>
-          <a href="lactating-sow.html">哺乳母豬</a>
-          <a href="nursery-pig.html">保育豬</a>
-          <a href="finisher-pig-fcr.html">育肥豬</a>
-          <a href="layer-chicken.html">蛋雞</a>
-          <a href="broiler-fcr.html">白肉雞·土雞</a>
-          <a href="breeder-chicken.html">種雞</a>
-          <a href="shrimp-survival.html">白蝦·泰國蝦</a>
-          <a href="tilapia-survival.html">羅非魚·吳郭魚</a>
-          <a href="livestock.html">肉牛·乳牛·羊</a>
-          <a href="index.html">首頁</a>
-        </div>
-      </div>
-      <div class="footer-copy">© 2026 活力旺® 代理商 · 活力得®枯草菌源蛋白酶 · 專業動物營養飼料添加劑</div>
-    </div>
-  </footer>
-</div><!-- /lang-cn -->
+<section class="section" id="faq">
+<div class="container">
+<div class="section-tag" data-i18n="faq_tag">FAQ</div>
+<h2 data-i18n="faq_title">常見問題</h2>
+<div class="faq-item"><div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open')"><span data-i18n="faq_q1">活力得®產品安全嗎？</span><span>+</span></div><div class="faq-a" data-i18n="faq_a1">本產品成分均符合混合型飼料添加劑註冊品種目錄，生產遵循GMP標準，常溫保存24個月，耐製粒高溫85°C。</div></div>
+<div class="faq-item"><div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open')"><span data-i18n="faq_q2">多長時間見效？</span><span>+</span></div><div class="faq-a" data-i18n="faq_a2">繁殖線（植物甾醇）一般2-4週可見生殖性能改善；生長線（蛋白酶）一般1-2週可見FCR與生長速度改善。</div></div>
+<div class="faq-item"><div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open')"><span data-i18n="faq_q3">可以與其他添加劑複配使用嗎？</span><span>+</span></div><div class="faq-a" data-i18n="faq_a3">可與多種維生素、礦物質、添加劑複配。建議初次使用時先小批量測試適口性與配伍穩定性。</div></div>
+</div>
+</section>
 
-<!-- ================================================================
-     繁體中文
-================================================================ -->
-<div id="lang-tw" class="lang-tw" style="display:none">
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="footer-brand" data-i18n="footer_brand">活力得® Vitality Plus®</div>
+<p data-i18n="footer_tagline">精準動物營養解決方案</p>
+</div>
+<div>
+<p data-i18n="footer_company">廈門澤林生物科技有限公司</p>
+<p style="font-size:var(--text-xs)" data-i18n="footer_addr">福建省自由貿易試驗區廈門片區嵩嶼中路809號航運大廈1102室之260</p>
+<p style="font-size:var(--text-xs);opacity:.6">91350200MAERUOWJXD</p>
+</div>
+</div>
+<div class="footer-disclaimer" data-i18n="footer_disclaimer">免責聲明：本網站所提供之資訊僅供專業養殖從業人員參考，不構成任何醫療或診斷建議。產品效能可能因養殖環境、飼養管理及動物健康狀況而有所差異。活力得®為註冊商標（第5類及第31類），未經授權不得使用。</div>
+</div>
+</footer>
 
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-inner">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <div class="hero-eyebrow">PRECISION ANIMAL NUTRITION · ADVANCED BIOTECHNOLOGY</div>
-            <h1 class="hero-title">全物種動物營養<br><em>科學解決方案</em></h1>
-            <p class="hero-desc">活力旺®活力得®枯草菌源蛋白酶，覆蓋豬·雞·蝦·魚·牛羊11個物種，從分子層面提升免疫力、消化率與生產性能。</p>
-            <div class="hero-kpis">
-              <div class="hero-kpi"><div class="hero-kpi-num num">11</div><div class="hero-kpi-label">物種方案</div></div>
-              <div class="hero-kpi"><div class="hero-kpi-num num">97.4%</div><div class="hero-kpi-label">最高存活率</div></div>
-              <div class="hero-kpi"><div class="hero-kpi-num num">3語言</div><div class="hero-kpi-label">中英文支援</div></div>
-            </div>
-          </div>
-          <div class="hero-visual">
-            <div class="hero-img-wrap">
-              <img class="no-lightbox" src="assets/logo.jpg" alt="活力旺®精準動物營養" loading="eager" onerror="this.style.display='none'">
-              <div class="hero-img-badge">活力得® 枯草菌源蛋白酶</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="ribbon">
-    <div class="container">
-      <div class="ribbon-inner">
-        <div class="ribbon-stat"><div class="ribbon-num num">97.4%</div><div class="ribbon-label">對蝦最高存活率</div></div>
-        <div class="ribbon-stat"><div class="ribbon-num num">↓95%</div><div class="ribbon-label">弧菌菌落數</div></div>
-        <div class="ribbon-stat"><div class="ribbon-num num">+39.5%</div><div class="ribbon-label">蛋殼強度提升</div></div>
-        <div class="ribbon-stat"><div class="ribbon-num num">↓18%</div><div class="ribbon-label">育肥豬 FCR</div></div>
-        <div class="ribbon-stat"><div class="ribbon-num num">+25%</div><div class="ribbon-label">肉牛 ADG</div></div>
-      </div>
-    </div>
-  </div>
-
-  <section class="section section--ivory">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">PRODUCT SOLUTIONS</div>
-        <h2 class="section-title">選擇您的養殖物種</h2>
-        <p class="section-desc">每個方案均提供完整的科學數據支持、田間試驗驗證，以及 CN / TW / EN 三語技術資料。</p>
-      </div>
-      <div class="group-section">
-        <div class="group-header"><div class="group-icon">🐷</div><div class="group-title">豬隻方案</div><span class="group-count">5 個方案</span></div>
-        <div class="product-grid">
-          <a href="swine-breeding.html" class="pcard"><div class="pcard-img"><img src="assets/modern-boar-farm-header.jpg" alt="種公豬" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🐗</span>種公豬</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">65%→85%+</span>精子活力</div><div class="pcard-kpi"><span class="pcard-kpi-val">+15-20%</span>精液量</div></div><div class="pcard-cta">查看方案</div></div><span class="pcard-badge">✦ 上線中</span></a>
-          <a href="pregnant-sow.html" class="pcard"><div class="pcard-img"><img src="assets/pregnant-sow-production-optimization.jpg" alt="懷孕母豬" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🐷</span>懷孕母豬</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">+5-8%</span>健仔率</div><div class="pcard-kpi"><span class="pcard-kpi-val">↑</span>初生重均勻度</div></div><div class="pcard-cta">查看方案</div></div><span class="pcard-badge">✦ 上線中</span></a>
-          <a href="lactating-sow.html" class="pcard"><div class="pcard-img"><img src="assets/nursing-sow-performance-improvement.jpg" alt="哺乳母豬" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🐷</span>哺乳母豬</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">+5-8%</span>A級苗比例</div><div class="pcard-kpi"><span class="pcard-kpi-val">↑</span>斷奶重均勻度</div></div><div class="pcard-cta">查看方案</div></div><span class="pcard-badge">✦ 上線中</span></a>
-          <a href="nursery-pig.html" class="pcard"><div class="pcard-img"><img src="assets/healthy-piglets.jpg" alt="保育豬" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🐽</span>保育豬</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">+6.45%</span>ADG 日增重</div><div class="pcard-kpi"><span class="pcard-kpi-val">↓10%</span>腹瀉率</div></div><div class="pcard-cta">查看方案</div></div><span class="pcard-badge">✦ 上線中</span></a>
-          <a href="finisher-pig-fcr.html" class="pcard"><div class="pcard-img"><img src="assets/heavy-pigs-140kg.jpg" alt="育肥豬" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🥩</span>育肥豬</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">2.8→2.3</span>FCR ↓18%</div><div class="pcard-kpi"><span class="pcard-kpi-val">110→130kg</span>出欄體重</div></div><div class="pcard-cta">查看方案</div></div><span class="pcard-badge">✦ 上線中</span></a>
-        </div>
-      </div>
-      <div class="group-section">
-        <div class="group-header"><div class="group-icon">🐓</div><div class="group-title">家禽方案</div><span class="group-count">3 個方案</span></div>
-        <div class="product-grid">
-          <a href="layer-chicken.html" class="pcard"><div class="pcard-img"><img src="assets/layer-chicken-performance-improvement.jpg" alt="蛋雞" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🥚</span>蛋雞</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">↓4.9%</span>FCR 料蛋比</div><div class="pcard-kpi"><span class="pcard-kpi-val">+39.5%</span>蛋殼強度</div></div><div class="pcard-cta">查看方案</div></div><span class="pcard-badge">✦ 上線中</span></a>
-          <a href="broiler-fcr.html" class="pcard"><div class="pcard-img"><img src="assets/broiler-chicken-fcr-improvement.jpg" alt="白肉雞土雞" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🍗</span>白肉雞·土雞</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">+12.15%</span>胸肉產量</div><div class="pcard-kpi"><span class="pcard-kpi-val">+5.88%</span>屠體率</div></div><div class="pcard-cta">查看方案</div></div><span class="pcard-badge">✦ 上線中</span></a>
-          <a href="breeder-chicken.html" class="pcard"><div class="pcard-img"><img src="assets/breeding-chicken-performance-improvement.jpg" alt="種雞" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🐓</span>種雞</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">+3-4%</span>受精率</div><div class="pcard-kpi"><span class="pcard-kpi-val">+4-5%</span>孵化率</div></div><div class="pcard-cta">查看方案</div></div><span class="pcard-badge">✦ 上線中</span></a>
-        </div>
-      </div>
-      <div class="group-section">
-        <div class="group-header"><div class="group-icon">🌊</div><div class="group-title">水產方案</div><span class="group-count">2 個方案</span></div>
-        <div class="product-grid">
-          <a href="shrimp-survival.html" class="pcard"><div class="pcard-img"><img src="assets/shrimp-cover.jpg" alt="白蝦" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🦐</span>白蝦·泰國蝦</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">97.4%</span>存活率</div><div class="pcard-kpi"><span class="pcard-kpi-val">↓95%</span>弧菌</div></div><div class="pcard-cta">查看方案</div></div><span class="pcard-badge">✦ 上線中</span></a>
-          <a href="tilapia-survival.html" class="pcard"><div class="pcard-img"><img src="assets/tilapia-harvest-closeup.jpg" alt="羅非魚" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🐟</span>羅非魚·吳郭魚</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">97.4%</span>存活率</div><div class="pcard-kpi"><span class="pcard-kpi-val">+60%</span>均重</div></div><div class="pcard-cta">查看方案</div></div><span class="pcard-badge">✦ 上線中</span></a>
-        </div>
-      </div>
-      <div class="group-section">
-        <div class="group-header"><div class="group-icon">🐄</div><div class="group-title">偶蹄動物方案</div><span class="group-count">1 個方案</span></div>
-        <div class="product-grid">
-          <a href="livestock.html" class="pcard"><div class="pcard-img"><img src="assets/livestock-beef-before-after.jpg" alt="牛羊" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🐄</span>肉牛·乳牛·肉羊·綿羊</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">+25%</span>肉牛 ADG</div><div class="pcard-kpi"><span class="pcard-kpi-val">+2.7kg/日</span>產奶量</div></div><div class="pcard-cta">查看方案</div></div><span class="pcard-badge">✦ 上線中</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="science-strip">
-    <div class="container">
-      <div class="science-inner">
-        <div class="science-text">
-          <h2 class="science-title">活力得®枯草菌源蛋白酶<br>分子層面的精準護盾</h2>
-          <p class="science-desc">從消化效率到免疫強化，活力旺®透過四層分子機制同時提升FCR、存活率、繁殖性能與產品品質——無需抗生素，符合全球無抗養殖趨勢。</p>
-          <div class="science-pills">
-            <span class="science-pill">PMC 2018</span><span class="science-pill">ResearchGate 2026</span><span class="science-pill">MDPI 2021</span><span class="science-pill">中科院 2023</span><span class="science-pill">BAP / ASC 認證相容</span>
-          </div>
-        </div>
-        <div class="science-kpis">
-          <div class="science-kpi"><div class="science-kpi-num num">+49.3%</div><div class="science-kpi-label">飼料利用率</div></div>
-          <div class="science-kpi"><div class="science-kpi-num num">↓20.2%</div><div class="science-kpi-label">運營成本</div></div>
-          <div class="science-kpi"><div class="science-kpi-num num">500×</div><div class="science-kpi-label">VE 抗氧化力</div></div>
-          <div class="science-kpi"><div class="science-kpi-num num">1:8</div><div class="science-kpi-label">最高投入產出比</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img src="assets/logo.png" alt="活力旺®" class="footer-logo no-lightbox" onerror="this.style.display='none'">
-          <div><div class="footer-brand-text">活力旺® VitalBoost Plus</div><div class="footer-tagline">PRECISION ANIMAL NUTRITION</div></div>
-        </div>
-        <div class="footer-links">
-          <a href="swine-breeding.html">種公豬</a><a href="pregnant-sow.html">懷孕母豬</a><a href="lactating-sow.html">哺乳母豬</a><a href="nursery-pig.html">保育豬</a><a href="finisher-pig-fcr.html">育肥豬</a><a href="layer-chicken.html">蛋雞</a><a href="broiler-fcr.html">白肉雞·土雞</a><a href="breeder-chicken.html">種雞</a><a href="shrimp-survival.html">白蝦·泰國蝦</a><a href="tilapia-survival.html">羅非魚</a><a href="livestock.html">牛羊</a><a href="index.html">首頁</a>
-        </div>
-      </div>
-      <div class="footer-copy">© 2026 活力旺® 代理商 · 活力得®枯草菌源蛋白酶 · 專業動物營養飼料添加劑</div>
-    </div>
-  </footer>
-</div><!-- /lang-tw -->
-
-<!-- ================================================================
-     English
-================================================================ -->
-<div id="lang-en" class="lang-en" style="display:none">
-
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-inner">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <div class="hero-eyebrow">PRECISION ANIMAL NUTRITION · ADVANCED BIOTECHNOLOGY</div>
-            <h1 class="hero-title">Multi-Species Animal<br><em>Nutrition Solutions</em></h1>
-            <p class="hero-desc">活力旺® VitalBoost® Subtilisin covers 11 species — swine, poultry, shrimp, fish, cattle & sheep — enhancing immunity, digestibility and production performance at the molecular level.</p>
-            <div class="hero-kpis">
-              <div class="hero-kpi"><div class="hero-kpi-num num">11</div><div class="hero-kpi-label">Species Programs</div></div>
-              <div class="hero-kpi"><div class="hero-kpi-num num">97.4%</div><div class="hero-kpi-label">Peak Survival Rate</div></div>
-              <div class="hero-kpi"><div class="hero-kpi-num num">3-Lang</div><div class="hero-kpi-label">CN / TW / EN</div></div>
-            </div>
-          </div>
-          <div class="hero-visual">
-            <div class="hero-img-wrap">
-              <img class="no-lightbox" src="assets/logo.jpg" alt="VitalBoost Plus Precision Nutrition" loading="eager" onerror="this.style.display='none'">
-              <div class="hero-img-badge">VitalBoost® Subtilisin</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="ribbon">
-    <div class="container">
-      <div class="ribbon-inner">
-        <div class="ribbon-stat"><div class="ribbon-num num">97.4%</div><div class="ribbon-label">Shrimp Survival Rate</div></div>
-        <div class="ribbon-stat"><div class="ribbon-num num">↓95%</div><div class="ribbon-label">Vibrio Count</div></div>
-        <div class="ribbon-stat"><div class="ribbon-num num">+39.5%</div><div class="ribbon-label">Eggshell Strength</div></div>
-        <div class="ribbon-stat"><div class="ribbon-num num">↓18%</div><div class="ribbon-label">Finisher FCR</div></div>
-        <div class="ribbon-stat"><div class="ribbon-num num">+25%</div><div class="ribbon-label">Beef Cattle ADG</div></div>
-      </div>
-    </div>
-  </div>
-
-  <section class="section section--ivory">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">PRODUCT SOLUTIONS</div>
-        <h2 class="section-title">Choose Your Species</h2>
-        <p class="section-desc">Each program is backed by published research, field trial data, and available in CN / TW / EN.</p>
-      </div>
-      <div class="group-section">
-        <div class="group-header"><div class="group-icon">🐷</div><div class="group-title">Swine Programs</div><span class="group-count">5 Programs</span></div>
-        <div class="product-grid">
-          <a href="swine-breeding.html" class="pcard"><div class="pcard-img"><img src="assets/modern-boar-farm-header.jpg" alt="Boar" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🐗</span>Boar</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">65%→85%+</span>Sperm motility</div><div class="pcard-kpi"><span class="pcard-kpi-val">+15-20%</span>Semen volume</div></div><div class="pcard-cta">View Program</div></div><span class="pcard-badge">✦ Live</span></a>
-          <a href="pregnant-sow.html" class="pcard"><div class="pcard-img"><img src="assets/pregnant-sow-production-optimization.jpg" alt="Pregnant Sow" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🐷</span>Pregnant Sow</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">+5-8%</span>Healthy piglet rate</div><div class="pcard-kpi"><span class="pcard-kpi-val">↑</span>Birth weight uniformity</div></div><div class="pcard-cta">View Program</div></div><span class="pcard-badge">✦ Live</span></a>
-          <a href="lactating-sow.html" class="pcard"><div class="pcard-img"><img src="assets/nursing-sow-performance-improvement.jpg" alt="Lactating Sow" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🐷</span>Lactating Sow</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">+5-8%</span>Grade A weaner rate</div><div class="pcard-kpi"><span class="pcard-kpi-val">↑</span>Weaning uniformity</div></div><div class="pcard-cta">View Program</div></div><span class="pcard-badge">✦ Live</span></a>
-          <a href="nursery-pig.html" class="pcard"><div class="pcard-img"><img src="assets/healthy-piglets.jpg" alt="Nursery Pig" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🐽</span>Nursery Pig</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">+6.45%</span>ADG improvement</div><div class="pcard-kpi"><span class="pcard-kpi-val">↓10%</span>Diarrhea rate</div></div><div class="pcard-cta">View Program</div></div><span class="pcard-badge">✦ Live</span></a>
-          <a href="finisher-pig-fcr.html" class="pcard"><div class="pcard-img"><img src="assets/heavy-pigs-140kg.jpg" alt="Finisher Pig" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🥩</span>Finisher Pig</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">2.8→2.3</span>FCR ↓18%</div><div class="pcard-kpi"><span class="pcard-kpi-val">110→130kg</span>Live weight</div></div><div class="pcard-cta">View Program</div></div><span class="pcard-badge">✦ Live</span></a>
-        </div>
-      </div>
-      <div class="group-section">
-        <div class="group-header"><div class="group-icon">🐓</div><div class="group-title">Poultry Programs</div><span class="group-count">3 Programs</span></div>
-        <div class="product-grid">
-          <a href="layer-chicken.html" class="pcard"><div class="pcard-img"><img src="assets/layer-chicken-performance-improvement.jpg" alt="Layer Hen" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🥚</span>Layer Hen</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">↓4.9%</span>Egg FCR</div><div class="pcard-kpi"><span class="pcard-kpi-val">+39.5%</span>Shell strength</div></div><div class="pcard-cta">View Program</div></div><span class="pcard-badge">✦ Live</span></a>
-          <a href="broiler-fcr.html" class="pcard"><div class="pcard-img"><img src="assets/broiler-chicken-fcr-improvement.jpg" alt="Broiler" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🍗</span>Broiler · Native Chicken</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">+12.15%</span>Breast yield</div><div class="pcard-kpi"><span class="pcard-kpi-val">+5.88%</span>Carcass rate</div></div><div class="pcard-cta">View Program</div></div><span class="pcard-badge">✦ Live</span></a>
-          <a href="breeder-chicken.html" class="pcard"><div class="pcard-img"><img src="assets/breeding-chicken-performance-improvement.jpg" alt="Breeder" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🐓</span>Breeder Chicken</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">+3-4%</span>Fertility rate</div><div class="pcard-kpi"><span class="pcard-kpi-val">+4-5%</span>Hatchability</div></div><div class="pcard-cta">View Program</div></div><span class="pcard-badge">✦ Live</span></a>
-        </div>
-      </div>
-      <div class="group-section">
-        <div class="group-header"><div class="group-icon">🌊</div><div class="group-title">Aquaculture Programs</div><span class="group-count">2 Programs</span></div>
-        <div class="product-grid">
-          <a href="shrimp-survival.html" class="pcard"><div class="pcard-img"><img src="assets/shrimp-cover.jpg" alt="Shrimp" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🦐</span>White Shrimp · Tiger Prawn</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">97.4%</span>Survival rate</div><div class="pcard-kpi"><span class="pcard-kpi-val">↓95%</span>Vibrio count</div></div><div class="pcard-cta">View Program</div></div><span class="pcard-badge">✦ Live</span></a>
-          <a href="tilapia-survival.html" class="pcard"><div class="pcard-img"><img src="assets/tilapia-harvest-closeup.jpg" alt="Tilapia" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🐟</span>Tilapia</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">97.4%</span>Survival rate</div><div class="pcard-kpi"><span class="pcard-kpi-val">+60%</span>Avg body weight</div></div><div class="pcard-cta">View Program</div></div><span class="pcard-badge">✦ Live</span></a>
-        </div>
-      </div>
-      <div class="group-section">
-        <div class="group-header"><div class="group-icon">🐄</div><div class="group-title">Livestock Programs</div><span class="group-count">1 Program</span></div>
-        <div class="product-grid">
-          <a href="livestock.html" class="pcard"><div class="pcard-img"><img src="assets/livestock-beef-before-after.jpg" alt="Cattle Sheep" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-body"><div class="pcard-name"><span class="pcard-emoji">🐄</span>Beef · Dairy · Sheep</div><div class="pcard-kpis"><div class="pcard-kpi"><span class="pcard-kpi-val">+25%</span>Beef cattle ADG</div><div class="pcard-kpi"><span class="pcard-kpi-val">+2.7kg/day</span>Dairy milk yield</div></div><div class="pcard-cta">View Program</div></div><span class="pcard-badge">✦ Live</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="science-strip">
-    <div class="container">
-      <div class="science-inner">
-        <div class="science-text">
-          <h2 class="science-title">VitalBoost® Subtilisin<br>Molecular-Level Precision</h2>
-          <p class="science-desc">Through four molecular mechanisms, 活力旺® simultaneously improves FCR, survival rate, reproductive performance, and product quality — without antibiotics, aligned with global antibiotic-free farming standards.</p>
-          <div class="science-pills">
-            <span class="science-pill">PMC 2018</span><span class="science-pill">ResearchGate 2026</span><span class="science-pill">MDPI 2021</span><span class="science-pill">CASS 2023</span><span class="science-pill">BAP / ASC Compatible</span>
-          </div>
-        </div>
-        <div class="science-kpis">
-          <div class="science-kpi"><div class="science-kpi-num num">+49.3%</div><div class="science-kpi-label">Feed Utilization</div></div>
-          <div class="science-kpi"><div class="science-kpi-num num">↓20.2%</div><div class="science-kpi-label">Operating Cost</div></div>
-          <div class="science-kpi"><div class="science-kpi-num num">500×</div><div class="science-kpi-label">Vs Vitamin E</div></div>
-          <div class="science-kpi"><div class="science-kpi-num num">1:8</div><div class="science-kpi-label">Peak ROI Ratio</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img src="assets/logo.png" alt="活力旺®" class="footer-logo no-lightbox" onerror="this.style.display='none'">
-          <div><div class="footer-brand-text">活力旺® VitalBoost Plus</div><div class="footer-tagline">PRECISION ANIMAL NUTRITION</div></div>
-        </div>
-        <div class="footer-links">
-          <a href="swine-breeding.html">Boar</a><a href="pregnant-sow.html">Pregnant Sow</a><a href="lactating-sow.html">Lactating Sow</a><a href="nursery-pig.html">Nursery</a><a href="finisher-pig-fcr.html">Finisher</a><a href="layer-chicken.html">Layer Hen</a><a href="broiler-fcr.html">Broiler</a><a href="breeder-chicken.html">Breeder</a><a href="shrimp-survival.html">Shrimp</a><a href="tilapia-survival.html">Tilapia</a><a href="livestock.html">Livestock</a><a href="index.html">Home</a>
-        </div>
-      </div>
-      <div class="footer-copy">© 2026 活力旺® Distributor · VitalBoost® Subtilisin · Professional Animal Nutrition</div>
-    </div>
-  </footer>
-</div><!-- /lang-en -->
-
-<!-- Back to top -->
-<div id="btt" class="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
-
+<script src="translations.js"></script>
 <script>
-(function(){
-  // Lang switch
-  function switchLang(lang) {
-    ['cn','tw','en'].forEach(function(l){
-      var el = document.getElementById('lang-'+l);
-      if(el) el.style.display = (l===lang) ? 'block' : 'none';
-    });
-    document.querySelectorAll('.lang-btn').forEach(function(btn){
-      btn.classList.toggle('active', btn.dataset.lang===lang);
-    });
-    document.documentElement.lang = lang==='cn'?'zh-CN':lang==='tw'?'zh-TW':'en';
+function toggleAccordion(btn) {
+  var acc = btn.nextElementSibling;
+  if (acc && acc.classList.contains('accordion')) {
+    acc.classList.toggle('open');
+    var isZh = currentLang && currentLang.startsWith('zh');
+    btn.textContent = acc.classList.contains('open')
+      ? (isZh ? '收起' : 'Close')
+      : (isZh ? '了解更多' : 'Learn More');
   }
-  document.querySelectorAll('.lang-btn').forEach(function(btn){
-    btn.addEventListener('click', function(){ switchLang(btn.dataset.lang); });
-  });
-  switchLang('cn');
-
-  // Back to top
-  var btt = document.getElementById('btt');
-  window.addEventListener('scroll', function(){
-    btt.classList.toggle('visible', window.scrollY > 400);
-  }, {passive:true});
-
-  // Lightbox
-  document.addEventListener('click', function(e){
-    if(e.target.tagName==='IMG' && e.target.id!=='lb-img' && !e.target.classList.contains('nav-logo') && !e.target.classList.contains('footer-logo') && !e.target.classList.contains('no-lightbox')){
-      var lb = document.getElementById('lightbox');
-      document.getElementById('lb-img').src = e.target.src;
-      lb.classList.add('active');
-    }
-  });
-  document.getElementById('lightbox').addEventListener('click', function(){
-    this.classList.remove('active');
-  });
-})();
+}
+switchLang(currentLang);
 </script>
 </body>
 </html>
