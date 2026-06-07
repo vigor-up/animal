@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>活力得® Vitality Plus®｜精準動物營養・全物種解決方案</title>
-<meta name="description" content="活力得®植物甾醇與蛋白酶飼料添加劑，覆蓋豬雞水產牛羊，FCR↓、存活率↑、蛋殼強度提升，美國頂尖農業大學研究基礎→台灣生產→廈門澤林總代理">
+<meta name="description" content="活力得®植物甾醇與蛋白酶飼料添加劑，覆蓋豬雞水產牛羊，FCR↓、存活率↑、蛋殼強度提升，康奈爾大學研發→台灣生產→廈門澤林總代理">
 <link rel="canonical" href="https://animal.feed-pet.com/">
 <link rel="alternate" hreflang="zh-Hant" href="https://animal.feed-pet.com/">
 <link rel="alternate" hreflang="zh-Hans" href="https://animal.feed-pet.com/">
@@ -45,7 +45,7 @@ h3{font-size:clamp(var(--text-md),2.5vw,var(--text-lg));font-weight:700}
 .hero-title{font-size:clamp(2rem,5vw,3.5rem);margin-bottom:var(--s3)}
 .hero-title em{font-style:normal;color:var(--gold);display:block}
 .hero-desc{font-size:var(--text-md);color:rgba(255,255,255,.7);max-width:560px;margin-bottom:var(--s4);line-height:1.8}
-.hero-img{width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-lg)}
+.hero-img{width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-lg)} /* see fallback below */
 .chain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--s4);margin-top:var(--s4)}
 .chain-card{background:var(--white);border-radius:var(--r-lg);padding:var(--s4);box-shadow:var(--shadow-sm);border:1px solid var(--mist);text-align:center}
 .chain-step{font-family:'DM Mono',monospace;font-size:var(--text-xl);color:var(--gold);font-weight:500}
@@ -82,6 +82,30 @@ h3{font-size:clamp(var(--text-md),2.5vw,var(--text-lg));font-weight:700}
 .faq-q{font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
 .faq-a{display:none;margin-top:var(--s1);color:var(--mid);font-size:var(--text-sm)}
 .faq-a.open{display:block}
+
+.hero-img{width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-lg)}
+.hero-img-fallback{
+  width:100%;aspect-ratio:4/3;border-radius:var(--r-lg);
+  background:linear-gradient(135deg,rgba(26,58,26,.95) 0%,rgba(42,90,42,.85) 50%,rgba(26,58,26,.95) 100%);
+  border:2px solid rgba(201,165,53,.35);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:16px;padding:32px;box-shadow:var(--shadow-lg)
+}
+.hif-brand{
+  font-family:'Noto Serif TC',serif;font-size:clamp(2.5rem,6vw,4rem);
+  font-weight:900;color:var(--gold);letter-spacing:2px;text-align:center
+}
+.hif-brand sup{font-size:.5em;vertical-align:super}
+.hif-sub{
+  font-size:clamp(.75rem,2vw,1rem);color:rgba(255,255,255,.6);
+  letter-spacing:3px;text-transform:uppercase;text-align:center
+}
+.hif-pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:8px}
+.hif-pills span{
+  background:rgba(201,165,53,.15);border:1px solid rgba(201,165,53,.4);
+  color:var(--gold);font-size:.8rem;padding:5px 14px;border-radius:20px;
+  letter-spacing:.5px
+}
 </style>
 </head>
 <body>
@@ -107,11 +131,11 @@ h3{font-size:clamp(var(--text-md),2.5vw,var(--text-lg));font-weight:700}
 <div class="hero-text">
 <div class="hero-eyebrow text-gold" data-i18n="hero_eyebrow">PRECISION ANIMAL NUTRITION</div>
 <h1 class="hero-title" data-i18n="hero_title">活力得<sup>®</sup> <em data-i18n="hero_subtitle">精準動物營養</em></h1>
-<p class="hero-desc" data-i18n="hero_desc">源自美國頂尖農業大學動物科學系研究基礎，經台灣百萬頭規模實證，為中華區畜牧水產市場打造的六支精準飼料添加劑。</p>
+<p class="hero-desc" data-i18n="hero_desc">源自美國康奈爾大學動物科學系研究基礎，經台灣百萬頭規模實證，為中華區畜牧水產市場打造的六支精準飼料添加劑。</p>
 <a href="#products" class="cta-btn" style="border-color:var(--gold);color:var(--gold);display:inline-block" data-i18n="hero_cta">探索產品 →</a>
 </div>
 <div class="hero-visual">
-<img src="assets/images/product-package-blank.jpg" alt="Vitality Plus" class="hero-img" loading="lazy">
+<img src="assets/images/hero-farm-vitality.jpg" alt="活力得® Precision Animal Nutrition" class="hero-img" loading="lazy" onerror="this.parentElement.innerHTML='<div class=hero-img-fallback><div class=hif-brand>活力得<sup>®</sup></div><div class=hif-sub>Precision Animal Nutrition</div><div class=hif-pills><span>植物甾醇</span><span>蛋白酶</span><span>6支精準配方</span></div></div>'">
 </div>
 </div>
 </div>
@@ -122,7 +146,7 @@ h3{font-size:clamp(var(--text-md),2.5vw,var(--text-lg));font-weight:700}
 <div class="section-tag" data-i18n="chain_tag">TECHNOLOGY ORIGIN</div>
 <h2 data-i18n="chain_title">三地溯源・驗證技術鏈</h2>
 <div class="chain-grid">
-<div class="chain-card"><div class="chain-step">01</div><div class="chain-name" data-i18n="chain_1_name">美國農業研究院</div><div class="chain-role" data-i18n="chain_1_role">動物科學系．研發源頭</div></div>
+<div class="chain-card"><div class="chain-step">01</div><div class="chain-name" data-i18n="chain_1_name">康奈爾大學</div><div class="chain-role" data-i18n="chain_1_role">動物科學系．研發源頭</div></div>
 <div class="chain-card"><div class="chain-step">02</div><div class="chain-name" data-i18n="chain_2_name">richtrong.com</div><div class="chain-role" data-i18n="chain_2_role">美國商化運營</div></div>
 <div class="chain-card"><div class="chain-step">03</div><div class="chain-name" data-i18n="chain_3_name">台灣毅展實業</div><div class="chain-role" data-i18n="chain_3_role">標準化生產</div></div>
 <div class="chain-card"><div class="chain-step">04</div><div class="chain-name" data-i18n="chain_4_name">廈門澤林生物</div><div class="chain-role" data-i18n="chain_4_role">中國總代理</div></div>
@@ -209,7 +233,7 @@ values. Actual returns depend on farm management. Return ratio ~1:8 to 1:12 ※ 
 <div>
 <p data-i18n="footer_company">廈門澤林生物科技有限公司</p>
 <p style="font-size:var(--text-xs)" data-i18n="footer_addr">福建省自由貿易試驗區廈門片區嵩嶼中路809號航運大廈1102室之260</p>
-<p style="font-size:var(--text-xs);opacity:.6">91350200MAERU0WJXD</p>
+<p style="font-size:var(--text-xs);opacity:.6">91350200MAERUOWJXD</p>
 </div>
 </div>
 <div class="footer-disclaimer" data-i18n="footer_disclaimer">免責聲明：本網站所提供之資訊僅供專業養殖從業人員參考，不構成任何醫療或診斷建議。產品效能可能因養殖環境、飼養管理及動物健康狀況而有所差異。活力得®為註冊商標（第5類及第31類），未經授權不得使用。</div>
