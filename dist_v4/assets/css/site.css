@@ -357,3 +357,112 @@ p  { font-size: clamp(14px,1.5vw,16px); color: #2a4a3c; }
   .usage-steps { grid-template-columns: 1fr; }
   .dosage-table th, .dosage-table td { padding: 8px 10px; font-size: 12px; }
 }
+
+/* ============================================
+   STUFF-01 追加：密排版元件
+   ============================================ */
+
+/* FAQ Accordion */
+.faq-section { padding: 48px 0; }
+.faq-grid { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 8px; }
+details.faq-item { border: 1.5px solid #ddd8cc; border-radius: 10px; overflow: hidden; background: var(--bg); }
+details.faq-item[open] { border-color: var(--gold); box-shadow: 0 2px 12px rgba(201,169,97,.18); }
+details.faq-item summary {
+  padding: 16px 20px; font-weight: 600; font-size: 15px; cursor: pointer;
+  list-style: none; display: flex; justify-content: space-between; align-items: center;
+  color: var(--ink); user-select: none; gap: 12px;
+}
+details.faq-item summary::-webkit-details-marker { display: none; }
+.faq-toggle {
+  flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%;
+  background: var(--bg-alt); display: flex; align-items: center; justify-content: center;
+  font-size: 16px; color: var(--gold); font-weight: 700; line-height: 1;
+}
+details.faq-item[open] .faq-toggle { background: var(--gold); color: var(--ink); }
+.faq-body { padding: 4px 20px 18px; font-size: 14px; color: #4a6a5a; line-height: 1.7; border-top: 1px solid #f0ece0; }
+
+/* Before/After Grid */
+.ba-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); gap: 20px; }
+.ba-card {
+  background: var(--bg); border: 1.5px solid #ddd8cc;
+  border-radius: 12px; padding: 20px 18px; box-shadow: var(--shadow); text-align: center;
+}
+.ba-label { font-size: 11px; font-weight: 600; color: #7a8a80; letter-spacing:.06em; text-transform:uppercase; margin-bottom:8px; }
+.ba-nums { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 8px 0; flex-wrap: wrap; }
+.ba-before { font-size: 26px; font-weight: 800; color: var(--pain); font-family: 'Baloo 2',sans-serif; }
+.ba-arrow  { font-size: 22px; color: var(--gold); line-height: 1; }
+.ba-after  { font-size: 26px; font-weight: 800; color: var(--green-hi); font-family: 'Baloo 2',sans-serif; }
+.ba-unit   { font-size: 12px; color: #8a9a90; margin-top: 2px; display: block; }
+.ba-bar-wrap { height: 7px; background: #eee; border-radius: 4px; overflow: hidden; margin: 10px 0 6px; }
+.ba-bar { height: 100%; background: linear-gradient(90deg, var(--green-hi), var(--gold-lt)); border-radius: 4px; }
+.ba-change { font-size: 14px; font-weight: 800; color: var(--green-hi); font-family: 'Baloo 2',sans-serif; }
+.ba-note   { font-size: 11px; color: #aaa; margin-top: 4px; }
+
+/* ROI Stripe */
+.roi-stripe {
+  background: linear-gradient(135deg, var(--ink) 0%, var(--ink2) 100%);
+  padding: 52px 0; text-align: center;
+}
+.roi-stripe .roi-num {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: clamp(56px, 12vw, 100px); font-weight: 800;
+  color: var(--gold-lt); line-height: 1; display: block;
+}
+.roi-stripe .roi-label { font-size: 20px; color: rgba(255,255,255,.85); margin-top: 8px; display: block; }
+.roi-stripe .roi-note  { font-size: 12px; color: rgba(255,255,255,.45); margin-top: 12px; }
+
+/* BA inline (index card) */
+.ba-inline { display: flex; align-items: center; gap: 6px; padding: 8px 0; border-top: 1px solid #f0ece0; border-bottom: 1px solid #f0ece0; margin: 6px 0; }
+.ba-inline .bai-label  { font-size: 11px; color: #7a8a80; font-weight: 600; text-transform: uppercase; flex-shrink: 0; }
+.ba-inline .bai-before { font-size: 17px; font-weight: 800; color: var(--pain); font-family: 'Baloo 2',sans-serif; }
+.ba-inline .bai-arr    { font-size: 16px; color: var(--gold); }
+.ba-inline .bai-after  { font-size: 17px; font-weight: 800; color: var(--green-hi); font-family: 'Baloo 2',sans-serif; flex: 1; }
+
+/* ROI big dark badge in card */
+.roi-card-big { display: flex; align-items: center; gap: 8px; margin: 8px 0; padding: 6px 10px; background: var(--mech-bg); border-radius: 6px; }
+.roi-card-big .roi-val   { font-family: 'Baloo 2',sans-serif; font-size: 18px; font-weight: 800; color: var(--gold-lt); }
+.roi-card-big .roi-label { font-size: 11px; color: rgba(255,255,255,.65); }
+
+/* Dense product card pain list */
+.product-pain-list { list-style: none; margin: 8px 0 10px; padding: 0; }
+.product-pain-list li { font-size: 12.5px; padding: 5px 0 5px 22px; position: relative; color: #5a4040; line-height: 1.4; border-bottom: 1px solid #f0ece0; }
+.product-pain-list li::before { content: '✗'; position: absolute; left: 0; color: var(--pain); font-weight: 700; font-size: 14px; }
+.product-pain-list li:last-child { border-bottom: none; }
+
+/* Species tag chip */
+.card-species-tag { display: inline-block; font-size: 11px; font-weight: 600; color: var(--accent); background: #eef7f2; padding: 2px 10px; border-radius: 20px; margin-bottom: 4px; }
+[data-theme="amber"] .card-species-tag { background: #fdecd8; color: #8a4010; }
+[data-theme="ocean"] .card-species-tag  { background: #d8e8f4; color: #0a2a4a; }
+
+/* Taller product card image */
+.product-card .product-card-img { height: 220px; }
+
+/* Application grid */
+.app-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(170px,1fr)); gap: 14px; margin-top: 24px; }
+.app-item { background: var(--bg); border-radius: 10px; padding: 16px 14px; border-left: 3px solid var(--accent); box-shadow: var(--shadow); }
+.app-item h4 { font-size: 14px; color: var(--ink); margin-bottom: 4px; font-weight: 700; }
+.app-item p  { font-size: 12px; color: #6a8a7a; line-height: 1.5; }
+
+/* Spec table */
+.spec-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 20px; }
+.spec-table th { background: var(--ink2); color: #fff; padding: 10px 16px; text-align: left; font-weight: 600; }
+.spec-table td { padding: 10px 16px; border-bottom: 1px solid #e8e0d0; }
+.spec-table tr:nth-child(even) td { background: #faf6ee; }
+
+/* Feature band */
+.feat-band { background: var(--bg-alt); padding: 28px 0; border-top: 1px solid #ddd8cc; border-bottom: 1px solid #ddd8cc; }
+.feat-band-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 48px; }
+.feat-item { text-align: center; min-width: 100px; }
+.feat-item .fi-num { font-family: 'Baloo 2',sans-serif; font-size: 26px; font-weight: 800; color: var(--ink2); display: block; }
+.feat-item .fi-lab { font-size: 12px; color: #6a8a7a; }
+
+/* Responsive additions */
+@media (max-width: 640px) {
+  .ba-grid { grid-template-columns: 1fr 1fr; }
+  .ba-card { padding: 14px 12px; }
+  .app-grid { grid-template-columns: 1fr 1fr; }
+  details.faq-item summary { font-size: 14px; padding: 14px 16px; }
+  .roi-stripe .roi-num { font-size: 56px; }
+  .feat-band-inner { gap: 16px 28px; }
+  .product-card .product-card-img { height: 180px; }
+}
