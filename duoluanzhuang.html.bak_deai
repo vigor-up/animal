@@ -26,7 +26,7 @@
 
 <!-- §1 收益 Hero -->
 <section class="hero" data-theme="ocean">
-  <div class="hero-bg" style="background-image:url('assets/img/duoluan_broodstock_real_qwen.png')"></div>
+  <div class="hero-bg" style="background-image:url('assets/img/duoluan_broodstock1.png')"></div>
   <div class="hero-overlay"></div>
   <div class="hero-body">
     <div class="hero-tag">繁殖線 No.03 · 水產親本專屬</div>
@@ -53,7 +53,9 @@
 </section>
 
 <!-- 多卵壯圖片補充說明 -->
-
+<div style="background:#d8e8f4;border-left:4px solid #1A4A6B;padding:10px 24px;font-size:13px;color:#0a2a4a;" data-pending-img="IMG-GEN-01">
+  ⚠ 多卵壯專屬水產親本場景圖待補（IMG-GEN-01 任務），現以近似圖佔位。
+</div>
 
 <!-- §2 痛點 vs 改善 -->
 <section class="section">
