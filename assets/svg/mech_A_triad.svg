@@ -1,0 +1,20 @@
+<svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC, sans-serif">
+<rect width="900" height="300" fill="#0F3B2E"/>
+<text x="30" y="42" fill="#C9A961" font-size="22" font-weight="700">Ser&#x2013;His&#x2013;Asp 催化三聯體｜分子剪刀</text>
+<g transform="translate(60,120)">
+  <circle cx="0" cy="0" r="34" fill="#16A86A"/><text x="0" y="6" fill="#fff" font-size="15" text-anchor="middle">Asp32</text>
+  <circle cx="130" cy="0" r="34" fill="#16A86A"/><text x="130" y="6" fill="#fff" font-size="15" text-anchor="middle">His64</text>
+  <circle cx="260" cy="0" r="34" fill="#C9A961"/><text x="260" y="6" fill="#15281D" font-size="15" text-anchor="middle">Ser221</text>
+  <path d="M34 0 L96 0" stroke="#C9A961" stroke-width="3" marker-end="url(#ah)"/>
+  <path d="M164 0 L226 0" stroke="#C9A961" stroke-width="3" marker-end="url(#ah)"/>
+  <text x="130" y="-46" fill="#F5EFE0" font-size="13" text-anchor="middle">電荷接力 &#x2192; 活化 Ser 親核</text>
+</g>
+<g transform="translate(430,120)">
+  <rect x="0" y="-26" width="150" height="52" rx="8" fill="#244" stroke="#C9A961"/><text x="75" y="6" fill="#F5EFE0" font-size="13" text-anchor="middle">飼料大分子蛋白</text>
+  <path d="M150 0 L210 0" stroke="#16A86A" stroke-width="4" marker-end="url(#ah)"/>
+  <rect x="210" y="-26" width="170" height="52" rx="8" fill="#16A86A"/><text x="295" y="0" fill="#fff" font-size="13" text-anchor="middle">小肽 + 游離胺基酸</text>
+  <text x="295" y="18" fill="#eafff2" font-size="11" text-anchor="middle">&#x2192; 腸道吸收</text>
+</g>
+<defs><marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#C9A961"/></marker></defs>
+<text x="30" y="280" fill="#F5EFE0" font-size="12" opacity="0.8">subtilisin 型編號；催化效率遠高於被動水解，並分解抗營養因子釋放可用胺基酸</text>
+</svg>

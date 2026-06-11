@@ -1,0 +1,16 @@
+{
+    "style":  "realistic",
+    "quality":  "final",
+    "steps":  14,
+    "size":  "1024x768",
+    "out":  "D:\\LLM\\sites\\animal\\dist_v4\\assets\\img\\duoluan_broodstock_scene2.png",
+    "size_bytes":  "1327030",
+    "gen_s":  68.3,
+    "vram_base_GiB":  35.42,
+    "vram_peak_GiB":  45.23,
+    "vram_max_budget_GiB":  58,
+    "vram_safe":  true,
+    "qwen_health":  200,
+    "prompt_chars":  1665,
+    "prompt_file":  "D:\\LLM\\sites\\animal\\dist_v4\\assets\\img\\duoluan_broodstock_scene2.png.prompt.txt"
+}

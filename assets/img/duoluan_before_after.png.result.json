@@ -1,0 +1,16 @@
+{
+    "style":  "realistic",
+    "quality":  "final",
+    "steps":  14,
+    "size":  "1024x768",
+    "out":  "D:\\LLM\\sites\\animal\\dist_v4\\assets\\img\\duoluan_before_after.png",
+    "size_bytes":  "1363714",
+    "gen_s":  66.8,
+    "vram_base_GiB":  35.42,
+    "vram_peak_GiB":  45.17,
+    "vram_max_budget_GiB":  58,
+    "vram_safe":  true,
+    "qwen_health":  200,
+    "prompt_chars":  1334,
+    "prompt_file":  "D:\\LLM\\sites\\animal\\dist_v4\\assets\\img\\duoluan_before_after.png.prompt.txt"
+}
