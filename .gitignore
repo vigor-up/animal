@@ -1,1 +1,5 @@
 work/
+
+# DEPLOY-P1 internal (not for public site)
+_abmap.json
+assets/img_upgrade_candidates.md
