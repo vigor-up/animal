@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://animal.feed-pet.com/</loc><lastmod>2026-04-29</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://animal.feed-pet.com/swine-breeding.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://animal.feed-pet.com/pregnant-sow.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://animal.feed-pet.com/lactating-sow.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://animal.feed-pet.com/nursery-pig.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://animal.feed-pet.com/finisher-pig-fcr.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://animal.feed-pet.com/layer-chicken.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://animal.feed-pet.com/broiler-fcr.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://animal.feed-pet.com/breeder-chicken.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://animal.feed-pet.com/shrimp-survival.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://animal.feed-pet.com/tilapia-survival.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://animal.feed-pet.com/livestock.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://animal.feed-pet.com/</loc>
+    <lastmod>2026-06-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://animal.feed-pet.com/?lang=zh-Hans"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://animal.feed-pet.com/?lang=zh-Hant"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://animal.feed-pet.com/?lang=en"/>
+  </url>
+  <url>
+    <loc>https://animal.feed-pet.com/junzaiwang.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://animal.feed-pet.com/junzaiwang.html?lang=zh-Hans"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://animal.feed-pet.com/junzaiwang.html?lang=zh-Hant"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://animal.feed-pet.com/junzaiwang.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://animal.feed-pet.com/kelionwang.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://animal.feed-pet.com/kelionwang.html?lang=zh-Hans"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://animal.feed-pet.com/kelionwang.html?lang=zh-Hant"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://animal.feed-pet.com/kelionwang.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://animal.feed-pet.com/duoluanzhuang.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://animal.feed-pet.com/duoluanzhuang.html?lang=zh-Hans"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://animal.feed-pet.com/duoluanzhuang.html?lang=zh-Hant"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://animal.feed-pet.com/duoluanzhuang.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://animal.feed-pet.com/zhangbiaowang.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://animal.feed-pet.com/zhangbiaowang.html?lang=zh-Hans"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://animal.feed-pet.com/zhangbiaowang.html?lang=zh-Hant"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://animal.feed-pet.com/zhangbiaowang.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://animal.feed-pet.com/zujinwang.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://animal.feed-pet.com/zujinwang.html?lang=zh-Hans"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://animal.feed-pet.com/zujinwang.html?lang=zh-Hant"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://animal.feed-pet.com/zujinwang.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://animal.feed-pet.com/baomiaowang.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://animal.feed-pet.com/baomiaowang.html?lang=zh-Hans"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://animal.feed-pet.com/baomiaowang.html?lang=zh-Hant"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://animal.feed-pet.com/baomiaowang.html?lang=en"/>
+  </url>
 </urlset>
