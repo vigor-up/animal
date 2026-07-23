@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+User-agent: Baiduspider
+Allow: /
+User-agent: Googlebot
+Allow: /
 Sitemap: https://animal.feed-pet.com/sitemap.xml
