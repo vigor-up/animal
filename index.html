@@ -4,27 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>活力得® Vitality Plus®｜精準動物營養・全物種解決方案</title>
-<meta name="description" content="活力得®植物甾醇與蛋白酶飼料添加劑，覆蓋豬雞水產牛羊，FCR↓、存活率↑、蛋殼強度提升，康奈爾大學研發→台灣生產→廈門澤林總代理">
+<meta name="description" content="活力得®植物甾醇與蛋白酶飼料添加劑，覆蓋豬雞水產牛羊，FCR↓、存活率↑、蛋殼強度提升，台灣毅展實業/廈門澤林生物科技">
 <link rel="canonical" href="https://animal.feed-pet.com/">
 <link rel="alternate" hreflang="zh-Hant" href="https://animal.feed-pet.com/">
 <link rel="alternate" hreflang="zh-Hans" href="https://animal.feed-pet.com/">
 <link rel="alternate" hreflang="en" href="https://animal.feed-pet.com/">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
+/* === SKYWORK DESIGN SYSTEM === */
 :root {
-  --ink: #0d1f0d;
-  --forest: #1a3a1a;
-  --forest-md: #2a5a2a;
-  --forest-lt: #3a7a3a;
-  --gold: #c9a535;
-  --gold-lt: #e2bb4a;
-  --gold-bg: #fdf8ee;
-  --ivory: #fafaf7;
-  --paper: #f4f3ef;
-  --mist: #e8e6e0;
-  --mid: #8a9080;
-  --white: #ffffff;
-  --emerald: #2d7a4f;
+  --forest: #0F3B2E;
+  --forest-grad: #143D2C;
+  --gold: #C9A961;
+  --gold-lt: #E5C977;
+  --gold-dk: #8B6F2D;
+  --card-bg: #F5EFE0;
+  --accent: #FF7A59;
+  --accent-dk: #E55638;
+  --pain-red: #EF6B5E;
+  --ink: #15281D;
+  --white: #FFFFFF;
+  --offwhite: #FAF8F2;
+  --mist: rgba(255,255,255,.12);
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
@@ -33,80 +34,184 @@
   --text-xl: 1.75rem;
   --text-2xl: 2.25rem;
   --text-3xl: 3rem;
-  --text-4xl: 4rem;
+  --text-4xl: 3.75rem;
   --s1: 8px; --s2: 16px; --s3: 24px; --s4: 32px;
   --s5: 48px; --s6: 64px; --s7: 96px;
   --r-sm: 4px; --r-md: 8px; --r-lg: 16px; --r-xl: 24px;
-  --shadow-sm: 0 2px 8px rgba(13,31,13,.08);
-  --shadow-md: 0 4px 20px rgba(13,31,13,.1);
-  --shadow-lg: 0 12px 40px rgba(13,31,13,.14);
+  --shadow-sm: 0 2px 8px rgba(15,59,46,.08);
+  --shadow-md: 0 4px 20px rgba(15,59,46,.12);
+  --shadow-lg: 0 12px 40px rgba(15,59,46,.16);
   --ease-out: cubic-bezier(.22,.6,.36,1);
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Noto Sans SC',sans-serif;font-size:var(--text-base);line-height:1.85;color:var(--ink);background:var(--ivory)}
-h1,h2,h3,h4{font-family:'Noto Serif SC',serif;line-height:1.25;letter-spacing:-.01em}
-h1{font-size:clamp(2rem,6vw,var(--text-4xl));font-weight:900}
-h2{font-size:clamp(1.5rem,4vw,var(--text-2xl));font-weight:700;margin-bottom:var(--s3)}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:'Noto Sans TC',sans-serif;font-size:var(--text-base);line-height:1.85;color:var(--ink);background:var(--offwhite)}
+h1,h2,h3,h4,h5{font-family:'Noto Serif TC',serif;line-height:1.25;letter-spacing:-.01em}
+h1{font-size:clamp(2rem,5vw,var(--text-4xl));font-weight:900}
+h2{font-size:clamp(1.5rem,3.5vw,var(--text-2xl));font-weight:800;margin-bottom:var(--s3)}
 h3{font-size:clamp(var(--text-md),2.5vw,var(--text-lg));font-weight:700}
+.num{font-family:'Baloo 2',cursive;font-weight:800}
 .container{max-width:1280px;margin:0 auto;padding:0 var(--s3)}
 @media(min-width:768px){.container{padding:0 var(--s5)}}
-.nav{position:sticky;top:0;z-index:200;background:rgba(26,58,26,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,165,53,.15)}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:200;background:linear-gradient(135deg,var(--forest),var(--forest-grad));border-bottom:1px solid rgba(201,169,97,.15);box-shadow:0 2px 20px rgba(15,59,46,.25)}
 .nav-inner{display:flex;align-items:center;gap:var(--s2);padding:var(--s2) var(--s3);max-width:1280px;margin:0 auto}
 .nav-brand{display:flex;align-items:center;gap:var(--s1);margin-right:auto}
 .nav-logo{height:36px;width:auto}
-.nav-name{font-family:'Noto Serif SC',serif;font-weight:700;font-size:1.2rem;color:var(--gold);letter-spacing:.06em;white-space:nowrap}
+.nav-name{font-family:'Noto Serif TC',serif;font-weight:700;font-size:1.2rem;color:var(--gold);letter-spacing:.06em;white-space:nowrap}
 .lang-group{display:flex;gap:4px;background:rgba(255,255,255,.08);border-radius:40px;padding:3px}
 .lang-btn{cursor:pointer;border:none;background:transparent;color:rgba(255,255,255,.65);font-size:var(--text-xs);font-weight:500;padding:5px 12px;border-radius:40px;transition:all .2s}
 .lang-btn.active{background:var(--gold);color:var(--forest);font-weight:700}
+
+/* SECTION */
 .section{padding:var(--s6) 0}
-.section--dark{background:var(--forest);color:var(--white)}
-.section--paper{background:var(--paper)}
-.section-tag{font-size:var(--text-xs);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--s2)}
-.hero{position:relative;background:var(--forest);color:var(--white);overflow:hidden;min-height:min(90vh,680px);display:flex;align-items:center}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 65% 40%,rgba(42,90,42,.55) 0%,transparent 70%),radial-gradient(ellipse 50% 40% at 20% 80%,rgba(201,165,53,.08) 0%,transparent 60%),linear-gradient(160deg,#0d1f0d,#1a3a1a 50%,#0f2a0f 100%)}
-.hero-bg::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,165,53,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,165,53,.04) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,transparent 0%,black 20%,black 80%,transparent 100%)}
+.section--dark{background:linear-gradient(160deg,var(--forest),#0a2a1a);color:var(--white)}
+.section--card{background:var(--card-bg)}
+.section--white{background:var(--white)}
+.section-tag{font-family:'Baloo 2',cursive;font-size:var(--text-xs);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--s2)}
+.section-desc{color:var(--ink);opacity:.7;max-width:700px;margin-bottom:var(--s4);font-size:var(--text-md)}
+.section-subtitle{font-size:var(--text-sm);font-weight:700;color:var(--forest);margin-bottom:var(--s2);display:flex;align-items:center;gap:6px}
+
+/* HERO */
+.hero{position:relative;background:linear-gradient(160deg,var(--forest),#0a2a1a);color:var(--white);overflow:hidden;min-height:min(90vh,680px);display:flex;align-items:center}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 65% 40%,rgba(20,61,44,.55) 0%,transparent 70%),radial-gradient(ellipse 50% 40% at 20% 80%,rgba(201,169,97,.06) 0%,transparent 60%),linear-gradient(160deg,#0a2a1a,var(--forest) 50%,#0d3528 100%)}
+.hero-bg::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,169,97,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,169,97,.04) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,transparent 0%,black 20%,black 80%,transparent 100%)}
 .hero-inner{position:relative;z-index:2;width:100%;padding:var(--s6) 0 var(--s5)}
-.hero-title{font-size:clamp(2rem,5vw,3.5rem);margin-bottom:var(--s3)}
-.hero-title em{font-style:normal;color:var(--gold);display:block}
-.hero-desc{font-size:var(--text-md);color:rgba(255,255,255,.7);max-width:560px;margin-bottom:var(--s4);line-height:1.8}
-.hero-img{width:100%;max-width:500px;border-radius:var(--r-lg);box-shadow:var(--shadow-lg);margin-top:var(--s3)}
 .hero-content{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s5)}
 .hero-text{flex:1;min-width:300px}
 .hero-visual{flex:0 0 44%}
 @media(max-width:768px){.hero-visual{flex:1 1 100%}}
+.hero-eyebrow{font-family:'Baloo 2',cursive;font-size:var(--text-sm);font-weight:700;letter-spacing:.12em;margin-bottom:var(--s2);color:var(--gold)}
+.hero-title{font-size:clamp(2rem,5vw,3.5rem);margin-bottom:var(--s3)}
+.hero-title em{font-style:normal;color:var(--gold-lt);display:block}
+.hero-desc{font-size:var(--text-md);color:rgba(255,255,255,.7);max-width:560px;margin-bottom:var(--s4);line-height:1.8}
+.hero-cta{margin-top:var(--s3)}
+.hero-img{width:100%;max-width:500px;border-radius:var(--r-lg);box-shadow:var(--shadow-lg);margin-top:var(--s3)}
+
+/* BUTTONS */
+.btn-gold{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold-lt));color:var(--forest);font-weight:700;padding:14px 36px;border-radius:40px;text-decoration:none;font-size:var(--text-sm);transition:all .25s var(--ease-out);border:none;cursor:pointer}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,169,97,.3)}
+.btn-outline{display:inline-block;border:2px solid var(--gold);color:var(--gold);background:transparent;font-weight:600;padding:12px 28px;border-radius:40px;text-decoration:none;font-size:var(--text-sm);transition:all .25s var(--ease-out);cursor:pointer}
+.btn-outline:hover{background:var(--gold);color:var(--forest)}
+
+/* EVIDENCE BADGE */
+.ev-badge{display:inline-block;font-size:.65rem;font-weight:600;padding:2px 8px;border-radius:20px;white-space:nowrap;margin-left:4px;vertical-align:middle}
+.ev-confirmed{background:#d4edda;color:#155724;border:1px solid #c3e6cb}
+.ev-inferring{background:#fff3cd;color:#856404;border:1px solid #ffeeba}
+.ev-strengthening{background:#ffe5d0;color:#a0522d;border:1px solid #ffd6b0}
+
+/* PRODUCT CARD */
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:var(--s5)}
+.pcard{background:var(--white);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid rgba(201,169,97,.15);transition:transform .3s var(--ease-out),box-shadow .3s}
+.pcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.pcard-img{aspect-ratio:16/9;overflow:hidden;background:#e8e3d5}
+.pcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.pcard:hover .pcard-img img{transform:scale(1.06)}
+.pcard-body{padding:var(--s4)}
+.pcard-badge{display:inline-block;font-size:var(--text-xs);font-weight:700;padding:4px 14px;border-radius:40px;margin-bottom:var(--s2);text-transform:uppercase;letter-spacing:.08em}
+.badge-breeding{background:var(--card-bg);color:var(--gold-dk);border:1px solid var(--gold)}
+.badge-growth{background:#e6efe4;color:#2a6a2a;border:1px solid #8fbc8f}
+.pcard-name{font-size:var(--text-xl);font-weight:900;margin-bottom:4px}
+.pcard-tagline{font-size:var(--text-sm);color:var(--accent);font-weight:600;margin-bottom:var(--s2)}
+.pcard-target{font-size:var(--text-sm);color:var(--ink);opacity:.6;margin-bottom:4px}
+.pcard-ingredient{font-size:var(--text-xs);color:var(--forest);opacity:.7;margin-bottom:var(--s3);font-weight:500}
+
+/* PAIN POINTS */
+.pain-points{background:#fef5f3;border-left:3px solid var(--pain-red);padding:var(--s2) var(--s3);border-radius:var(--r-md);margin-bottom:var(--s3)}
+.pain-points ul{list-style:none;padding:0}
+.pain-points li{font-size:var(--text-sm);line-height:1.65;color:var(--pain-red);margin-bottom:4px}
+.pain-points li:last-child{margin-bottom:0}
+.pain-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--pain-red)}
+
+/* MECH BLOCK */
+.mech-block{background:linear-gradient(135deg,#f0f5ea,#e8f0e0);border-radius:var(--r-md);padding:var(--s2) var(--s3);margin-bottom:var(--s3)}
+.mech-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gold-dk)}
+.mech-text{font-size:var(--text-sm);line-height:1.75;color:var(--ink)}
+
+/* V5 KPI LIST */
+.v5-kpi-grid{background:var(--card-bg);border-radius:var(--r-md);padding:var(--s2) var(--s3);margin-bottom:var(--s3)}
+.kpi-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.v5-item{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid rgba(201,169,97,.15);font-size:var(--text-sm)}
+.v5-item:last-child{border-bottom:none}
+.v5-text{flex:1}
+
+/* KPI GRID */
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:var(--s3)}
+.kpi-cell{background:var(--card-bg);border-radius:var(--r-md);padding:var(--s2) var(--s1);text-align:center;border:1px solid rgba(201,169,97,.2)}
+.kpi-num{font-family:'Baloo 2',cursive;font-size:var(--text-lg);font-weight:800;color:var(--forest)}
+.kpi-label{font-size:var(--text-xs);color:var(--ink);opacity:.7;margin:2px 0 4px}
+
+/* EXTRA INFO */
+.extra-info{padding:var(--s2);background:var(--offwhite);border-radius:var(--r-md);font-size:var(--text-sm)}
+.info-row{padding:3px 0;display:flex;gap:6px}
+.info-label{font-weight:700;color:var(--gold-dk);white-space:nowrap}
+.info-lit{font-size:var(--text-xs);color:var(--forest);opacity:.7}
+
+/* CHAIN SECTION */
 .chain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--s4);margin-top:var(--s4)}
-.chain-card{background:var(--white);border-radius:var(--r-lg);padding:var(--s4);box-shadow:var(--shadow-sm);border:1px solid var(--mist);text-align:center}
-.chain-step{font-family:'DM Mono',monospace;font-size:var(--text-xl);color:var(--gold);font-weight:500}
-.chain-name{font-weight:700;margin:var(--s1) 0 var(--s1)}
-.chain-role{font-size:var(--text-sm);color:var(--mid)}
-.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:var(--s4)}
-.pcard{background:var(--white);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--mist);transition:transform .25s var(--ease-out),box-shadow .25s}
-.pcard:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
-.pcard-img{aspect-ratio:16/9;overflow:hidden;background:var(--paper)}
-.pcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
-.pcard:hover .pcard-img img{transform:scale(1.04)}
-.pcard-body{padding:var(--s3)}
-.pcard-badge{display:inline-block;font-size:var(--text-xs);font-weight:600;padding:3px 10px;border-radius:40px;margin-bottom:var(--s2);text-transform:uppercase;letter-spacing:.08em}
-.badge-breeding{background:var(--gold-bg);color:#8B6F2D}
-.badge-growth{background:#e1eddb;color:var(--forest-md)}
-.pcard-target{font-size:var(--text-sm);color:var(--mid);margin-bottom:var(--s1)}
-.pcard-ingredient{font-size:var(--text-xs);color:var(--forest-lt);margin-bottom:var(--s2)}
-.pcard-kpis{display:grid;grid-template-columns:1fr 1fr;gap:var(--s1);margin:var(--s2) 0}
-.kpi-item{background:var(--paper);border-radius:var(--r-sm);padding:var(--s1);text-align:center}
-.kpi-num{font-family:'DM Mono',monospace;font-size:var(--text-md);font-weight:500;color:var(--forest-md)}
-.kpi-label{font-size:var(--text-xs);color:var(--mid)}
-.pcard-mech{font-size:var(--text-sm);color:var(--ink);margin-bottom:var(--s2);line-height:1.7}
-.accordion{display:none;font-size:var(--text-sm);color:var(--ink);padding:var(--s2);background:var(--paper);border-radius:var(--r-md);margin-top:var(--s2)}
-.accordion.open{display:block}
-.cta-btn{cursor:pointer;border:1px solid var(--forest-md);background:transparent;color:var(--forest-md);font-size:var(--text-sm);padding:8px 20px;border-radius:40px;transition:all .2s;font-weight:500}
-.cta-btn:hover{background:var(--forest-md);color:var(--white)}
-.footer{background:var(--ink);color:rgba(255,255,255,.6);padding:var(--s5) 0;font-size:var(--text-sm)}
+.chain-card{background:var(--white);border-radius:var(--r-lg);padding:var(--s4);box-shadow:var(--shadow-sm);border:1px solid rgba(201,169,97,.15);text-align:center;transition:transform .25s var(--ease-out)}
+.chain-card:hover{transform:translateY(-3px)}
+.chain-step{font-family:'Baloo 2',cursive;font-size:var(--text-2xl);color:var(--gold);font-weight:800;margin-bottom:var(--s1)}
+.chain-name{font-weight:700;margin-bottom:4px;color:var(--forest)}
+.chain-role{font-size:var(--text-sm);color:var(--ink);opacity:.6}
+
+/* SCIENCE SECTION */
+.science-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--s4)}
+.science-card{background:rgba(255,255,255,.05);border:1px solid rgba(201,169,97,.15);border-radius:var(--r-lg);padding:var(--s4);backdrop-filter:blur(4px)}
+.science-card-title{font-family:'Noto Serif TC',serif;font-size:var(--text-md);font-weight:700;color:var(--gold-lt);margin-bottom:var(--s2)}
+.science-card-text{font-size:var(--text-sm);color:rgba(255,255,255,.75);line-height:1.7}
+
+/* COMPOUND DARK SECTION */
+.compound-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4)}
+@media(max-width:768px){.compound-grid{grid-template-columns:1fr}}
+.compound-card{background:rgba(255,255,255,.06);border:1px solid rgba(201,169,97,.15);border-radius:var(--r-lg);padding:var(--s4)}
+.compound-title{font-weight:700;color:var(--gold-lt);margin-bottom:var(--s2)}
+.compound-tag{font-size:var(--text-2xl);font-weight:900;color:var(--gold);text-align:center;margin:var(--s4) 0;font-family:'Baloo 2',cursive}
+
+/* MARKET SECTION */
+.market-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--s4)}
+.market-card{background:var(--white);border-radius:var(--r-lg);padding:var(--s4);box-shadow:var(--shadow-sm);border:1px solid rgba(201,169,97,.12)}
+.market-card h4{font-size:var(--text-md);color:var(--gold-dk);margin-bottom:var(--s2)}
+.market-card p{font-size:var(--text-sm);color:var(--ink);opacity:.75;line-height:1.7}
+
+/* APP LINES */
+.app-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:var(--s4)}
+.app-card{background:var(--white);border-radius:var(--r-lg);padding:var(--s4);box-shadow:var(--shadow-sm);position:relative;overflow:hidden;border-top:4px solid var(--gold)}
+.app-card h4{font-size:var(--text-md);color:var(--forest);margin-bottom:4px}
+.app-card .app-product{font-size:var(--text-sm);color:var(--accent);font-weight:700;margin-bottom:var(--s2)}
+.app-card .app-desc{font-size:var(--text-sm);color:var(--ink);opacity:.75;margin-bottom:var(--s2)}
+.app-benefits{display:flex;flex-wrap:wrap;gap:6px}
+.app-benefit{background:var(--card-bg);padding:4px 12px;border-radius:20px;font-size:var(--text-xs);font-weight:600;color:var(--forest)}
+
+/* EVIDENCE DB SECTION */
+.evdb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--s4);margin-bottom:var(--s4)}
+.evdb-stat{background:rgba(255,255,255,.06);border:1px solid rgba(201,169,97,.15);border-radius:var(--r-lg);padding:var(--s4);text-align:center}
+.evdb-stat .num{font-size:var(--text-3xl);color:var(--gold);font-weight:800}
+.evdb-stat .label{font-size:var(--text-sm);color:rgba(255,255,255,.6);margin-top:4px}
+.evdb-cite{background:rgba(255,255,255,.04);border:1px solid rgba(201,169,97,.1);border-radius:var(--r-md);padding:var(--s2) var(--s3);font-size:var(--text-xs);color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:6px;}
+.evdb-cite strong{color:var(--gold-lt);font-weight:600}
+.cite-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--s2);max-height:500px;overflow-y:auto;padding:var(--s2);background:rgba(0,0,0,.15);border-radius:var(--r-lg)}
+
+/* AGRICULTURE SECTION */
+.agri-section{background:linear-gradient(135deg,#f0f5ea,#e8f0e0)}
+
+/* FOOTER */
+.footer{background:linear-gradient(135deg,var(--forest),#0a2a1a);color:rgba(255,255,255,.6);padding:var(--s5) 0;font-size:var(--text-sm)}
 .footer a{color:var(--gold);text-decoration:none}
-.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:var(--s4);margin-bottom:var(--s4)}
-.footer-brand{font-family:'Noto Serif SC',serif;font-size:1.1rem;color:var(--gold);margin-bottom:var(--s1)}
-.footer-disclaimer{font-size:var(--text-xs);color:rgba(255,255,255,.4);line-height:1.6;margin-top:var(--s3);padding-top:var(--s2);border-top:1px solid rgba(255,255,255,.08)}
-.text-gold{color:var(--gold)}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--s4);margin-bottom:var(--s4)}
+.footer-brand{font-family:'Noto Serif TC',serif;font-size:1.1rem;color:var(--gold);margin-bottom:var(--s1)}
+.footer-disclaimer{font-size:var(--text-xs);color:rgba(255,255,255,.35);line-height:1.6;margin-top:var(--s3);padding-top:var(--s2);border-top:1px solid rgba(201,169,97,.1)}
+.footer-approval{font-size:var(--text-xs);color:rgba(255,255,255,.3);margin-top:var(--s2)}
+
+/* EVIDENCE LEGEND */
+.ev-legend{display:flex;gap:var(--s3);flex-wrap:wrap;margin-bottom:var(--s4)}
+.ev-legend-item{display:flex;align-items:center;gap:6px;font-size:var(--text-sm);color:rgba(255,255,255,.7)}
+
+/* TAGLINE BANNER */
+.tagline-banner{background:linear-gradient(135deg,var(--card-bg),#efe8d4);padding:var(--s5) 0;text-align:center}
+.tagline-banner h2{font-size:clamp(1.5rem,4vw,var(--text-2xl));color:var(--forest)}
+.tagline-banner .sub{font-size:var(--text-lg);color:var(--gold-dk);margin-top:var(--s2);font-weight:600}
 </style>
 </head>
 <body>
@@ -115,7 +220,6 @@ h3{font-size:clamp(var(--text-md),2.5vw,var(--text-lg));font-weight:700}
 <nav class="nav">
 <div class="nav-inner">
 <a href="#" class="nav-brand">
-<img src="assets/images/product-package-blank.jpg" alt="Vitality Plus" class="nav-logo" onerror="this.style.display='none'">
 <span class="nav-name" data-i18n="brand_name">活力得®</span>
 </a>
 <div class="lang-group">
@@ -132,20 +236,53 @@ h3{font-size:clamp(var(--text-md),2.5vw,var(--text-lg));font-weight:700}
 <div class="container hero-inner">
 <div class="hero-content">
 <div class="hero-text">
-<div class="hero-eyebrow text-gold" data-i18n="hero_eyebrow">PRECISION ANIMAL NUTRITION</div>
+<div class="hero-eyebrow" data-i18n="hero_eyebrow">PRECISION ANIMAL NUTRITION</div>
 <h1 class="hero-title" data-i18n="hero_title">活力得<sup>®</sup> <em data-i18n="hero_subtitle">精準動物營養</em></h1>
-<p class="hero-desc" data-i18n="hero_desc">源自美國康奈爾大學動物科學系研究基礎，經台灣百萬頭規模實證，為中華區畜牧水產市場打造的六支精準飼料添加劑。</p>
-<p class="hero-cta"><a href="#products" class="cta-btn" style="border-color:var(--gold);color:var(--gold);display:inline-block" data-i18n="hero_cta">探索產品 →</a></p>
+<p class="hero-desc" data-i18n="hero_desc">源自美國康奈爾大學動物科學系研究基礎，經台灣150萬頭規模實證，為中華區畜牧水產市場打造的六支精準飼料添加劑。</p>
+<p class="hero-cta"><a href="#products" class="btn-gold" data-i18n="hero_cta">探索產品</a></p>
 </div>
 <div class="hero-visual">
-<img src="assets/images/product-package-blank.jpg" alt="Vitality Plus" class="hero-img" loading="lazy">
+<div style="background:linear-gradient(135deg,rgba(201,169,97,.1),rgba(255,122,89,.05));border-radius:var(--r-xl);padding:var(--s5);text-align:center;border:1px solid rgba(201,169,97,.2)">
+  <div style="font-size:clamp(1.2rem,3vw,1.8rem);font-family:'Baloo 2',cursive;font-weight:800;color:var(--gold)" data-i18n="hero_visual_tag">SOFT × HARD → 1+1&gt;2</div>
+  <div style="margin-top:var(--s3);display:flex;gap:var(--s2);justify-content:center;flex-wrap:wrap">
+    <span style="background:rgba(255,255,255,.08);padding:6px 16px;border-radius:20px;font-size:var(--text-xs)" data-i18n="hero_v1">軟組織利用</span>
+    <span style="background:rgba(255,255,255,.08);padding:6px 16px;border-radius:20px;font-size:var(--text-xs)" data-i18n="hero_v2">硬組織利用</span>
+    <span style="background:rgba(201,169,97,.2);padding:6px 16px;border-radius:20px;font-size:var(--text-xs);color:var(--gold);font-weight:700" data-i18n="hero_v3">一體化升級</span>
+  </div>
+</div>
 </div>
 </div>
 </div>
 </section>
 
-<!-- === CHAIN === -->
-<section class="section section--paper" id="chain">
+<!-- === TAGLINE === -->
+<section class="section section--white" id="compound">
+<div class="container">
+<div class="section-tag" data-i18n="compound_tag">COMPOSITE PLATFORM</div>
+<h2 data-i18n="compound_title">活力得® 複合物</h2>
+<p class="section-desc" data-i18n="compound_desc">軟組織利用 × 硬組織利用 → 1+1>2 ｜ 同一複合物內的協同效應</p>
+<div class="compound-grid">
+<div class="compound-card" style="background:var(--card-bg);border-color:var(--gold)">
+  <div style="display:flex;align-items:center;gap:var(--s2);margin-bottom:var(--s2)">
+    <span class="compound-title" style="color:var(--forest)">重組C-譜系絲氨酸蛋白酶</span>
+    <span class="ev-badge ev-confirmed">✓ 實證</span>
+  </div>
+  <p style="font-size:var(--text-sm);color:var(--ink);opacity:.75;line-height:1.7" data-i18n="compound_soft_desc">Ser-His-Asp 催化三聯體，高效水解飼料蛋白為小肽與游離胺基酸，催化效率高出被動水解 10⁷-10¹⁰ 倍。支持蛋白質消化利用與腸道吸收。</p>
+</div>
+<div class="compound-card" style="background:var(--card-bg);border-color:var(--gold)">
+  <div style="display:flex;align-items:center;gap:var(--s2);margin-bottom:var(--s2)">
+    <span class="compound-title" style="color:var(--forest)">游離矽相關組分</span>
+    <span class="ev-badge ev-inferring">≈ 推估</span>
+  </div>
+  <p style="font-size:var(--text-sm);color:var(--ink);opacity:.75;line-height:1.7" data-i18n="compound_hard_desc">游離矽組分支持膠原蛋白有機基質形成與羥基磷灰石結晶，強化骨骼、外骨骼與結締組織結構完整性。</p>
+</div>
+</div>
+<div class="compound-tag" style="font-size:1.2rem">同一複合物 · 六款產品 · 全物種覆蓋</div>
+</div>
+</section>
+
+<!-- === VALUE CHAIN === -->
+<section class="section section--card" id="chain">
 <div class="container">
 <div class="section-tag" data-i18n="chain_tag">TECHNOLOGY ORIGIN</div>
 <h2 data-i18n="chain_title">三地溯源・驗證技術鏈</h2>
@@ -174,61 +311,513 @@ h3{font-size:clamp(var(--text-md),2.5vw,var(--text-lg));font-weight:700}
 </div>
 </section>
 
+<!-- === SCIENCE === -->
+<section class="section section--dark" id="science">
+<div class="container">
+<div class="section-tag" data-i18n="science_tag">CROSS-SPECIES PLATFORM</div>
+<h2 data-i18n="science_title">跨物種精準營養平台</h2>
+<p class="section-desc" style="color:rgba(255,255,255,.6)" data-i18n="science_desc">同一複合物技術軸，從分子設計到田間驗證全鏈路打通，覆蓋六大應用場景。</p>
+<div class="science-grid">
+
+    <div class="science-card">
+      <div class="science-card-title" data-i18n="science_title_platform">同一平台·六款產品</div>
+      <div class="science-card-text" data-i18n="science_text_platform">以同一複合物技術軸，對應豬、雞、水產、反芻、農業六大應用場景。軟硬組織利用效率一體化，從分子設計到田間驗證全鏈路打通。</div>
+      
+    </div>
+    <div class="science-card">
+      <div class="science-card-title" data-i18n="science_title_ser_his_asp">Ser-His-Asp 催化三聯體</div>
+      <div class="science-card-text" data-i18n="science_text_ser_his_asp">分子剪刀的五步電荷接力機制：激活→親核攻擊→四面體中間體→斷裂釋放→脫醯基復原。催化效率高出被動水解10⁷-10¹⁰倍。</div>
+      
+    </div>
+    <div class="science-card">
+      <div class="science-card-title" data-i18n="science_title_igf1">IGF-1 軸激活</div>
+      <div class="science-card-text" data-i18n="science_text_igf1">蛋白消化率↑→小肽富集→IGF-1血中濃度↑（PMID 41514887/41423875/41812033）→生殖信號轉化、泌乳支持、肌肉合成。</div>
+      <span class="ev-badge ev-confirmed">✓ 實證</span>
+    </div>
+    <div class="science-card">
+      <div class="science-card-title" data-i18n="science_title_hpg">HPG 軸調節</div>
+      <div class="science-card-text" data-i18n="science_text_hpg">植物甾醇作為類固醇荷爾蒙前體，支持下視丘-腦垂體-性腺軸的正常運作，穩定FSH/LH分泌，改善卵泡發育與排卵。</div>
+      <span class="ev-badge ev-inferring">≈ 推估</span>
+    </div>
+    <div class="science-card">
+      <div class="science-card-title" data-i18n="science_title_sttd">UIUC STTD 標準消化率體系</div>
+      <div class="science-card-text" data-i18n="science_text_sttd">創辦人李易昌經台灣教育部千里馬計畫赴UIUC研修，深承 Hans H. Stein 教授團隊方法學，導入STTD標準迴腸消化率評估體系，建立百萬頭實證動態模型。</div>
+      
+    </div>
+    <div class="science-card">
+      <div class="science-card-title" data-i18n="science_title_validation">台灣百萬頭規模實證</div>
+      <div class="science-card-text" data-i18n="science_text_validation">經台灣150萬頭次豬雞田間驗證，三年持續追蹤，跨季節跨地區實測。數據由獨立第三方收集，結果可重複、可信。</div>
+      <span class="ev-badge ev-confirmed">✓ 實證</span>
+    </div>
+</div>
+<div class="section-tag" style="margin-top:var(--s5)">EVIDENCE LEGEND</div>
+<div class="ev-legend">
+  <span class="ev-legend-item"><span class="ev-badge ev-confirmed">✓ 實證</span>文獻或田間數據支撐</span>
+  <span class="ev-legend-item"><span class="ev-badge ev-inferring">≈ 推估</span>配方模型外推</span>
+  <span class="ev-legend-item"><span class="ev-badge ev-strengthening">◷ 補強中</span>僅機轉成立</span>
+</div>
+</div>
+</section>
+
 <!-- === PRODUCTS === -->
-<section class="section" id="products">
+<section class="section section--white" id="products">
 <div class="container">
 <div class="section-tag" data-i18n="prod_tag">SIX FORMULATIONS</div>
-<h2 data-i18n="prod_title">六支專屬配方．精準對應</h2>
-<p class="section-desc" style="margin-bottom:var(--s5);color:var(--mid)" data-i18n="prod_desc">繁殖線以植物甾醇為核心，生長線以蛋白酶為核心。數據來自台灣實證場。</p>
+<h2 data-i18n="prod_title">六支專屬配方・精準對應</h2>
+<p class="section-desc" data-i18n="prod_desc">繁殖線以植物甾醇為核心，生長線以蛋白酶為核心。數據來自台灣實證場。</p>
 <div class="product-grid">
-<div class="pcard"><div class="pcard-img"><img src="assets/images/sow-nursing-piglets.jpg" alt="均仔旺" loading="lazy"></div><div class="pcard-body"><div class="pcard-badge badge-breeding" data-i18n="uniform_litter_badge">繁殖</div><h3 data-i18n="uniform_litter_name">均仔旺</h3><div class="pcard-target" data-i18n="uniform_litter_target">懷孕+哺乳母豬</div><div class="pcard-ingredient">植物甾醇 ≥ 2.5%</div><p class="pcard-mech" data-i18n="uniform_litter_mech">植物甾醇調節母豬生殖激素平衡，優化子宮內營養分配，提升胎兒均勻度與初生活力；搭配蛋白酶強化乳汁蛋白合成，仔豬離乳整齊。</p><div class="pcard-kpis"><div class="kpi-item"><div class="kpi-num">22-28</div><div class="kpi-label" data-i18n="uniform_litter_kpi0">PSY</div></div><div class="kpi-item"><div class="kpi-num">6.5-8.5</div><div class="kpi-label" data-i18n="uniform_litter_kpi1">離乳體重(kg)</div></div><div class="kpi-item"><div class="kpi-num">85-92%</div><div class="kpi-label" data-i18n="uniform_litter_kpi2">分娩率</div></div><div class="kpi-item"><div class="kpi-num">1:5~1:8</div><div class="kpi-label" data-i18n="uniform_litter_kpi3">ROI</div></div></div><button class="cta-btn" onclick="toggleAccordion(this)" data-i18n="uniform_litter_cta">了解更多</button><div class="accordion"><h4 data-i18n="uniform_litter_accord_mech">完整作用機制</h4><p>Enhances protein digestion for milk production; optimizes fat metabolism to preserve body condition; supports gut microbiome balance via milk quality. ① Milk Protein Enhancement Subtilisin breaks down feed proteins, providing amino acids directly into milk. Higher milk protein = better piglet growth and survival. → Same feed, richer milk. Grade A weaner rate rises 5-8%. ② Body Condition Preservation Optimizes fat metabolism, reducing body reserves mobilization. Sow maintains BCS 2.5-3.5, supporting next litter conception. → Less body loss = faster return to estrus. Annual litter rate stays above 2.2. ③ Piglet Gut Development Improved sow nutrition transfers to milk IgG and growth factors. Better passive immunity + villi development = lifetime FCR advantage. → Invest in the sow, benefit all three outcomes. Does It Work for Your Breed? Yorkshire × Landrace National mainstream. Lactation intake 5-7kg/day. Weaning uniformity ↑, Grade A piglet rate +5-8% PIC composite Corporate farms. Intake 6-8kg/day. Significant improvement, Grade A rate improved Landrace GD/SC/FJ. Intake 5-7kg/day. Uniformity improved, Grade A + Shennong composite South China large farms. Intake 5-7kg/day. Significant improvement, Grade A + ※ Average PSY ~23 in mainland China. 活力旺®'s core value: ① Increase Grade A piglet rate ② Reduce weak piglet losses ③ Maintain sow body condition for next litter. Small Trial, Large Profit 1 Phase 1: Effect Verification Scale : 20-50 sows (same breed, same parity). 4-6 weeks</p><h4 style="margin-top:var(--s2)" data-i18n="uniform_litter_accord_ref">參考文獻</h4><p style="font-size:var(--text-xs)">values. Actual returns depend on management. Ready to maximize your boar's value? Contact a Vitality® distributor for a tailored plan. Contact Distributor ※ Data from Vitality® field trials and published literature. Actual results vary with management, breed, season. ※ Use breed‑matched control groups for verification. ※ ROI figures are references, not investment advice. Fig: Boar sperm morphology improvement over time | Day 0→7→14→21, abnormal rate 45%→5% 活力旺® VitalBoost Plus PRECISION ANIMAL NUTRITION Boar Pregnant Sow Lactating Sow Nursery Finisher Layer Hen Broiler Breeder Shrimp Tilapia Livestock Home © 2026 活力旺® Distributor · VitalBoost® Subtilisin · Professional Animal Nutrition ↑
 
-values. Actual returns depend on management. Return ratio approx. 1:4～1:6 Ready to improve your sow reproductive performance? Contact VitalBoost® Distributor Contact Distributor ※ Data from VitalBoost® field trials and published literature. Results vary by breed, parity, and management. ※ Recommend same-farm control group. ※ ROI is reference value only, not investment advice. 活力旺® VitalBoost Plus PRECISION ANIMAL NUTRITION Boar Pregnant Sow Lactating Sow Nursery Finisher Layer Hen Broiler Breeder Shrimp Tilapia Livestock Home © 2026 活力旺® Distributor · VitalBoost® Subtilisin · Professional Animal Nutrition ↑
+    <div class="pcard">
+      <div class="pcard-img"><img src="assets/images/sow-nursing-piglets.jpg" alt="均仔旺" loading="lazy"></div>
+      <div class="pcard-body">
+        <div class="pcard-badge badge-breeding">繁殖線</div>
+        <h3 class="pcard-name">均仔旺</h3>
+        <div class="pcard-tagline">旺受胎·多產仔·整齊離乳</div>
+        <div class="pcard-target">懷孕+哺乳母豬</div>
+        <div class="pcard-ingredient">植物甾醇 ≥ 2.5%</div>
+        
+        <div class="pain-points">
+          <div class="section-subtitle"><span class="pain-dot"></span> 痛點</div>
+          <ul><li>🔥 內分泌失調引發返情風險，HPG軸異常·黃體不全，NPD非生產天數導致￥400-600/次直接損失</li><li>🔥 產仔數不足：弱仔·死胎·木乃伊，產程>4-5h子宮疲勞，死胎率對數級攀升</li><li>🔥 泌乳力不足：圍產期負平衡→催乳素偏低，行業均值離乳重<7.0 kg，窩內CV升高</li><li>🔥 母豬體況：哺乳期BCS降至2.5以下，便秘毒素累積抑制催乳素，斷奶後發情延遲</li></ul>
+        </div>
 
-values. Based on A/B grade piglet standard calculation. Ready to maximize your lactating sow performance? Contact 活力旺® Distributor 📞 Technical Consultation 📋 Request Trial Protocol ※ Data based on same-farm same-breed control trials. Results vary by breed, housing, management, and season. ※ Recommend on-farm control group verification. ROI ratios are reference values only. 活力旺® VitalBoost Plus PRECISION ANIMAL NUTRITION Boar Pregnant Sow Lactating Sow Nursery Finisher Layer Hen Broiler Breeder Shrimp Tilapia Livestock Home © 2026 活力旺® Distributor · VitalBoost® Subtilisin · Professional Animal Nutrition id="backToTop"> ↑
+        <div class="mech-block">
+          <div class="section-subtitle"><span class="mech-dot"></span> 作用機轉</div>
+          <p class="mech-text">植物甾醇調節母豬生殖激素平衡，優化子宮內營養分配，提升胎兒均勻度與初生活力；搭配蛋白酶強化乳汁蛋白合成，仔豬離乳整齊。</p>
+        </div>
 
-values. Actual returns depend on management. Nursery stag</p></div></div></div><div class="pcard"><div class="pcard-img"><img src="assets/images/layer-hen-farm.jpg" alt="殼力旺" loading="lazy"></div><div class="pcard-body"><div class="pcard-badge badge-breeding" data-i18n="shell_strength_badge">繁殖</div><h3 data-i18n="shell_strength_name">殼力旺</h3><div class="pcard-target" data-i18n="shell_strength_target">種雞·蛋雞</div><div class="pcard-ingredient">植物甾醇 ≥ 2.5%</div><p class="pcard-mech" data-i18n="shell_strength_mech">植物甾醇調節鈣磷代謝與蛋殼腺功能，強化蛋殼超微結構，延緩產蛋後期蛋殼品質衰退，提升種蛋孵化性能。</p><div class="pcard-kpis"><div class="kpi-item"><div class="kpi-num">+15-25%</div><div class="kpi-label" data-i18n="shell_strength_kpi0">蛋殼強度</div></div><div class="kpi-item"><div class="kpi-num">85-93%</div><div class="kpi-label" data-i18n="shell_strength_kpi1">孵化率</div></div><div class="kpi-item"><div class="kpi-num">30-50%</div><div class="kpi-label" data-i18n="shell_strength_kpi2">破蛋率降</div></div><div class="kpi-item"><div class="kpi-num">1:6~1:9</div><div class="kpi-label" data-i18n="shell_strength_kpi3">ROI</div></div></div><button class="cta-btn" onclick="toggleAccordion(this)" data-i18n="shell_strength_cta">了解更多</button><div class="accordion"><h4 data-i18n="shell_strength_accord_mech">完整作用機制</h4><p>s — dual optimization for roosters and hens ① Nutrient Absorption & Gut Health VitalBoost® Protease improves protein digestibility by 18-22%, enhances gut villi structure, reduces gut inflammation, ensuring key nutrients reach the reproductive system. → Same feed, more key amino acids absorbed. Better sperm development, more nourished follicles. ② Antioxidant & Cell Protection VitalBoost® Protease activates Nrf2/ARE pathway, protects oocyte/sperm cell membrane integrity, reduces embryonic oxidative stress, significantly lowers early embryo mortality (PMC 2017/2024). → Sperm protected from oxidative damage. Intact oocyte membranes. Higher embryo survival after fertilization = more healthy chicks. ③ Reproductive Endocrine Regulation VitalBoost® Protease activates mTOR pathway, stabilizes FSH/LH/estrogen secretion, improves ovarian mitochondrial function, elevates progesterone (P4), extends peak laying by 4 weeks (ResearchGate 2017). → Stable hormones = sustained laying peak. 4 extra weeks of high production = thousands more qualified eggs. ④ Rooster Testicular Function VitalBoost® Protease improves Leydig cell function, boosts testosterone synthesis, delays age-related semen quality decline. Sperm motility improves from 25% to 85%+. → Older roosters don't decline as fast. Same rooster ratio, higher and more consistent fertility. Replace roosters less often. Does It Work for Your Breed? Breed Type Main Provinces Fertility Improvement Hatchability Healthy Chick Rate VitalBoost® A</p><h4 style="margin-top:var(--s2)" data-i18n="shell_strength_accord_ref">參考文獻</h4><p style="font-size:var(--text-xs)">) 1:5 Conservative ROI Ratio Field Trial Reference 1:9 Top Farms ※ Reference value. Excludes hatchery premium. Actual results vary by management. Ready to enter a new era of high-hatchability breeding? Contact VitalBoost® distributor for your custom breeder program Contact VitalBoost® Distributor ※ Hatchability/fertility/healthy chick data from VitalBoost® breeder field control trials; P4/embryo quality from PMC 2017/2024; reproductive axis regulation from ResearchGate 2017. ※ Results vary by breed, age, and management conditions. Recommend same-farm control group. ROI is reference only, not investment advice. 活力旺® VitalBoost Plus PRECISION ANIMAL NUTRITION Boar Pregnant Sow Lactating Sow Nursery Finisher Layer Hen Broiler Breeder Shrimp Tilapia Livestock Home © 2026 活力旺® Distributor · VitalBoost® Subtilisin · Professional Animal Nutrition ↑
+        <div class="v5-kpi-grid">
+          <div class="section-subtitle"><span class="kpi-dot"></span> 效益數據</div>
+          <div class="v5-item"><span class="v5-text">PSY +7 頭（行業均值21→實證28+）</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">離乳重 7.0→10.0 kg</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">斷奶後發情 5-7天→24-48h</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">死產率降30-40%</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">年胎次 1.80→2.33</span><span class="ev-badge ev-inferring">≈ 推估</span></div><div class="v5-item"><span class="v5-text">全A苗仔豬 >6kg @300元/頭</span><span class="ev-badge ev-confirmed">✓ 實證</span></div>
+        </div>
 
-1:6 Top Farm 活力旺® layer solution addition cost approx. ¥20/ton feed , within standard additive cost acceptance for mainland farms. ※ Field trial reference values. Actual returns vary by management conditions. Based on 10,000 hens, 72-week lay period, market egg price, 115g daily feed intake per hen. Ready to Boost Your Layer Farm Performance? Contact your 活力旺® distributor today 📞 Technical Consultation 📋 Request Trial Protocol ※ 活力旺® distributors provide complete trial record forms including laying rate logs, FCR calculation sheets, spot egg detection cards, and yolk color comparison cards. ※ Data sourced from 活力旺® field trials and published literature (ResearchGate 2017/MDPI 2021/PMC 2018/CASS 2023). ※ Actual results vary by breed, stocking density, feed formulation and season. Recommend on-farm control group verification. ※ ROI ratios are reference values and do not constitute investment advice. 活力旺® VitalBoost Plus PRECISION ANIMAL NUTRITION Boar Pregnant Sow Lactating Sow Nursery F</p></div></div></div><div class="pcard"><div class="pcard-img"><img src="assets/images/shrimp-broodstock-pond.jpg" alt="多卵壯" loading="lazy"></div><div class="pcard-body"><div class="pcard-badge badge-breeding" data-i18n="spawn_boost_badge">繁殖</div><h3 data-i18n="spawn_boost_name">多卵壯</h3><div class="pcard-target" data-i18n="spawn_boost_target">種魚·蝦親本</div><div class="pcard-ingredient">植物甾醇 ≥ 2.5%</div><p class="pcard-mech" data-i18n="spawn_boost_mech">植物甾醇促進親本性腺發育與卵黃生成，優化卵質與精子活力，提升受精率及苗種整齊度。</p><div class="pcard-kpis"><div class="kpi-item"><div class="kpi-num">+20-35%</div><div class="kpi-label" data-i18n="spawn_boost_kpi0">產卵率</div></div><div class="kpi-item"><div class="kpi-num">85-95%</div><div class="kpi-label" data-i18n="spawn_boost_kpi1">受精率</div></div><div class="kpi-item"><div class="kpi-num">+15-25%</div><div class="kpi-label" data-i18n="spawn_boost_kpi2">苗種存活率</div></div><div class="kpi-item"><div class="kpi-num">1:5~1:8</div><div class="kpi-label" data-i18n="spawn_boost_kpi3">ROI</div></div></div><button class="cta-btn" onclick="toggleAccordion(this)" data-i18n="spawn_boost_cta">了解更多</button><div class="accordion"><h4 data-i18n="spawn_boost_accord_mech">完整作用機制</h4><p>植物甾醇促進親本性腺發育與卵黃生成，優化卵質與精子活力，提升受精率及苗種整齊度。</p></div></div></div><div class="pcard"><div class="pcard-img"><img src="assets/images/finishing-pigs-barn.jpg" alt="長膘旺" loading="lazy"></div><div class="pcard-body"><div class="pcard-badge badge-growth" data-i18n="growth_max_badge">生長</div><h3 data-i18n="growth_max_name">長膘旺</h3><div class="pcard-target" data-i18n="growth_max_target">育肥豬·肉牛·羊</div><div class="pcard-ingredient">蛋白酶 ≥ 100 U/g</div><p class="pcard-mech" data-i18n="growth_max_mech">複合蛋白酶提升蛋白消化率與胺基酸利用率，優化腸道菌群平衡，降低糞氮排放；肉牛/羊搭配植物甾醇提升瘤胃發酵效率。</p><div class="pcard-kpis"><div class="kpi-item"><div class="kpi-num"><2.4</div><div class="kpi-label" data-i18n="growth_max_kpi0">料肉比(FCR)</div></div><div class="kpi-item"><div class="kpi-num">7-14天</div><div class="kpi-label" data-i18n="growth_max_kpi1">提前出欄</div></div><div class="kpi-item"><div class="kpi-num">750-950g</div><div class="kpi-label" data-i18n="growth_max_kpi2">日增重</div></div><div class="kpi-item"><div class="kpi-num">1:5~1:8</div><div class="kpi-label" data-i18n="growth_max_kpi3">ROI</div></div></div><button class="cta-btn" onclick="toggleAccordion(this)" data-i18n="growth_max_cta">了解更多</button><div class="accordion"><h4 data-i18n="growth_max_accord_mech">完整作用機制</h4><p>Why Bacillus subtilis Protease Improves FCR Subtilisin (EC 3.4.21.62), a serine endoprotease derived from Bacillus subtilis , maintains enzymatic activity across pH 6.5–8.0 in the swine digestive tract. It efficiently hydrolyzes the anti-nutritional factors present in soybean meal — primarily glycinin and β-conglycinin — into 2–6 amino acid oligopeptides, significantly enhancing brush-border peptidase efficiency in the jejunum (PMC 2018). Apparent ileal digestibility of lysine improves by approximately 3–5 percentage points, equivalent to reducing soybean meal inclusion by 8–12 kg/tonne while maintaining equivalent digestible amino acid supply. ① Precise Protein Hydrolysis Degrades trypsin inhibitors, lectins, and intact storage proteins in soybean meal, releasing free amino acids and di/tripeptides for direct absorption. → 3–5% improvement in ileal AA digestibility translates directly to FCR reduction without formula redesign. ② Hindgut Microenvironment Reduces undigested protein substrate entering the large intestine, decreasing putrefactive fermentation and biogenic amine production that damages intestinal villi. → Villus height/crypt depth ratio maintained throughout finishing phase; feed efficiency does not decline with age. ③ AGP Reduction · Immunity · Stress Tolerance Bacillus subtilis colonization competitively excludes C. perfringens , upregulates secretory IgA, and strengthens innate mucosal immunity. Lipopeptide metabolites (iturin, surfactin) provide broad-spectr</p><h4 style="margin-top:var(--s2)" data-i18n="growth_max_accord_ref">參考文獻</h4><p style="font-size:var(--text-xs)">by Scale Farm Scale (head/batch) Feed Saved (tonnes) Revenue Gain / Batch Annual Gain (3 batches) 1,000 head 79.4 t $30K $90K 5,000 head 397 t $150K $450K 10,000 head 794 t $300K $900K ※ Calculated at (2.75−2.06)×115kg×scale×feed price. Enhancer cost not deducted. Actual ROI varies by management. ※ Field data from Taiwan trials with control group design (n≥200/group). Baseline FCR per NY/T 2894-2016 and MARA 2023. Actual results vary by farm management, genetics, season. Formulator verification recommended prior to full adoption. ProGrow® Finisher Enhancer PRECISION ANIMAL NUTRITION · ANTIBIOTIC-FREE Layer Hen Broiler Breeder Shrimp Cattle Home © 2026 ProGrow® · Subtilisin Protease Enhancer · Precision Animal Nutrition ↑
+        <div class="kpi-grid">
+          
+            <div class="kpi-cell">
+              <div class="kpi-num">28+</div>
+              <div class="kpi-label">PSY</div>
+              <span class="ev-badge ev-confirmed">✓ 實證</span>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-num">>10.0</div>
+              <div class="kpi-label">離乳體重(kg)</div>
+              <span class="ev-badge ev-confirmed">✓ 實證</span>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-num">2.33</div>
+              <div class="kpi-label">年胎次</div>
+              <span class="ev-badge ev-inferring">≈ 推估</span>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-num">1:12+</div>
+              <div class="kpi-label">ROI</div>
+              <span class="ev-badge ev-inferring">≈ 推估</span>
+            </div>
+        </div>
 
-values. Actual returns depend on management. ※ Data from published literature (Sentonpharm field trial, PMC 2012, Selko 2024, PMC11394282). ADG/FCR/milk improvements are literature-reported means. Actual results vary by farm management, breed, feed formula, and environment. Bacillus subtilis listed in MARA Feed Additive Catalogue for cattle and sheep use. ProGrow® Ruminant Enhancer PRECISION ANIMAL NUTRITION · ANTIBIOTIC-FREE Finisher Pig Broiler Layer Hen Shrimp Home © 2026 ProGrow® · Bacillus subtilis Enhancer · Precision Animal Nutrition ↑</p></div></div></div><div class="pcard"><div class="pcard-img"><img src="assets/images/broiler-chicken-house.jpg" alt="足斤旺" loading="lazy"></div><div class="pcard-body"><div class="pcard-badge badge-growth" data-i18n="full_weight_badge">生長</div><h3 data-i18n="full_weight_name">足斤旺</h3><div class="pcard-target" data-i18n="full_weight_target">白肉雞·土雞</div><div class="pcard-ingredient">蛋白酶 ≥ 100 U/g</div><p class="pcard-mech" data-i18n="full_weight_mech">蛋白酶促進腸絨毛發育與隱窩深度比優化，提升飼料養分吸收表面積，搭配植物萃取物緩解熱緊迫。可作為抗生素生長促進劑替代方案。</p><div class="pcard-kpis"><div class="kpi-item"><div class="kpi-num">1.5-1.8</div><div class="kpi-label" data-i18n="full_weight_kpi0">料肉比(FCR)</div></div><div class="kpi-item"><div class="kpi-num">45-65g</div><div class="kpi-label" data-i18n="full_weight_kpi1">日增重</div></div><div class="kpi-item"><div class="kpi-num"><10%</div><div class="kpi-label" data-i18n="full_weight_kpi2">均勻度CV</div></div><div class="kpi-item"><div class="kpi-num">1:6~1:9</div><div class="kpi-label" data-i18n="full_weight_kpi3">ROI</div></div></div><button class="cta-btn" onclick="toggleAccordion(this)" data-i18n="full_weight_cta">了解更多</button><div class="accordion"><h4 data-i18n="full_weight_accord_mech">完整作用機制</h4><p>蛋白酶促進腸絨毛發育與隱窩深度比優化，提升飼料養分吸收表面積，搭配植物萃取物緩解熱緊迫。可作為抗生素生長促進劑替代方案。</p><h4 style="margin-top:var(--s2)" data-i18n="full_weight_accord_ref">參考文獻</h4><p style="font-size:var(--text-xs)">values only, not investment advice. Ready to maximize your broiler's commercial value? Contact VitalBoost® Distributor 📞 Technical Consultation 📋 Request Trial Protocol Native Chicken Farming Challenges? ⏱ Long grow-out (16-22 weeks). High FCR (3.3-3.5). Feed costs never come down. 🪶 Dull feathers, uneven body size. Poor appearance at live bird market. Only ordinary prices. 📉 Survival rate varies 92-95%. Losses eat profits. Intense rural competition. Real Results with VitalBoost® +5-8% Weight Gain 16wk 2.45kg→2.60-2.65kg -3-5% FCR 3.45:1→3.30-3.35:1 +2-3% Survival Rate 95%→97-98% +15% Carcass Score Feather quality significantly improved 📌 VitalBoost® pre-mixed product, 20kg/bag. Add 20kg per 1 metric ton of complete feed. Ready to use. Why VitalBoost® Works for Native Chickens Too? ① Precision Enzyme Complex : Improves protein and amino acid absorption, reduces anti-nutritional factors → Same coarse feed, more absorbed. FCR drops 3-5% directly. ② Immune Modulation Peptide : Activates N</p></div></div></div><div class="pcard"><div class="pcard-img"><img src="assets/images/shrimp-growout-pond.jpg" alt="保苗旺" loading="lazy"></div><div class="pcard-body"><div class="pcard-badge badge-growth" data-i18n="seed_guard_badge">生長</div><h3 data-i18n="seed_guard_name">保苗旺</h3><div class="pcard-target" data-i18n="seed_guard_target">白蝦·吳郭魚·淡水魚</div><div class="pcard-ingredient">蛋白酶 ≥ 100 U/g</div><p class="pcard-mech" data-i18n="seed_guard_mech">蛋白酶增強蛋白同化效率與能量分配，減輕肝胰臟代謝負擔；搭配免疫調節因子提升腸黏膜屏障功能，降低弧菌感染風險。</p><div class="pcard-kpis"><div class="kpi-item"><div class="kpi-num">>80%</div><div class="kpi-label" data-i18n="seed_guard_kpi0">育成率</div></div><div class="kpi-item"><div class="kpi-num">1.0-1.4</div><div class="kpi-label" data-i18n="seed_guard_kpi1">料肉比(FCR)</div></div><div class="kpi-item"><div class="kpi-num">-70%</div><div class="kpi-label" data-i18n="seed_guard_kpi2">白便發生率</div></div><div class="kpi-item"><div class="kpi-num">1:5~1:9</div><div class="kpi-label" data-i18n="seed_guard_kpi3">ROI</div></div></div><button class="cta-btn" onclick="toggleAccordion(this)" data-i18n="seed_guard_cta">了解更多</button><div class="accordion"><h4 data-i18n="seed_guard_accord_mech">完整作用機制</h4><p>蛋白酶增強蛋白同化效率與能量分配，減輕肝胰臟代謝負擔；搭配免疫調節因子提升腸黏膜屏障功能，降低弧菌感染風險。</p><h4 style="margin-top:var(--s2)" data-i18n="seed_guard_accord_ref">參考文獻</h4><p style="font-size:var(--text-xs)">
-values. Actual returns depend on farm management. Return ratio ~1:8 to 1:12 ※ Data from published literature (PMID:38481478; APJMBB 2024 doi:10.35118/apjmbb.2024.032.3.10; ResearchGate 2026; FSI 2025; MDPI 2023) and field trial reference values. Survival/FCR improvements are literature-reported means and vary by culture system, water quality, density, and management. Establish same-farm control groups to validate. Bacillus subtilis listed in MARA Feed Additive Catalogue for aquatic feed use. ProGrow® Shrimp Enhancer PRECISION AQUACULTURE NUTRITION · ANTIBIOTIC-FREE Finisher Pig Broiler Cattle & Sheep Layer Hen Home © 2026 ProGrow® · Bacillus subtilis Enhancer · Precision Aquaculture Nutrition ↑</p></div></div></div>
+        <div class="extra-info">
+          <div class="info-row"><span class="info-label">驗證：</span><span>台灣6,000頭母豬場連續兩年（2023-2025）實測驗證</span></div>
+          <div class="info-row"><span class="info-label">用量：</span><span>後備500g/噸、妊娠800g/噸、泌乳1,000g/噸</span></div>
+          <div class="info-row"><span class="info-label">文獻：</span><span class="info-lit">PMID 41514887, PMID 41423875, PMID 41812033, PMID 20453086, PMID 21948611, PMID 38671855, PMID 36387380, PMID 35781577, PMID 33997335</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-img"><img src="assets/images/layer-hen-farm.jpg" alt="殼力旺" loading="lazy"></div>
+      <div class="pcard-body">
+        <div class="pcard-badge badge-breeding">繁殖線</div>
+        <h3 class="pcard-name">殼力旺</h3>
+        <div class="pcard-tagline">旺產蛋·固蛋殼·延高峰</div>
+        <div class="pcard-target">種雞·蛋雞</div>
+        <div class="pcard-ingredient">植物甾醇 ≥ 2.5%</div>
+        
+        <div class="pain-points">
+          <div class="section-subtitle"><span class="pain-dot"></span> 痛點</div>
+          <ul><li>🔥 產蛋持續力不足：高峰期僅60-90天，後期每週自然衰退，老齡卵巢功能衰退卵泡閉鎖率高</li><li>🔥 蛋殼缺陷：暗斑/砂殼/薄殼，破損降等直接耗損，運輸損耗疊加</li><li>🔥 肝臟代謝壓力：脂肪肝風險致產蛋率下降、蛋殼品質劣化、死淘率升高</li><li>🔥 飼養戶對不明添加劑安全疑慮</li></ul>
+        </div>
+
+        <div class="mech-block">
+          <div class="section-subtitle"><span class="mech-dot"></span> 作用機轉</div>
+          <p class="mech-text">植物甾醇調節鈣磷代謝與蛋殼腺功能，強化蛋殼超微結構，延緩產蛋後期蛋殼品質衰退，提升種蛋孵化性能。</p>
+        </div>
+
+        <div class="v5-kpi-grid">
+          <div class="section-subtitle"><span class="kpi-dot"></span> 效益數據</div>
+          <div class="v5-item"><span class="v5-text">蛋殼抗破強度 3.21→4.52 kgf (+40%)</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">破蛋率 8.42%→3.96%（降53%）</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">蛋殼厚度 0.331→0.373 mm</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">產蛋高峰延長約7-10天</span><span class="ev-badge ev-inferring">≈ 推估</span></div><div class="v5-item"><span class="v5-text">高峰期延長50天核算：每隻增收24.3 CNY</span><span class="ev-badge ev-inferring">≈ 推估</span></div><div class="v5-item"><span class="v5-text">雙引擎合計 26.9 CNY/隻（產量+耗損降低）</span><span class="ev-badge ev-inferring">≈ 推估</span></div>
+        </div>
+
+        <div class="kpi-grid">
+          
+            <div class="kpi-cell">
+              <div class="kpi-num">4.52</div>
+              <div class="kpi-label">蛋殼強度(kgf)</div>
+              <span class="ev-badge ev-confirmed">✓ 實證</span>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-num">0.373</div>
+              <div class="kpi-label">蛋殼厚度(mm)</div>
+              <span class="ev-badge ev-confirmed">✓ 實證</span>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-num">-53%</div>
+              <div class="kpi-label">破蛋率降</div>
+              <span class="ev-badge ev-confirmed">✓ 實證</span>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-num">~468</div>
+              <div class="kpi-label">ROI(CNY/噸料)</div>
+              <span class="ev-badge ev-inferring">≈ 推估</span>
+            </div>
+        </div>
+
+        <div class="extra-info">
+          <div class="info-row"><span class="info-label">驗證：</span><span>文獻實證（PMID 36830449）+ 企業觀察個案</span></div>
+          <div class="info-row"><span class="info-label">用量：</span><span>蛋雞/種雞料 推薦比例，全程使用</span></div>
+          <div class="info-row"><span class="info-label">文獻：</span><span class="info-lit">PMID 36830449, PMID 20075279, PMID 39739956, PMID 37846975</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-img"><img src="assets/images/shrimp-broodstock-pond.jpg" alt="多卵壯" loading="lazy"></div>
+      <div class="pcard-body">
+        <div class="pcard-badge badge-breeding">繁殖線</div>
+        <h3 class="pcard-name">多卵壯</h3>
+        <div class="pcard-tagline">多卵·多苗·多效益</div>
+        <div class="pcard-target">種魚·蝦親本</div>
+        <div class="pcard-ingredient">植物甾醇 ≥ 2.5%</div>
+        
+        <div class="pain-points">
+          <div class="section-subtitle"><span class="pain-dot"></span> 痛點</div>
+          <ul><li>🔥 產卵率低，親本性腺發育不良</li><li>🔥 受精率差，卵質與精子活力不足</li><li>🔥 苗種質量不穩定，整齊度差</li></ul>
+        </div>
+
+        <div class="mech-block">
+          <div class="section-subtitle"><span class="mech-dot"></span> 作用機轉</div>
+          <p class="mech-text">植物甾醇促進親本性腺發育與卵黃生成，優化卵質與精子活力，提升受精率及苗種整齊度。</p>
+        </div>
+
+        <div class="v5-kpi-grid">
+          <div class="section-subtitle"><span class="kpi-dot"></span> 效益數據</div>
+          <div class="v5-item"><span class="v5-text">產卵率+20-35%</span><span class="ev-badge ev-inferring">≈ 推估</span></div><div class="v5-item"><span class="v5-text">受精率85-95%</span><span class="ev-badge ev-inferring">≈ 推估</span></div><div class="v5-item"><span class="v5-text">苗種整齊度提升</span><span class="ev-badge ev-inferring">≈ 推估</span></div><div class="v5-item"><span class="v5-text">苗種存活率+15-25%</span><span class="ev-badge ev-inferring">≈ 推估</span></div>
+        </div>
+
+        <div class="kpi-grid">
+          
+            <div class="kpi-cell">
+              <div class="kpi-num">+20-35%</div>
+              <div class="kpi-label">產卵率</div>
+              <span class="ev-badge ev-inferring">≈ 推估</span>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-num">85-95%</div>
+              <div class="kpi-label">受精率</div>
+              <span class="ev-badge ev-inferring">≈ 推估</span>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-num">+15-25%</div>
+              <div class="kpi-label">苗種存活率</div>
+              <span class="ev-badge ev-inferring">≈ 推估</span>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-num">1:5~1:8</div>
+              <div class="kpi-label">ROI</div>
+              <span class="ev-badge ev-inferring">≈ 推估</span>
+            </div>
+        </div>
+
+        <div class="extra-info">
+          <div class="info-row"><span class="info-label">驗證：</span><span>機制推定+外部文獻方向支持</span></div>
+          <div class="info-row"><span class="info-label">用量：</span><span>依親本種類與階段調整</span></div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-img"><img src="assets/images/finishing-pigs-barn.jpg" alt="長膘旺" loading="lazy"></div>
+      <div class="pcard-body">
+        <div class="pcard-badge badge-growth">生長線</div>
+        <h3 class="pcard-name">長膘旺</h3>
+        <div class="pcard-tagline">省料·增重·胴體升級</div>
+        <div class="pcard-target">育肥豬·肉牛·羊</div>
+        <div class="pcard-ingredient">蛋白酶 ≥ 100 U/g</div>
+        
+        <div class="pain-points">
+          <div class="section-subtitle"><span class="pain-dot"></span> 痛點</div>
+          <ul><li>🔥 飼料蛋白未被充分利用：豆粕/雜粕結構屏障→傳統酶系水解不徹底，每噸豆粕損失約120-180元</li><li>🔥 抗營養因子鎖住胺基酸吸收：胰蛋白酶抑制因子·凝集素，消化率受限</li><li>🔥 腸道健康受損：未消化蛋白→後腸發酵→致病菌滋生→漏腸，夏季FCR↑0.3-0.5</li><li>🔥 反芻育肥精料成本佔65%，FCR是利潤最敏感變數</li></ul>
+        </div>
+
+        <div class="mech-block">
+          <div class="section-subtitle"><span class="mech-dot"></span> 作用機轉</div>
+          <p class="mech-text">複合蛋白酶提升蛋白消化率與胺基酸利用率，優化腸道菌群平衡，降低糞氮排放；肉牛/羊搭配植物甾醇提升瘤胃發酵效率。</p>
+        </div>
+
+        <div class="v5-kpi-grid">
+          <div class="section-subtitle"><span class="kpi-dot"></span> 效益數據</div>
+          <div class="v5-item"><span class="v5-text">FCR 2.75→2.0（降27%，150萬頭實測）</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">出欄提前7-14天</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">頭均增收213-264元（省料+胴體溢價）</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">SID必需胺基酸消化率+5.6-8%</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">背脂-8.5%, 瘦肉率+4.4%</span><span class="ev-badge ev-inferring">≈ 推估</span></div><div class="v5-item"><span class="v5-text">反芻FCR降20%（台灣場，牛7.0→5.6）</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">牛育肥300kg絕對增益</span><span class="ev-badge ev-confirmed">✓ 實證</span></div>
+        </div>
+
+        <div class="kpi-grid">
+          
+            <div class="kpi-cell">
+              <div class="kpi-num">2.0</div>
+              <div class="kpi-label">FCR(實證)</div>
+              <span class="ev-badge ev-confirmed">✓ 實證</span>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-num">7-14天</div>
+              <div class="kpi-label">提前出欄</div>
+              <span class="ev-badge ev-confirmed">✓ 實證</span>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-num">>85%</div>
+              <div class="kpi-label">屠體率</div>
+              <span class="ev-badge ev-inferring">≈ 推估</span>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-num">213-264</div>
+              <div class="kpi-label">頭均增收(元)</div>
+              <span class="ev-badge ev-inferring">≈ 推估</span>
+            </div>
+        </div>
+
+        <div class="extra-info">
+          <div class="info-row"><span class="info-label">驗證：</span><span>台灣150萬頭田間驗證（含東北Q1 n=10,000+實測）+反芻牛羊台灣5萬頭驗證</span></div>
+          <div class="info-row"><span class="info-label">用量：</span><span>育肥前段500g/噸，中後段500-1000g/噸（可加倍），連續使用禁斷停</span></div>
+          <div class="info-row"><span class="info-label">文獻：</span><span class="info-lit">PMID 40723572, PMID 42282997, PMID 42286697, PMID 39261875, PMID 41683174, PMID 27610318, PMID 37036172, PMID 31326164, PMID 40198999, PMID 30351389</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-img"><img src="assets/images/broiler-chicken-house.jpg" alt="足斤旺" loading="lazy"></div>
+      <div class="pcard-body">
+        <div class="pcard-badge badge-growth">生長線</div>
+        <h3 class="pcard-name">足斤旺</h3>
+        <div class="pcard-tagline">足斤足兩·胸肉倍增·安全可溯</div>
+        <div class="pcard-target">白肉雞·土雞</div>
+        <div class="pcard-ingredient">蛋白酶 ≥ 100 U/g</div>
+        
+        <div class="pain-points">
+          <div class="section-subtitle"><span class="pain-dot"></span> 痛點</div>
+          <ul><li>🔥 飼料成本佔肉禽總成本60-70%，FCR每降1%利潤顯著提升</li><li>🔥 豆粕蛋白消化率不足，抗營養因子鎖住胺基酸，未消化蛋白流入後腸→濕墊料·腳墊炎·FCR惡化</li><li>🔥 熱應激衝擊：高溫期採食量↓8-12%，FCR↑0.15-0.25</li><li>🔥 生長速度與骨骼發育失衡，腿部健康風險升高</li><li>🔥 動物性原料潛藏禽流感等傳染風險</li></ul>
+        </div>
+
+        <div class="mech-block">
+          <div class="section-subtitle"><span class="mech-dot"></span> 作用機轉</div>
+          <p class="mech-text">蛋白酶促進腸絨毛發育與隱窩深度比優化，提升飼料養分吸收表面積，搭配植物萃取物緩解熱緊迫。可作為抗生素生長促進劑替代方案。</p>
+        </div>
+
+        <div class="v5-kpi-grid">
+          <div class="section-subtitle"><span class="kpi-dot"></span> 效益數據</div>
+          <div class="v5-item"><span class="v5-text">FCR -2.5~-3.2%（2.75→2.0）</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">出欄體重 +3.4~+3.9%</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">胸肉產量 +15.24%（12PPM條件）</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">每噸飼料效益約500元起</span><span class="ev-badge ev-inferring">≈ 推估</span></div><div class="v5-item"><span class="v5-text">天然螺旋藻基質，5項國際文獻佐證</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">均勻度CV<10%</span><span class="ev-badge ev-inferring">≈ 推估</span></div>
+        </div>
+
+        <div class="kpi-grid">
+          
+            <div class="kpi-cell">
+              <div class="kpi-num">-2.5~3.2%</div>
+              <div class="kpi-label">FCR改善</div>
+              <span class="ev-badge ev-confirmed">✓ 實證</span>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-num">+3.4~3.9%</div>
+              <div class="kpi-label">出欄體重</div>
+              <span class="ev-badge ev-confirmed">✓ 實證</span>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-num">+15.24%</div>
+              <div class="kpi-label">胸肉產量</div>
+              <span class="ev-badge ev-confirmed">✓ 實證</span>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-num">~500+</div>
+              <div class="kpi-label">ROI(CNY/噸料)</div>
+              <span class="ev-badge ev-inferring">≈ 推估</span>
+            </div>
+        </div>
+
+        <div class="extra-info">
+          <div class="info-row"><span class="info-label">驗證：</span><span>企業田間實證+PMID 40501263/38284560/42291520，白羽/黃羽雞雙線驗證</span></div>
+          <div class="info-row"><span class="info-label">用量：</span><span>500-1000g/噸混飼，可加倍</span></div>
+          <div class="info-row"><span class="info-label">文獻：</span><span class="info-lit">PMID 40501263, PMID 38284560, PMID 42291520, PMID 41810122, PMID 42340377, PMID 42320184, PMID 42314296, PMID 42257813, PMID 42087212</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-img"><img src="assets/images/shrimp-growout-pond.jpg" alt="保苗旺" loading="lazy"></div>
+      <div class="pcard-body">
+        <div class="pcard-badge badge-growth">生長線</div>
+        <h3 class="pcard-name">保苗旺</h3>
+        <div class="pcard-tagline">保存活·強屏障·抗弧菌</div>
+        <div class="pcard-target">白蝦·吳郭魚·淡水魚</div>
+        <div class="pcard-ingredient">蛋白酶 ≥ 100 U/g</div>
+        
+        <div class="pain-points">
+          <div class="section-subtitle"><span class="pain-dot"></span> 痛點</div>
+          <ul><li>🔥 苗期育成率<60%，早期損失無法追回</li><li>🔥 腸道健康與弧菌感染威脅：未消化蛋白入腸→消化壓力演化為病原爆發</li><li>🔥 添加劑來源疑慮：不明添加物、殘留與停藥期壓力</li><li>🔥 白便高發，肝胰臟病變風險</li></ul>
+        </div>
+
+        <div class="mech-block">
+          <div class="section-subtitle"><span class="mech-dot"></span> 作用機轉</div>
+          <p class="mech-text">蛋白酶增強蛋白同化效率與能量分配，減輕肝胰臟代謝負擔；搭配免疫調節因子提升腸黏膜屏障功能，降低弧菌感染風險。</p>
+        </div>
+
+        <div class="v5-kpi-grid">
+          <div class="section-subtitle"><span class="kpi-dot"></span> 效益數據</div>
+          <div class="v5-item"><span class="v5-text">育成率 60%→80%（+20pp）</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">弧菌感染 ↓40%</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">白便發生率 ↓70%</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">午仔魚存活+44.6%, 收量+87%</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">吳郭魚均重+60%</span><span class="ev-badge ev-confirmed">✓ 實證</span></div><div class="v5-item"><span class="v5-text">高值魚種每噸料增收約7,900 CNY</span><span class="ev-badge ev-inferring">≈ 推估</span></div>
+        </div>
+
+        <div class="kpi-grid">
+          
+            <div class="kpi-cell">
+              <div class="kpi-num">>80%</div>
+              <div class="kpi-label">育成率</div>
+              <span class="ev-badge ev-confirmed">✓ 實證</span>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-num">1.0-1.4</div>
+              <div class="kpi-label">料肉比(FCR)</div>
+              <span class="ev-badge ev-inferring">≈ 推估</span>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-num">-70%</div>
+              <div class="kpi-label">白便發生率</div>
+              <span class="ev-badge ev-inferring">≈ 推估</span>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-num">1:8~1:12</div>
+              <div class="kpi-label">ROI</div>
+              <span class="ev-badge ev-inferring">≈ 推估</span>
+            </div>
+        </div>
+
+        <div class="extra-info">
+          <div class="info-row"><span class="info-label">驗證：</span><span>台灣田間實證（屏東佳冬午仔魚、台南麻豆吳郭魚）</span></div>
+          <div class="info-row"><span class="info-label">用量：</span><span>500-1000g/噸混飼，可加倍（應激期調整）</span></div>
+          <div class="info-row"><span class="info-label">文獻：</span><span class="info-lit">PMID 38481478, APJMBB 2024</span></div>
+        </div>
+      </div>
+    </div>
 </div>
 </div>
 </section>
 
-<!-- === EVIDENCE === -->
+<!-- === APPLICATIONS === -->
+<section class="section section--card" id="applications">
+<div class="container">
+<div class="section-tag" data-i18n="app_tag">APPLICATION LINES</div>
+<h2 data-i18n="app_title">六大應用線・全場景覆蓋</h2>
+<div class="app-grid">
+
+    <div class="app-card">
+      <h4 data-i18n="app_name_breeding_swine">繁殖線·母豬</h4>
+      <div class="app-product" data-i18n="app_product_breeding_swine">均仔旺</div>
+      <div class="app-desc" data-i18n="app_desc_breeding_swine">後備·妊娠·泌乳全階段適用，HPG軸調節×蛋白營養強化，PSY提升+7頭實證</div>
+      <div class="app-benefits"><span class="app-benefit">受胎增強</span> <span class="app-benefit">產仔優化</span> <span class="app-benefit">泌乳提升</span> <span class="app-benefit">離乳整齊</span> <span class="app-benefit">體況維持</span></div>
+    </div>
+    <div class="app-card">
+      <h4 data-i18n="app_name_breeding_poultry">繁殖線·蛋雞/種雞</h4>
+      <div class="app-product" data-i18n="app_product_breeding_poultry">殼力旺</div>
+      <div class="app-desc" data-i18n="app_desc_breeding_poultry">全生命週期精準營養支持：前期建基·高峰維持·後期延緩，蛋殼強度與產蛋持續力雙提升</div>
+      <div class="app-benefits"><span class="app-benefit">產蛋率↑</span> <span class="app-benefit">蛋殼強度↑</span> <span class="app-benefit">破蛋率↓</span> <span class="app-benefit">產蛋高峰延長</span> <span class="app-benefit">肝臟健康保護</span></div>
+    </div>
+    <div class="app-card">
+      <h4 data-i18n="app_name_breeding_aqua">繁殖線·水產親本</h4>
+      <div class="app-product" data-i18n="app_product_breeding_aqua">多卵壯</div>
+      <div class="app-desc" data-i18n="app_desc_breeding_aqua">促進親本性腺發育與卵黃生成，提升受精率及苗種整齊度</div>
+      <div class="app-benefits"><span class="app-benefit">產卵率↑</span> <span class="app-benefit">受精率↑</span> <span class="app-benefit">苗種整齊度↑</span></div>
+    </div>
+    <div class="app-card">
+      <h4 data-i18n="app_name_finishing">生長線·育肥</h4>
+      <div class="app-product" data-i18n="app_product_finishing">長膘旺</div>
+      <div class="app-desc" data-i18n="app_desc_finishing">育肥豬·肉牛·羊全覆蓋，FCR降27%實證，頭均增收213-264元</div>
+      <div class="app-benefits"><span class="app-benefit">FCR↓</span> <span class="app-benefit">增重↑</span> <span class="app-benefit">胴體品質↑</span> <span class="app-benefit">腸道健康↑</span></div>
+    </div>
+    <div class="app-card">
+      <h4 data-i18n="app_name_poultry_growth">生長線·家禽</h4>
+      <div class="app-product" data-i18n="app_product_poultry_growth">足斤旺</div>
+      <div class="app-desc" data-i18n="app_desc_poultry_growth">白羽肉雞·黃羽雞·鴨·鵝，胸肉產量+15.24%，天然螺旋藻基質安全可溯</div>
+      <div class="app-benefits"><span class="app-benefit">FCR改善</span> <span class="app-benefit">出欄體重↑</span> <span class="app-benefit">胸肉產量↑</span> <span class="app-benefit">安全可溯</span></div>
+    </div>
+    <div class="app-card">
+      <h4 data-i18n="app_name_aqua_growth">生長線·水產育成</h4>
+      <div class="app-product" data-i18n="app_product_aqua_growth">保苗旺</div>
+      <div class="app-desc" data-i18n="app_desc_aqua_growth">白蝦·吳郭魚·淡水魚，育成率60%→80%，弧菌白便綜合管理方案</div>
+      <div class="app-benefits"><span class="app-benefit">育成存活↑</span> <span class="app-benefit">弧菌控制</span> <span class="app-benefit">白便降低</span> <span class="app-benefit">腸道屏障強化</span></div>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- === EVIDENCE DB === -->
 <section class="section section--dark" id="evidence">
 <div class="container">
-<div class="section-tag" data-i18n="ev_tag">FIELD VERIFICATION</div>
-<h2 data-i18n="ev_title">台灣百萬頭規模・實證背書</h2>
-<p data-i18n="ev_desc" style="color:rgba(255,255,255,.6);margin-bottom:var(--s4);max-width:600px">經台灣150萬頭次養殖實證，數據由獨立第三方收集。</p>
+<div class="section-tag" data-i18n="evdb_tag">EVIDENCE DATABASE</div>
+<h2 data-i18n="evdb_title">證據資料庫</h2>
+<div class="evdb-grid">
+  <div class="evdb-stat">
+    <div class="num">32</div>
+    <div class="label" data-i18n="evdb_lit">文獻引用數</div>
+  </div>
+  <div class="evdb-stat">
+    <div class="num">150萬+</div>
+    <div class="label" data-i18n="evdb_trial">台灣田間驗證規模</div>
+  </div>
+  <div class="evdb-stat">
+    <div class="num" style="color:var(--accent)">12</div>
+    <div class="label" data-i18n="evdb_confirmed">實證✓ 宣稱項</div>
+  </div>
+  <div class="evdb-stat">
+    <div class="num" style="color:#ffc107">8</div>
+    <div class="label" data-i18n="evdb_inferring">推估≈ 宣稱項</div>
+  </div>
+</div>
+<div class="cite-grid">
+<div class="evdb-cite"><strong>PMID 41514887</strong> — IGF-1血中濃度與生殖信號轉化</div><div class="evdb-cite"><strong>PMID 41423875</strong> — IGF-1跨物種生殖調控</div><div class="evdb-cite"><strong>PMID 41812033</strong> — 蛋白消化率→IGF-1軸激活</div><div class="evdb-cite"><strong>PMID 36830449</strong> — 植物甾醇→蛋殼強度/厚度改善（蛋雞）</div><div class="evdb-cite"><strong>PMID 20075279</strong> — 植物甾醇→膽固醇代謝與脂肪肝風險降低</div><div class="evdb-cite"><strong>PMID 39739956</strong> — 辣木葉粉（含植物甾醇）→蛋品質改善</div><div class="evdb-cite"><strong>PMID 37846975</strong> — 石榴籽油（含植物甾醇）→蛋黃脂肪酸優化</div><div class="evdb-cite"><strong>PMID 20453086</strong> — 褐藻Fucoidan→初乳IgG提升</div><div class="evdb-cite"><strong>PMID 38671855</strong> — Fucoidan→Nrf2抗氧化通路</div><div class="evdb-cite"><strong>PMID 36387380</strong> — 酵母核苷酸→腸道屏障強化</div><div class="evdb-cite"><strong>PMID 35781577</strong> — 核苷酸→胎盤血管生成/仔豬活力</div><div class="evdb-cite"><strong>PMID 33997335</strong> — 核苷酸→仔豬腸屏障/免疫</div><div class="evdb-cite"><strong>PMID 40501263</strong> — 蛋白酶→肉雞FCR改善</div><div class="evdb-cite"><strong>PMID 38284560</strong> — 蛋白酶→肉雞FCR改善（PMID交叉驗證）</div><div class="evdb-cite"><strong>PMID 42291520</strong> — 蛋白酶→肉雞SID全面提升</div><div class="evdb-cite"><strong>PMID 41810122</strong> — PepT1激活→小肽吸收效率最大化</div><div class="evdb-cite"><strong>PMID 42340377</strong> — 螺旋藻→肉雞生長性能</div><div class="evdb-cite"><strong>PMID 42320184</strong> — 螺旋藻+β-glucan緩解免疫抑制</div><div class="evdb-cite"><strong>PMID 42314296</strong> — 螺旋藻→肉雞生長·肉質</div><div class="evdb-cite"><strong>PMID 42257813</strong> — 螺旋藻+甘露寡糖→FCR改善</div><div class="evdb-cite"><strong>PMID 42087212</strong> — 螺旋藻粉替代抗生素</div><div class="evdb-cite"><strong>PMID 40723572</strong> — 蛋白酶直效→替代豆粕</div><div class="evdb-cite"><strong>PMID 42282997</strong> — 蛋白酶直效→改善生長</div><div class="evdb-cite"><strong>PMID 42286697</strong> — 固態發酵→FCR改善</div><div class="evdb-cite"><strong>PMID 39261875</strong> — 發酵植物蛋白→消化率↑</div><div class="evdb-cite"><strong>PMID 41683174</strong> — 菜籽粕發酵→肉質優化</div><div class="evdb-cite"><strong>PMID 27610318</strong> — 外源酶→牛ADG/FCR改善</div><div class="evdb-cite"><strong>PMID 37036172</strong> — 外源蛋白酶→綿羊ADG改善</div><div class="evdb-cite"><strong>PMID 31326164</strong> — 纖維酶→綿羊NDF/ADF消化率↑</div><div class="evdb-cite"><strong>PMID 40198999</strong> — 外源酶→牛HCW提升+2.21kg</div><div class="evdb-cite"><strong>PMID 30351389</strong> — α-amylase→牛育肥試驗</div><div class="evdb-cite"><strong>PMID 38481478</strong> — 枯草芽孢桿菌→水產消化率改善</div>
+</div>
 </div>
 </section>
 
-<!-- === DISEASE PREVENTION === -->
-<section class="section section--paper" id="disease">
+<!-- === MARKET === -->
+<section class="section section--white" id="market">
 <div class="container">
-<div class="section-tag" data-i18n="dz_tag">DISEASE MANAGEMENT</div>
-<h2 data-i18n="dz_title">疾病預防・替抗方案</h2>
-<p data-i18n="dz_desc" style="color:var(--mid);margin-bottom:var(--s4)">精準營養調控替代傳統抗生素使用路徑，降低養殖風險。</p>
+<div class="section-tag" data-i18n="market_tag">MARKET STRATEGY</div>
+<h2 data-i18n="market_title">市場策略與商業路徑</h2>
+<div class="market-grid">
+  <div class="market-card">
+    <h4 data-i18n="market_comp_title">競爭定位</h4>
+    <p data-i18n="market_comp_desc">全球飼料級矽營養尚無同類競爭者。活力得®為首個高生物利用率飼料級+農業級雙市場複合物，從進口依賴走向國產功能材料。</p>
+  </div>
+  <div class="market-card">
+    <h4 data-i18n="market_pricing_title">價值定價</h4>
+    <p data-i18n="market_pricing_desc">飼料級以ROI的20-30%定價，客戶保留70-80%增值。農業級以增產效益的30-40%定價。隨規模效應，單位成本持續下降。</p>
+  </div>
+  <div class="market-card">
+    <h4 data-i18n="market_channel_title">渠道策略</h4>
+    <p data-i18n="market_channel_desc">四大渠道並行：省級/市級經銷商網絡、年用飼料>5,000噸大型養殖場直營、農業級小包裝電商、東南亞/中東/非洲國際經銷。先國內後國際。</p>
+  </div>
+  <div class="market-card">
+    <h4 data-i18n="market_patent_title">專利壁壘</h4>
+    <p data-i18n="market_patent_desc">P1-P7核心專利族（複合物+動物營養+多元應用）+農業應用專利P2（申請中）+ LCTR連續流智造工艺know-how保護。三重防護支撐長期差異化。</p>
+  </div>
+  <div class="market-card">
+    <h4 data-i18n="market_reg_title">法規路徑</h4>
+    <p data-i18n="market_reg_desc">先建立中國飼料級市場基礎，再擴展至EU等高價值國際市場。東南亞（越南、泰國、印尼、馬來西亞）為首個國際目標市場。</p>
+  </div>
+  <div class="market-card">
+    <h4 data-i18n="market_roi_title">跨應用ROI</h4>
+    <p data-i18n="market_roi_desc">農業端投入產出比1:8-1:15（實證）。動物端部分實證+部分推估。同一複合物技術平台，連結健康、效率與永續的三重價值。</p>
+  </div>
+</div>
 </div>
 </section>
 
-<!-- === HOW TO USE === -->
-<section class="section" id="howtouse">
-<div class="container">
-<div class="section-tag" data-i18n="use_tag">USAGE GUIDE</div>
-<h2 data-i18n="use_title">使用方法速查</h2>
-<p data-i18n="use_desc" style="color:var(--mid);margin-bottom:var(--s4)">每支產品依照混合型飼料添加劑註冊品種目錄標定劑量。</p>
-</div>
-</section>
-
-<!-- === FAQ === -->
-<section class="section section--paper" id="faq">
-<div class="container">
-<div class="section-tag" data-i18n="faq_tag">FAQ</div>
-<h2 data-i18n="faq_title">常見問題</h2>
+<!-- === MARKET ATTRIBUTION === -->
+<section class="section section--card" id="attribution">
+<div class="container" style="text-align:center">
+<p style="font-size:var(--text-sm);color:var(--ink);opacity:.6" data-i18n="market_attr">
+市場規模與營收預測均為策略推估／目標。效益會因物種、品種與養殖管理條件而異。
+部分數據為機制性推估或戰略目標，具體效果需結合本場驗證。
+</p>
 </div>
 </section>
 
@@ -239,15 +828,21 @@ values. Actual returns depend on farm management. Return ratio ~1:8 to 1:12 ※ 
 <div>
 <div class="footer-brand" data-i18n="footer_brand">活力得® Vitality Plus®</div>
 <p data-i18n="footer_tagline">精準動物營養解決方案</p>
+<p style="margin-top:var(--s1);font-size:var(--text-xs)">台灣 <strong data-i18n="footer_company_tw">毅展實業有限公司</strong></p>
+<p style="font-size:var(--text-xs)" data-i18n="footer_company_cn">廈門澤林生物科技有限公司</p>
 </div>
 <div>
-<p data-i18n="footer_company">廈門澤林生物科技有限公司</p>
 <p data-i18n="footer_addr">福建省自由貿易試驗區廈門片區嵩嶼中路809號航運大廈1102室之260</p>
 <p style="font-size:var(--text-xs);opacity:.6">91350200MAERUOWJXD</p>
+<p style="margin-top:var(--s2)"><a href="https://richtrong.com" target="_blank">richtrong.com</a></p>
+</div>
+<div>
+<p style="font-size:var(--text-xs);opacity:.7" data-i18n="footer_approvals">贛飼添(2024)H02015 · Q/JXHYB002-2026 · HPLC批號HYB</p>
+<p style="font-size:var(--text-xs);opacity:.5;margin-top:var(--s1)" data-i18n="footer_founder">創辦人：李易昌 (UIUC千里馬計劃研修學者)</p>
 </div>
 </div>
 <div class="footer-disclaimer" data-i18n="footer_disclaimer">
-免責聲明：本網站所提供之資訊僅供專業養殖從業人員參考，不構成任何醫療或診斷建議。產品效能可能因養殖環境、飼養管理及動物健康狀況而有所差異。活力得®為註冊商標（第5類及第31類），未經授權不得使用。
+免責聲明：本網站所提供之資訊僅供專業養殖從業人員參考，不構成任何醫療或診斷建議。產品效能可能因養殖環境、飼養管理及動物健康狀況而有所差異。活力得®為註冊商標（第5類及第31類），未經授權不得使用。證據標示（✓實證 / ≈推估 / ◷補強中）反映數據可信度等級。
 </div>
 </div>
 </footer>
@@ -260,8 +855,17 @@ const T = {
     hero_eyebrow: "PRECISION ANIMAL NUTRITION",
     hero_title: "活力得<sup>®</sup>",
     hero_subtitle: "精準動物營養",
-    hero_desc: "源自美國康奈爾大學動物科學系研究基礎，經台灣百萬頭規模實證，為中華區畜牧水產市場打造的六支精準飼料添加劑。",
-    hero_cta: "探索產品 →",
+    hero_desc: "源自美國康奈爾大學動物科學系研究基礎，經台灣150萬頭規模實證，為中華區畜牧水產市場打造的六支精準飼料添加劑。",
+    hero_cta: "探索產品",
+    hero_visual_tag: "SOFT × HARD → 1+1>2",
+    hero_v1: "軟組織利用",
+    hero_v2: "硬組織利用",
+    hero_v3: "一體化升級",
+    compound_tag: "COMPOSITE PLATFORM",
+    compound_title: "活力得® 複合物",
+    compound_desc: "軟組織利用 × 硬組織利用 → 1+1>2 ｜ 同一複合物內的協同效應",
+    compound_soft_desc: "Ser-His-Asp 催化三聯體，高效水解飼料蛋白為小肽與游離胺基酸，催化效率高出被動水解 10⁷-10¹⁰ 倍。支持蛋白質消化利用與腸道吸收。",
+    compound_hard_desc: "游離矽組分支持膠原蛋白有機基質形成與羥基磷灰石結晶，強化骨骼、外骨骼與結締組織結構完整性。",
     chain_tag: "TECHNOLOGY ORIGIN",
     chain_title: "三地溯源・驗證技術鏈",
     chain_1_name: "康奈爾大學",
@@ -272,100 +876,124 @@ const T = {
     chain_3_role: "標準化生產",
     chain_4_name: "廈門澤林生物",
     chain_4_role: "中國總代理",
+    science_tag: "CROSS-SPECIES PLATFORM",
+    science_title: "跨物種精準營養平台",
+    science_desc: "同一複合物技術軸，從分子設計到田間驗證全鏈路打通，覆蓋六大應用場景。",
+
+    science_title_platform: "同一平台·六款產品",
+    science_text_platform: "以同一複合物技術軸，對應豬、雞、水產、反芻、農業六大應用場景。軟硬組織利用效率一體化，從分子設計到田間驗證全鏈路打通。",
+    science_title_ser_his_asp: "Ser-His-Asp 催化三聯體",
+    science_text_ser_his_asp: "分子剪刀的五步電荷接力機制：激活→親核攻擊→四面體中間體→斷裂釋放→脫醯基復原。催化效率高出被動水解10⁷-10¹⁰倍。",
+    science_title_igf1: "IGF-1 軸激活",
+    science_text_igf1: "蛋白消化率↑→小肽富集→IGF-1血中濃度↑（PMID 41514887/41423875/41812033）→生殖信號轉化、泌乳支持、肌肉合成。",
+    science_title_hpg: "HPG 軸調節",
+    science_text_hpg: "植物甾醇作為類固醇荷爾蒙前體，支持下視丘-腦垂體-性腺軸的正常運作，穩定FSH/LH分泌，改善卵泡發育與排卵。",
+    science_title_sttd: "UIUC STTD 標準消化率體系",
+    science_text_sttd: "創辦人李易昌經台灣教育部千里馬計畫赴UIUC研修，深承 Hans H. Stein 教授團隊方法學，導入STTD標準迴腸消化率評估體系，建立百萬頭實證動態模型。",
+    science_title_validation: "台灣百萬頭規模實證",
+    science_text_validation: "經台灣150萬頭次豬雞田間驗證，三年持續追蹤，跨季節跨地區實測。數據由獨立第三方收集，結果可重複、可信。",
+    science_title_platform: "同一平台·六款產品",
+    science_text_platform: "以同一複合物技術軸，對應豬、雞、水產、反芻、農業六大應用場景。軟硬組織利用效率一體化，從分子設計到田間驗證全鏈路打通。",
     prod_tag: "SIX FORMULATIONS",
-    prod_title: "六支專屬配方．精準對應",
+    prod_title: "六支專屬配方・精準對應",
     prod_desc: "繁殖線以植物甾醇為核心，生長線以蛋白酶為核心。數據來自台灣實證場。",
-    ev_tag: "FIELD VERIFICATION",
-    ev_title: "台灣百萬頭規模・實證背書",
-    ev_desc: "經台灣150萬頭次養殖實證，數據由獨立第三方收集。",
-    dz_tag: "DISEASE MANAGEMENT",
-    dz_title: "疾病預防・替抗方案",
-    dz_desc: "精準營養調控替代傳統抗生素使用路徑，降低養殖風險。",
-    use_tag: "USAGE GUIDE",
-    use_title: "使用方法速查",
-    use_desc: "每支產品依照混合型飼料添加劑註冊品種目錄標定劑量。",
-    faq_tag: "FAQ",
-    faq_title: "常見問題",
-    footer_brand: "活力得® Vitality Plus®",
-    footer_tagline: "精準動物營養解決方案",
-    footer_company: "廈門澤林生物科技有限公司",
-    footer_addr: "福建省自由貿易試驗區廈門片區嵩嶼中路809號航運大廈1102室之260",
-    footer_disclaimer: "免責聲明：本網站所提供之資訊僅供專業養殖從業人員參考，不構成任何醫療或診斷建議。產品效能可能因養殖環境、飼養管理及動物健康狀況而有所差異。活力得®為註冊商標（第5類及第31類），未經授權不得使用。",
+    app_tag: "APPLICATION LINES",
+    app_title: "六大應用線・全場景覆蓋",
+    evdb_tag: "EVIDENCE DATABASE",
+    evdb_title: "證據資料庫",
+    evdb_lit: "文獻引用數",
+    evdb_trial: "台灣田間驗證規模",
+    evdb_confirmed: "實證✓ 宣稱項",
+    evdb_inferring: "推估≈ 宣稱項",
+    market_tag: "MARKET STRATEGY",
+    market_title: "市場策略與商業路徑",
+    market_comp_title: "競爭定位",
+    market_comp_desc: "全球飼料級矽營養尚無同類競爭者。活力得®為首個高生物利用率飼料級+農業級雙市場複合物，從進口依賴走向國產功能材料。",
+    market_pricing_title: "價值定價",
+    market_pricing_desc: "飼料級以ROI的20-30%定價，客戶保留70-80%增值。農業級以增產效益的30-40%定價。隨規模效應，單位成本持續下降。",
+    market_channel_title: "渠道策略",
+    market_channel_desc: "四大渠道並行：省級/市級經銷商網絡、年用飼料>5,000噸大型養殖場直營、農業級小包裝電商、東南亞/中東/非洲國際經銷。先國內後國際。",
+    market_patent_title: "專利壁壘",
+    market_patent_desc: "P1-P7核心專利族（複合物+動物營養+多元應用）+農業應用專利P2（申請中）+ LCTR連續流智造工艺know-how保護。三重防護支撐長期差異化。",
+    market_reg_title: "法規路徑",
+    market_reg_desc: "先建立中國飼料級市場基礎，再擴展至EU等高價值國際市場。東南亞（越南、泰國、印尼、馬來西亞）為首個國際目標市場。",
+    market_roi_title: "跨應用ROI",
+    market_roi_desc: "農業端投入產出比1:8-1:15（實證）。動物端部分實證+部分推估。同一複合物技術平台，連結健康、效率與永續的三重價值。",
+    market_attr: "市場規模與營收預測均為策略推估／目標。效益會因物種、品種與養殖管理條件而異。部分數據為機制性推估或戰略目標，具體效果需結合本場驗證。",
 
     uniform_litter_name: "均仔旺",
     uniform_litter_target: "懷孕+哺乳母豬",
-    uniform_litter_badge: "繁殖",
+    uniform_litter_badge: "繁殖線",
     uniform_litter_mech: "植物甾醇調節母豬生殖激素平衡，優化子宮內營養分配，提升胎兒均勻度與初生活力；搭配蛋白酶強化乳汁蛋白合成，仔豬離乳整齊。",
     uniform_litter_cta: "了解更多",
-    uniform_litter_kpi0: "PSY",
-    uniform_litter_kpi1: "離乳體重(kg)",
-    uniform_litter_kpi2: "分娩率",
-    uniform_litter_kpi3: "ROI",
-    uniform_litter_accord_mech: "完整作用機制",
-    uniform_litter_accord_ref: "參考文獻",
     shell_strength_name: "殼力旺",
     shell_strength_target: "種雞·蛋雞",
-    shell_strength_badge: "繁殖",
+    shell_strength_badge: "繁殖線",
     shell_strength_mech: "植物甾醇調節鈣磷代謝與蛋殼腺功能，強化蛋殼超微結構，延緩產蛋後期蛋殼品質衰退，提升種蛋孵化性能。",
     shell_strength_cta: "了解更多",
-    shell_strength_kpi0: "蛋殼強度",
-    shell_strength_kpi1: "孵化率",
-    shell_strength_kpi2: "破蛋率降",
-    shell_strength_kpi3: "ROI",
-    shell_strength_accord_mech: "完整作用機制",
-    shell_strength_accord_ref: "參考文獻",
     spawn_boost_name: "多卵壯",
     spawn_boost_target: "種魚·蝦親本",
-    spawn_boost_badge: "繁殖",
+    spawn_boost_badge: "繁殖線",
     spawn_boost_mech: "植物甾醇促進親本性腺發育與卵黃生成，優化卵質與精子活力，提升受精率及苗種整齊度。",
     spawn_boost_cta: "了解更多",
-    spawn_boost_kpi0: "產卵率",
-    spawn_boost_kpi1: "受精率",
-    spawn_boost_kpi2: "苗種存活率",
-    spawn_boost_kpi3: "ROI",
-    spawn_boost_accord_mech: "完整作用機制",
-    spawn_boost_accord_ref: "參考文獻",
     growth_max_name: "長膘旺",
     growth_max_target: "育肥豬·肉牛·羊",
-    growth_max_badge: "生長",
+    growth_max_badge: "生長線",
     growth_max_mech: "複合蛋白酶提升蛋白消化率與胺基酸利用率，優化腸道菌群平衡，降低糞氮排放；肉牛/羊搭配植物甾醇提升瘤胃發酵效率。",
     growth_max_cta: "了解更多",
-    growth_max_kpi0: "料肉比(FCR)",
-    growth_max_kpi1: "提前出欄",
-    growth_max_kpi2: "日增重",
-    growth_max_kpi3: "ROI",
-    growth_max_accord_mech: "完整作用機制",
-    growth_max_accord_ref: "參考文獻",
     full_weight_name: "足斤旺",
     full_weight_target: "白肉雞·土雞",
-    full_weight_badge: "生長",
+    full_weight_badge: "生長線",
     full_weight_mech: "蛋白酶促進腸絨毛發育與隱窩深度比優化，提升飼料養分吸收表面積，搭配植物萃取物緩解熱緊迫。可作為抗生素生長促進劑替代方案。",
     full_weight_cta: "了解更多",
-    full_weight_kpi0: "料肉比(FCR)",
-    full_weight_kpi1: "日增重",
-    full_weight_kpi2: "均勻度CV",
-    full_weight_kpi3: "ROI",
-    full_weight_accord_mech: "完整作用機制",
-    full_weight_accord_ref: "參考文獻",
     seed_guard_name: "保苗旺",
     seed_guard_target: "白蝦·吳郭魚·淡水魚",
-    seed_guard_badge: "生長",
+    seed_guard_badge: "生長線",
     seed_guard_mech: "蛋白酶增強蛋白同化效率與能量分配，減輕肝胰臟代謝負擔；搭配免疫調節因子提升腸黏膜屏障功能，降低弧菌感染風險。",
     seed_guard_cta: "了解更多",
-    seed_guard_kpi0: "育成率",
-    seed_guard_kpi1: "料肉比(FCR)",
-    seed_guard_kpi2: "白便發生率",
-    seed_guard_kpi3: "ROI",
-    seed_guard_accord_mech: "完整作用機制",
-    seed_guard_accord_ref: "參考文獻",
-    // Simplified Chinese
-    "zh-Hans": {
+    app_name_breeding_swine: "繁殖線·母豬",
+    app_product_breeding_swine: "均仔旺",
+    app_desc_breeding_swine: "後備·妊娠·泌乳全階段適用，HPG軸調節×蛋白營養強化，PSY提升+7頭實證",
+    app_name_breeding_poultry: "繁殖線·蛋雞/種雞",
+    app_product_breeding_poultry: "殼力旺",
+    app_desc_breeding_poultry: "全生命週期精準營養支持：前期建基·高峰維持·後期延緩，蛋殼強度與產蛋持續力雙提升",
+    app_name_breeding_aqua: "繁殖線·水產親本",
+    app_product_breeding_aqua: "多卵壯",
+    app_desc_breeding_aqua: "促進親本性腺發育與卵黃生成，提升受精率及苗種整齊度",
+    app_name_finishing: "生長線·育肥",
+    app_product_finishing: "長膘旺",
+    app_desc_finishing: "育肥豬·肉牛·羊全覆蓋，FCR降27%實證，頭均增收213-264元",
+    app_name_poultry_growth: "生長線·家禽",
+    app_product_poultry_growth: "足斤旺",
+    app_desc_poultry_growth: "白羽肉雞·黃羽雞·鴨·鵝，胸肉產量+15.24%，天然螺旋藻基質安全可溯",
+    app_name_aqua_growth: "生長線·水產育成",
+    app_product_aqua_growth: "保苗旺",
+    app_desc_aqua_growth: "白蝦·吳郭魚·淡水魚，育成率60%→80%，弧菌白便綜合管理方案",
+    footer_brand: "活力得® Vitality Plus®",
+    footer_tagline: "精準動物營養解決方案",
+    footer_company_tw: "毅展實業有限公司",
+    footer_company_cn: "廈門澤林生物科技有限公司",
+    footer_addr: "福建省自由貿易試驗區廈門片區嵩嶼中路809號航運大廈1102室之260",
+    footer_approvals: "贛飼添(2024)H02015 · Q/JXHYB002-2026 · HPLC批號HYB",
+    footer_founder: "創辦人：李易昌 (UIUC千里馬計劃研修學者)",
+    footer_disclaimer: "免責聲明：本網站所提供之資訊僅供專業養殖從業人員參考，不構成任何醫療或診斷建議。產品效能可能因養殖環境、飼養管理及動物健康狀況而有所差異。活力得®為註冊商標（第5類及第31類），未經授權不得使用。證據標示（✓實證 / ≈推估 / ◷補強中）反映數據可信度等級。",
+  },
+  "zh-Hans": {
     brand_name: "活力得®",
     hero_eyebrow: "PRECISION ANIMAL NUTRITION",
     hero_title: "活力得<sup>®</sup>",
     hero_subtitle: "精准动物营养",
-    hero_desc: "源自美国康奈尔大学动物科学系研究基础，经台湾百万头规模实证，为中华区畜牧水产市场打造的六支精准饲料添加剂。",
-    hero_cta: "探索产品 →",
+    hero_desc: "源自美国康奈尔大学动物科学系研究基础，经台湾150万头规模实证，为中华区畜牧水产市场打造的六支精准饲料添加剂。",
+    hero_cta: "探索产品",
+    hero_visual_tag: "SOFT × HARD → 1+1>2",
+    hero_v1: "软组织利用",
+    hero_v2: "硬组织利用",
+    hero_v3: "一体化升级",
+    compound_tag: "COMPOSITE PLATFORM",
+    compound_title: "活力得® 复合物",
+    compound_desc: "软组织利用 × 硬组织利用 → 1+1>2 ｜ 同一复合物内的协同效应",
+    compound_soft_desc: "Ser-His-Asp 催化三联体，高效水解饲料蛋白为小肽与游离氨基酸，催化效率高出被动水解 10⁷-10¹⁰ 倍。支持蛋白质消化利用与肠道吸收。",
+    compound_hard_desc: "游离硅组分支持胶原蛋白有机基质形成与羟基磷灰石结晶，强化骨骼、外骨骼与结缔组织结构完整性。",
     chain_tag: "TECHNOLOGY ORIGIN",
     chain_title: "三地溯源・验证技术链",
     chain_1_name: "康奈尔大学",
@@ -376,66 +1004,124 @@ const T = {
     chain_3_role: "标准化生产",
     chain_4_name: "厦门泽林生物",
     chain_4_role: "中国总代理",
+    science_tag: "CROSS-SPECIES PLATFORM",
+    science_title: "跨物种精准营养平台",
+    science_desc: "同一复合物技术轴，从分子设计到田间验证全链路打通，覆盖六大应用场景。",
+
+    science_title_platform: "同一平台·六款產品",
+    science_text_platform: "以同一複合物技術軸，對應豬、雞、水產、反芻、農業六大應用場景。軟硬組織利用效率一体化，從分子設計到田間验證全鏈路打通。",
+    science_title_ser_his_asp: "Ser-His-Asp 催化三聯体",
+    science_text_ser_his_asp: "分子剪刀的五步電荷接力機制：激活→親核攻擊→四面体中間体→斷裂釋放→脫醯基复原。催化效率高出被動水解10⁷-10¹⁰倍。",
+    science_title_igf1: "IGF-1 軸激活",
+    science_text_igf1: "蛋白消化率↑→小肽富集→IGF-1血中濃度↑（PMID 41514887/41423875/41812033）→生殖信號轉化、泌乳支持、肌肉合成。",
+    science_title_hpg: "HPG 軸調節",
+    science_text_hpg: "植物甾醇作為類固醇荷爾蒙前体，支持下視丘-腦垂体-性腺軸的正常運作，穩定FSH/LH分泌，改善卵泡發育與排卵。",
+    science_title_sttd: "UIUC STTD 標准消化率体系",
+    science_text_sttd: "創辦人李易昌經台湾教育部千里馬計畫赴UIUC研修，深承 Hans H. Stein 教授團隊方法學，導入STTD標准迴腸消化率評估体系，建立百萬頭實證動態模型。",
+    science_title_validation: "台湾百萬頭規模實證",
+    science_text_validation: "經台湾150萬頭次豬雞田間验證，三年持續追蹤，跨季節跨地區實測。數據由獨立第三方收集，結果可重複、可信。",
     prod_tag: "SIX FORMULATIONS",
-    prod_title: "六支专属配方．精准对应",
+    prod_title: "六支专属配方・精准对应",
     prod_desc: "繁殖线以植物甾醇为核心，生长线以蛋白酶为核心。数据来自台湾实证场。",
-    ev_tag: "FIELD VERIFICATION",
-    ev_title: "台湾百万头规模・实证背书",
-    ev_desc: "经台湾150万头次养殖实证，数据由独立第三方收集。",
-    dz_tag: "DISEASE MANAGEMENT",
-    dz_title: "疾病预防・替抗方案",
-    dz_desc: "精准营养调控替代传统抗生素使用路径，降低养殖风险。",
-    use_tag: "USAGE GUIDE",
-    use_title: "使用方法速查",
-    use_desc: "每支产品依照混合型饲料添加剂注册品种目录标定剂量。",
-    faq_tag: "FAQ",
-    faq_title: "常见问题",
-    footer_brand: "活力得® Vitality Plus®",
-    footer_tagline: "精准动物营养解决方案",
-    footer_company: "厦门泽林生物科技有限公司",
-    footer_addr: "福建省自由贸易试验区厦门片区嵩屿中路809号航运大厦1102室之260",
-    footer_disclaimer: "免责声明：本网站所提供之信息仅供专业养殖从业人员参考，不构成任何医疗或诊断建议。产品效能可能因养殖环境、饲养管理及动物健康状况而有所差异。活力得®为注册商标（第5类及第31类），未经授权不得使用。",
+    app_tag: "APPLICATION LINES",
+    app_title: "六大应用线・全场景覆盖",
+    evdb_tag: "EVIDENCE DATABASE",
+    evdb_title: "证据数据库",
+    evdb_lit: "文献引用数",
+    evdb_trial: "台湾田间验证规模",
+    evdb_confirmed: "实证✓ 宣称项",
+    evdb_inferring: "推估≈ 宣称项",
+    market_tag: "MARKET STRATEGY",
+    market_title: "市场策略与商业路径",
+    market_comp_title: "竞争定位",
+    market_comp_desc: "全球饲料级硅营养尚无同类竞争者。活力得®为首个高生物利用率饲料级+农业级双市场复合物，从进口依赖走向国产功能材料。",
+    market_pricing_title: "价值定价",
+    market_pricing_desc: "饲料级以ROI的20-30%定价，客户保留70-80%增值。农业级以增产效益的30-40%定价。随规模效应，单位成本持续下降。",
+    market_channel_title: "渠道策略",
+    market_channel_desc: "四大渠道并行：省级/市级经销商网络、年用饲料>5,000吨大型养殖场直营、农业级小包装电商、东南亚/中东/非洲国际经销。先国内后国际。",
+    market_patent_title: "专利壁垒",
+    market_patent_desc: "P1-P7核心专利族（复合物+动物营养+多元应用）+农业应用专利P2（申请中）+ LCTR连续流智造工艺know-how保护。三重防护支撑长期差异化。",
+    market_reg_title: "法规路径",
+    market_reg_desc: "先建立中国市场基础，再扩展至EU等高价值国际市场。东南亚（越南、泰国、印尼、马来西亚）为首个国际目标市场。",
+    market_roi_title: "跨应用ROI",
+    market_roi_desc: "农业端投入产出比1:8-1:15（实证）。动物端部分实证+部分推估。同一复合物技术平台，链接健康、效率与可持续的三重价值。",
+    market_attr: "市场规模与营收预测均为策略推估/目标。效益会因物种、品种与养殖管理条件而异。部分数据为机制性推估或战略目标，具体效果需结合本场验证。",
 
     uniform_litter_name: "均仔旺",
     uniform_litter_target: "怀孕+哺乳母猪",
-    uniform_litter_badge: "繁殖",
+    uniform_litter_badge: "繁殖线",
     uniform_litter_mech: "植物甾醇调节母猪生殖激素平衡，优化子宫内营养分配，提升胎儿均匀度与初生活力；搭配蛋白酶强化乳汁蛋白合成，仔猪离乳整齐。",
     uniform_litter_cta: "了解更多",
     shell_strength_name: "壳力旺",
     shell_strength_target: "种鸡·蛋鸡",
-    shell_strength_badge: "繁殖",
+    shell_strength_badge: "繁殖线",
     shell_strength_mech: "植物甾醇调节钙磷代谢与蛋壳腺功能，强化蛋壳超微结构，延缓产蛋后期蛋壳品质衰退，提升种蛋孵化性能。",
     shell_strength_cta: "了解更多",
     spawn_boost_name: "多卵壮",
     spawn_boost_target: "种鱼·虾亲本",
-    spawn_boost_badge: "繁殖",
+    spawn_boost_badge: "繁殖线",
     spawn_boost_mech: "植物甾醇促进亲本性腺发育与卵黄生成，优化卵质与精子活力，提升受精率及苗种整齐度。",
     spawn_boost_cta: "了解更多",
     growth_max_name: "长膘旺",
     growth_max_target: "育肥猪·肉牛·羊",
-    growth_max_badge: "生长",
+    growth_max_badge: "生长线",
     growth_max_mech: "复合蛋白酶提升蛋白消化率与氨基酸利用率，优化肠道菌群平衡，降低粪氮排放；肉牛/羊搭配植物甾醇提升瘤胃发酵效率。",
     growth_max_cta: "了解更多",
     full_weight_name: "足斤旺",
     full_weight_target: "白羽鸡·土鸡",
-    full_weight_badge: "生长",
+    full_weight_badge: "生长线",
     full_weight_mech: "蛋白酶促进肠绒毛发育与隐窝深度比优化，提升饲料养分吸收表面积，搭配植物萃取物缓解热紧迫。可作为抗生素生长促进剂替代方案。",
     full_weight_cta: "了解更多",
     seed_guard_name: "保苗旺",
     seed_guard_target: "白虾·罗非鱼·淡水鱼",
-    seed_guard_badge: "生长",
+    seed_guard_badge: "生长线",
     seed_guard_mech: "蛋白酶增强蛋白同化效率与能量分配，减轻肝胰脏代谢负担；搭配免疫调节因子提升肠黏膜屏障功能，降低弧菌感染风险。",
     seed_guard_cta: "了解更多",
-    // English
-    "en": {
+    app_name_breeding_swine: "繁殖线·母猪",
+    app_product_breeding_swine: "均仔旺",
+    app_desc_breeding_swine: "后备·妊娠·泌乳全阶段适用，HPG轴调节×蛋白营养强化，PSY提升+7头实证",
+    app_name_breeding_poultry: "繁殖线·蛋鸡/种鸡",
+    app_product_breeding_poultry: "殼力旺",
+    app_desc_breeding_poultry: "全生命周期精准营养支持：前期建基·高峰维持·后期延缓，蛋壳强度与产蛋持续力双提升",
+    app_name_breeding_aqua: "繁殖线·水产亲本",
+    app_product_breeding_aqua: "多卵壯",
+    app_desc_breeding_aqua: "促进亲本性腺发育与卵黄生成，提升受精率及苗种整齐度",
+    app_name_finishing: "生长线·育肥",
+    app_product_finishing: "長膘旺",
+    app_desc_finishing: "育肥猪·肉牛·羊全覆盖，FCR降27%实证，头均增收213-264元",
+    app_name_poultry_growth: "生长线·家禽",
+    app_product_poultry_growth: "足斤旺",
+    app_desc_poultry_growth: "白羽肉鸡·黄羽鸡·鸭·鹅，胸肉产量+15.24%，天然螺旋藻基质安全可溯",
+    app_name_aqua_growth: "生长线·水产育成",
+    app_product_aqua_growth: "保苗旺",
+    app_desc_aqua_growth: "白虾·罗非鱼·淡水鱼，育成率60%→80%，弧菌白便综合管理方案",
+    footer_brand: "活力得® Vitality Plus®",
+    footer_tagline: "精准动物营养解决方案",
+    footer_company_tw: "毅展实业有限公司",
+    footer_company_cn: "厦门泽林生物科技有限公司",
+    footer_addr: "福建省自由贸易试验区厦门片区嵩屿中路809号航运大厦1102室之260",
+    footer_approvals: "赣饲添(2024)H02015 · Q/JXHYB002-2026 · HPLC批号HYB",
+    footer_founder: "创办人：李易昌 (UIUC千里马计划研修学者)",
+    footer_disclaimer: "免责声明：本网站所提供之信息仅供专业养殖从业人员参考，不构成任何医疗或诊断建议。产品效能可能因养殖环境、饲养管理及动物健康状况而有所差异。活力得®为注册商标（第5类及第31类），未经授权不得使用。证据标示（✓实证 / ≈推估 / ◷补强中）反映数据可信度等级。",
+  },
+  "en": {
     brand_name: "Vitality Plus®",
     hero_eyebrow: "PRECISION ANIMAL NUTRITION",
     hero_title: "Vitality Plus<sup>®</sup>",
     hero_subtitle: "Precision Animal Nutrition",
-    hero_desc: "Developed from Cornell University College of Agriculture and Life Sciences research, validated across 1.5 million animals in Taiwan, delivering six precision feed additives for the Greater China livestock and aquaculture market.",
-    hero_cta: "Explore Products →",
+    hero_desc: "Developed from Cornell University research, validated across 1.5M animals in Taiwan, delivering six precision feed additives for Greater China.",
+    hero_cta: "Explore Products",
+    hero_visual_tag: "SOFT × HARD → 1+1>2",
+    hero_v1: "Soft Tissue",
+    hero_v2: "Hard Tissue",
+    hero_v3: "Integrated Upgrade",
+    compound_tag: "COMPOSITE PLATFORM",
+    compound_title: "Huolide® Composite",
+    compound_desc: "Soft Tissue × Hard Tissue → 1+1>2 ｜ Synergistic effect within one composite",
+    compound_soft_desc: "Ser-His-Asp catalytic triad efficiently hydrolyzes feed proteins into peptides and free amino acids, with catalytic efficiency 10⁷-10¹⁰× higher than passive hydrolysis.",
+    compound_hard_desc: "Free silicon components support collagen matrix formation and hydroxyapatite crystallization, strengthening bone, exoskeleton and connective tissue integrity.",
     chain_tag: "TECHNOLOGY ORIGIN",
-    chain_title: "Tri-Sourced Technology Transfer Chain",
+    chain_title: "Tri-Sourced Technology Chain",
     chain_1_name: "Cornell University",
     chain_1_role: "Animal Science · R&D Source",
     chain_2_name: "richtrong.com",
@@ -444,92 +1130,105 @@ const T = {
     chain_3_role: "Taiwan Production",
     chain_4_name: "Xiamen Zelin Biotech",
     chain_4_role: "China General Agent",
+    science_tag: "CROSS-SPECIES PLATFORM",
+    science_title: "Cross-Species Precision Nutrition Platform",
+    science_desc: "Single composite technology axis covering six application scenarios from molecular design to field validation.",
+
+    science_title_platform: "同一平台·六款產品",
+    science_text_platform: "Single Composite, Six Products — One technology axis for swine, poultry, aquaculture, ruminant and agriculture applications.",
+    science_title_ser_his_asp: "Ser-His-Asp 催化三聯體",
+    science_text_ser_his_asp: "Ser-His-Asp catalytic triad: five-step charge relay mechanism (Activation→Nucleophilic attack→Tetrahedral intermediate→Bond cleavage→Deacylation). 10⁷-10¹⁰× catalytic efficiency.",
+    science_title_igf1: "IGF-1 軸激活",
+    science_text_igf1: "Protein digestibility↑ → Peptide enrichment → IGF-1 blood concentration↑ (PMID 41514887/41423875/41812033) → Reproductive signal, lactation support, muscle synthesis.",
+    science_title_hpg: "HPG 軸調節",
+    science_text_hpg: "Phytosterols as steroid hormone precursors supporting hypothalamic-pituitary-gonadal axis function, stabilizing FSH/LH secretion, improving follicle development and ovulation.",
+    science_title_sttd: "UIUC STTD 標準消化率體系",
+    science_text_sttd: "Founder Yi-Chang Li trained at UIUC under Prof. Hans H. Stein, adopting STTD standardized ileal digestibility system with 1.5M+ animal dynamic model.",
+    science_title_validation: "台灣百萬頭規模實證",
+    science_text_validation: "Validated across 1.5M+ animal placements in Taiwan over 3+ years, cross-season and cross-region. Data collected by independent third parties.",
     prod_tag: "SIX FORMULATIONS",
     prod_title: "Six Targeted Formulations",
-    prod_desc: "Breeding line built on phytosterol, growth line built on protease. All data from Taiwan field trials.",
-    ev_tag: "FIELD VERIFICATION",
-    ev_title: "1.5 Million Head Taiwan Validation",
-    ev_desc: "Validated across 1.5 million animal placements in Taiwan. Data collected by independent third parties.",
-    dz_tag: "DISEASE MANAGEMENT",
-    dz_title: "Disease Prevention · Antibiotic Alternatives",
-    dz_desc: "Precision nutrition modulation as a pathway to replace conventional antibiotic use, reducing farm risk.",
-    use_tag: "USAGE GUIDE",
-    use_title: "Quick Reference Usage Guide",
-    use_desc: "Each product follows registered dosage standards for compound feed additives per species category.",
-    faq_tag: "FAQ",
-    faq_title: "Frequently Asked Questions",
-    footer_brand: "Vitality Plus®",
-    footer_tagline: "Precision Animal Nutrition Solutions",
-    footer_company: "Xiamen Zelin Biotech Co., Ltd.",
-    footer_addr: "Rm 260, 1102, No.809 Songyu Middle Rd, Xiamen FTZ, Fujian, China",
-    footer_disclaimer: "Disclaimer: Information on this website is for professional livestock professionals reference only. Product efficacy may vary based on farm conditions, management practices, and animal health status. Vitality Plus® is a registered trademark (Classes 5 & 31). Unauthorized use prohibited.",
+    prod_desc: "Breeding line: phytosterol core; Growth line: protease core. Field data from Taiwan trials.",
+    app_tag: "APPLICATION LINES",
+    app_title: "Six Application Lines · Full Coverage",
+    evdb_tag: "EVIDENCE DATABASE",
+    evdb_title: "Evidence Database",
+    evdb_lit: "Literature Citations",
+    evdb_trial: "Taiwan Field Validation",
+    evdb_confirmed: "Confirmed Items",
+    evdb_inferring: "Inferred Items",
+    market_tag: "MARKET STRATEGY",
+    market_title: "Market Strategy & Commercial Path",
+    market_comp_title: "Competitive Position",
+    market_comp_desc: "No direct competitors in global feed-grade silicon nutrition. Huolide® is the first high-bioavailability dual-market (feed+agriculture) composite.",
+    market_pricing_title: "Value Pricing",
+    market_pricing_desc: "Feed grade: 20-30% of ROI pricing (client retains 70-80% value). Agriculture: 30-40% of yield gain pricing. Unit cost declines with scale.",
+    market_channel_title: "Channel Strategy",
+    market_channel_desc: "Four parallel channels: provincial distributors, >5,000t/yr large farm direct sales, e-commerce (agri-grade), international (SE Asia, Middle East, Africa).",
+    market_patent_title: "Patent Moat",
+    market_patent_desc: "P1-P7 core patent family (composite+animal nutrition+applications) + P2 agriculture patent (pending) + LCTR continuous flow know-how protection.",
+    market_reg_title: "Regulatory Path",
+    market_reg_desc: "Establish China feed-grade market first, then expand to EU and other high-value international markets. SE Asia (Vietnam, Thailand, Indonesia, Malaysia) as first international targets.",
+    market_roi_title: "Cross-Application ROI",
+    market_roi_desc: "Agriculture: 1:8-1:15 (confirmed). Animal: partially confirmed + partially inferred. One platform linking health, efficiency and sustainability.",
+    market_attr: "Market size and revenue projections are strategic estimates/targets. Results vary by species, breed, and management conditions.",
 
     uniform_litter_name: "UniformLitter",
     uniform_litter_target: "Gestating & Lactating Sows",
-    uniform_litter_badge: "Breeding",
-    uniform_litter_mech: "植物甾醇調節母豬生殖激素平衡，優化子宮內營養分配，提升胎兒均勻度與初生活力；搭配蛋白酶強化乳汁蛋白合成，仔豬離乳整齊。",
+    uniform_litter_badge: "Breeding Line",
+    uniform_litter_mech: "Phytosterol regulates sow reproductive hormone balance, optimizes uterine nutrient distribution, improves fetal uniformity and birth vitality.",
     uniform_litter_cta: "Learn More",
-    uniform_litter_kpi0: "PSY",
-    uniform_litter_kpi1: "Weaning Wt (kg)",
-    uniform_litter_kpi2: "Farrowing Rate",
-    uniform_litter_kpi3: "ROI",
-    uniform_litter_accord_mech: "Full Mechanism",
-    uniform_litter_accord_ref: "References",
     shell_strength_name: "ShellStrength",
     shell_strength_target: "Breeders & Layers",
-    shell_strength_badge: "Breeding",
-    shell_strength_mech: "植物甾醇調節鈣磷代謝與蛋殼腺功能，強化蛋殼超微結構，延緩產蛋後期蛋殼品質衰退，提升種蛋孵化性能。",
+    shell_strength_badge: "Breeding Line",
+    shell_strength_mech: "Phytosterol regulates calcium-phosphorus metabolism and shell gland function, strengthens eggshell ultrastructure.",
     shell_strength_cta: "Learn More",
-    shell_strength_kpi0: "Shell Strength",
-    shell_strength_kpi1: "Hatchability",
-    shell_strength_kpi2: "Breakage Reduction",
-    shell_strength_kpi3: "ROI",
-    shell_strength_accord_mech: "Full Mechanism",
-    shell_strength_accord_ref: "References",
     spawn_boost_name: "SpawnBoost",
     spawn_boost_target: "Broodstock (Fish & Shrimp)",
-    spawn_boost_badge: "Breeding",
-    spawn_boost_mech: "植物甾醇促進親本性腺發育與卵黃生成，優化卵質與精子活力，提升受精率及苗種整齊度。",
+    spawn_boost_badge: "Breeding Line",
+    spawn_boost_mech: "Phytosterol promotes broodstock gonad development and vitellogenesis, optimizes egg quality and sperm motility.",
     spawn_boost_cta: "Learn More",
-    spawn_boost_kpi0: "Spawning Rate",
-    spawn_boost_kpi1: "Fertilization",
-    spawn_boost_kpi2: "Fry Survival",
-    spawn_boost_kpi3: "ROI",
-    spawn_boost_accord_mech: "Full Mechanism",
-    spawn_boost_accord_ref: "References",
     growth_max_name: "GrowthMax",
     growth_max_target: "Finishing Pigs, Beef, Sheep",
-    growth_max_badge: "Growth",
-    growth_max_mech: "複合蛋白酶提升蛋白消化率與胺基酸利用率，優化腸道菌群平衡，降低糞氮排放；肉牛/羊搭配植物甾醇提升瘤胃發酵效率。",
+    growth_max_badge: "Growth Line",
+    growth_max_mech: "Complex protease improves protein digestibility and amino acid utilization, balances gut microbiota, reduces fecal nitrogen.",
     growth_max_cta: "Learn More",
-    growth_max_kpi0: "FCR",
-    growth_max_kpi1: "Early Market",
-    growth_max_kpi2: "ADG",
-    growth_max_kpi3: "ROI",
-    growth_max_accord_mech: "Full Mechanism",
-    growth_max_accord_ref: "References",
     full_weight_name: "FullWeight",
     full_weight_target: "Broilers & Native Chickens",
-    full_weight_badge: "Growth",
-    full_weight_mech: "蛋白酶促進腸絨毛發育與隱窩深度比優化，提升飼料養分吸收表面積，搭配植物萃取物緩解熱緊迫。可作為抗生素生長促進劑替代方案。",
+    full_weight_badge: "Growth Line",
+    full_weight_mech: "Protease promotes intestinal villi development and V/C ratio optimization, increasing nutrient absorption surface area.",
     full_weight_cta: "Learn More",
-    full_weight_kpi0: "FCR",
-    full_weight_kpi1: "Daily Gain",
-    full_weight_kpi2: "Uniformity CV",
-    full_weight_kpi3: "ROI",
-    full_weight_accord_mech: "Full Mechanism",
-    full_weight_accord_ref: "References",
     seed_guard_name: "SeedGuard",
     seed_guard_target: "Shrimp, Tilapia, Freshwater Fish",
-    seed_guard_badge: "Growth",
-    seed_guard_mech: "蛋白酶增強蛋白同化效率與能量分配，減輕肝胰臟代謝負擔；搭配免疫調節因子提升腸黏膜屏障功能，降低弧菌感染風險。",
+    seed_guard_badge: "Growth Line",
+    seed_guard_mech: "Protease enhances protein assimilation efficiency and energy allocation, reduces hepatopancreatic metabolic burden.",
     seed_guard_cta: "Learn More",
-    seed_guard_kpi0: "Survival Rate",
-    seed_guard_kpi1: "FCR",
-    seed_guard_kpi2: "White Feces ↓",
-    seed_guard_kpi3: "ROI",
-    seed_guard_accord_mech: "Full Mechanism",
-    seed_guard_accord_ref: "References",
+    app_name_breeding_swine: "Breeding · Swine",
+    app_product_breeding_swine: "均仔旺",
+    app_desc_breeding_swine: "All-stage (gilt, gestation, lactation) support. HPG axis × protein nutrition. PSY +7 confirmed.",
+    app_name_breeding_poultry: "Breeding · Poultry",
+    app_product_breeding_poultry: "殼力旺",
+    app_desc_breeding_poultry: "Full lifecycle precision nutrition: foundation building, peak maintenance, decline delay.",
+    app_name_breeding_aqua: "Breeding · Aquaculture",
+    app_product_breeding_aqua: "多卵壯",
+    app_desc_breeding_aqua: "Promotes gonad development and vitellogenesis, improves fertilization and fry uniformity.",
+    app_name_finishing: "Growth · Finishing",
+    app_product_finishing: "長膘旺",
+    app_desc_finishing: "Swine, beef, sheep. FCR -27% confirmed. +213-264 CNY/head.",
+    app_name_poultry_growth: "Growth · Poultry",
+    app_product_poultry_growth: "足斤旺",
+    app_desc_poultry_growth: "Broilers & native chickens. Breast meat +15.24%. Natural spirulina matrix.",
+    app_name_aqua_growth: "Growth · Aquaculture",
+    app_product_aqua_growth: "保苗旺",
+    app_desc_aqua_growth: "Shrimp, tilapia, freshwater fish. Survival 60%→80%. Vibrio/white feces management.",
+    footer_brand: "Vitality Plus®",
+    footer_tagline: "Precision Animal Nutrition Solutions",
+    footer_company_tw: "Y&J Industrial Co., Ltd.",
+    footer_company_cn: "Xiamen Zelin Biotech Co., Ltd.",
+    footer_addr: "Rm 260, 1102, No.809 Songyu Middle Rd, Xiamen FTZ, Fujian, China",
+    footer_approvals: "GanSiTian(2024)H02015 · Q/JXHYB002-2026 · Batch HYB",
+    footer_founder: "Founder: Yi-Chang Li (UIUC Visiting Scholar)",
+    footer_disclaimer: "Disclaimer: Information on this website is for professional reference only. Product efficacy varies by management. Vitality Plus® is a registered trademark (Classes 5 & 31). Evidence badges (✓ confirmed / ≈ inferred / ◷ strengthening) reflect data confidence levels.",
   }
 };
 
