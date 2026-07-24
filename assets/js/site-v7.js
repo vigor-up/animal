@@ -8,10 +8,13 @@
     setTimeout(() => intro.remove(), 500);
   };
   if (intro) {
-    if (reduced || sessionStorage.getItem("huolide-intro")) intro.remove();
+    if (reduced || sessionStorage.getItem("huolide-intro")) {
+      intro.remove();
+      document.documentElement.classList.add("intro-skipped");
+    }
     else {
       intro.querySelector(".skip-intro")?.addEventListener("click", finishIntro);
-      setTimeout(finishIntro, 1750);
+      setTimeout(finishIntro, 2500);
     }
   }
   const io = new IntersectionObserver(entries => entries.forEach(e => {
