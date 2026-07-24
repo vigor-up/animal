@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://animal.feed-pet.com/sitemap.xml
