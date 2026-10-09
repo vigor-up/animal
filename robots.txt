@@ -1,22 +1,36 @@
 User-agent: *
 Allow: /
+Disallow: /legacy-20261009/
+Disallow: /screenshots/
 
 User-agent: GPTBot
 Allow: /
+Disallow: /legacy-20261009/
+Disallow: /screenshots/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /legacy-20261009/
+Disallow: /screenshots/
 
 User-agent: CCBot
 Allow: /
+Disallow: /legacy-20261009/
+Disallow: /screenshots/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /legacy-20261009/
+Disallow: /screenshots/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /legacy-20261009/
+Disallow: /screenshots/
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /legacy-20261009/
+Disallow: /screenshots/
 
 Sitemap: https://animal.feed-pet.com/sitemap.xml
