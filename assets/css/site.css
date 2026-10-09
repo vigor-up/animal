@@ -374,3 +374,12 @@ p  { font-size: clamp(14px,1.5vw,16px); color: #2a4a3c; }
   .usage-steps { grid-template-columns: 1fr; }
   .dosage-table th, .dosage-table td { padding: 8px 10px; font-size: 12px; }
 }
+
+/* === FAQ (GEO: FAQPage structured-data companion) === */
+.faq { padding: 56px 0 60px; background: #fff; }
+.faq .sec-title { font-size: 26px; color: #1f3d2b; text-align: center; margin-bottom: 28px; letter-spacing: .04em; }
+.faq-list { max-width: 860px; margin: 0 auto; display: grid; gap: 14px; }
+.faq-item { border: 1px solid #e6e1d4; border-left: 4px solid #C9A961; border-radius: 8px; padding: 16px 20px; background: #fcfbf7; }
+.faq-q { font-weight: 700; color: #1f3d2b; font-size: 16px; margin-bottom: 6px; }
+.faq-a { color: #4a4a40; font-size: 15px; line-height: 1.7; }
+.faq-note { max-width: 860px; margin: 22px auto 0; font-size: 12.5px; color: #8a8576; text-align: center; }
