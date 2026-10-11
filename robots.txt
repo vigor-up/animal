@@ -4,8 +4,8 @@ Allow: /
 Disallow: /legacy-20261009/
 Disallow: /screenshots/
 
-# Explicitly allow major search and AI retrieval crawlers on the same public paths.
-# GPTBot / ClaudeBot / Google-Extended are separate model-training or model-use controls.
+# Search crawlers and AI retrieval agents may crawl public pages.
+# Training and search bots are separate controls; these agents follow the same path rules.
 User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
 User-agent: GPTBot
@@ -17,6 +17,7 @@ User-agent: CCBot
 User-agent: PerplexityBot
 User-agent: Google-Extended
 User-agent: Bingbot
+User-agent: Baiduspider
 Allow: /
 Disallow: /legacy-20261009/
 Disallow: /screenshots/
