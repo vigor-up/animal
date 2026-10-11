@@ -1,34 +1,22 @@
+# Public pages are crawlable; exclude retained legacy pages and local review images.
 User-agent: *
 Allow: /
 Disallow: /legacy-20261009/
 Disallow: /screenshots/
 
+# Explicitly allow major search and AI retrieval crawlers on the same public paths.
+# GPTBot / ClaudeBot / Google-Extended are separate model-training or model-use controls.
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
 User-agent: GPTBot
-Allow: /
-Disallow: /legacy-20261009/
-Disallow: /screenshots/
-
 User-agent: ClaudeBot
-Allow: /
-Disallow: /legacy-20261009/
-Disallow: /screenshots/
-
-User-agent: CCBot
-Allow: /
-Disallow: /legacy-20261009/
-Disallow: /screenshots/
-
-User-agent: PerplexityBot
-Allow: /
-Disallow: /legacy-20261009/
-Disallow: /screenshots/
-
-User-agent: Google-Extended
-Allow: /
-Disallow: /legacy-20261009/
-Disallow: /screenshots/
-
+User-agent: Claude-SearchBot
+User-agent: Claude-User
 User-agent: anthropic-ai
+User-agent: CCBot
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Bingbot
 Allow: /
 Disallow: /legacy-20261009/
 Disallow: /screenshots/

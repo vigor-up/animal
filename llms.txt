@@ -2,27 +2,25 @@
 
 > 活力得®品牌網站：介紹生物可利用硅源複合功能材料、產品設計說明與各應用頁面。
 
-## 核心說明
+本索引只列出現役公開頁面。產品組成、設計目的、應用方式與參考資料，請以相應頁面的實際內容為準；引用數值時保留物種、單位、比較組與條件，不從單一案例延伸推論。
 
-活力得®網站將產品描述為膽鹼穩定原硅酸與重組 C-譜系絲氨酸蛋白酶構成的單一複合功能材料，並以「軟組織利用」與「硬組織利用」說明其設計主張。成分與作用說明請以科學總論頁為準；本文不延伸推論頁面未明載的功效。
+## 核心概念
+
+- 活力得®複合功能材料的組成、雙軸設計邏輯與參考資料，請見[科學總論](https://animal.feed-pet.com/science.html)。頁面中的材料設計主張應與應用資訊分開引用。
+- 飼料添加劑須依產品標籤與所在地法規使用；[農業頁](https://animal.feed-pet.com/agriculture.html)的施用資訊只適用於該頁所述情境。
 
 ## 網站導覽
 
 - [首頁](https://animal.feed-pet.com/): 品牌與應用線總覽。
 - [科學總論](https://animal.feed-pet.com/science.html): 材料定義、雙軸設計說明與參考資料。
 - [母豬繁殖](https://animal.feed-pet.com/sow.html): 母豬繁殖線與使用方式。
-- [育肥豬](https://animal.feed-pet.com/finishing-pig.html): 育肥豬生長線。
+- [育肥豬](https://animal.feed-pet.com/finishing-pig.html): 育肥豬應用資訊。
 - [反芻牛羊](https://animal.feed-pet.com/ruminant.html): 反芻動物應用線。
 - [家禽](https://animal.feed-pet.com/poultry.html): 家禽應用線。
 - [水產育成](https://animal.feed-pet.com/aquaculture.html): 水產養殖應用線。
 - [農業](https://animal.feed-pet.com/agriculture.html): 作物葉面施用資訊。
 - [綜效市場](https://animal.feed-pet.com/market.html): 跨應用線與導入評估資訊。
 
-## 解讀與使用
-
-- 飼料添加劑請依產品標籤與所在地法規使用；農業頁的施用內容僅適用於該頁所述情境。
-- 請優先引用本頁連結的原始頁面，並保留數字上下文、單位與限定語。
-
 ## Sitemap
 
-- [sitemap.xml](https://animal.feed-pet.com/sitemap.xml)
+- [sitemap.xml](https://animal.feed-pet.com/sitemap.xml): 現役公開頁面的標準 XML 清單。
