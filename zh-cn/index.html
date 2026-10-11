@@ -114,8 +114,8 @@
     </div>
 <div class="site-controls" aria-label="语言与币别设定">
       <div class="language-switch" aria-label="选择语言"><a href="../index.html" lang="zh-TW">繁体</a><a href="index.html" lang="zh-CN" aria-current="page">简体</a></div>
-      <label><span>显示币别</span><select data-currency-select aria-label="显示币别"><option value="CNY">人民币 CNY</option><option value="TWD" disabled>新台币 TWD</option></select></label>
-      <label><span>1 CNY =</span><input type="number" min="0.000001" step="any" inputmode="decimal" placeholder="手动汇率" data-cny-twd-rate aria-label="手动输入人民币兑新台币汇率"><span>TWD</span></label>
+      <label><span>显示币别</span><select name="displayCurrency" data-currency-select aria-label="显示币别"><option value="CNY">人民币 CNY</option><option value="TWD" disabled>新台币 TWD</option></select></label>
+      <label><span>1 CNY =</span><input name="cnyToTwdRate" type="number" min="0.000001" step="any" inputmode="decimal" placeholder="手动汇率" data-cny-twd-rate aria-label="手动输入人民币兑新台币汇率"><span>TWD</span></label>
       <span data-fx-status aria-live="polite"></span>
     </div>
   </div>
@@ -151,9 +151,9 @@
   <div class="container"><div class="roi-panel">
     <div class="roi-copy"><span class="eyebrow">先把自家数据带进来</span><h2 id="roi-title">每批到底能不能赚？</h2><p>填入你估算的每头增收／节省、产品投入成本和本批头数，即时计算盈亏平衡点与整批净收益。金额输入以 CNY 为基准。</p></div>
     <div class="roi-form" data-roi-calculator>
-      <label>预计每头每批增收＋节省（CNY）<input type="number" min="0" step="any" inputmode="decimal" data-roi-gain placeholder="按自家场况填写"></label>
-      <label>产品每头每批投入成本（CNY）<input type="number" min="0" step="any" inputmode="decimal" data-roi-cost placeholder="按实际报价填写"></label>
-      <label>本批使用头数<input type="number" min="0" step="1" inputmode="numeric" data-roi-heads placeholder="填写本批头数"></label>
+      <label>预计每头每批增收＋节省（CNY）<input name="roiGainCny" type="number" min="0" step="any" inputmode="decimal" data-roi-gain placeholder="按自家场况填写"></label>
+      <label>产品每头每批投入成本（CNY）<input name="roiCostCny" type="number" min="0" step="any" inputmode="decimal" data-roi-cost placeholder="按实际报价填写"></label>
+      <label>本批使用头数<input name="roiHeads" type="number" min="0" step="1" inputmode="numeric" data-roi-heads placeholder="填写本批头数"></label>
       <div class="roi-results" aria-live="polite">
         <div class="roi-result"><span>每头预计净收益</span><strong><span data-roi-net-head>—</span> <span data-roi-currency>CNY</span></strong></div>
         <div class="roi-result"><span>整批预计净收益</span><strong><span data-roi-net-batch>—</span> <span data-roi-currency>CNY</span></strong></div>

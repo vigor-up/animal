@@ -112,8 +112,8 @@
     </div>
 <div class="site-controls" aria-label="語言與幣別設定">
       <div class="language-switch" aria-label="選擇語言"><a href="poultry.html" lang="zh-TW" aria-current="page">繁體</a><a href="zh-cn/poultry.html" lang="zh-CN">简体</a></div>
-      <label><span>顯示幣別</span><select data-currency-select aria-label="顯示幣別"><option value="CNY">人民幣 CNY</option><option value="TWD" disabled>新臺幣 TWD</option></select></label>
-      <label><span>1 CNY =</span><input type="number" min="0.000001" step="any" inputmode="decimal" placeholder="手動匯率" data-cny-twd-rate aria-label="手動輸入人民幣兌新臺幣匯率"><span>TWD</span></label>
+      <label><span>顯示幣別</span><select name="displayCurrency" data-currency-select aria-label="顯示幣別"><option value="CNY">人民幣 CNY</option><option value="TWD" disabled>新臺幣 TWD</option></select></label>
+      <label><span>1 CNY =</span><input name="cnyToTwdRate" type="number" min="0.000001" step="any" inputmode="decimal" placeholder="手動匯率" data-cny-twd-rate aria-label="手動輸入人民幣兌新臺幣匯率"><span>TWD</span></label>
       <span data-fx-status aria-live="polite"></span>
     </div>
   </div>
