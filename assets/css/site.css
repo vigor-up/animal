@@ -3,8 +3,7 @@
    白底農民受益先行版
    ========================================== */
 
-/* === Google Fonts === */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@300;400;500&family=Baloo+2:wght@400;600;700;800&display=swap');
+/* === Local system font stacks; no external font CDN === */
 
 /* === Token Variables === */
 :root {
@@ -32,10 +31,16 @@
 /* === Reset & Base === */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
+html:lang(zh-CN) body {
+  font-family: 'Noto Sans CJK SC', 'Microsoft YaHei', 'PingFang SC', system-ui, sans-serif;
+}
+html:lang(zh-CN) h1, html:lang(zh-CN) h2, html:lang(zh-CN) h3, html:lang(zh-CN) h4 {
+  font-family: 'Noto Serif CJK SC', 'Songti SC', 'SimSun', serif;
+}
 body {
   background: var(--bg);
   color: var(--ink);
-  font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  font-family: 'Noto Sans CJK TC', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans CJK SC', 'Microsoft YaHei', 'PingFang SC', system-ui, sans-serif;
   font-weight: 400;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -43,7 +48,7 @@ body {
 
 /* === Typography === */
 h1,h2,h3,h4 {
-  font-family: 'Noto Serif TC', 'PingFang TC', serif;
+  font-family: 'Noto Serif CJK TC', 'Noto Serif TC', 'PingFang TC', 'PMingLiU', 'Noto Serif CJK SC', 'Songti SC', 'SimSun', serif;
   line-height: 1.2;
   color: var(--ink);
 }
@@ -225,7 +230,7 @@ p  { font-size: clamp(14px,1.5vw,16px); color: #2a4a3c; }
   text-align: center; margin-bottom: 40px;
 }
 .section-head h2 { margin-bottom: 8px; }
-.section-head p  { color: #6a8a7a; max-width: 600px; margin: 0 auto; }
+.section-head p  { color: #557466; max-width: 600px; margin: 0 auto; }
 .line-pill {
   display: inline-block;
   padding: 3px 14px; border-radius: 20px;
@@ -306,7 +311,7 @@ p  { font-size: clamp(14px,1.5vw,16px); color: #2a4a3c; }
 .product-card-body h3 { font-size: 20px; color: var(--ink); }
 .product-card-body .kpi-inline {
   font-family: 'Baloo 2', sans-serif;
-  font-size: 16px; font-weight: 700; color: var(--accent);
+  font-size: 16px; font-weight: 700; color: #935018;
 }
 .product-card-body p { font-size: 13px; color: #5a7a6a; flex: 1; }
 .btn-more {
@@ -368,7 +373,7 @@ p  { font-size: clamp(14px,1.5vw,16px); color: #2a4a3c; }
   letter-spacing: .05em;
 }
 .ef-legal {
-  font-size: 11px; color: rgba(245,239,224,.55);
+  font-size: 11px; color: rgba(245,239,224,.62);
   line-height: 1.5;
 }
 .ef-brand {
