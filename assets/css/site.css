@@ -123,6 +123,7 @@ p  { font-size: clamp(14px,1.5vw,16px); color: #2a4a3c; }
   position: absolute; inset: 0;
   background-size: cover; background-position: center;
   filter: brightness(.75);
+  background-image: radial-gradient(ellipse at 74% 20%, rgba(201,169,97,.15), transparent 34%), linear-gradient(128deg, #0d2921, #24483a 58%, #526456);
 }
 .hero-overlay {
   position: absolute; inset: 0;
@@ -276,6 +277,7 @@ p  { font-size: clamp(14px,1.5vw,16px); color: #2a4a3c; }
 .product-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .product-card-img {
   height: 180px; background-size: cover; background-position: center;
+  background-image: radial-gradient(ellipse at 80% 18%, rgba(201,169,97,.2), transparent 34%), linear-gradient(128deg, #12372b, #315443 62%, #687764);
   position: relative;
 }
 .product-card-img .line-pill {
