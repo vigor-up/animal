@@ -36,3 +36,15 @@
 ## Sitemap
 
 - [sitemap.xml](https://animal.feed-pet.com/sitemap.xml)：繁體與簡體現役公開頁面的標準 XML 清單。
+
+## 图像来源与内容边界
+
+以下两张应用场景照片由 GPT Image 2 依据本地真实养殖场景素材生成／重制，作为场景呈现；它们不是可核验的客户养殖场纪录或试验结果：
+- `assets/images/ruminant-cattle-barn-gpt-image2.webp`：舍内牛群采食场景。
+- `assets/images/aquaculture-tilapia-tank-gpt-image2.webp`：鱼群平常在水中活动，投喂时无序争食并溅水的场景。
+
+## 圖像來源與內容界線
+
+以下兩張應用場景照片由 GPT Image 2 依據本機真實養殖場景素材生成／重製，作為場景呈現；它們不是可查證的客戶養殖場紀錄或試驗結果：
+- `assets/images/ruminant-cattle-barn-gpt-image2.webp`：舍內牛群採食場景。
+- `assets/images/aquaculture-tilapia-tank-gpt-image2.webp`：魚群平時在水中活動，投餌時無序爭食並濺水的場景。
