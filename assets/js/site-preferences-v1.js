@@ -45,6 +45,48 @@
     return numberFormat.format(scale > 1 ? converted / scale : converted);
   }
 
+  function updateRoi() {
+    const calculator = document.querySelector('[data-roi-calculator]');
+    if (!calculator) return;
+
+    const gainInput = calculator.querySelector('[data-roi-gain]');
+    const costInput = calculator.querySelector('[data-roi-cost]');
+    const headsInput = calculator.querySelector('[data-roi-heads]');
+    const statusNode = calculator.querySelector('[data-roi-status]');
+    const values = [gainInput, costInput, headsInput].map((input) => input.value.trim());
+    const outputs = {
+      netHead: calculator.querySelector('[data-roi-net-head]'),
+      netBatch: calculator.querySelector('[data-roi-net-batch]'),
+      percent: calculator.querySelector('[data-roi-percent]'),
+      breakEven: calculator.querySelector('[data-roi-breakeven]')
+    };
+
+    calculator.querySelectorAll('[data-roi-currency]').forEach((node) => {
+      node.textContent = currencySelect.value;
+    });
+
+    const complete = values.every((value) => value !== '' && Number.isFinite(Number(value)) && Number(value) >= 0);
+    if (!complete) {
+      Object.values(outputs).forEach((node) => { if (node) node.textContent = '—'; });
+      if (statusNode) statusNode.textContent = isSimplified
+        ? '填入三项自家数据即可试算，数据不会上传。'
+        : '填入三項自家數據即可試算，數據不會上傳。';
+      return;
+    }
+
+    const [gain, cost, heads] = values.map(Number);
+    const netPerHead = gain - cost;
+    if (outputs.netHead) outputs.netHead.textContent = formatValue(netPerHead, 1);
+    if (outputs.netBatch) outputs.netBatch.textContent = formatValue(netPerHead * heads, 1);
+    if (outputs.breakEven) outputs.breakEven.textContent = formatValue(gain, 1);
+    if (outputs.percent) outputs.percent.textContent = cost > 0
+      ? `${numberFormat.format((netPerHead / cost) * 100)}%`
+      : (isSimplified ? '成本为 0，不适用' : '成本為 0，不適用');
+    if (statusNode) statusNode.textContent = isSimplified
+      ? `按当前输入估算：每头净收益 ${formatValue(netPerHead, 1)} ${currencySelect.value}；实际结果以本场记录为准。`
+      : `依目前輸入估算：每頭淨收益 ${formatValue(netPerHead, 1)} ${currencySelect.value}；實際結果以本場紀錄為準。`;
+  }
+
   function updateCurrency() {
     const canConvert = Number.isFinite(rate) && rate > 0;
     const twdOption = currencySelect.querySelector('option[value="TWD"]');
@@ -68,6 +110,7 @@
     document.querySelectorAll('[data-money-code]').forEach((node) => {
       node.textContent = targetCode;
     });
+    updateRoi();
 
     if (status) {
       if (canConvert) {
@@ -91,5 +134,8 @@
     updateCurrency();
   });
   currencySelect.addEventListener('change', updateCurrency);
+  document.querySelectorAll('[data-roi-gain], [data-roi-cost], [data-roi-heads]').forEach((input) => {
+    input.addEventListener('input', updateRoi);
+  });
   updateCurrency();
 })();

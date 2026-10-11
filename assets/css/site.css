@@ -100,7 +100,7 @@ p  { font-size: clamp(14px,1.5vw,16px); color: #2a4a3c; }
 }
 .nav-inner {
   max-width: 1140px; margin: 0 auto;
-  display: flex; align-items: center; height: 58px; gap: 24px;
+  display: flex; align-items: center; height: 58px; gap: 12px;
 }
 .nav-logo {
   font-family: 'Noto Serif TC', serif;
@@ -109,9 +109,9 @@ p  { font-size: clamp(14px,1.5vw,16px); color: #2a4a3c; }
   white-space: nowrap;
 }
 .nav-logo span { color: var(--gold); }
-.nav-links { display: flex; gap: 4px; flex-wrap: wrap; }
+.nav-links { display: flex; gap: 0; flex-wrap: nowrap; }
 .nav-links a {
-  font-size: 13px; padding: 6px 10px; border-radius: 6px;
+  font-size: 12px; padding: 6px; border-radius: 6px;
   color: var(--ink2); text-decoration: none; font-weight: 500;
   transition: background .15s;
 }
@@ -183,6 +183,48 @@ p  { font-size: clamp(14px,1.5vw,16px); color: #2a4a3c; }
 .hero-kpi { text-align: left; }
 .hero-kpi .num-l1 { color: #fff; }
 .hero-kpi .num-l2 { color: var(--gold-lt); }
+
+/* === Farmer-first landing hero and A/B comparison === */
+.hero-sales { min-height: 560px; }
+.hero-sales .hero-bg { background-position: center 58%; }
+.hero-sales .hero-overlay { background: linear-gradient(90deg, rgba(8,31,23,.96) 0%, rgba(8,31,23,.90) 45%, rgba(8,31,23,.72) 100%); }
+.hero-sales .hero-body { width: min(1240px, 100%); max-width: none; padding: 54px 32px; margin: 0 auto; }
+.hero-layout { display: grid; grid-template-columns: minmax(300px, .86fr) minmax(450px, 1.14fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+.hero-copy .hero-title { font-size: clamp(34px, 5vw, 56px); }
+.hero-copy .hero-sub { max-width: 560px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+.hero-actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 18px; border-radius: 8px; font-weight: 750; text-decoration: none; }
+.hero-actions .primary { background: var(--gold-lt); color: #172f25; }
+.hero-actions .secondary { border: 1px solid rgba(255,255,255,.58); color: white; }
+.hero-ab { padding: 22px; border: 1px solid rgba(255,255,255,.22); border-radius: 16px; background: rgba(8,25,19,.72); backdrop-filter: blur(4px); box-shadow: 0 18px 52px rgba(0,0,0,.24); }
+.hero-ab h2 { color: #fff; font-size: 18px; margin: 0 0 6px; }
+.hero-ab-intro,.hero-ab-note { color: rgba(255,255,255,.72); font-size: 12px; }
+.hero-ab-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin-top: 16px; }
+.hero-ab-card { min-height: 160px; padding: 16px 14px; border-radius: 11px; background: rgba(255,255,255,.96); color: #19392c; }
+.hero-ab-card .ab-label { color: #587264; font-size: 12px; font-weight: 700; }
+.hero-ab-values { display: flex; align-items: baseline; gap: 8px; margin: 15px 0 8px; white-space: nowrap; }
+.hero-ab-values .before { color: #777f79; font-size: clamp(17px, 2.2vw, 23px); font-weight: 700; }
+.hero-ab-values .after { color: #0e674b; font-size: clamp(21px, 2.6vw, 29px); font-weight: 900; }
+.hero-ab-values .arrow { color: #bd7b2d; font-size: 19px; font-weight: 900; }
+.hero-ab-card .ab-unit { color: #52665c; font-size: 11px; }
+.hero-ab-note { margin: 14px 0 0; }
+
+/* === Farmer ROI calculator === */
+.roi-section { padding: clamp(36px, 6vw, 68px) 0; background: #f1f3ee; }
+.roi-panel { display: grid; grid-template-columns: minmax(270px,.8fr) minmax(430px,1.2fr); gap: 28px; align-items: start; padding: clamp(22px,4vw,38px); border: 1px solid #dce4db; border-radius: 18px; background: #fff; box-shadow: 0 14px 38px rgba(20,52,39,.09); }
+.roi-copy .eyebrow { color: #9a6025; font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+.roi-copy h2 { margin: 8px 0 10px; color: #123b2d; font-size: clamp(24px,3vw,34px); }
+.roi-copy p { color: #5e6f64; font-size: 14px; }
+.roi-form { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+.roi-form label { display: flex; flex-direction: column; gap: 6px; color: #344d3f; font-size: 12px; font-weight: 700; }
+.roi-form input { width: 100%; min-height: 44px; padding: 8px 11px; border: 1px solid #cbd7cd; border-radius: 8px; color: #173c2d; font: inherit; }
+.roi-form input:focus { outline: 3px solid rgba(199,150,69,.32); border-color: #a97830; }
+.roi-results { grid-column: 1/-1; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 10px; margin-top: 4px; }
+.roi-result { padding: 13px; border-radius: 10px; background: #edf3ee; }
+.roi-result span { display: block; color: #5b7062; font-size: 11px; }
+.roi-result strong { display: block; margin-top: 5px; color: #0c563d; font-size: clamp(18px,2.5vw,24px); }
+.roi-disclaimer { grid-column: 1/-1; margin: 0; color: #66766c; font-size: 11px; line-height: 1.6; }
+.roi-empty { color: #68786e !important; font-size: 13px !important; }
 
 /* === KPI Cards === */
 .kpi-grid {
@@ -301,11 +343,15 @@ p  { font-size: clamp(14px,1.5vw,16px); color: #2a4a3c; }
 .product-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .product-card-img {
   height: 180px; background-size: cover; background-position: center;
-  background-image: radial-gradient(ellipse at 80% 18%, rgba(201,169,97,.2), transparent 34%), linear-gradient(128deg, #12372b, #315443 62%, #687764);
+  background-color: #e4e9e3;
   position: relative;
+  overflow: hidden;
 }
+.product-card-img img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.product-card-img::after { content: ""; position: absolute; inset: 35% 0 0; background: linear-gradient(transparent,rgba(8,30,22,.32)); pointer-events: none; }
 .product-card-img .line-pill {
   position: absolute; top: 12px; left: 12px;
+  z-index: 1;
 }
 .product-card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
 .product-card-body h3 { font-size: 20px; color: var(--ink); }
@@ -387,6 +433,9 @@ p  { font-size: clamp(14px,1.5vw,16px); color: #2a4a3c; }
   .hero-body { max-width: 100%; padding: 40px 20px; }
   .hero-kpis { gap: 16px; }
   .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-layout,.roi-panel { grid-template-columns: 1fr; }
+  .hero-sales { min-height: 0; }
+  .roi-results { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 /* 製程與品質管理 */
 .proc-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 8px 0 26px; }
@@ -412,6 +461,13 @@ p  { font-size: clamp(14px,1.5vw,16px); color: #2a4a3c; }
   .kpi-card { padding: 16px 12px; }
   .hero { min-height: 420px; }
   .product-grid { grid-template-columns: 1fr; }
+  .hero-sales .hero-body { padding: 34px 18px; }
+  .hero-ab { padding: 16px 13px; }
+  .hero-ab-grid { grid-template-columns: 1fr; }
+  .hero-ab-card { min-height: 0; padding: 13px 14px; }
+  .hero-ab-values { margin: 8px 0 3px; }
+  .roi-panel { padding: 20px 16px; }
+  .roi-form,.roi-results { grid-template-columns: 1fr; }
   .pain-fix-grid { grid-template-columns: 1fr; }
   .nav-links { display: none; }
   .usage-steps { grid-template-columns: 1fr; }
