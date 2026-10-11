@@ -4,9 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>水產育成 — 成活與增重雙提升 | 活力得®</title>
-<meta name="description" content="活力得®水產育成線：育成率 60→80%，午仔魚 +44.6%，吳郭魚均重 +60%，白便 −70%，弧菌 −40%，每噸料 +7900 元。">
+<meta name="description" content="活力得®水產育成線：育成率 60→80%，午仔魚 +44.6%，吳郭魚均重 +60%，白便 −70%，弧菌 −40%，每噸料 +7900 CNY。">
 <link rel="stylesheet" href="assets/css/site.css">
   <link rel="canonical" href="https://animal.feed-pet.com/aquaculture.html">
+  <link rel="alternate" hreflang="zh-TW" href="https://animal.feed-pet.com/aquaculture.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://animal.feed-pet.com/zh-cn/aquaculture.html">
+  <link rel="alternate" hreflang="x-default" href="https://animal.feed-pet.com/aquaculture.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_TW">
   <meta property="og:site_name" content="活力得®">
@@ -37,7 +40,7 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首頁",
-          "item": "https://animal.feed-pet.com/index.html"
+          "item": "https://animal.feed-pet.com/"
         },
         {
           "@type": "ListItem",
@@ -107,6 +110,12 @@
       <a href="agriculture.html">農業</a>
       <a href="market.html">綜效市場</a>
     </div>
+<div class="site-controls" aria-label="語言與幣別設定">
+      <div class="language-switch" aria-label="選擇語言"><a href="aquaculture.html" lang="zh-TW" aria-current="page">繁體</a><a href="zh-cn/aquaculture.html" lang="zh-CN">简体</a></div>
+      <label><span>顯示幣別</span><select data-currency-select aria-label="顯示幣別"><option value="CNY">人民幣 CNY</option><option value="TWD" disabled>新臺幣 TWD</option></select></label>
+      <label><span>1 CNY =</span><input type="number" min="0.000001" step="any" inputmode="decimal" placeholder="手動匯率" data-cny-twd-rate aria-label="手動輸入人民幣兌新臺幣匯率"><span>TWD</span></label>
+      <span data-fx-status aria-live="polite"></span>
+    </div>
   </div>
 </nav>
 
@@ -120,7 +129,7 @@
     <div class="hero-kpis">
       <div class="hero-kpi"><div class="num-l1">60→80%</div><div class="num-l2">育成率</div><div class="num-l4">成活提升，出塘均勻度改善</div></div>
       <div class="hero-kpi"><div class="num-l1">+60%</div><div class="num-l2">吳郭魚均重</div><div class="num-l4">增重潛力，養殖周期縮短</div></div>
-      <div class="hero-kpi"><div class="num-l1">+7900</div><div class="num-l2">元/噸料</div><div class="num-l4">場景估算增益，保守口徑</div></div>
+      <div class="hero-kpi"><div class="num-l1"><span data-money data-cny="7900" data-prefix="+">+7,900</span></div><div class="num-l2"><span data-money-unit data-cny-unit="CNY/噸料" data-twd-unit="TWD/噸料">CNY/噸料</span></div><div class="num-l4">場景估算增益，保守口徑</div></div>
     </div>
   </div>
 </section>
@@ -201,5 +210,6 @@
   </div>
 </footer>
 
+<script src="assets/js/site-preferences.js" defer></script>
 </body>
 </html>

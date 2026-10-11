@@ -8,6 +8,9 @@
   <link rel="preload" as="image" href="assets/images/huolide-sow-nursing-source.webp" fetchpriority="high">
 <link rel="stylesheet" href="assets/css/site.css">
   <link rel="canonical" href="https://animal.feed-pet.com/">
+  <link rel="alternate" hreflang="zh-TW" href="https://animal.feed-pet.com/">
+  <link rel="alternate" hreflang="zh-CN" href="https://animal.feed-pet.com/zh-cn/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://animal.feed-pet.com/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_TW">
   <meta property="og:site_name" content="活力得®">
@@ -109,6 +112,12 @@
       <a href="agriculture.html">農業</a>
       <a href="market.html">綜效市場</a>
     </div>
+<div class="site-controls" aria-label="語言與幣別設定">
+      <div class="language-switch" aria-label="選擇語言"><a href="index.html" lang="zh-TW" aria-current="page">繁體</a><a href="zh-cn/index.html" lang="zh-CN">简体</a></div>
+      <label><span>顯示幣別</span><select data-currency-select aria-label="顯示幣別"><option value="CNY">人民幣 CNY</option><option value="TWD" disabled>新臺幣 TWD</option></select></label>
+      <label><span>1 CNY =</span><input type="number" min="0.000001" step="any" inputmode="decimal" placeholder="手動匯率" data-cny-twd-rate aria-label="手動輸入人民幣兌新臺幣匯率"><span>TWD</span></label>
+      <span data-fx-status aria-live="polite"></span>
+    </div>
   </div>
 </nav>
 
@@ -161,7 +170,7 @@
         <div class="product-card-img" style="background-image:url('assets/images/huolide-sow-nursing-source.webp')"><span class="line-pill">繁殖線</span></div>
         <div class="product-card-body">
           <h3>母豬繁殖</h3>
-          <div class="kpi-inline">PSY 21→&gt;28 頭/母豬/年 · 年增益 ≈1800 元/頭</div>
+          <div class="kpi-inline">PSY 21→&gt;28 頭/母豬/年 · 年增益 <span data-money data-cny="1800" data-prefix="≈">≈1,800</span> <span data-money-unit data-cny-unit="CNY/頭" data-twd-unit="TWD/頭">CNY/頭</span></div>
           <p>硬組織利用支持肢蹄與繁殖耐力，軟組織利用提升蛋白供給，母豬年產仔批次與整齊度改善。</p>
           <a class="btn-more" href="sow.html">了解更多 →</a>
         </div>
@@ -221,7 +230,7 @@
         <div class="product-card-img" style="background-image:url('assets/images/mfg_stainless-steel-conveyor-machine.webp')"><span class="line-pill">綜效市場</span></div>
         <div class="product-card-body">
           <h3>綜效市場</h3>
-          <div class="kpi-inline">400 億飼添 TAM · 專利 P1–P7</div>
+          <div class="kpi-inline"><span data-money data-cny="40000000000" data-scale="100000000" data-suffix="億">400億</span> <span data-money-code>CNY</span> 飼添 TAM · 專利 P1–P7</div>
           <p>跨物種平台材料，價值定價與東南亞佈局，構築技術護城河。</p>
           <a class="btn-more" href="market.html">了解更多 →</a>
         </div>
@@ -275,5 +284,6 @@
   </div>
 </footer>
 
+<script src="assets/js/site-preferences.js" defer></script>
 </body>
 </html>

@@ -8,6 +8,9 @@
   <link rel="preload" as="image" href="assets/images/mfg_researcher-microscope-bench.webp" fetchpriority="high">
 <link rel="stylesheet" href="assets/css/site.css">
   <link rel="canonical" href="https://animal.feed-pet.com/science.html">
+  <link rel="alternate" hreflang="zh-TW" href="https://animal.feed-pet.com/science.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://animal.feed-pet.com/zh-cn/science.html">
+  <link rel="alternate" hreflang="x-default" href="https://animal.feed-pet.com/science.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_TW">
   <meta property="og:site_name" content="活力得®">
@@ -40,7 +43,7 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首頁",
-          "item": "https://animal.feed-pet.com/index.html"
+          "item": "https://animal.feed-pet.com/"
         },
         {
           "@type": "ListItem",
@@ -109,6 +112,12 @@
       <a href="aquaculture.html">水產育成</a>
       <a href="agriculture.html">農業</a>
       <a href="market.html">綜效市場</a>
+    </div>
+<div class="site-controls" aria-label="語言與幣別設定">
+      <div class="language-switch" aria-label="選擇語言"><a href="science.html" lang="zh-TW" aria-current="page">繁體</a><a href="zh-cn/science.html" lang="zh-CN">简体</a></div>
+      <label><span>顯示幣別</span><select data-currency-select aria-label="顯示幣別"><option value="CNY">人民幣 CNY</option><option value="TWD" disabled>新臺幣 TWD</option></select></label>
+      <label><span>1 CNY =</span><input type="number" min="0.000001" step="any" inputmode="decimal" placeholder="手動匯率" data-cny-twd-rate aria-label="手動輸入人民幣兌新臺幣匯率"><span>TWD</span></label>
+      <span data-fx-status aria-live="polite"></span>
     </div>
   </div>
 </nav>
@@ -263,5 +272,6 @@
   </div>
 </footer>
 
+<script src="assets/js/site-preferences.js" defer></script>
 </body>
 </html>

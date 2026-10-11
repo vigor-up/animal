@@ -1,26 +1,38 @@
 # 活力得®
 
-> 活力得®品牌网站：介绍生物可利用硅源复合功能材料、产品设计说明与各应用页面。
+> 活力得®品牌网站：介绍生物可利用硅源复合功能材料、产品设计说明与各应用页面。网站提供简体中文（zh-CN）和繁体中文（zh-TW）版本，可在页面顶部手动切换。
 
-本索引只列出现役公开页面。产品组成、设计目的、应用方式与参考资料，请以相应页面的实际内容为准；引用数值时保留物种、单位、比较组与条件，不从单一案例延伸推论。
+本索引列出现役公开页面。产品组成、设计目的、应用方式与参考资料，请以对应语言页面的实际内容为准；引用数值时保留物种、单位、比较组与条件，不从单一案例延伸推论。站内经济效益数值以人民币 CNY 为基准；新台币 TWD 换算使用访客手动输入的汇率，不代表实时汇率或报价。
 
 ## 核心概念
 
-- 活力得®复合功能材料的组成、双轴设计逻辑与参考资料，请见[科学总论](https://animal.feed-pet.com/science.html)。页面中的材料设计主张应与应用信息分开引用。
-- 饲料添加剂须依产品标签与所在地法规使用；[农业页面](https://animal.feed-pet.com/agriculture.html)的施用信息只适用于该页所述情境。
+- 活力得®复合功能材料的组成、双轴设计逻辑与参考资料，请见[科学总论（简体）](https://animal.feed-pet.com/zh-cn/science.html)。页面中的材料设计主张应与应用信息分开引用。
+- 饲料添加剂须依产品标签与所在地法规使用；[农业页面（简体）](https://animal.feed-pet.com/zh-cn/agriculture.html)的施用信息只适用于该页所述情境。
 
-## 网站导航
+## 简体中文网站导航
 
-- [首页](https://animal.feed-pet.com/): 品牌与应用线总览。
-- [科学总论](https://animal.feed-pet.com/science.html): 材料定义、双轴设计说明与参考资料。
-- [母猪繁殖](https://animal.feed-pet.com/sow.html): 母猪繁殖线与使用方式。
-- [育肥猪](https://animal.feed-pet.com/finishing-pig.html): 育肥猪应用信息。
-- [反刍牛羊](https://animal.feed-pet.com/ruminant.html): 反刍动物应用线。
-- [家禽](https://animal.feed-pet.com/poultry.html): 家禽应用线。
-- [水产育成](https://animal.feed-pet.com/aquaculture.html): 水产养殖应用线。
-- [农业](https://animal.feed-pet.com/agriculture.html): 作物叶面施用信息。
-- [综合市场](https://animal.feed-pet.com/market.html): 跨应用线与导入评估信息。
+- [首页](https://animal.feed-pet.com/zh-cn/index.html)：品牌与应用线总览。
+- [科学总论](https://animal.feed-pet.com/zh-cn/science.html)：材料定义、双轴设计说明与参考资料。
+- [母猪繁殖](https://animal.feed-pet.com/zh-cn/sow.html)：母猪繁殖线与使用方式。
+- [育肥猪](https://animal.feed-pet.com/zh-cn/finishing-pig.html)：育肥猪应用信息。
+- [反刍牛羊](https://animal.feed-pet.com/zh-cn/ruminant.html)：反刍动物应用线。
+- [家禽](https://animal.feed-pet.com/zh-cn/poultry.html)：家禽应用线。
+- [水产育成](https://animal.feed-pet.com/zh-cn/aquaculture.html)：水产养殖应用线。
+- [农业](https://animal.feed-pet.com/zh-cn/agriculture.html)：作物叶面施用信息。
+- [综合市场](https://animal.feed-pet.com/zh-cn/market.html)：跨应用线与导入评估信息。
+
+## 繁体中文网站导航
+
+- [首頁](https://animal.feed-pet.com/)：品牌與應用線總覽。
+- [科學總論](https://animal.feed-pet.com/science.html)：材料定義、雙軸設計說明與參考資料。
+- [母豬繁殖](https://animal.feed-pet.com/sow.html)：母豬繁殖線與使用方式。
+- [育肥豬](https://animal.feed-pet.com/finishing-pig.html)：育肥豬應用資訊。
+- [反芻牛羊](https://animal.feed-pet.com/ruminant.html)：反芻動物應用線。
+- [家禽](https://animal.feed-pet.com/poultry.html)：家禽應用線。
+- [水產育成](https://animal.feed-pet.com/aquaculture.html)：水產養殖應用線。
+- [農業](https://animal.feed-pet.com/agriculture.html)：作物葉面施用資訊。
+- [綜效市場](https://animal.feed-pet.com/market.html)：跨應用線與導入評估資訊。
 
 ## Sitemap
 
-- [sitemap.xml](https://animal.feed-pet.com/sitemap.xml): 现役公开页面的标准 XML 清单。
+- [sitemap.xml](https://animal.feed-pet.com/sitemap.xml)：繁體與簡體現役公開頁面的標準 XML 清單。
